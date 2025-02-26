@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdrjk7l11i70m"]
+
+[ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="1_xuu8o"]
+[ext_resource type="Script" path="res://draggable_product.gd" id="2_61ri6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsqtl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DraggableProduct" type="Sprite2D" parent="."]
+position = Vector2(1038, 528)
+texture = ExtResource("1_xuu8o")
+script = ExtResource("2_61ri6")
+
+[node name="Button" type="Button" parent="DraggableProduct"]
+offset_left = -63.0
+offset_top = -62.0
+offset_right = 65.0
+offset_bottom = 65.0
+metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="DraggableProduct"]
+position = Vector2(-392, -397)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableProduct/StaticBody2D2"]
+position = Vector2(392, 402)
+shape = SubResource("RectangleShape2D_lsqtl")
+
+[connection signal="button_down" from="DraggableProduct/Button" to="DraggableProduct" method="_on_button_button_down"]
+[connection signal="button_up" from="DraggableProduct/Button" to="DraggableProduct" method="_on_button_button_up"]

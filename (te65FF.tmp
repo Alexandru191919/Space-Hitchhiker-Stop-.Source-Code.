@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://vkf70fslt7nv"]
+
+[ext_resource type="Texture2D" uid="uid://rfwu1opje4a4" path="res://Gray.png" id="2_0e778"]
+[ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="3_yabvi"]
+[ext_resource type="Script" path="res://scanner.gd" id="5_73h0u"]
+[ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="6_pak0g"]
+[ext_resource type="Script" path="res://draggable_product.gd" id="7_xdy67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fekv"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejdoq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="cash register" type="Area2D" parent="."]
+position = Vector2(255, 521)
+
+[node name="Sprite2D" type="Sprite2D" parent="cash register"]
+texture = ExtResource("2_0e778")
+
+[node name="Beep" type="AudioStreamPlayer2D" parent="cash register"]
+stream = ExtResource("3_yabvi")
+volume_db = -10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cash register"]
+shape = SubResource("RectangleShape2D_8fekv")
+
+[node name="BarCode Scanner" type="Button" parent="."]
+offset_left = 727.0
+offset_top = 430.0
+offset_right = 834.0
+offset_bottom = 482.0
+script = ExtResource("5_73h0u")
+
+[node name="DraggableProduct" type="Sprite2D" parent="."]
+position = Vector2(587, 213)
+texture = ExtResource("6_pak0g")
+script = ExtResource("7_xdy67")
+
+[node name="Button" type="Button" parent="DraggableProduct"]
+offset_left = -63.0
+offset_top = -62.0
+offset_right = 65.0
+offset_bottom = 65.0
+metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="DraggableProduct"]
+position = Vector2(-392, -397)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableProduct/StaticBody2D2"]
+position = Vector2(392, 402)
+shape = SubResource("RectangleShape2D_ejdoq")
+
+[connection signal="body_entered" from="cash register" to="." method="_on_cash_register_body_entered"]
+[connection signal="body_entered" from="cash register" to="cash register" method="_on_body_entered"]
+[connection signal="button_down" from="BarCode Scanner" to="DraggableProduct" method="_on_bar_code_scanner_button_down"]
+[connection signal="button_up" from="BarCode Scanner" to="DraggableProduct" method="_on_bar_code_scanner_button_up"]
+[connection signal="pressed" from="BarCode Scanner" to="BarCode Scanner" method="_on_pressed"]
+[connection signal="button_down" from="DraggableProduct/Button" to="DraggableProduct" method="_on_button_button_down"]
+[connection signal="button_up" from="DraggableProduct/Button" to="DraggableProduct" method="_on_button_button_up"]

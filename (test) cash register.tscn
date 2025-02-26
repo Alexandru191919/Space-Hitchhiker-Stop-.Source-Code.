@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://vkf70fslt7nv"]
+
+[ext_resource type="Texture2D" uid="uid://rfwu1opje4a4" path="res://Gray.png" id="2_0e778"]
+[ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="3_yabvi"]
+[ext_resource type="Script" path="res://ProducttoScan.gd" id="5_22wco"]
+[ext_resource type="Script" path="res://scanner.gd" id="5_73h0u"]
+[ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="6_pak0g"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BarCode Scanner" type="Button" parent="."]
+offset_left = 712.0
+offset_top = 500.0
+offset_right = 819.0
+offset_bottom = 552.0
+script = ExtResource("5_73h0u")
+metadata/_edit_use_anchors_ = true
+
+[node name="Beep" type="AudioStreamPlayer2D" parent="BarCode Scanner"]
+position = Vector2(53, 26)
+stream = ExtResource("3_yabvi")
+volume_db = -10.0
+
+[node name="ProducttoScan" type="Sprite2D" parent="."]
+position = Vector2(94, 158)
+scale = Vector2(0.8125, 1.63281)
+texture = ExtResource("6_pak0g")
+
+[node name="Button" type="Button" parent="ProducttoScan"]
+offset_left = -63.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("5_22wco")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(507.75, 281)
+scale = Vector2(2.08203, 1.51562)
+texture = ExtResource("6_pak0g")
+
+[node name="ProductBarcode" type="Button" parent="Sprite2D2"]
+anchors_preset = -1
+anchor_left = -6.654
+anchor_top = -9.615
+anchor_right = -6.654
+anchor_bottom = -9.615
+offset_left = 789.393
+offset_top = 1168.04
+offset_right = 914.393
+offset_bottom = 1293.04
+toggle_mode = true
+
+[node name="PlaceinBagButton" type="Button" parent="."]
+visible = false
+offset_left = 782.0
+offset_top = 77.0
+offset_right = 854.0
+offset_bottom = 149.0
+toggle_mode = true
+icon = ExtResource("2_0e778")
+
+[node name="Bagging Area" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1052, 111)
+texture = ExtResource("6_pak0g")
+
+[connection signal="pressed" from="BarCode Scanner" to="BarCode Scanner" method="_on_pressed"]
+[connection signal="pressed" from="BarCode Scanner" to="BarCode Scanner" method="_on_Barcode_Scanner_pressed"]
+[connection signal="button_up" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_button_up"]
+[connection signal="mouse_entered" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_pressed"]
+[connection signal="button_up" from="Sprite2D2/ProductBarcode" to="BarCode Scanner" method="_on_product_barcode_button_up"]
+[connection signal="toggled" from="Sprite2D2/ProductBarcode" to="BarCode Scanner" method="_on_product_barcode_toggled"]
+[connection signal="toggled" from="PlaceinBagButton" to="BarCode Scanner" method="_on_placein_bag_button_toggled"]

@@ -1,0 +1,126 @@
+[gd_scene load_steps=17 format=3 uid="uid://dt4y3nvs6dutf"]
+
+[ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="1_exssr"]
+[ext_resource type="Script" path="res://coffee_machine.gd" id="1_pys0x"]
+[ext_resource type="Texture2D" uid="uid://c2veb5p7o214x" path="res://Imported/Coffee Machine (Placeholder).png" id="2_asi5t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bh5i"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oemi"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jyn1"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmyp4"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxtxk"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtjqv"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogme8"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3gj5"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75rse"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4rff"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvikx"]
+atlas = ExtResource("2_asi5t")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2mrj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wcai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bh5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oemi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jyn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmyp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxtxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtjqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogme8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3gj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75rse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4rff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvikx")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pys0x")
+
+[node name="CoffeeMachine" type="Button" parent="."]
+show_behind_parent = true
+light_mask = 0
+visibility_layer = 0
+offset_left = 331.0
+offset_top = 136.0
+offset_right = 756.0
+offset_bottom = 494.0
+
+[node name="CoffeeMachineCooldown" type="Timer" parent="CoffeeMachine"]
+wait_time = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(543.5, 315)
+scale = Vector2(3.32031, 2.79687)
+texture = ExtResource("1_exssr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(543, 315)
+scale = Vector2(13.2812, 11.1875)
+sprite_frames = SubResource("SpriteFrames_w2mrj")
+animation = &"new_animation"
+
+[connection signal="pressed" from="CoffeeMachine" to="." method="_on_coffeemachine_pressed"]
+[connection signal="timeout" from="CoffeeMachine/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]

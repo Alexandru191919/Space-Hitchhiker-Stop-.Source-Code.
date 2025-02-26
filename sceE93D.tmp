@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=3 uid="uid://clpnxse35m8q1"]
+
+[ext_resource type="Script" path="res://scene_1.gd" id="1_1lou1"]
+[ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Purple.png" id="1_jqcyg"]
+[ext_resource type="PackedScene" uid="uid://veay2miahlvh" path="res://char/character_body_2d.tscn" id="2_diy10"]
+[ext_resource type="Script" path="res://char/character_body_2d.gd" id="4_b60gq"]
+[ext_resource type="PackedScene" uid="uid://x05jyo85cokj" path="res://test.tscn" id="4_ou53n"]
+[ext_resource type="Texture2D" uid="uid://2lscdjr2akyy" path="res://white.png" id="4_takeo"]
+[ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="5_uylr3"]
+[ext_resource type="PackedScene" uid="uid://evcr440oecc8" path="res://ProgressBars.tscn" id="7_cg8ll"]
+[ext_resource type="PackedScene" uid="uid://d0xqtny38pa34" path="res://Global.tscn" id="9_ygxcl"]
+[ext_resource type="PackedScene" uid="uid://cx18w2guvximk" path="res://scene2.tscn" id="10_51qnm"]
+[ext_resource type="PackedScene" uid="uid://dplb70j8pjp6v" path="res://scene3.tscn" id="11_c4lwc"]
+[ext_resource type="PackedScene" uid="uid://bms3b60oaeia4" path="res://scene4.tscn" id="12_sam2i"]
+
+[sub_resource type="GDScript" id="GDScript_vel7x"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_1lou1")
+
+[node name="GlobalNode" type="Node" parent="."]
+script = SubResource("GDScript_vel7x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jqcyg")
+stretch_mode = 1
+
+[node name="Customer" parent="." instance=ExtResource("2_diy10")]
+position = Vector2(240, 245)
+script = ExtResource("4_b60gq")
+
+[node name="ShopCounter" type="Sprite2D" parent="."]
+position = Vector2(576, 488.5)
+scale = Vector2(0.994819, 0.853658)
+texture = ExtResource("4_takeo")
+
+[node name="BaggingProcess" type="Sprite2D" parent="ShopCounter"]
+position = Vector2(338.253, -378.371)
+scale = Vector2(3.76168, 3.02924)
+texture = ExtResource("5_uylr3")
+
+[node name="ProductToBuy" parent="." instance=ExtResource("4_ou53n")]
+position = Vector2(151, 425)
+
+[node name="Temper & Time Bars" parent="." instance=ExtResource("7_cg8ll")]
+
+[node name="Button1" type="Button" parent="."]
+anchors_preset = -1
+anchor_top = 0.921
+anchor_right = 0.259
+anchor_bottom = 1.0
+offset_top = -0.807983
+offset_right = -0.368011
+offset_bottom = -1.99994
+theme_override_font_sizes/font_size = 30
+text = "scene 1"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.259
+anchor_top = 0.92
+anchor_right = 0.513
+anchor_bottom = 0.997
+offset_left = -0.368011
+offset_top = -0.160034
+offset_right = 0.0239868
+offset_bottom = -0.0559692
+theme_override_font_sizes/font_size = 30
+text = "scene 2"
+
+[node name="Button3" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.92
+anchor_right = 0.764
+anchor_bottom = 0.997
+offset_left = 0.0239868
+offset_top = -0.160034
+offset_right = -0.128052
+offset_bottom = -0.0559692
+theme_override_font_sizes/font_size = 30
+text = "scene 3"
+
+[node name="Button4" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.764
+anchor_top = 0.923
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = -0.128113
+offset_top = -2.10406
+offset_right = 1.0
+offset_bottom = -0.0560303
+rotation = 0.00136651
+theme_override_font_sizes/font_size = 30
+text = "scene 4"
+
+[node name="testCheckBox" type="CheckBox" parent="."]
+offset_right = 1152.0
+offset_bottom = 331.0
+keep_pressed_outside = true
+
+[node name="Global" parent="." instance=ExtResource("9_ygxcl")]
+
+[node name="scene2" parent="." instance=ExtResource("10_51qnm")]
+
+[node name="scene3" parent="." instance=ExtResource("11_c4lwc")]
+
+[node name="scene4" parent="." instance=ExtResource("12_sam2i")]
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

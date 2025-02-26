@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv7j8skcrwjvu"]
+
+[sub_resource type="GDScript" id="GDScript_pcgtc"]
+
+[node name="Global" type="Node"]
+script = SubResource("GDScript_pcgtc")
