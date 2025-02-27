@@ -9,13 +9,22 @@ var texture_pickedup: Texture = preload("res://icon.svg")
 var Beep: AudioStreamPlayer2D
 
 func _ready():
-	Input.set_custom_mouse_cursor(null)  # System cursor by default
-	self.toggle_mode = true 
+	Input.set_custom_mouse_cursor(null)  # System cursor by default 
 	Beep = $Beep
+	$"../Sprite2D2/ProductBarcode".toggle_mode = true 
 	Beep.stream = preload("res://beep.wav")
 
 
-func _on_pressed():
+func _on_BarCode_Scanner_button_down():
+	$"../Sprite2D2/ProductBarcode".show()
+	$"../Sprite2D2/ProductBarcode".disabled = true
+
+
+func _on_BarCode_Scanner_button_up():
+	$"../Sprite2D2/ProductBarcode".hide()
+	$"../Sprite2D2/ProductBarcode".disabled = false
+
+func _on_Barcode_Scanner_pressed():
 	if using_custom_cursor:
 		Input.set_custom_mouse_cursor(null)
 		print("System Cursor")
@@ -38,8 +47,6 @@ func _on_pressed():
 ######
 
 
-func _on_Barcode_Scanner_pressed():
-	$"../Sprite2D2/ProductBarcode".show()
 
 func _on_product_barcode_button_up():
 	$"../PlaceinBagButton".show()
@@ -49,16 +56,16 @@ func _on_product_barcode_button_up():
 func _on_product_barcode_toggled(toggled_on: bool):
 	$"../PlaceinBagButton".show()
 	$"../PlaceinBagButton".disabled = false
-	
-	if using_custom_cursor:
-		$"../Sprite2D2/ProductBarcode".disabled = true
-		$"../Sprite2D2".hide()
-		Beep.play()
-		$"../PlaceinBagButton".show()
-		$"../PlaceinBagButton".disabled = false
+
+###	if using_custom_cursor:
+###		$"../Sprite2D2/ProductBarcode".disabled = true
+###		$"../Sprite2D2".hide()
+###		Beep.play()
+###		$"../PlaceinBagButton".show()
+###		$"../PlaceinBagButton".disabled = false
+###	else:
+###		pass
 		
-	elif using_normal_cursor:
-		pass
 
 func _on_placein_bag_button_toggled(toggled_on: bool):
 	$"../Bagging Area".show()

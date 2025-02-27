@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=26 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" path="res://scene_1.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://x05jyo85cokj" path="res://test.tscn" id="4_ou53n"]
 [ext_resource type="Texture2D" uid="uid://2lscdjr2akyy" path="res://white.png" id="4_takeo"]
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="5_uylr3"]
+[ext_resource type="PackedScene" uid="uid://vkf70fslt7nv" path="res://(test) cash register.tscn" id="7_obn3x"]
 [ext_resource type="Texture2D" uid="uid://d2cohkhow6c4i" path="res://Imported_Background/Brown.png" id="9_hc3vt"]
 [ext_resource type="Texture2D" uid="uid://2cqs4u4nmcli" path="res://Imported_Background/Pink.png" id="10_efqc3"]
 [ext_resource type="Texture2D" uid="uid://c2veb5p7o214x" path="res://Imported/Coffee Machine (Placeholder).png" id="10_gq4dn"]
@@ -210,11 +211,6 @@ position = Vector2(576, 488.5)
 scale = Vector2(0.994819, 0.853658)
 texture = ExtResource("4_takeo")
 
-[node name="BaggingProcess" type="Sprite2D" parent="Scene1/ShopCounter"]
-position = Vector2(391.529, -324.486)
-scale = Vector2(2.92924, 2.18728)
-texture = ExtResource("5_uylr3")
-
 [node name="ProductToBuy" parent="Scene1" instance=ExtResource("4_ou53n")]
 position = Vector2(734, 413)
 
@@ -274,6 +270,8 @@ metadata/_edit_use_anchors_ = true
 [node name="CustomerTemper" type="Timer" parent="Scene1/ProgressBar"]
 process_callback = 0
 wait_time = 2.0
+
+[node name="Scanning MiniGame" parent="Scene1" instance=ExtResource("7_obn3x")]
 
 [node name="Scene2" type="Node" parent="."]
 
