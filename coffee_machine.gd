@@ -27,11 +27,11 @@ func _on_coffeemachine_cooldown_timeout():
 ## COFFEE MACHINE
 
 func _on_coffeemachine_pressed():
-	$Scene4/CanvasLayer/CoffeeMachineButton.hide()
+$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.hide()
 	$Scene4/CanvasLayer/CoffeeMachineRunning.show()
 	$Scene4/CanvasLayer/CoffeeMachineRunning.play()
 	
-	$Scene4/CanvasLayer/CoffeeMachineButton/CoffeeMachineCooldown.start()
+$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown.start()
 	
 	print("Coffee coming right up!")
 	if $Scene4/CanvasLayer/CoffeeMachineButton/CoffeeMachineCooldown.time_left > 0:

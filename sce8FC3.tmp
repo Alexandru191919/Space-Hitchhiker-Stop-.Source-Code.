@@ -1,23 +1,18 @@
-[gd_scene load_steps=34 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=28 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
 [ext_resource type="Script" path="res://scene_1.gd" id="2_2bu8m"]
 [ext_resource type="PackedScene" uid="uid://dpmthxhg01t2m" path="res://char/Customer.tscn" id="3_oqa6r"]
 [ext_resource type="Texture2D" uid="uid://2lscdjr2akyy" path="res://white.png" id="4_takeo"]
-[ext_resource type="Script" path="res://scanner.gd" id="6_6d84l"]
-[ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="7_y86bs"]
-[ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="8_lljbe"]
-[ext_resource type="Script" path="res://ProducttoScan.gd" id="9_evrua"]
+[ext_resource type="PackedScene" uid="uid://vkf70fslt7nv" path="res://(test) cash register.tscn" id="7_obn3x"]
 [ext_resource type="Texture2D" uid="uid://d2cohkhow6c4i" path="res://Imported_Background/Brown.png" id="9_hc3vt"]
 [ext_resource type="Texture2D" uid="uid://dduvhg8fdbcvl" path="res://coffee cup.png" id="10_4w70j"]
-[ext_resource type="Texture2D" uid="uid://rfwu1opje4a4" path="res://Gray.png" id="10_bf8pu"]
 [ext_resource type="Texture2D" uid="uid://2cqs4u4nmcli" path="res://Imported_Background/Pink.png" id="10_efqc3"]
 [ext_resource type="Texture2D" uid="uid://c2veb5p7o214x" path="res://Imported/Coffee Machine (Placeholder).png" id="10_gq4dn"]
 [ext_resource type="Texture2D" uid="uid://cqhwa77lplyux" path="res://coffee machine.png" id="10_oiyxf"]
 [ext_resource type="Texture2D" uid="uid://dg8gquviw1v5n" path="res://Imported_Background/Green.png" id="11_2h1yj"]
 [ext_resource type="Texture2D" uid="uid://bfmej5mmye1kj" path="res://coffee.png" id="12_06jb2"]
-[ext_resource type="AudioStream" uid="uid://q28bb06inne3" path="res://SLURP.mp3" id="13_21bv0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hq0e"]
 resource_local_to_scene = true
@@ -117,53 +112,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_nollb"]
-script/source = "extends Node2D
-
-const minutes_day = 1440
-const minutes_hour = 60
-const real_minute_duration = (2 * PI) / minutes_day
-
-signal time_tick(day:int, hour:int, minute:int)
-
-@export var ingame_speed = 1.0
-@export var initial_hour: int = 12
-
-var time: float = 0.0
-var past_minute: float = -1.0
-var label: Label  # Reference to the Label node
-
-func _ready():
-	time = initial_hour * minutes_hour
-	label = $Timer/Label  # Get the Label node
-	time_tick.connect(_on_time_tick)  # Connect signal
-
-func _process(delta: float):
-	time += delta * real_minute_duration * ingame_speed
-	_recalculate_time()
-
-func _recalculate_time():
-	var total_minutes = int(time / real_minute_duration)
-	var day = int(total_minutes / minutes_day)
-	var current_day_minutes = total_minutes % minutes_day
-	var hour = int(current_day_minutes / minutes_hour)
-	var minute = int(current_day_minutes % minutes_hour)
-
-	if past_minute != minute:
-		past_minute = minute
-		time_tick.emit(day, hour, minute)
-
-func _on_time_tick(day:int, hour:int, minute:int):
-	if label:
-		label.text = \"Day: %d, Time: %02d:%02d\" % [day, hour, minute]
-
-	# **Change Scene when Time Reaches 15:00**
-	if hour == 15 and minute == 0:
-		get_tree().change_scene_to_file(\"res://MainMenu.tscn\")  # Replace with your scene path
-"
-
 [node name="Node" type="Node"]
 script = ExtResource("1_1lou1")
+countdown_time1 = null
+countdown_time2 = null
+countdown_time3 = null
 
 [node name="PlayerGUI" type="Node" parent="."]
 
@@ -241,17 +194,11 @@ metadata/_edit_use_anchors_ = true
 process_callback = 0
 wait_time = 25.0
 
-[node name="CanvasLayerCoins" type="CanvasLayer" parent="PlayerGUI"]
-
-[node name="Label" type="Label" parent="PlayerGUI/CanvasLayerCoins"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "MONEY: 0"
-
 [node name="Scene1" type="Node" parent="."]
 script = ExtResource("2_2bu8m")
 
 [node name="TextureRect" type="TextureRect" parent="Scene1"]
+visible = false
 texture_filter = 2
 texture_repeat = 3
 anchors_preset = 15
@@ -264,14 +211,17 @@ texture = ExtResource("1_jqcyg")
 stretch_mode = 1
 
 [node name="Customer" parent="Scene1" instance=ExtResource("3_oqa6r")]
+visible = false
 position = Vector2(286, 233)
 
 [node name="ShopCounter" type="Sprite2D" parent="Scene1"]
+visible = false
 position = Vector2(576, 488.5)
 scale = Vector2(0.994819, 0.853658)
 texture = ExtResource("4_takeo")
 
 [node name="ProgressBar2" type="ProgressBar" parent="Scene1"]
+visible = false
 anchors_preset = -1
 anchor_right = 0.173
 anchor_bottom = 0.042
@@ -300,6 +250,7 @@ process_callback = 0
 wait_time = 5.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Scene1"]
+visible = false
 anchors_preset = -1
 anchor_right = 0.173
 anchor_bottom = 0.042
@@ -328,70 +279,8 @@ metadata/_edit_use_anchors_ = true
 process_callback = 0
 wait_time = 2.0
 
-[node name="Scanning Minigame" type="Node2D" parent="Scene1"]
-
-[node name="BarCode Scanner" type="Button" parent="Scene1/Scanning Minigame"]
-offset_left = 712.0
-offset_top = 500.0
-offset_right = 819.0
-offset_bottom = 552.0
-toggle_mode = true
-script = ExtResource("6_6d84l")
-
-[node name="Beep" type="AudioStreamPlayer2D" parent="Scene1/Scanning Minigame/BarCode Scanner"]
-position = Vector2(53, 26)
-stream = ExtResource("7_y86bs")
-volume_db = -10.0
-
-[node name="ProducttoScan" type="Sprite2D" parent="Scene1/Scanning Minigame"]
-position = Vector2(107, 481)
-scale = Vector2(0.8125, 1.63281)
-texture = ExtResource("8_lljbe")
-
-[node name="Button" type="Button" parent="Scene1/Scanning Minigame/ProducttoScan"]
-anchors_preset = -1
-anchor_left = -0.127
-anchor_top = -0.125
-anchor_right = 1.186
-anchor_bottom = 0.141
-offset_left = -63.9747
-offset_top = -64.0
-offset_right = -64.0388
-offset_bottom = -64.048
-script = ExtResource("9_evrua")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Scene1/Scanning Minigame"]
+[node name="Scanning Minigame" parent="Scene1" instance=ExtResource("7_obn3x")]
 visible = false
-position = Vector2(507.75, 281)
-scale = Vector2(2.08203, 1.51562)
-texture = ExtResource("8_lljbe")
-
-[node name="ProductBarcode" type="Button" parent="Scene1/Scanning Minigame/Sprite2D2"]
-anchors_preset = -1
-anchor_left = -6.654
-anchor_top = -9.615
-anchor_right = -6.654
-anchor_bottom = -9.615
-offset_left = 789.393
-offset_top = 1168.04
-offset_right = 914.393
-offset_bottom = 1293.04
-toggle_mode = true
-
-[node name="PlaceinBagButton" type="Button" parent="Scene1/Scanning Minigame"]
-visible = false
-offset_left = 782.0
-offset_top = 77.0
-offset_right = 854.0
-offset_bottom = 149.0
-toggle_mode = true
-icon = ExtResource("10_bf8pu")
-
-[node name="Bagging Area" type="Sprite2D" parent="Scene1/Scanning Minigame"]
-visible = false
-position = Vector2(1008.5, 189)
-scale = Vector2(2.21094, 2.21875)
-texture = ExtResource("8_lljbe")
 
 [node name="Scene2" type="Node" parent="."]
 
@@ -434,7 +323,6 @@ position = Vector2(922, 297)
 [node name="Scene4" type="Node" parent="."]
 
 [node name="TextureScene2" type="TextureRect" parent="Scene4"]
-visible = false
 texture_filter = 2
 texture_repeat = 3
 anchors_preset = 15
@@ -447,11 +335,9 @@ texture = ExtResource("11_2h1yj")
 stretch_mode = 1
 
 [node name="Customer" parent="Scene4" instance=ExtResource("3_oqa6r")]
-visible = false
 position = Vector2(240, 214)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Scene4"]
-visible = false
 
 [node name="CoffeeMachine" type="Sprite2D" parent="Scene4/CanvasLayer"]
 position = Vector2(880, 329.564)
@@ -487,9 +373,6 @@ offset_bottom = 520.0
 position = Vector2(64, 52)
 texture = ExtResource("12_06jb2")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Scene4/CanvasLayer/Coffee"]
-stream = ExtResource("13_21bv0")
-
 [node name="Coffee Cup" type="Sprite2D" parent="Scene4/CanvasLayer"]
 position = Vector2(867, 358)
 texture = ExtResource("10_4w70j")
@@ -501,15 +384,6 @@ offset_right = 63.0
 offset_bottom = 66.0
 
 [node name="Day&Night" type="Node2D" parent="."]
-script = SubResource("GDScript_nollb")
-
-[node name="Timer" type="Timer" parent="Day&Night"]
-
-[node name="Label" type="Label" parent="Day&Night/Timer"]
-offset_left = 557.0
-offset_top = 32.0
-offset_right = 867.0
-offset_bottom = 103.0
 
 [connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button2" to="." method="_on_button_2_pressed"]
@@ -519,17 +393,6 @@ offset_bottom = 103.0
 [connection signal="visibility_changed" from="Scene1/Customer" to="Scene1" method="_on_customer_visibility_changed"]
 [connection signal="timeout" from="Scene1/ProgressBar2/CustomerReappear" to="." method="_on_customer_reappear_timeout"]
 [connection signal="timeout" from="Scene1/ProgressBar/CustomerTemper" to="." method="_on_customer_temper_timeout"]
-[connection signal="button_up" from="Scene1/Scanning Minigame/BarCode Scanner" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_BarCode_Scanner_button_up"]
-[connection signal="pressed" from="Scene1/Scanning Minigame/BarCode Scanner" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_Barcode_Scanner_pressed"]
-[connection signal="toggled" from="Scene1/Scanning Minigame/BarCode Scanner" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_toggled"]
-[connection signal="button_up" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_button_up"]
-[connection signal="mouse_entered" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_mouse_exited"]
-[connection signal="pressed" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_pressed"]
-[connection signal="button_down" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_product_barcode_button_down"]
-[connection signal="button_up" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_product_barcode_button_up"]
-[connection signal="pressed" from="Scene1/Scanning Minigame/PlaceinBagButton" to="." method="_on_placein_bag_button_pressed"]
-[connection signal="pressed" from="Scene1/Scanning Minigame/PlaceinBagButton" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_placein_bag_button_pressed"]
 [connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
 [connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]

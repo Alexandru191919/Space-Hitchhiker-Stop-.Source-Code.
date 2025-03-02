@@ -15,7 +15,6 @@ offset_right = 819.0
 offset_bottom = 552.0
 toggle_mode = true
 script = ExtResource("5_73h0u")
-metadata/_edit_use_anchors_ = true
 
 [node name="Beep" type="AudioStreamPlayer2D" parent="BarCode Scanner"]
 position = Vector2(53, 26)
@@ -23,7 +22,7 @@ stream = ExtResource("3_yabvi")
 volume_db = -10.0
 
 [node name="ProducttoScan" type="Sprite2D" parent="."]
-position = Vector2(92, 443)
+position = Vector2(107, 481)
 scale = Vector2(0.8125, 1.63281)
 texture = ExtResource("6_pak0g")
 
@@ -38,7 +37,6 @@ offset_top = -64.0
 offset_right = -64.0388
 offset_bottom = -64.048
 script = ExtResource("5_22wco")
-metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
@@ -73,13 +71,13 @@ position = Vector2(1008.5, 189)
 scale = Vector2(2.21094, 2.21875)
 texture = ExtResource("6_pak0g")
 
-[connection signal="button_down" from="BarCode Scanner" to="BarCode Scanner" method="_on_BarCode_Scanner_button_down"]
 [connection signal="button_up" from="BarCode Scanner" to="BarCode Scanner" method="_on_BarCode_Scanner_button_up"]
 [connection signal="pressed" from="BarCode Scanner" to="BarCode Scanner" method="_on_Barcode_Scanner_pressed"]
+[connection signal="toggled" from="BarCode Scanner" to="BarCode Scanner" method="_on_toggled"]
 [connection signal="button_up" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_button_up"]
 [connection signal="mouse_entered" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="ProducttoScan/Button" to="ProducttoScan/Button" method="_on_pressed"]
+[connection signal="button_down" from="Sprite2D2/ProductBarcode" to="BarCode Scanner" method="_on_product_barcode_button_down"]
 [connection signal="button_up" from="Sprite2D2/ProductBarcode" to="BarCode Scanner" method="_on_product_barcode_button_up"]
-[connection signal="toggled" from="Sprite2D2/ProductBarcode" to="BarCode Scanner" method="_on_product_barcode_toggled"]
-[connection signal="toggled" from="PlaceinBagButton" to="BarCode Scanner" method="_on_placein_bag_button_toggled"]
+[connection signal="pressed" from="PlaceinBagButton" to="BarCode Scanner" method="_on_placein_bag_button_pressed"]

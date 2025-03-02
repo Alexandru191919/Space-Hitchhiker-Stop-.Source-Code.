@@ -528,8 +528,6 @@ offset_bottom = 103.0
 [connection signal="pressed" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_pressed"]
 [connection signal="button_down" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_product_barcode_button_down"]
 [connection signal="button_up" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_product_barcode_button_up"]
-[connection signal="pressed" from="Scene1/Scanning Minigame/PlaceinBagButton" to="." method="_on_placein_bag_button_pressed"]
-[connection signal="pressed" from="Scene1/Scanning Minigame/PlaceinBagButton" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_placein_bag_button_pressed"]
 [connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
 [connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]
