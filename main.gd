@@ -247,7 +247,6 @@ func _on_add_cup_pressed():
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = false
 	$"Scene4/CanvasLayer/Coffee Cup/AddCup".disabled = true
 	$"Scene4/CanvasLayer/Coffee Cup/AddCup".hide()
-
 func _on_coffeemachine_button_pressed():
 	$Scene4/CanvasLayer/CoffeeMachine.hide()
 	$Scene4/CanvasLayer/CoffeeMachineRunning.show()
@@ -267,15 +266,26 @@ func _on_coffeemachine_cooldown_timeout():
 	$Scene4/CanvasLayer/Coffee.disabled = false
 	$Scene4/CanvasLayer/Coffee.show()
 	
+	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = true
+	$"Scene4/CanvasLayer/Coffee Cup".hide()
+	
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown.stop()
 	
 func _on_coffee_pressed():
+	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = true
 	timer3.stop()
 	timer3.wait_time = countdown_time3
 	timer3.start()  # Restart to apply the new time
+	
 	$Scene4/CanvasLayer/Coffee.disabled = true
 	$Scene4/CanvasLayer/Coffee.hide()
 	$Scene4/CanvasLayer/Coffee/AudioStreamPlayer2D.play()
+	
+	$"Scene4/CanvasLayer/Coffee Cup".show()
+	$"Scene4/CanvasLayer/Coffee Cup/AddCup".disabled = false
+	$"Scene4/CanvasLayer/Coffee Cup/AddCup".show()
+	
+
 
 ## if you drink coffee while hot, -75 permanent to energy bar each time you drink it while it's hot
 ## you drink it cool? delete the debuffs
@@ -351,52 +361,6 @@ var texture_normal: Texture = preload("res://Jump (32x32).png")
 var texture_pickedup: Texture = preload("res://icon.svg")
 var Beep: AudioStreamPlayer2D
 
-
-func _on_Barcode_Scanner_pressed():
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".show()
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = true
-	if using_custom_cursor:
-		Input.set_custom_mouse_cursor(null)
-		print("System Cursor")
-		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_normal  # Change button texture when picked up
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
-		
-	else:
-		var hotspot = Vector2(223, 46) ## s223, 46
-		Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, hotspot)
-		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_pickedup  # Change button texture when picked up
-		print("BarCode Scanner Picked up!")
-	
-	# Toggle the state of the custom cursor
-	using_custom_cursor = !using_custom_cursor
-
-
-func _on_BarCode_scanner_button_down():
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".hide()
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
-
-	# Toggle the cursor visibility properly
-	if using_custom_cursor:
-		# Reset to the system cursor
-		Input.set_custom_mouse_cursor(null)
-		print("System Cursor")
-		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_normal  # Set the normal button texture
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false  # Enable barcode sprite for further scanning
-	else:
-		# Set the custom cursor for scanning
-		var hotspot = Vector2(223, 46)  # Adjust the hotspot if necessary
-		Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, hotspot)
-		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_pickedup  # Change texture to "picked up"
-		print("BarCode Scanner Picked up!")
-	
-	# Toggle the state of the custom cursor
-	using_custom_cursor = !using_custom_cursor
-
-
-#func _on_button_mouse_entered() -> void:
-#	pass #### change cursor to opened hand, about to take the scanner
-
-
 func _on_product_barcode_button_up():
 	$"Scene1/Scanning Minigame/PlaceinBagButton".show()
 	$"Scene1/Scanning Minigame/PlaceinBagButton".disabled = false
@@ -442,12 +406,13 @@ func _on_BarCode_scanner_toggled(toggled_on: bool):
 		print("System Cursor")
 		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_normal  # Change button texture when picked up
 		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
-		
+		$"Scene1/Scanning Minigame/Fake Background".hide()
 	else:
 		var hotspot = Vector2(223, 46) ## s223, 46
 		Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, hotspot)
 		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_pickedup  # Change button texture when picked up
 		print("BarCode Scanner Picked up!")
+		$"Scene1/Scanning Minigame/Fake Background".show()
 	
 	# Toggle the state of the custom cursor
 	using_custom_cursor = !using_custom_cursor
