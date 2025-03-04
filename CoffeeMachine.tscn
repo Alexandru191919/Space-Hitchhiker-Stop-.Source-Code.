@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://dt4y3nvs6dutf"]
 
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="1_exssr"]
-[ext_resource type="Script" path="res://coffee_machine.gd" id="1_pys0x"]
+[ext_resource type="Script" uid="uid://ctctdfa2m5lqu" path="res://coffee_machine.gd" id="1_pys0x"]
 [ext_resource type="Texture2D" uid="uid://c2veb5p7o214x" path="res://Imported/Coffee Machine (Placeholder).png" id="2_asi5t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]

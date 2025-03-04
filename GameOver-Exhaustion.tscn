@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0x4hgctd5oq8"]
 
-[ext_resource type="Script" path="res://game_over_exhaustion.gd" id="1_7qtx7"]
+[ext_resource type="Script" uid="uid://c6q7qphp2cudw" path="res://game_over_exhaustion.gd" id="1_7qtx7"]
 
 [node name="EnergyDeath" type="Node"]
 script = ExtResource("1_7qtx7")

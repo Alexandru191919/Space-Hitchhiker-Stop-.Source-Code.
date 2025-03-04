@@ -1,14 +1,13 @@
-[gd_scene load_steps=34 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=35 format=3 uid="uid://clpnxse35m8q1"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_1lou1"]
+[ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
-[ext_resource type="Script" path="res://scene_1.gd" id="2_2bu8m"]
+[ext_resource type="Script" uid="uid://rywqumku82e0" path="res://scene_1.gd" id="2_2bu8m"]
 [ext_resource type="PackedScene" uid="uid://dpmthxhg01t2m" path="res://char/Customer.tscn" id="3_oqa6r"]
 [ext_resource type="Texture2D" uid="uid://2lscdjr2akyy" path="res://white.png" id="4_takeo"]
-[ext_resource type="Script" path="res://scanner.gd" id="6_6d84l"]
 [ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="7_y86bs"]
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="8_lljbe"]
-[ext_resource type="Script" path="res://ProducttoScan.gd" id="9_evrua"]
+[ext_resource type="Script" uid="uid://cl66krass8k4l" path="res://ProducttoScan.gd" id="9_evrua"]
 [ext_resource type="Texture2D" uid="uid://d2cohkhow6c4i" path="res://Imported_Background/Brown.png" id="9_hc3vt"]
 [ext_resource type="Texture2D" uid="uid://dduvhg8fdbcvl" path="res://coffee cup.png" id="10_4w70j"]
 [ext_resource type="Texture2D" uid="uid://rfwu1opje4a4" path="res://Gray.png" id="10_bf8pu"]
@@ -17,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cqhwa77lplyux" path="res://coffee machine.png" id="10_oiyxf"]
 [ext_resource type="Texture2D" uid="uid://dg8gquviw1v5n" path="res://Imported_Background/Green.png" id="11_2h1yj"]
 [ext_resource type="Texture2D" uid="uid://bfmej5mmye1kj" path="res://coffee.png" id="12_06jb2"]
+[ext_resource type="AudioStream" uid="uid://ql4s8cif4b6u" path="res://cash baby dinero.mp3" id="12_bqxh6"]
+[ext_resource type="AudioStream" uid="uid://guv1owvlngrj" path="res://roblox tycoon error.mp3" id="13_1b2e6"]
 [ext_resource type="AudioStream" uid="uid://q28bb06inne3" path="res://SLURP.mp3" id="13_21bv0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hq0e"]
@@ -131,16 +132,25 @@ signal time_tick(day:int, hour:int, minute:int)
 
 var time: float = 0.0
 var past_minute: float = -1.0
-var label: Label  # Reference to the Label node
+var label: Label
+
+var is_night: bool = false  # Variable to track if it's night or day
+var time_since_last_change: float = 0.0  # Time passed from last day & night change
 
 func _ready():
 	time = initial_hour * minutes_hour
-	label = $Timer/Label  # Get the Label node
-	time_tick.connect(_on_time_tick)  # Connect signal
+	label = $Timer/Label
+	time_tick.connect(_on_time_tick)
 
 func _process(delta: float):
 	time += delta * real_minute_duration * ingame_speed
 	_recalculate_time()
+
+	# Update the timer so each 3 secons that passes, it turns day & night.
+	time_since_last_change += delta
+	if time_since_last_change >= 3.0:
+		_toggle_day_night()
+		time_since_last_change = 0.0
 
 func _recalculate_time():
 	var total_minutes = int(time / real_minute_duration)
@@ -152,6 +162,15 @@ func _recalculate_time():
 	if past_minute != minute:
 		past_minute = minute
 		time_tick.emit(day, hour, minute)
+
+func _toggle_day_night():
+
+	if is_night:
+		print(\"It's daytime\")
+		is_night = false
+	else:
+		print(\"It's nighttime\")
+		is_night = true 
 
 func _on_time_tick(day:int, hour:int, minute:int):
 	if label:
@@ -241,6 +260,13 @@ metadata/_edit_use_anchors_ = true
 process_callback = 0
 wait_time = 25.0
 
+[node name="Label" type="Label" parent="PlayerGUI/CanvasLayerEnergy/EnergyBar"]
+layout_mode = 0
+offset_left = 71.0001
+offset_top = 44.0
+offset_right = 111.0
+offset_bottom = 67.0
+
 [node name="CanvasLayerCoins" type="CanvasLayer" parent="PlayerGUI"]
 
 [node name="Label" type="Label" parent="PlayerGUI/CanvasLayerCoins"]
@@ -300,6 +326,7 @@ process_callback = 0
 wait_time = 5.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Scene1"]
+visible = false
 anchors_preset = -1
 anchor_right = 0.173
 anchor_bottom = 0.042
@@ -336,7 +363,6 @@ offset_top = 500.0
 offset_right = 819.0
 offset_bottom = 552.0
 toggle_mode = true
-script = ExtResource("6_6d84l")
 
 [node name="Beep" type="AudioStreamPlayer2D" parent="Scene1/Scanning Minigame/BarCode Scanner"]
 position = Vector2(53, 26)
@@ -408,9 +434,107 @@ grow_vertical = 2
 texture = ExtResource("9_hc3vt")
 stretch_mode = 1
 
-[node name="Customer" parent="Scene2" instance=ExtResource("3_oqa6r")]
+[node name="Upgrades" type="Node" parent="Scene2"]
+
+[node name="Successful" type="AudioStreamPlayer2D" parent="Scene2/Upgrades"]
+position = Vector2(-7.62939e-06, 0)
+stream = ExtResource("12_bqxh6")
+
+[node name="Error" type="AudioStreamPlayer2D" parent="Scene2/Upgrades"]
+position = Vector2(-7.62939e-06, 0)
+stream = ExtResource("13_1b2e6")
+
+[node name="Upgrade1-Energy" type="CanvasLayer" parent="Scene2/Upgrades"]
 visible = false
-position = Vector2(390, 413)
+
+[node name="Label" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy"]
+offset_left = 352.0
+offset_top = 88.0
+offset_right = 414.0
+offset_bottom = 111.0
+text = "ENERGY"
+metadata/_edit_use_anchors_ = true
+
+[node name="upgrade1" type="Button" parent="Scene2/Upgrades/Upgrade1-Energy"]
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.139
+anchor_right = 0.294
+anchor_bottom = 0.302
+offset_left = -0.160004
+offset_top = 25.928
+offset_right = 0.311951
+offset_bottom = 0.303986
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrade2-MoneyCap" type="CanvasLayer" parent="Scene2/Upgrades"]
+visible = false
+
+[node name="Label" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+offset_left = 793.0
+offset_top = 98.0
+offset_right = 855.0
+offset_bottom = 121.0
+text = "CAP"
+metadata/_edit_use_anchors_ = true
+
+[node name="upgrade2" type="Button" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+anchors_preset = -1
+anchor_left = 0.459
+anchor_top = 0.165
+anchor_right = 0.674
+anchor_bottom = 0.275
+offset_left = 0.231995
+offset_top = -8.92001
+offset_right = -0.447998
+offset_bottom = -0.199997
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrade3-MoneyGain" type="CanvasLayer" parent="Scene2/Upgrades"]
+visible = false
+
+[node name="upgrade3" type="Button" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+anchors_preset = -1
+anchor_left = 0.077
+anchor_top = 0.519
+anchor_right = 0.292
+anchor_bottom = 0.642
+offset_left = 0.29599
+offset_top = -0.312042
+offset_right = -0.384033
+offset_bottom = -0.0160217
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+offset_left = 360.0
+offset_top = 341.0
+offset_right = 422.0
+offset_bottom = 364.0
+text = "GAIN"
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrade4-CustomerTemper" type="CanvasLayer" parent="Scene2/Upgrades"]
+visible = false
+
+[node name="upgrade4" type="Button" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+anchors_preset = -1
+anchor_left = 0.424
+anchor_top = 0.571
+anchor_right = 0.639
+anchor_bottom = 0.693
+offset_left = 0.551971
+offset_top = -1.00803
+offset_right = -0.128052
+offset_bottom = -0.0640259
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+offset_left = 760.0
+offset_top = 368.0
+offset_right = 822.0
+offset_bottom = 391.0
+text = "TEMPER"
+metadata/_edit_use_anchors_ = true
 
 [node name="Scene3" type="Node" parent="."]
 
@@ -519,17 +643,27 @@ offset_bottom = 103.0
 [connection signal="visibility_changed" from="Scene1/Customer" to="Scene1" method="_on_customer_visibility_changed"]
 [connection signal="timeout" from="Scene1/ProgressBar2/CustomerReappear" to="." method="_on_customer_reappear_timeout"]
 [connection signal="timeout" from="Scene1/ProgressBar/CustomerTemper" to="." method="_on_customer_temper_timeout"]
+[connection signal="button_up" from="Scene1/Scanning Minigame/BarCode Scanner" to="." method="_on_BarCode_scanner_button_up"]
 [connection signal="button_up" from="Scene1/Scanning Minigame/BarCode Scanner" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_BarCode_Scanner_button_up"]
+[connection signal="pressed" from="Scene1/Scanning Minigame/BarCode Scanner" to="." method="_on_BarCode_scanner_pressed"]
 [connection signal="pressed" from="Scene1/Scanning Minigame/BarCode Scanner" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_Barcode_Scanner_pressed"]
+[connection signal="toggled" from="Scene1/Scanning Minigame/BarCode Scanner" to="." method="_on_BarCode_scanner_toggled"]
 [connection signal="toggled" from="Scene1/Scanning Minigame/BarCode Scanner" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_toggled"]
+[connection signal="button_up" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="." method="_on_button_up"]
 [connection signal="button_up" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_button_up"]
 [connection signal="mouse_entered" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="." method="_on_pressed"]
 [connection signal="pressed" from="Scene1/Scanning Minigame/ProducttoScan/Button" to="Scene1/Scanning Minigame/ProducttoScan/Button" method="_on_pressed"]
-[connection signal="button_down" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_product_barcode_button_down"]
-[connection signal="button_up" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_product_barcode_button_up"]
+[connection signal="button_down" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="." method="_on_product_barcode_button_down"]
+[connection signal="button_up" from="Scene1/Scanning Minigame/Sprite2D2/ProductBarcode" to="." method="_on_product_barcode_button_up"]
+[connection signal="button_up" from="Scene1/Scanning Minigame/PlaceinBagButton" to="." method="_on_placein_bag_button_button_up"]
 [connection signal="pressed" from="Scene1/Scanning Minigame/PlaceinBagButton" to="." method="_on_placein_bag_button_pressed"]
 [connection signal="pressed" from="Scene1/Scanning Minigame/PlaceinBagButton" to="Scene1/Scanning Minigame/BarCode Scanner" method="_on_placein_bag_button_pressed"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1" to="." method="_on_upgrade1_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2" to="." method="_on_upgrade_2_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3" to="." method="_on_upgrade_3_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4" to="." method="_on_upgrade_4_button_down"]
 [connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
 [connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]

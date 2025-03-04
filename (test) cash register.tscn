@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://rfwu1opje4a4" path="res://Gray.png" id="2_0e778"]
 [ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="3_yabvi"]
-[ext_resource type="Script" path="res://ProducttoScan.gd" id="5_22wco"]
-[ext_resource type="Script" path="res://scanner.gd" id="5_73h0u"]
+[ext_resource type="Script" uid="uid://cl66krass8k4l" path="res://ProducttoScan.gd" id="5_22wco"]
+[ext_resource type="Script" uid="uid://b6ealoxcxnqwy" path="res://scanner.gd" id="5_73h0u"]
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="6_pak0g"]
 
 [node name="Node2D" type="Node2D"]
