@@ -1,8 +1,33 @@
-[gd_scene load_steps=17 format=3 uid="uid://dt4y3nvs6dutf"]
+[gd_scene load_steps=17 format=3 uid="uid://cyx6bbsru2s0v"]
 
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="1_exssr"]
-[ext_resource type="Script" uid="uid://ctctdfa2m5lqu" path="res://coffee_machine.gd" id="1_pys0x"]
 [ext_resource type="Texture2D" uid="uid://c2veb5p7o214x" path="res://Imported/Coffee Machine (Placeholder).png" id="2_asi5t"]
+
+[sub_resource type="GDScript" id="GDScript_j3qce"]
+script/source = "extends Node2D
+
+func _ready():
+	$AnimatedSprite2D.hide()
+
+func _on_coffeemachine_pressed():
+	$Sprite2D.hide()
+	
+	$AnimatedSprite2D.show()
+	$AnimatedSprite2D.play()
+	
+	$CoffeeMachine/CoffeeMachineCooldown.start()
+	
+	print(\"Coffee coming right up!\")
+	if $CoffeeMachine/CoffeeMachineCooldown.time_left > 0:
+		$CoffeeMachine.disabled = true
+
+func _on_coffeemachine_cooldown_timeout():
+	$CoffeeMachine.disabled = false
+	$AnimatedSprite2D.hide()
+	$Sprite2D.show()
+
+## if you drink coffee while hot, -75 permanent to energy bar each time you drink it while it's hot
+## you drink it cool? delete the debuffs"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
 atlas = ExtResource("2_asi5t")
@@ -97,7 +122,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_pys0x")
+script = SubResource("GDScript_j3qce")
 
 [node name="CoffeeMachine" type="Button" parent="."]
 show_behind_parent = true

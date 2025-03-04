@@ -68,7 +68,7 @@ func _on_product_barcode_button_down():
 func _on_placein_bag_button_pressed():
 	$"../Bagging Area".show()
 	if using_normal_cursor:
-		self.shzow()
+		self.show()
 		$"../PlaceinBagButton".disabled = false
 		$"../ProducttoScan".show()
 		$"../ProducttoScan/Button".show()
