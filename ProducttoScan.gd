@@ -8,7 +8,7 @@ extends Button
 
 
 ## uncomment when integration with scene1 is ready.
-#@onready var customer = $Scene1/Customer
+#@onready var customer = $Scene1/Scene1CanvasLayer/Customer
 #
 func _ready():
 	$"../../Sprite2D2/ProductBarcode".disabled = true

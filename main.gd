@@ -18,16 +18,26 @@ func _on_button_1_pressed():
 	$"Scene2/Upgrades/Upgrade4-CustomerTemper".hide()
 
 	#scene3 hide
-	$Scene3/TextureScene2.hide()
-	$Scene3/Customer.hide()
+	$Scene3/TextureScene3.hide()
+	
+	# TruckScene hide
+	$Scene3/TruckScene/TextureSceneTruck.hide()
+	$Scene3/TruckScene/ToComputer.hide()
+	
+	# ComputerScene hide
+	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/TruckScene/ComputerScene/ToTruck.hide()
+	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".hide()
+	$Scene3/TruckScene/ComputerScene/Computer.hide()
 
 	#scene4 hide
-	$Scene4/TextureScene2.hide()
-	$Scene4/Customer.hide()
+	$Scene4/TextureScene4.hide()
 	$Scene4/CanvasLayer.hide()
-	
+
 	##always show
-	$PlayerGUI/CanvasLayerEnergy/EnergyBar.show()
+	$PlayerGUI/CanvasLayerButtons.show()
+	$PlayerGUI/CanvasLayerEnergy.show()
+	$PlayerGUI/CanvasLayerSupplies.show()
 
 func _on_button_2_pressed():
 	#show scene2
@@ -47,21 +57,40 @@ func _on_button_2_pressed():
 	$Scene1/ProgressBar/Label.hide()
 
 	#scene3 hide
-	$Scene3/TextureScene2.hide()
-	$Scene3/Customer.hide()
+	$Scene3/TextureScene3.hide()
+	
+	# TruckScene hide
+	$Scene3/TruckScene/TextureSceneTruck.hide()
+	$Scene3/TruckScene/ToComputer.hide()
+	
+	# ComputerScene hide
+	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/TruckScene/ComputerScene/ToTruck.hide()
+	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".hide()
+	$Scene3/TruckScene/ComputerScene/Computer.hide()
 
 	#scene4 hide
-	$Scene4/TextureScene2.hide()
-	$Scene4/Customer.hide()
+	$Scene4/TextureScene4.hide()
 	$Scene4/CanvasLayer.hide()
 
 	##always show
-	$PlayerGUI/CanvasLayerEnergy/EnergyBar.show()
+	$PlayerGUI/CanvasLayerButtons.show()
+	$PlayerGUI/CanvasLayerEnergy.show()
+	$PlayerGUI/CanvasLayerSupplies.show()
 
 func _on_button_3_pressed():
 	#scene3 show
-	$Scene3/TextureScene2.show()
-	$Scene3/Customer.show()
+	$Scene3/TextureScene3.show()
+	
+	# TruckScene show
+	$Scene3/TruckScene/TextureSceneTruck.show()
+	$Scene3/TruckScene/ToComputer.show()
+	
+	# ComputerScene show
+	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.show()
+	$Scene3/TruckScene/ComputerScene/ToTruck.show()
+	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".show()
+	$Scene3/TruckScene/ComputerScene/Computer.show()
 
 	#scene1 hide
 	$Scene1/TextureRect.hide()
@@ -80,19 +109,19 @@ func _on_button_3_pressed():
 	$"Scene2/Upgrades/Upgrade4-CustomerTemper".hide()
 
 	#scene4 hide
-	$Scene4/TextureScene2.hide()
-	$Scene4/Customer.hide()
+	$Scene4/TextureScene4.hide()
 	$Scene4/CanvasLayer.hide()
 
 	##always show
-	$PlayerGUI/CanvasLayerEnergy/EnergyBar.show()
+	$PlayerGUI/CanvasLayerButtons.show()
+	$PlayerGUI/CanvasLayerEnergy.show()
+	$PlayerGUI/CanvasLayerSupplies.show()
 
 func _on_button_4_pressed():
-	#scene4 show
-	$Scene4/TextureScene2.show()
-	$Scene4/Customer.show()
+	#show scene4
+	$Scene4/TextureScene4.show()
 	$Scene4/CanvasLayer.show()
-
+	
 	#scene1 hide
 	$Scene1/TextureRect.hide()
 	$Scene1/Customer.hide()
@@ -109,11 +138,22 @@ func _on_button_4_pressed():
 	$"Scene2/Upgrades/Upgrade4-CustomerTemper".hide()
 
 	#scene3 hide
-	$Scene3/TextureScene2.hide()
-	$Scene3/Customer.hide()
+	$Scene3/TextureScene3.show()
+	
+	# TruckScene hide
+	$Scene3/TruckScene/TextureSceneTruck.show()
+	$Scene3/TruckScene/ToComputer.show()
+	
+	# ComputerScene hide
+	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.show()
+	$Scene3/TruckScene/ComputerScene/ToTruck.show()
+	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".show()
+	$Scene3/TruckScene/ComputerScene/Computer.show()
 
 	##always show
-	$PlayerGUI/CanvasLayerEnergy/EnergyBar.show()
+	$PlayerGUI/CanvasLayerButtons.show()
+	$PlayerGUI/CanvasLayerEnergy.show()
+	$PlayerGUI/CanvasLayerSupplies.show()
 
 
 ## PROGRESS BARS & CUSTOMER TEMPER
@@ -128,23 +168,31 @@ func _on_button_4_pressed():
 @onready var label2 = $Scene1/ProgressBar2/Label2
 @onready var label3 = $PlayerGUI/CanvasLayerEnergy/EnergyBar/Label
 
-@export var countdown_time1 : float = 11.0 ### Need to change for Upgrade4, same as I did with Upgrade2.
-@export var countdown_time2 : float = 6.0 ### Need to change for Upgrade4, same as I did with Upgrade2.
-@export var countdown_time3 : float = 25 ### Need to change for Upgrade4, same as I did with Upgrade2.
-
-@onready var coin_label = $PlayerGUI/CanvasLayerCoins/Label
+@export var countdown_time1 : float = 11.0 ### Need to change for Upgrade4, same as I did with Upgrade2. ## Customer Temper
+@export var countdown_time2 : float = 6.0 ### Need to change for Upgrade4, same as I did with Upgrade2. ## Customer Reappear
+@export var countdown_time3 : float = 26 ## Energy time
 
 @onready var kaching: AudioStreamPlayer2D = $Scene2/Upgrades/Successful
 @onready var error_onBuy: AudioStreamPlayer2D = $Scene2/Upgrades/Error
 
-@onready var BarCode_Scanner = $"Scene1/Scanning Minigame/BarCode Scanner"
-@onready var PlaceinBagButton = $"Scene1/Scanning Minigame/PlaceinBagButton"
-@onready var Coin_Label = $PlayerGUI/CanvasLayerCoins/Label
+@onready var BarCode_Scanner = $"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner"
+@onready var PlaceinBagButton = $"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton"
+@onready var coin_label: Label = $PlayerGUI/CanvasLayerSupplies/Coins
+
+@onready var Customer = $Scene1/Customer
+@onready var scanning_minigame = $"Scene1/ScanningMinigameCanvasLayer"
+
+@onready var box_label: Label = $PlayerGUI/CanvasLayerSupplies/Supplies
+
+@onready var fake_background: TextureRect = $"Scene1/ScanningMinigameCanvasLayer/Fake Background"
 
 var coin_gain: int = 1
 
 ## CUSTOMER TEMPER
 func _ready():
+	if Customer:
+		Customer.visibility_changed.connect(_on_customer_visibility_changed)
+		_on_customer_visibility_changed()  # Ensure correct visibility at start
 	
 		## ENERGY TIMER READY
 	$PlayerGUI/CanvasLayerEnergy/EnergyBar/EnergyTimer.start()
@@ -158,8 +206,8 @@ func _ready():
 	
 	## SCANNER BUTTON
 	Input.set_custom_mouse_cursor(null)  # System cursor by default 
-	Beep = $"Scene1/Scanning Minigame/BarCode Scanner/Beep"
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".toggle_mode = true 
+	Beep = $"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner/Beep"
+	$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".toggle_mode = true 
 	Beep.stream = preload("res://beep.wav")
 	
 	# Set up initial values Customer time and pb
@@ -177,6 +225,10 @@ func _ready():
 		$Scene1/ProgressBar/CustomerTemper.start()
 		$Scene1/ProgressBar.visible = true
 		$Scene1/ProgressBar/Label.visible = true 
+
+func _on_customer_visibility_changed():
+	if Customer:
+		scanning_minigame.visible = Customer.visible
 
 func _on_customer_temper_timeout():
 	print("Time out")
@@ -204,7 +256,6 @@ func _on_customer_reappear_timeout():
 	timer.start()
 	$Scene1/ProgressBar.visible = true
 	$Scene1/ProgressBar/Label.visible = true
-
 
 ## LABEL CODE
 
@@ -306,6 +357,23 @@ func add_coin(amount: int):
 	coin_count += amount
 	coin_label.text = str(coin_count)  #Update Label
 
+
+### SUPPLIES!!
+
+var box_count: int = 0
+
+func sub_box(amount: int):
+	box_count -= amount
+	box_label.text = str(box_count)  #update Label
+func update_box_display():
+	box_label.text = str(box_count)  #update Label
+
+
+func add_box(amount: int):
+	box_count += amount
+	box_label.text = str(box_count)  #Update Label
+
+
 ### UPGRADE SHOP
 
 func _on_upgrade1_button_down():
@@ -346,10 +414,15 @@ func _on_upgrade_4_button_down():
 	if coin_count >= 4:
 		sub_coin(4)
 		print("UPGRADE 4 BOUGHT")
+		countdown_time1 += 1
+		timer.wait_time = countdown_time1
+		### ENABLE WHEN DIFFERENT UPGRADE LEVELS ### $"Scene2/Upgrades/Upgrade1-Energy/upgrade4".hide()
+		### ENABLE WHEN DIFFERENT UPGRADE LEVELS ### $"Scene2/Upgrades/Upgrade1-Energy/upgrade4".disabled = true
 		kaching.play()
 	else:
 		print("couldn't buy")
 		error_onBuy.play()
+		
 
 
 #### SCANNING MINIGAME
@@ -362,33 +435,33 @@ var texture_pickedup: Texture = preload("res://icon.svg")
 var Beep: AudioStreamPlayer2D
 
 func _on_product_barcode_button_up():
-	$"Scene1/Scanning Minigame/PlaceinBagButton".show()
-	$"Scene1/Scanning Minigame/PlaceinBagButton".disabled = false
+	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".show()
+	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
 
 
 func _on_product_barcode_button_down():
-	$"Scene1/Scanning Minigame/PlaceinBagButton".show()
+	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".show()
 	if PlaceinBagButton.visible:
-		$"Scene1/Scanning Minigame/PlaceinBagButton".disabled = false
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = true
+		$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
+		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
 
 	if using_custom_cursor:
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = true
-		$"Scene1/Scanning Minigame/Sprite2D2".hide()
+		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
+		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2".hide()
 		Beep.play()
-		$"Scene1/Scanning Minigame/PlaceinBagButton".show()
-		$"Scene1/Scanning Minigame/PlaceinBagButton".disabled = false
+		$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".show()
+		$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
 	else:
 		pass
 
 
 func _on_placein_bag_button_button_up():
-	$"Scene1/Scanning Minigame/Bagging Area".show() 	
-	$"Scene1/Scanning Minigame/BarCode Scanner".show()
-	$"Scene1/Scanning Minigame/PlaceinBagButton".disabled = false
-	$"Scene1/Scanning Minigame/ProducttoScan".show()
-	$"Scene1/Scanning Minigame/ProducttoScan/Button".show()
-	$"Scene1/Scanning Minigame/PlaceinBagButton".hide()
+	$"Scene1/ScanningMinigameCanvasLayer/Bagging Area".show() 	
+	$"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner".show()
+	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
+	$"Scene1/ScanningMinigameCanvasLayer/ProducttoScan".show()
+	$"Scene1/ScanningMinigameCanvasLayer/ProducttoScan/Button".show()
+###	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".hide()
 
 	var main_node = get_tree().root.get_node("Node")
 	if main_node:
@@ -399,20 +472,64 @@ func _on_placein_bag_button_button_up():
 
 
 func _on_BarCode_scanner_toggled(toggled_on: bool):
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".show()
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
+	$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".show()
+	$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
 	if using_custom_cursor:
 		Input.set_custom_mouse_cursor(null)
 		print("System Cursor")
-		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_normal  # Change button texture when picked up
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
-		$"Scene1/Scanning Minigame/Fake Background".hide()
+		$"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner".icon = texture_normal  # Change button texture when picked up
+		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
+		$"Scene1/ScanningMinigameCanvasLayer/Fake Background".hide()
+		
 	else:
 		var hotspot = Vector2(223, 46) ## s223, 46
 		Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, hotspot)
-		$"Scene1/Scanning Minigame/BarCode Scanner".icon = texture_pickedup  # Change button texture when picked up
+		$"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner".icon = texture_pickedup  # Change button texture when picked up
 		print("BarCode Scanner Picked up!")
-		$"Scene1/Scanning Minigame/Fake Background".show()
+		$"Scene1/ScanningMinigameCanvasLayer/Fake Background".show()
 	
 	# Toggle the state of the custom cursor
 	using_custom_cursor = !using_custom_cursor
+
+#### 3 UPGRADE
+
+func _on_toTruck_pressed():
+	# Computer Scene
+	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/TruckScene/ComputerScene/ToTruck.hide()
+	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".hide()
+	$Scene3/TruckScene/ComputerScene/Computer.hide()
+	
+	# Truck Scene
+	$Scene3/TruckScene/TextureSceneTruck.show()
+	$Scene3/TruckScene/ToComputer.show()
+
+
+func _on_computer_pressed():
+	$Scene3/TruckScene/ComputerScene/ComputerCanvasLayer.show()
+	
+
+#### COMPUTER LAYOUT
+
+func _on_close_button_pressed():
+	$Scene3/TruckScene/ComputerScene/ComputerCanvasLayer.hide()
+
+
+func _on_close_button_2_pressed():
+	$Scene3/TruckScene/ComputerScene/ComputerCanvasLayer.hide()
+
+
+#### 3-1 UPGRADE
+func _on_toComputer_pressed():
+	
+
+	
+	# Computer Scene
+	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.show()
+	$Scene3/TruckScene/ComputerScene/ToTruck.show()
+	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".show()
+	$Scene3/TruckScene/ComputerScene/Computer.show()
+
+	# Truck Scene
+	$Scene3/TruckScene/TextureSceneTruck.hide()
+	$Scene3/TruckScene/ToComputer.hide()

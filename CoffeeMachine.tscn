@@ -27,7 +27,8 @@ func _on_coffeemachine_cooldown_timeout():
 	$Sprite2D.show()
 
 ## if you drink coffee while hot, -75 permanent to energy bar each time you drink it while it's hot
-## you drink it cool? delete the debuffs"
+## you drink it cool? delete the debuffs
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
 atlas = ExtResource("2_asi5t")
@@ -132,6 +133,7 @@ offset_left = 331.0
 offset_top = 136.0
 offset_right = 756.0
 offset_bottom = 494.0
+metadata/_edit_use_anchors_ = true
 
 [node name="CoffeeMachineCooldown" type="Timer" parent="CoffeeMachine"]
 wait_time = 5.0

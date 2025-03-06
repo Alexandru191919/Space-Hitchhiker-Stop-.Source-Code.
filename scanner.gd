@@ -10,7 +10,7 @@ var coin_gain: int = 1
 
 @onready var BarCode_Scanner = $"."
 @onready var PlaceinBagButton = $"../PlaceinBagButton"
-@onready var Coin_Label = $"../../../PlayerGUI/CanvasLayerCoins/Label"
+@onready var coin_label = $"../../../PlayerGUI/CanvasLayerCoins/Label"
 
 
 func _ready():
@@ -21,13 +21,13 @@ func _ready():
 
 
 #func _on_Barcode_Scanner_pressed():
-#	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".show()
-#	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = true
+#	$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".show()
+#	$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
 #	if using_custom_cursor:
 #		Input.set_custom_mouse_cursor(null)
 #		print("System Cursor")
 #		self.icon = texture_normal  # Change button texture when picked up
-#		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
+#		$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
 #		
 #	else:
 #		var hotspot = Vector2(223, 46) ## s223, 46
@@ -39,8 +39,8 @@ func _ready():
 #	using_custom_cursor = !using_custom_cursor
 
 func _on_BarCode_Scanner_button_down():
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".hide()
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
+	$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".hide()
+	$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
 
 #func _on_button_mouse_entered() -> void:
 #	pass #### change cursor to opened hand, about to take the scanner
@@ -54,10 +54,10 @@ func _on_product_barcode_button_down():
 	$"../PlaceinBagButton".show()
 	if PlaceinBagButton.visible:
 		$"../PlaceinBagButton".disabled = false
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = true
+		$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
 
 	if using_custom_cursor:
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = true
+		$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
 		$"../Sprite2D2".hide()
 		Beep.play()
 		$"../PlaceinBagButton".show()
@@ -86,13 +86,13 @@ func _on_placein_bag_button_pressed():
 
 
 func _on_toggled(toggled_off: bool):
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".show()
-	$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
+	$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".show()
+	$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
 	if using_custom_cursor:
 		Input.set_custom_mouse_cursor(null)
 		print("System Cursor")
 		self.icon = texture_normal  # Change button texture when picked up
-		$"Scene1/Scanning Minigame/Sprite2D2/ProductBarcode".disabled = false
+		$"Scene1/Scene1CanvasLayer/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
 		
 	else:
 		var hotspot = Vector2(223, 46) ## s223, 46

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkwqhwn4gdgi5"]
+[gd_scene load_steps=6 format=3 uid="uid://cyvwsj2ila341"]
 
 [ext_resource type="Script" uid="uid://dgu36opgegwfp" path="res://area_2d.gd" id="1_mdnvc"]
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="2_bppay"]
@@ -8,9 +8,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ngo0j"]
 radius = 6.0
-
-[sub_resource type="Resource" id="Resource_wk2u3"]
-metadata/__load_path__ = "res://test.gd"
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_mdnvc")
@@ -35,4 +32,3 @@ texture = ExtResource("2_bppay")
 
 [node name="DraggableProduct" parent="." instance=ExtResource("3_l6pu1")]
 position = Vector2(371, 203)
-script = SubResource("Resource_wk2u3")
