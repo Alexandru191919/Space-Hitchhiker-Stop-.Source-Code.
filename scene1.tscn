@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=38 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://603ph41ntibl" path="res://Terrain (16x16).png" id="13_di5qy"]
 [ext_resource type="Texture2D" uid="uid://bufmsujqhgskh" path="res://char/Windows Blue.png" id="15_1b2e6"]
 [ext_resource type="Texture2D" uid="uid://dg8gquviw1v5n" path="res://Imported_Background/Green.png" id="16_1b2e6"]
+[ext_resource type="Texture2D" uid="uid://bup7cpbsfvp7k" path="res://Jump (32x32).png" id="17_r7qbo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hq0e"]
 resource_local_to_scene = true
@@ -89,6 +90,9 @@ func _on_time_tick(day:int, hour:int, minute:int):
 ###	if hour == 15 and minute == 0:
 ###		get_tree().change_scene_to_file(\"res://MainMenu.tscn\")  # Replace with your scene path
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2ved"]
+size = Vector2(609, 365.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
 atlas = ExtResource("10_gq4dn")
@@ -594,6 +598,123 @@ grow_vertical = 2
 texture = ExtResource("9_hc3vt")
 stretch_mode = 1
 
+[node name="ComputerScene" type="Node" parent="Scene3"]
+
+[node name="TextureSceneComputer" type="TextureRect" parent="Scene3/ComputerScene"]
+visible = false
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_efqc3")
+stretch_mode = 1
+
+[node name="ToTruck" type="Button" parent="Scene3/ComputerScene"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.941
+anchor_top = 0.352
+anchor_right = 1.0
+anchor_bottom = 0.523
+offset_left = -0.0321045
+offset_top = -0.0960236
+offset_bottom = 0.0960083
+
+[node name="Restocking Shelves" type="Button" parent="Scene3/ComputerScene"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.436
+anchor_top = 0.08
+anchor_right = 0.908
+anchor_bottom = 0.52
+offset_left = -0.272034
+offset_top = 0.159996
+offset_right = -0.0161133
+offset_bottom = 0.039978
+
+[node name="TakeBox" type="Button" parent="Scene3/ComputerScene"]
+visible = false
+offset_left = 899.0
+offset_top = 362.0
+offset_right = 1144.0
+offset_bottom = 586.0
+
+[node name="Computer" type="Button" parent="Scene3/ComputerScene"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.073
+anchor_top = 0.122
+anchor_right = 0.518
+anchor_bottom = 0.864
+offset_left = -0.0960083
+offset_top = -0.0560074
+offset_right = 0.263977
+offset_bottom = 0.127991
+
+[node name="ComputerCanvasLayer" type="CanvasLayer" parent="Scene3/ComputerScene/Computer"]
+visible = false
+
+[node name="Fake Background" type="TextureRect" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = -14.0
+offset_top = -11.0
+offset_right = 1176.0
+offset_bottom = 668.0
+texture = ExtResource("10_gq4dn")
+stretch_mode = 1
+
+[node name="Computer Blue" type="TextureRect" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 90.0
+offset_top = 49.0
+offset_right = 1039.0
+offset_bottom = 562.0
+texture = ExtResource("15_1b2e6")
+
+[node name="Button" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 178.0
+offset_right = 492.0
+offset_bottom = 293.0
+
+[node name="Button2" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 42.0
+offset_right = 525.0
+offset_bottom = 101.0
+
+[node name="Button3" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 190.0
+offset_right = 243.0
+offset_bottom = 281.0
+
+[node name="Button4" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 43.0
+offset_right = 172.0
+offset_bottom = 118.0
+
+[node name="CloseButton" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 1.0
+offset_right = 949.0
+offset_bottom = 30.0
+
+[node name="CloseButton2" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 918.0
+offset_top = 482.0
+offset_right = 948.0
+offset_bottom = 511.0
+
 [node name="TruckScene" type="Node" parent="Scene3"]
 
 [node name="TextureSceneTruck" type="TextureRect" parent="Scene3/TruckScene"]
@@ -609,6 +730,7 @@ grow_vertical = 2
 texture = ExtResource("12_06jb2")
 expand_mode = 2
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ToComputer" type="Button" parent="Scene3/TruckScene"]
 anchors_preset = -1
@@ -620,107 +742,175 @@ offset_right = 0.0319977
 offset_bottom = 0.0960083
 metadata/_edit_use_anchors_ = true
 
-[node name="ComputerScene" type="Node" parent="Scene3/TruckScene"]
+[node name="AddBox" type="Button" parent="Scene3/TruckScene"]
+offset_left = 4.0
+offset_top = 358.0
+offset_right = 228.0
+offset_bottom = 574.0
+metadata/_edit_use_anchors_ = true
 
-[node name="TextureSceneComputer" type="TextureRect" parent="Scene3/TruckScene/ComputerScene"]
+[node name="Generators" type="Area2D" parent="Scene3/TruckScene"]
+position = Vector2(824, 302)
+
+[node name="buycratetestbutton" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = 39.0
+offset_top = -303.0
+offset_right = 153.0
+offset_bottom = -189.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/Generators"]
+shape = SubResource("RectangleShape2D_g2ved")
+
+[node name="LampthatlightsupGenerators" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
+position = Vector2(-16.5, -238.25)
+scale = Vector2(6.75, 1.375)
+texture = ExtResource("17_r7qbo")
+
+[node name="BoxGenerator3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = -292.0
+offset_top = -172.0
+offset_right = -103.0
+offset_bottom = 174.0
+
+[node name="BuyGenerator3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.114
+anchor_top = 0.424
+anchor_right = 0.865
+anchor_bottom = 0.592
+offset_left = -0.0460014
+offset_top = 0.04599
+offset_right = 0.0149841
+offset_bottom = -0.0820007
+
+[node name="BoxAvailable3" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
 visible = false
-texture_filter = 2
-texture_repeat = 3
-anchors_preset = 15
+position = Vector2(93, -11)
+scale = Vector2(0.734375, 0.5625)
+texture = ExtResource("8_lljbe")
+
+[node name="BoxGenerator2" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -52.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("10_efqc3")
-stretch_mode = 1
+offset_left = -93.0
+offset_top = -172.0
+offset_right = 96.0
+offset_bottom = 174.0
 
-[node name="ToTruck" type="Button" parent="Scene3/TruckScene/ComputerScene"]
-visible = false
+[node name="BuyGenerator2" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2"]
+layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.941
-anchor_top = 0.352
+anchor_left = 0.114
+anchor_top = 0.424
+anchor_right = 0.865
+anchor_bottom = 0.592
+offset_left = -0.0460014
+offset_top = 0.04599
+offset_right = 0.0149841
+offset_bottom = -0.0820007
+
+[node name="BoxAvailable2" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2"]
+visible = false
+position = Vector2(93, -11)
+scale = Vector2(0.734375, 0.5625)
+texture = ExtResource("8_lljbe")
+
+[node name="BoxGenerator" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.523
-offset_left = -0.0321045
-offset_top = -0.0960236
-offset_bottom = 0.0960083
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = -172.0
+offset_right = 295.0
+offset_bottom = 174.0
 
-[node name="Restocking Shelves" type="Button" parent="Scene3/TruckScene/ComputerScene"]
+[node name="BoxAvailable" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator"]
 visible = false
-anchors_preset = -1
-anchor_left = 0.436
-anchor_top = 0.08
-anchor_right = 0.908
-anchor_bottom = 0.52
-offset_left = -0.272034
-offset_top = 0.159996
-offset_right = -0.0161133
-offset_bottom = 0.039978
+position = Vector2(93, -11)
+scale = Vector2(0.734375, 0.5625)
+texture = ExtResource("8_lljbe")
 
-[node name="Computer" type="Button" parent="Scene3/TruckScene/ComputerScene"]
-visible = false
-anchors_preset = -1
-anchor_left = 0.073
-anchor_top = 0.122
-anchor_right = 0.518
-anchor_bottom = 0.864
-offset_left = -0.0960083
-offset_top = -0.0560074
-offset_right = 0.263977
-offset_bottom = 0.127991
+[node name="GeneratorSpeedUpgrade" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = -293.0
+offset_top = 222.0
+offset_right = 288.0
+offset_bottom = 262.0
 
-[node name="ComputerCanvasLayer" type="CanvasLayer" parent="Scene3/TruckScene/ComputerScene"]
-visible = false
+[node name="GeneratorSpeedUpgrade" type="Button" parent="Scene3/TruckScene/Generators/GeneratorSpeedUpgrade"]
+offset_left = -1.0
+offset_top = -28.0
+offset_right = 580.0
+offset_bottom = -7.0
 
-[node name="Computer Blue" type="TextureRect" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer"]
-offset_left = 90.0
-offset_top = 49.0
-offset_right = 1039.0
-offset_bottom = 562.0
-texture = ExtResource("15_1b2e6")
+[node name="ammounttest" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = -384.0
+offset_top = -298.0
+offset_right = -170.0
+offset_bottom = -121.0
+text = "1"
 
-[node name="Button" type="Button" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue"]
+[node name="1" type="Label" parent="Scene3/TruckScene/Generators/ammounttest"]
 layout_mode = 0
-offset_left = 349.0
-offset_top = 178.0
-offset_right = 492.0
-offset_bottom = 293.0
+offset_right = 40.0
+offset_bottom = 23.0
 
-[node name="Button2" type="Button" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue"]
-layout_mode = 0
-offset_left = 340.0
-offset_top = 42.0
-offset_right = 525.0
-offset_bottom = 101.0
+[node name="ammounttest2" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = -540.0
+offset_top = 97.0
+offset_right = -326.0
+offset_bottom = 274.0
+text = "20"
 
-[node name="Button3" type="Button" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue"]
-layout_mode = 0
-offset_left = 46.0
-offset_top = 190.0
-offset_right = 243.0
-offset_bottom = 281.0
+[node name="20" type="Label" parent="Scene3/TruckScene/Generators/ammounttest2"]
+offset_right = 40.0
+offset_bottom = 23.0
 
-[node name="Button4" type="Button" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 43.0
-offset_right = 172.0
-offset_bottom = 118.0
+[node name="ammounttest3" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = -694.0
+offset_top = -254.0
+offset_right = -480.0
+offset_bottom = -77.0
+text = "5"
 
-[node name="CloseButton" type="Button" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue"]
-layout_mode = 0
-offset_left = 919.0
-offset_top = 1.0
-offset_right = 949.0
-offset_bottom = 30.0
+[node name="5" type="Label" parent="Scene3/TruckScene/Generators/ammounttest3"]
+offset_right = 40.0
+offset_bottom = 23.0
 
-[node name="CloseButton2" type="Button" parent="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue"]
+[node name="purchasetest" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = -723.0
+offset_top = 238.0
+offset_right = -206.0
+offset_bottom = 321.0
+text = "buy"
+
+[node name="ammounttobuy" type="Label" parent="Scene3/TruckScene/Generators/purchasetest"]
 layout_mode = 0
-offset_left = 918.0
-offset_top = 482.0
-offset_right = 948.0
-offset_bottom = 511.0
+offset_left = 413.0
+offset_top = 30.0
+offset_right = 453.0
+offset_bottom = 53.0
+
+[node name="closetest" type="Button" parent="Scene3/TruckScene/Generators"]
+offset_left = -813.0
+offset_top = -169.0
+offset_right = -590.0
+offset_bottom = -2.0
+
+[node name="BuyAutoRobot" type="Button" parent="Scene3/TruckScene"]
+offset_left = 265.0
+offset_top = 67.0
+offset_right = 489.0
+offset_bottom = 455.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ToggleAutoRobot" type="Button" parent="Scene3/TruckScene/BuyAutoRobot"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="Scene4" type="Node" parent="."]
 
@@ -813,11 +1003,18 @@ offset_bottom = 66.0
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2" to="." method="_on_upgrade_2_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3" to="." method="_on_upgrade_3_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4" to="." method="_on_upgrade_4_button_down"]
+[connection signal="pressed" from="Scene3/ComputerScene/ToTruck" to="." method="_on_toTruck_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer" to="." method="_on_computer_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue/CloseButton2" to="." method="_on_close_button_2_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/ToComputer" to="." method="_on_toComputer_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/ComputerScene/ToTruck" to="." method="_on_toTruck_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/ComputerScene/Computer" to="." method="_on_computer_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue/CloseButton" to="." method="_on_close_button_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/ComputerScene/ComputerCanvasLayer/Computer Blue/CloseButton2" to="." method="_on_close_button_2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/buycratetestbutton" to="." method="_on_buycratetestbutton_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" to="." method="_on_BoxGenerator_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/ammounttest" to="." method="_on_ammounttest_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/ammounttest2" to="." method="_on_ammounttest_2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/ammounttest3" to="." method="_on_ammounttest_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/purchasetest" to="." method="_on_purchasetest_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/closetest" to="." method="_on_closetest_pressed"]
 [connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
 [connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]

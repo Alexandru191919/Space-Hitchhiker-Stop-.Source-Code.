@@ -20,15 +20,18 @@ func _on_button_1_pressed():
 	#scene3 hide
 	$Scene3/TextureScene3.hide()
 	
+	# ComputerScene hide
+	$Scene3/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/ComputerScene/ToTruck.hide()
+	$"Scene3/ComputerScene/Restocking Shelves".hide()
+	$Scene3/ComputerScene/Computer.hide()
+
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	
-	# ComputerScene hide
-	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.hide()
-	$Scene3/TruckScene/ComputerScene/ToTruck.hide()
-	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".hide()
-	$Scene3/TruckScene/ComputerScene/Computer.hide()
+	$Scene3/TruckScene/AddBox.hide()
+	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/BuyAutoRobot.hide()
 
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
@@ -59,15 +62,18 @@ func _on_button_2_pressed():
 	#scene3 hide
 	$Scene3/TextureScene3.hide()
 	
+	# ComputerScene hide
+	$Scene3/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/ComputerScene/ToTruck.hide()
+	$"Scene3/ComputerScene/Restocking Shelves".hide()
+	$Scene3/ComputerScene/Computer.hide()
+
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	
-	# ComputerScene hide
-	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.hide()
-	$Scene3/TruckScene/ComputerScene/ToTruck.hide()
-	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".hide()
-	$Scene3/TruckScene/ComputerScene/Computer.hide()
+	$Scene3/TruckScene/AddBox.hide()
+	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/BuyAutoRobot.hide()
 
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
@@ -82,15 +88,18 @@ func _on_button_3_pressed():
 	#scene3 show
 	$Scene3/TextureScene3.show()
 	
-	# TruckScene show
-	$Scene3/TruckScene/TextureSceneTruck.show()
-	$Scene3/TruckScene/ToComputer.show()
-	
-	# ComputerScene show
-	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.show()
-	$Scene3/TruckScene/ComputerScene/ToTruck.show()
-	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".show()
-	$Scene3/TruckScene/ComputerScene/Computer.show()
+	# show ComputerScene
+	$Scene3/ComputerScene/TextureSceneComputer.show()
+	$Scene3/ComputerScene/ToTruck.show()
+	$"Scene3/ComputerScene/Restocking Shelves".show()
+	$Scene3/ComputerScene/Computer.show()
+
+	# TruckScene hide
+	$Scene3/TruckScene/TextureSceneTruck.hide()
+	$Scene3/TruckScene/ToComputer.hide()
+	$Scene3/TruckScene/AddBox.hide()
+	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/BuyAutoRobot.hide()
 
 	#scene1 hide
 	$Scene1/TextureRect.hide()
@@ -140,15 +149,18 @@ func _on_button_4_pressed():
 	#scene3 hide
 	$Scene3/TextureScene3.show()
 	
-	# TruckScene hide
-	$Scene3/TruckScene/TextureSceneTruck.show()
-	$Scene3/TruckScene/ToComputer.show()
-	
 	# ComputerScene hide
-	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.show()
-	$Scene3/TruckScene/ComputerScene/ToTruck.show()
-	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".show()
-	$Scene3/TruckScene/ComputerScene/Computer.show()
+	$Scene3/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/ComputerScene/ToTruck.hide()
+	$"Scene3/ComputerScene/Restocking Shelves".hide()
+	$Scene3/ComputerScene/Computer.hide()
+
+	# TruckScene hide
+	$Scene3/TruckScene/TextureSceneTruck.hide()
+	$Scene3/TruckScene/ToComputer.hide()
+	$Scene3/TruckScene/AddBox.hide()
+	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/BuyAutoRobot.hide()
 
 	##always show
 	$PlayerGUI/CanvasLayerButtons.show()
@@ -185,6 +197,25 @@ func _on_button_4_pressed():
 @onready var box_label: Label = $PlayerGUI/CanvasLayerSupplies/Supplies
 
 @onready var fake_background: TextureRect = $"Scene1/ScanningMinigameCanvasLayer/Fake Background"
+
+@onready var BoxAvailable: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable
+@onready var BoxAvailable2: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable2
+@onready var BoxAvailable3: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable3
+
+
+####### TESTING SITE
+
+####@onready var BoxAmmount: Label = 
+####@onready var BoxAmmount2: Label = 
+####@onready var BoxAmmount3: Label = 
+
+@onready var BoxAmmountBuy1: int = 1
+@onready var BoxAmmountBuy3: int = 5
+@onready var BoxAmmountBuy2: int = 20
+
+@onready var AmmountToBuy: Label = $Scene3/TruckScene/Generators/purchasetest/ammounttobuy
+
+var current_cost: int = 0
 
 var coin_gain: int = 1
 
@@ -346,32 +377,32 @@ func _on_coffee_pressed():
 
 var coin_count: int = 0
 
-func sub_coin(amount: int):
-	coin_count -= amount
-	coin_label.text = str(coin_count)  #update Label
-func update_coin_display():
-	coin_label.text = str(coin_count)  #update Label
-
-
 func add_coin(amount: int):
 	coin_count += amount
 	coin_label.text = str(coin_count)  #Update Label
+
+func sub_coin(amount: int):
+	coin_count -= amount
+	coin_label.text = str(coin_count)  #update Label
+	
+func update_coin_display():
+	coin_label.text = str(coin_count)  #update Label
 
 
 ### SUPPLIES!!
 
 var box_count: int = 0
 
-func sub_box(amount: int):
-	box_count -= amount
-	box_label.text = str(box_count)  #update Label
-func update_box_display():
-	box_label.text = str(box_count)  #update Label
-
-
 func add_box(amount: int):
 	box_count += amount
 	box_label.text = str(box_count)  #Update Label
+
+func sub_box(amount: int):
+	box_count -= amount
+	box_label.text = str(box_count)  #update Label
+	
+func update_box_display():
+	box_label.text = str(box_count)  #update Label
 
 
 ### UPGRADE SHOP
@@ -491,45 +522,108 @@ func _on_BarCode_scanner_toggled(toggled_on: bool):
 	# Toggle the state of the custom cursor
 	using_custom_cursor = !using_custom_cursor
 
-#### 3 UPGRADE
+#### SCENE 3 
 
 func _on_toTruck_pressed():
-	# Computer Scene
-	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.hide()
-	$Scene3/TruckScene/ComputerScene/ToTruck.hide()
-	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".hide()
-	$Scene3/TruckScene/ComputerScene/Computer.hide()
-	
-	# Truck Scene
+
+	# ComputerScene hide
+	$Scene3/ComputerScene/TextureSceneComputer.hide()
+	$Scene3/ComputerScene/ToTruck.hide()
+	$"Scene3/ComputerScene/Restocking Shelves".hide()
+	$Scene3/ComputerScene/TakeBox.hide()
+	$Scene3/ComputerScene/Computer.hide()
+	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
+
+	# Show TruckScene
 	$Scene3/TruckScene/TextureSceneTruck.show()
 	$Scene3/TruckScene/ToComputer.show()
+	$Scene3/TruckScene/AddBox.show()
+	$Scene3/TruckScene/Generators.show()
+	$Scene3/TruckScene/BuyAutoRobot.show()
 
 
 func _on_computer_pressed():
-	$Scene3/TruckScene/ComputerScene/ComputerCanvasLayer.show()
-	
+	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.show()
+
 
 #### COMPUTER LAYOUT
 
 func _on_close_button_pressed():
-	$Scene3/TruckScene/ComputerScene/ComputerCanvasLayer.hide()
+	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 
 
 func _on_close_button_2_pressed():
-	$Scene3/TruckScene/ComputerScene/ComputerCanvasLayer.hide()
+	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 
 
-#### 3-1 UPGRADE
+#### SCENE 3-1
 func _on_toComputer_pressed():
 	
+	# Show ComputerScene
+	$Scene3/ComputerScene/TextureSceneComputer.show()
+	$Scene3/ComputerScene/ToTruck.show()
+	$"Scene3/ComputerScene/Restocking Shelves".show()
+	$Scene3/ComputerScene/TakeBox.show()
+	$Scene3/ComputerScene/Computer.show()
 
-	
-	# Computer Scene
-	$Scene3/TruckScene/ComputerScene/TextureSceneComputer.show()
-	$Scene3/TruckScene/ComputerScene/ToTruck.show()
-	$"Scene3/TruckScene/ComputerScene/Restocking Shelves".show()
-	$Scene3/TruckScene/ComputerScene/Computer.show()
-
-	# Truck Scene
+	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
+	$Scene3/TruckScene/AddBox.hide()
+	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/BuyAutoRobot.hide()
+
+
+#### BOX GENERATORS
+### BOX GENERATOR 1
+#func _on_BoxGenerator_pressed():
+#	if BoxAvailable.visible == true:
+#		add_box(BoxAmmount)
+#
+#### BOX GENERATOR 2
+#	if BoxAvailable2.visible == true:
+#		add_box(BoxAmmount2)
+#
+#### BOX GENERATOR 3
+#	if BoxAvailable3.visible == true:
+#		add_box(BoxAmmount3)
+
+func _on_buycratetestbutton_pressed():
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable.show()
+
+
+
+
+
+
+
+
+
+
+
+####### TESTING ZONE
+
+
+
+func _on_purchasetest_pressed():
+	if BoxAvailable.visible == true:
+		pass
+	else:
+		sub_coin(current_cost)
+
+func _on_ammounttest_pressed():
+	AmmountToBuy.text = "1" # ammount to show when clicking button
+	current_cost = 1 # ammount to deduct in player's wallet
+
+func _on_ammounttest_2_pressed():
+	AmmountToBuy.text =  "5" # ammount to show when clicking button
+	current_cost = 5 # ammount to deduct in player's wallet
+
+func _on_ammounttest_3_pressed():
+	AmmountToBuy.text = "20" # ammount to show when clicking button
+	current_cost = 20 # ammount to deduct in player's wallet
+
+
+func _on_closetest_pressed() -> void:
+	AmmountToBuy.text = " "
+	current_cost = 0
