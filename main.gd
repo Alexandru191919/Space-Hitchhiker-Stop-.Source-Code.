@@ -32,6 +32,9 @@ func _on_button_1_pressed():
 	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
@@ -74,6 +77,9 @@ func _on_button_2_pressed():
 	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
@@ -100,6 +106,9 @@ func _on_button_3_pressed():
 	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	#scene1 hide
 	$Scene1/TextureRect.hide()
@@ -161,6 +170,9 @@ func _on_button_4_pressed():
 	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	##always show
 	$PlayerGUI/CanvasLayerButtons.show()
@@ -180,12 +192,16 @@ func _on_button_4_pressed():
 @onready var label2 = $Scene1/ProgressBar2/Label2
 @onready var label3 = $PlayerGUI/CanvasLayerEnergy/EnergyBar/Label
 
-@export var countdown_time1 : float = 11.0 ### Need to change for Upgrade4, same as I did with Upgrade2. ## Customer Temper
-@export var countdown_time2 : float = 6.0 ### Need to change for Upgrade4, same as I did with Upgrade2. ## Customer Reappear
+@export var countdown_time1 : float = 11.0 ## Customer Temper
+@export var countdown_time2 : float = 6.0 ## Customer Reappear
 @export var countdown_time3 : float = 26 ## Energy time
+
+## BUYING SOUNDS
 
 @onready var kaching: AudioStreamPlayer2D = $Scene2/Upgrades/Successful
 @onready var error_onBuy: AudioStreamPlayer2D = $Scene2/Upgrades/Error
+
+## SCANNING MINIGAME
 
 @onready var BarCode_Scanner = $"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner"
 @onready var PlaceinBagButton = $"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton"
@@ -194,33 +210,46 @@ func _on_button_4_pressed():
 @onready var Customer = $Scene1/Customer
 @onready var scanning_minigame = $"Scene1/ScanningMinigameCanvasLayer"
 
-@onready var box_label: Label = $PlayerGUI/CanvasLayerSupplies/Supplies
+## SUPPLIES AND SUCH
+
+@onready var box_label: Label = $PlayerGUI/CanvasLayerSupplies/SuppliestoProcess
+@onready var supplies_label: Label = $PlayerGUI/CanvasLayerSupplies/Supplies
 
 @onready var fake_background: TextureRect = $"Scene1/ScanningMinigameCanvasLayer/Fake Background"
 
 @onready var BoxAvailable: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable
-@onready var BoxAvailable2: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable2
-@onready var BoxAvailable3: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable3
-
-
-####### TESTING SITE
-
-####@onready var BoxAmmount: Label = 
-####@onready var BoxAmmount2: Label = 
-####@onready var BoxAmmount3: Label = 
+@onready var BoxAvailable2: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/BoxAvailable2
+@onready var BoxAvailable3: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/BoxAvailable3
 
 @onready var BoxAmmountBuy1: int = 1
 @onready var BoxAmmountBuy3: int = 5
 @onready var BoxAmmountBuy2: int = 20
 
-@onready var AmmountToBuy: Label = $Scene3/TruckScene/Generators/purchasetest/ammounttobuy
+@onready var AmmountToBuy: Label = $Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater/ammounttobuy
 
-var current_cost: int = 0
+@onready var BuyGenerator2: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2
+
+@onready var BoxGenerator: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator
+@onready var BoxGenerator2: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2
+@onready var BoxGenerator3: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3
+
+@onready var SupplyOptionButtons1 = $Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1
+@onready var SupplyOptionButtons2 = $Options2Area2D/Options3CollisionShape2D/SupplyOptionButtons2
+@onready var SupplyOptionButtons3 = $Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3
+
+
+## CURRENCIES
 
 var coin_gain: int = 1
 
+var current_cost: int = 0
+var current_box: int = 0
+
 ## CUSTOMER TEMPER
 func _ready():
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3.disabled = true
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2.disabled = true
+	add_box(3)
 	if Customer:
 		Customer.visibility_changed.connect(_on_customer_visibility_changed)
 		_on_customer_visibility_changed()  # Ensure correct visibility at start
@@ -389,7 +418,7 @@ func update_coin_display():
 	coin_label.text = str(coin_count)  #update Label
 
 
-### SUPPLIES!!
+### SUPPLIES TO PROCESS!!
 
 var box_count: int = 0
 
@@ -403,6 +432,22 @@ func sub_box(amount: int):
 	
 func update_box_display():
 	box_label.text = str(box_count)  #update Label
+
+
+### SUPPLIES!!
+
+var supplies_count: int = 0
+
+func add_supplies(amount: int):
+	supplies_count += amount
+	supplies_label.text = str(supplies_count)  #Update Label
+
+func sub_supplies(amount: int):
+	supplies_count -= amount
+	supplies_label.text = str(supplies_count)  #update Label
+	
+func update_supplies_display():
+	supplies_label.text = str(supplies_count)  #update Label
 
 
 ### UPGRADE SHOP
@@ -550,11 +595,15 @@ func _on_computer_pressed():
 
 func _on_close_button_pressed():
 	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
-
+	AmmountToBuy.text = " " # ammount to show when clicking button
+	current_cost = 0 # ammount to deduct in player's wallet
+	current_box = 0 # supply ammoun to add after purchase
 
 func _on_close_button_2_pressed():
 	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
-
+	AmmountToBuy.text = " " # ammount to show when clicking button
+	current_cost = 0 # ammount to deduct in player's wallet
+	current_box = 0 # supply ammoun to add after purchase
 
 #### SCENE 3-1
 func _on_toComputer_pressed():
@@ -572,58 +621,154 @@ func _on_toComputer_pressed():
 	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
-
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 #### BOX GENERATORS
 ### BOX GENERATOR 1
-#func _on_BoxGenerator_pressed():
-#	if BoxAvailable.visible == true:
-#		add_box(BoxAmmount)
-#
-#### BOX GENERATOR 2
-#	if BoxAvailable2.visible == true:
-#		add_box(BoxAmmount2)
-#
-#### BOX GENERATOR 3
-#	if BoxAvailable3.visible == true:
-#		add_box(BoxAmmount3)
+## OPTION 1
+func _on_box_generator1_supply_option1_pressed():
+	if box_count >= 2:
+		sub_box(2)
+		$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/SupplyOptionButtons3/SupplyOption1/SupplyOption1Button3Timer.start()
 
-func _on_buycratetestbutton_pressed():
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxAvailable.show()
+func _on_supply_option1_button3_timer_timeout():
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Sprite2D.show()
+	
+
+func _on_box_supply_1_pressed():
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxSupply1.hide()
 
 
+func _on_box_generator1_supply_option2_pressed():
+	if box_count >= 10:
+		sub_box(10)
+
+func _on_box_generator1_supply_option3_pressed():
+	if box_count >= 20:
+		sub_box(20)
 
 
+### BOX GENERATOR 2
+func _on_box_generator2_supply_option1_pressed():
+	if box_count >= 2:
+		sub_box(2)
+
+func _on_box_generator2_supply_option2_pressed():
+	if box_count >= 10:
+		sub_box(10)
+
+func _on_box_generator2_supply_option3_pressed():
+	if box_count >= 20:
+		sub_box(20)
 
 
+### BOX GENERATOR 3
+func _on_box_generator3_supply_option1_pressed():
+	if box_count >= 2:
+		sub_box(2)
+
+func _on_box_generator3_supply_option2_pressed():
+	if box_count >= 10:
+		sub_box(10)
+
+func _on_box_generator3_supply_option3_pressed():
+	if box_count >= 20:
+		sub_box(20)
 
 
+### Crate Buying Interface
 
-
-
-####### TESTING ZONE
-
-
-
-func _on_purchasetest_pressed():
-	if BoxAvailable.visible == true:
-		pass
-	else:
+func _on_box_generator_pressed() -> void:
+	if coin_count >= current_cost:
 		sub_coin(current_cost)
+		add_box(current_box)
+		kaching.play()
+	elif BoxAvailable.visible == true:
+		pass
+	elif coin_count <= current_cost:
+		error_onBuy.play()
 
-func _on_ammounttest_pressed():
+func _on_buy_generator_3_pressed():
+	current_cost = 10
+	if coin_count >= current_cost:
+		sub_coin(current_cost)
+		$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/BuyGenerator3.hide()
+		$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3.disabled = false
+		kaching.play()
+	else:
+		error_onBuy.play()
+		print("couldn't buy")
+
+func _on_buy_generator_2_pressed():
+	current_cost = 10
+	if coin_count >= current_cost:
+		sub_coin(current_cost)
+		$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2.hide()
+		$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2.disabled = false
+		kaching.play()
+	else:
+		error_onBuy.play()
+		print("couldn't buy")
+
+func _on_Buy1Crate_pressed() -> void:
 	AmmountToBuy.text = "1" # ammount to show when clicking button
 	current_cost = 1 # ammount to deduct in player's wallet
+	current_box = 1 # supply ammoun to add after purchase
 
-func _on_ammounttest_2_pressed():
+func _on_Buy5Crate_pressed() -> void:
 	AmmountToBuy.text =  "5" # ammount to show when clicking button
 	current_cost = 5 # ammount to deduct in player's wallet
+	current_box = 5 # supply ammoun to add after purchase
 
-func _on_ammounttest_3_pressed():
+func _on_Buy20Crate_pressed() -> void:
 	AmmountToBuy.text = "20" # ammount to show when clicking button
 	current_cost = 20 # ammount to deduct in player's wallet
+	current_box = 20 # supply ammoun to add after purchase
+
+func _on_ClearButton_pressed():
+	AmmountToBuy.text = " " # ammount to show when clicking button
+	current_cost = 0 # ammount to deduct in player's wallet
+	current_box = 0 # supply ammoun to add after purchase
+
+## SUPPLY CRAFT
+func _on_BoxGenerator2_pressed():
+	
+	if SupplyOptionButtons3.visible:
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = true
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = true
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = true
+
+	else:
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.show()
+
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = false
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = false
+		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = false
 
 
-func _on_closetest_pressed() -> void:
-	AmmountToBuy.text = " "
-	current_cost = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func _on_add_100_dollors_pressed():
+	add_coin(100)
