@@ -16,6 +16,12 @@ script = ExtResource("1_wnoqq")
 position = Vector2(491, -67)
 texture = ExtResource("2_cy0t1")
 
+[node name="Button2" type="Button" parent="Button/Sprite2D"]
+offset_left = -674.0
+offset_top = -103.0
+offset_right = -666.0
+offset_bottom = -95.0
+
 [node name="MovingTimer" type="Timer" parent="Button"]
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

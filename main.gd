@@ -233,9 +233,9 @@ func _on_button_4_pressed():
 @onready var BoxGenerator2: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2
 @onready var BoxGenerator3: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3
 
-@onready var SupplyOptionButtons1 = $Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1
-@onready var SupplyOptionButtons2 = $Options2Area2D/Options3CollisionShape2D/SupplyOptionButtons2
-@onready var SupplyOptionButtons3 = $Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3
+@onready var SupplyOptionButtons1 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption1
+@onready var SupplyOptionButtons2 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption2
+@onready var SupplyOptionButtons3 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption3
 
 
 ## CURRENCIES
@@ -748,6 +748,7 @@ func _on_BoxGenerator2_pressed():
 		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = false
 		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = false
 		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = false
+
 
 
 
