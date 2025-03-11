@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=41 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://603ph41ntibl" path="res://Terrain (16x16).png" id="13_di5qy"]
 [ext_resource type="Texture2D" uid="uid://bufmsujqhgskh" path="res://char/Windows Blue.png" id="15_1b2e6"]
 [ext_resource type="Texture2D" uid="uid://dg8gquviw1v5n" path="res://Imported_Background/Green.png" id="16_1b2e6"]
-[ext_resource type="Texture2D" uid="uid://bup7cpbsfvp7k" path="res://Jump (32x32).png" id="17_r7qbo"]
 [ext_resource type="Script" uid="uid://c1i4iy4twoxgr" path="res://box_generator3.gd" id="18_g2ved"]
 [ext_resource type="Script" uid="uid://c1d3tb3g5tf2v" path="res://box_generator2.gd" id="19_m63tb"]
 [ext_resource type="Script" uid="uid://jg05ogp23quw" path="res://box_generator.gd" id="20_gnuvk"]
@@ -94,11 +93,11 @@ func _on_time_tick(day:int, hour:int, minute:int):
 ###		get_tree().change_scene_to_file(\"res://MainMenu.tscn\")  # Replace with your scene path
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2ved"]
-size = Vector2(609, 365.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m63tb"]
 size = Vector2(192, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2ved"]
+size = Vector2(609, 365.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
 atlas = ExtResource("10_gq4dn")
@@ -791,85 +790,165 @@ offset_right = 228.0
 offset_bottom = 574.0
 metadata/_edit_use_anchors_ = true
 
+[node name="GeneratorOptions" type="Node" parent="Scene3/TruckScene"]
+
+[node name="Options1Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+
+[node name="Options1CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D"]
+position = Vector2(1026, 85)
+shape = SubResource("RectangleShape2D_m63tb")
+
+[node name="ButtonsArea1Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D"]
+
+[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = -90.0
+offset_top = -26.0
+offset_right = -36.0
+offset_bottom = 26.0
+text = "2"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption1Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1"]
+
+[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = -26.0
+offset_top = -26.0
+offset_right = 28.0
+offset_bottom = 26.0
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption2Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2"]
+
+[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = 38.0
+offset_top = -26.0
+offset_right = 92.0
+offset_bottom = 26.0
+text = "20"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption3Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3"]
+
+[node name="MovingTimer1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D"]
+
+[node name="Options2Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+
+[node name="Options2CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D"]
+position = Vector2(826, 85)
+shape = SubResource("RectangleShape2D_m63tb")
+
+[node name="ButtonsArea2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D"]
+
+[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -91.0
+offset_top = -27.0
+offset_right = -37.0
+offset_bottom = 25.0
+text = "2"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption1Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1"]
+
+[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -27.0
+offset_top = -27.0
+offset_right = 27.0
+offset_bottom = 25.0
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption2Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2"]
+
+[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = 37.0
+offset_top = -27.0
+offset_right = 91.0
+offset_bottom = 25.0
+text = "20"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption3Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3"]
+
+[node name="MovingTimer2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D"]
+
+[node name="Options3Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+
+[node name="Options3CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D"]
+position = Vector2(626, 85)
+shape = SubResource("RectangleShape2D_m63tb")
+
+[node name="ButtonsArea2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
+
+[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -92.0
+offset_top = -26.0
+offset_right = -38.0
+offset_bottom = 26.0
+text = "2"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption1Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption1"]
+
+[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -28.0
+offset_top = -26.0
+offset_right = 26.0
+offset_bottom = 26.0
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption2Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption2"]
+
+[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = 36.0
+offset_top = -26.0
+offset_right = 90.0
+offset_bottom = 26.0
+text = "20"
+metadata/_edit_use_anchors_ = true
+
+[node name="SupplyOption3Button3Timer" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption3"]
+
+[node name="MovingTimer3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
+
 [node name="Generators" type="Area2D" parent="Scene3/TruckScene"]
 position = Vector2(824, 302)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/Generators"]
 shape = SubResource("RectangleShape2D_g2ved")
 
-[node name="LampthatlightsupGenerators" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
-position = Vector2(-16.5, -238.25)
-scale = Vector2(6.75, 1.375)
-texture = ExtResource("17_r7qbo")
-
-[node name="BoxGenerator3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
-anchors_preset = 10
+[node name="BoxGenerator" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -292.0
+anchor_bottom = 1.0
+offset_left = 106.0
 offset_top = -172.0
-offset_right = -103.0
+offset_right = 295.0
 offset_bottom = 174.0
 grow_horizontal = 2
-script = ExtResource("18_g2ved")
+grow_vertical = 2
+script = ExtResource("20_gnuvk")
 metadata/_edit_use_anchors_ = true
 
-[node name="BuyGenerator3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.114
-anchor_top = 0.424
-anchor_right = 0.865
-anchor_bottom = 0.592
-offset_left = -0.0460014
-offset_top = 0.04599
-offset_right = 7.95399
-offset_bottom = 8.04599
-metadata/_edit_use_anchors_ = true
-
-[node name="BoxAvailable3" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
+[node name="BoxAvailable" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator"]
 visible = false
 position = Vector2(93, -11)
 scale = Vector2(0.734375, 0.5625)
 texture = ExtResource("8_lljbe")
 
-[node name="Options3Area2D" type="Area2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator"]
+visible = false
+position = Vector2(97, 167)
+scale = Vector2(0.726563, 1.60156)
+texture = ExtResource("8_lljbe")
 
-[node name="Options3CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D"]
-position = Vector2(91, -44.5)
-shape = SubResource("RectangleShape2D_m63tb")
-
-[node name="SupplyOptionButtons3" type="CanvasLayer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D"]
-
-[node name="ButtonsArea2Sprite" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3"]
-
-[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite"]
-offset_left = 535.0
-offset_top = 59.0
-offset_right = 589.0
-offset_bottom = 111.0
-text = "2"
-
-[node name="SupplyOption1Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption1"]
-
-[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite"]
-offset_left = 599.0
-offset_top = 59.0
-offset_right = 653.0
-offset_bottom = 111.0
-text = "10"
-
-[node name="SupplyOption2Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption2"]
-
-[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite"]
-offset_left = 663.0
-offset_top = 59.0
-offset_right = 717.0
-offset_bottom = 111.0
-text = "20"
-
-[node name="SupplyOption3Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption3"]
-
-[node name="MovingTimer3" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D"]
+[node name="BoxSupply1" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Sprite2D"]
+offset_left = -63.0
+offset_top = -64.0
+offset_right = 65.0
+offset_bottom = 64.0
+metadata/_edit_use_anchors_ = true
 
 [node name="BoxGenerator2" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
 anchors_preset = 15
@@ -915,118 +994,35 @@ offset_right = 65.0
 offset_bottom = 64.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Options2Area2D" type="Area2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2"]
-
-[node name="Options2CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D"]
-position = Vector2(91, -44.5)
-shape = SubResource("RectangleShape2D_m63tb")
-
-[node name="SupplyOptionButtons2" type="CanvasLayer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D"]
-
-[node name="ButtonsArea2Sprite" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2"]
-
-[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite"]
-offset_left = 734.0
-offset_top = 59.0
-offset_right = 788.0
-offset_bottom = 111.0
-text = "2"
-
-[node name="SupplyOption1Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption1"]
-
-[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite"]
-offset_left = 798.0
-offset_top = 59.0
-offset_right = 852.0
-offset_bottom = 111.0
-text = "10"
-
-[node name="SupplyOption2Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption2"]
-
-[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite"]
-offset_left = 862.0
-offset_top = 59.0
-offset_right = 916.0
-offset_bottom = 111.0
-text = "20"
-
-[node name="SupplyOption3Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption3"]
-
-[node name="MovingTimer2" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2"]
-
-[node name="BoxGenerator" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
-anchors_preset = 15
+[node name="BoxGenerator3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D"]
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 106.0
+offset_left = -292.0
 offset_top = -172.0
-offset_right = 295.0
+offset_right = -103.0
 offset_bottom = 174.0
 grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("20_gnuvk")
+script = ExtResource("18_g2ved")
 metadata/_edit_use_anchors_ = true
 
-[node name="BoxAvailable" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator"]
+[node name="BuyGenerator3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.114
+anchor_top = 0.424
+anchor_right = 0.865
+anchor_bottom = 0.592
+offset_left = -0.0460014
+offset_top = 0.04599
+offset_right = 7.95399
+offset_bottom = 8.04599
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxAvailable3" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3"]
 visible = false
 position = Vector2(93, -11)
 scale = Vector2(0.734375, 0.5625)
 texture = ExtResource("8_lljbe")
-
-[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator"]
-visible = false
-position = Vector2(97, 167)
-scale = Vector2(0.726563, 1.60156)
-texture = ExtResource("8_lljbe")
-
-[node name="BoxSupply1" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Sprite2D"]
-offset_left = -63.0
-offset_top = -64.0
-offset_right = 65.0
-offset_bottom = 64.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Options1Area2D" type="Area2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator"]
-
-[node name="Options1CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D"]
-position = Vector2(91, -44.5)
-shape = SubResource("RectangleShape2D_m63tb")
-
-[node name="SupplyOptionButtons1" type="CanvasLayer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D"]
-
-[node name="ButtonsArea1Sprite" type="Sprite2D" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1"]
-
-[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite"]
-offset_left = 933.0
-offset_top = 59.0
-offset_right = 987.0
-offset_bottom = 111.0
-disabled = true
-text = "2"
-
-[node name="SupplyOption1Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption1"]
-
-[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite"]
-offset_left = 997.0
-offset_top = 59.0
-offset_right = 1051.0
-offset_bottom = 111.0
-disabled = true
-text = "10"
-
-[node name="SupplyOption2Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption2"]
-
-[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite"]
-offset_left = 1061.0
-offset_top = 59.0
-offset_right = 1115.0
-offset_bottom = 111.0
-disabled = true
-text = "20"
-
-[node name="SupplyOption3Button3Timer" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption3"]
-
-[node name="MovingTimer1" type="Timer" parent="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D"]
 
 [node name="GeneratorSpeedUpgrade" type="Button" parent="Scene3/TruckScene/Generators"]
 offset_left = -293.0
@@ -1159,28 +1155,28 @@ offset_bottom = 157.0
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater" to="." method="_on_purchasetest_pressed"]
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/ClearButton" to="." method="_on_ClearButton_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/ToComputer" to="." method="_on_toComputer_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3" method="_on_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/BuyGenerator3" to="." method="_on_buy_generator_3_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption1" to="." method="_on_box_generator3_supply_option1_pressed"]
-[connection signal="timeout" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption1/SupplyOption1Button3Timer" to="." method="_on_supply_option1_button3_timer_timeout"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
-[connection signal="timeout" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/MovingTimer3" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3" method="_on_moving_timer3_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1" to="." method="_on_box_generator3_supply_option1_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1/SupplyOption1Button3Timer" to="." method="_on_supply_option1_button3_timer_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/MovingTimer1" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" method="_on_moving_timer1_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1" to="." method="_on_box_generator3_supply_option1_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1/SupplyOption1Button3Timer" to="." method="_on_supply_option1_button3_timer_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/MovingTimer2" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2" method="_on_moving_timer2_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption1" to="." method="_on_box_generator3_supply_option1_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption1/SupplyOption1Button3Timer" to="." method="_on_supply_option1_button3_timer_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea2Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/MovingTimer3" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3" method="_on_moving_timer3_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" to="." method="_on_box_generator_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" method="_on_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2" method="_on_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2" to="." method="_on_buy_generator_2_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Sprite2D/BoxSupply2" to="." method="_on_box_supply_1_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption1" to="." method="_on_box_generator3_supply_option1_pressed"]
-[connection signal="timeout" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption1/SupplyOption1Button3Timer" to="." method="_on_supply_option1_button3_timer_timeout"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
-[connection signal="timeout" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/MovingTimer2" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2" method="_on_moving_timer2_timeout"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" to="." method="_on_box_generator_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" method="_on_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption1" to="." method="_on_box_generator3_supply_option1_pressed"]
-[connection signal="timeout" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption1/SupplyOption1Button3Timer" to="." method="_on_supply_option1_button3_timer_timeout"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
-[connection signal="timeout" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/MovingTimer1" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator" method="_on_moving_timer1_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3" to="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3" method="_on_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/BuyGenerator3" to="." method="_on_buy_generator_3_pressed"]
 [connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
 [connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]

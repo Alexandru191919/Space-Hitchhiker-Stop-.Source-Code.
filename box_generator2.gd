@@ -1,8 +1,8 @@
 extends Button
 
-@onready var SupplyOptionButtons2 = $Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2
-@onready var OptionsArea2D = $Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/ButtonsArea2Sprite
-@onready var MovingTimer2: Timer = $Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/MovingTimer2
+@onready var SupplyOptionButtons2 = $"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/"
+@onready var OptionsArea2D = $"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"
+@onready var MovingTimer2: Timer = $"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/MovingTimer2"
 
 var moving: bool = false
 var direction: int = -1  # 1 = up, -1 = down
@@ -16,26 +16,12 @@ func _on_pressed():
 		direction *= -1
 		moving = true
 		MovingTimer2.start()
-	$"../BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption1".disabled = true
-	$"../BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption2".disabled = true
-	$"../BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption3".disabled = true
+	$"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1".disabled = true
+	$"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2".disabled = true
+	$"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3".disabled = true
 
 func _on_moving_timer2_timeout():
 	moving = false
-	$"../BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption1".disabled = false
-	$"../BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption2".disabled = false
-	$"../BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/ButtonsArea2Sprite/SupplyOption3".disabled = false
-#	$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.show()
-#	
-#	$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption1.disabled = false
-#	$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption2.disabled = false
-#	$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption3.disabled = false
-
-
-#func _on_button_down() -> void:
-#	if SupplyOptionButtons2.visible:
-#		$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
-#
-#		$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption1.disabled = true
-#		$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption2.disabled = true
-#		$Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption3.disabled = true
+	$"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1".disabled = false
+	$"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2".disabled = false
+	$"../../../GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3".disabled = false
