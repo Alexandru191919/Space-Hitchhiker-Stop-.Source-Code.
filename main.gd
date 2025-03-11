@@ -233,9 +233,9 @@ func _on_button_4_pressed():
 @onready var BoxGenerator2: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2
 @onready var BoxGenerator3: Button = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3
 
-@onready var SupplyOptionButtons1 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption1
-@onready var SupplyOptionButtons2 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption2
-@onready var SupplyOptionButtons3 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2/SupplyOption3
+@onready var SupplyOptionButtons1 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1
+@onready var SupplyOptionButtons2 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2
+@onready var SupplyOptionButtons3 = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3
 
 
 ## CURRENCIES
@@ -680,15 +680,11 @@ func _on_box_generator3_supply_option3_pressed():
 
 ### Crate Buying Interface
 
-func _on_box_generator_pressed() -> void:
-	if coin_count >= current_cost:
-		sub_coin(current_cost)
-		add_box(current_box)
-		kaching.play()
-	elif BoxAvailable.visible == true:
-		pass
-	elif coin_count <= current_cost:
-		error_onBuy.play()
+#func _on_box_generator_pressed():
+#	if BoxAvailable.visible == true:
+#		pass
+#	elif coin_count <= current_cost:
+#		error_onBuy.play()
 
 func _on_buy_generator_3_pressed():
 	current_cost = 10
@@ -733,21 +729,21 @@ func _on_ClearButton_pressed():
 	current_box = 0 # supply ammoun to add after purchase
 
 ## SUPPLY CRAFT
-func _on_BoxGenerator2_pressed():
-	
-	if SupplyOptionButtons3.visible:
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
-
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = true
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = true
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = true
-
-	else:
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.show()
-
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = false
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = false
-		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = false
+#func _on_BoxGenerator2_pressed():
+#	
+#	if SupplyOptionButtons3.visible:
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
+#
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = true
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = true
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = true
+#
+#	else:
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.show()
+#
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = false
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = false
+#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = false
 
 
 

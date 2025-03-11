@@ -1,17 +1,21 @@
 extends Button
-#
-#
-#func _on_pressed():
-#	if SupplyOptionButtons1.visible:
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
-#
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/SupplyOption1.disabled = true
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/SupplyOption2.disabled = true
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/SupplyOption3.disabled = true
-#
-#	else:
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.show()
-#
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/SupplyOption1.disabled = false
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/SupplyOption2.disabled = false
-#		$Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/SupplyOption3.disabled = false
+
+@onready var SupplyOptionButtons1 = $Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1
+@onready var OptionsArea2D = $Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1/ButtonsArea1Sprite
+@onready var MovingTimer1: Timer = $Options1Area2D/Options1CollisionShape2D/MovingTimer1
+
+var moving: bool = false
+var direction: int = -1  # 1 = up, -1 = down
+
+func _process(delta):
+	if moving:
+		OptionsArea2D.position.y += 100 * delta * direction
+
+func _on_pressed():
+	if not moving:
+		direction *= -1
+		moving = true
+		MovingTimer1.start()
+
+func _on_moving_timer1_timeout():
+	moving = false
