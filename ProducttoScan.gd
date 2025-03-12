@@ -14,7 +14,7 @@ func _ready():
 	$"../../Sprite2D2/ProductBarcode".disabled = true
 	$"../../Sprite2D2/ProductBarcode".hide()
 #	self.disabled = true
-#	print("I AM ENABLED")
+#	print("I AM disabled")
 #	if customer.hidden == false:
 #		self.disabled = false
 #		print("I AM DISABLED")
