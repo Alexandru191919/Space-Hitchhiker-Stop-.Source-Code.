@@ -2,7 +2,7 @@ extends Button
 
 @onready var SupplyOptionButtons1 = $"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/"
 @onready var OptionsArea2D = $"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"
-@onready var MovingTimer1: Timer = $"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/MovingTimer1"
+@onready var MovingTimer1: Timer = $"../../../Options1Area2D/Options1CollisionShape2D/MovingTimer1"
 
 var moving: bool = false
 var direction: int = -1  # 1 = up, -1 = down
@@ -16,12 +16,12 @@ func _on_pressed():
 		direction *= -1
 		moving = true
 		MovingTimer1.start()
-		$"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1".disabled = true
-		$"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2".disabled = true
-		$"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3".disabled = true
+		$"../../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1".disabled = true
+		$"../../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2".disabled = true
+		$"../../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3".disabled = true
 
 func _on_moving_timer1_timeout():
 	moving = false
-	$"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1".disabled = false
-	$"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2".disabled = false
-	$"../../../GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3".disabled = false
+	$"../../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1".disabled = false
+	$"../../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2".disabled = false
+	$"../../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3".disabled = false

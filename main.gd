@@ -27,14 +27,15 @@ func _on_button_1_pressed():
 	$Scene3/ComputerScene/Computer.hide()
 
 	# TruckScene hide
+	$Scene3/TextureScene3.hide()
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
 	$Scene3/TruckScene/AddBox.hide()
-	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
@@ -72,14 +73,15 @@ func _on_button_2_pressed():
 	$Scene3/ComputerScene/Computer.hide()
 
 	# TruckScene hide
+	$Scene3/TextureScene3.hide()
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
 	$Scene3/TruckScene/AddBox.hide()
-	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
@@ -101,14 +103,15 @@ func _on_button_3_pressed():
 	$Scene3/ComputerScene/Computer.show()
 
 	# TruckScene hide
+	$Scene3/TextureScene3.hide()
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
 	$Scene3/TruckScene/AddBox.hide()
-	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	#scene1 hide
 	$Scene1/TextureRect.hide()
@@ -165,14 +168,15 @@ func _on_button_4_pressed():
 	$Scene3/ComputerScene/Computer.hide()
 
 	# TruckScene hide
+	$Scene3/TextureScene3.hide()
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
 	$Scene3/TruckScene/AddBox.hide()
-	$Scene3/TruckScene/Generators.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
 	$Scene3/TruckScene/BuyAutoRobot.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Options2Area2D/Options2CollisionShape2D/SupplyOptionButtons2.hide()
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/Options1Area2D/Options1CollisionShape2D/SupplyOptionButtons1.hide()
 
 	##always show
 	$PlayerGUI/CanvasLayerButtons.show()
@@ -221,9 +225,9 @@ func _on_button_4_pressed():
 @onready var BoxAvailable2: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/BoxAvailable2
 @onready var BoxAvailable3: Sprite2D = $Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/BoxAvailable3
 
-@onready var BoxAmmountBuy1: int = 1
-@onready var BoxAmmountBuy3: int = 5
-@onready var BoxAmmountBuy2: int = 20
+@onready var BoxAmmountBuy1: int = 6
+@onready var BoxAmmountBuy3: int = 10
+@onready var BoxAmmountBuy2: int = 50
 
 @onready var AmmountToBuy: Label = $Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater/ammounttobuy
 
@@ -247,9 +251,7 @@ var current_box: int = 0
 
 ## CUSTOMER TEMPER
 func _ready():
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3.disabled = true
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2.disabled = true
-	add_box(3)
+	add_box(6)
 	if Customer:
 		Customer.visibility_changed.connect(_on_customer_visibility_changed)
 		_on_customer_visibility_changed()  # Ensure correct visibility at start
@@ -628,26 +630,7 @@ func _on_toComputer_pressed():
 #### BOX GENERATORS
 ### BOX GENERATOR 1
 ## OPTION 1
-func _on_box_generator1_supply_option1_pressed():
-	if box_count >= 2:
-		sub_box(2)
-		$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator3/SupplyOptionButtons3/SupplyOption1/SupplyOption1Button3Timer.start()
 
-func _on_supply_option1_button3_timer_timeout():
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator2/Sprite2D.show()
-	
-
-func _on_box_supply_1_pressed():
-	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxSupply1.hide()
-
-
-func _on_box_generator1_supply_option2_pressed():
-	if box_count >= 10:
-		sub_box(10)
-
-func _on_box_generator1_supply_option3_pressed():
-	if box_count >= 20:
-		sub_box(20)
 
 
 ### BOX GENERATOR 2
@@ -665,9 +648,7 @@ func _on_box_generator2_supply_option3_pressed():
 
 
 ### BOX GENERATOR 3
-func _on_box_generator3_supply_option1_pressed():
-	if box_count >= 2:
-		sub_box(2)
+
 
 func _on_box_generator3_supply_option2_pressed():
 	if box_count >= 10:
@@ -678,7 +659,7 @@ func _on_box_generator3_supply_option3_pressed():
 		sub_box(20)
 
 
-### Crate Buying Interface
+### Crate Buying Interface (CBI)
 
 #func _on_box_generator_pressed():
 #	if BoxAvailable.visible == true:
@@ -728,27 +709,127 @@ func _on_ClearButton_pressed():
 	current_cost = 0 # ammount to deduct in player's wallet
 	current_box = 0 # supply ammoun to add after purchase
 
-## SUPPLY CRAFT
-#func _on_BoxGenerator2_pressed():
-#	
-#	if SupplyOptionButtons3.visible:
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.hide()
-#
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = true
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = true
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = true
-#
-#	else:
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3.show()
-#
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption1.disabled = false
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption2.disabled = false
-#		$Options3Area2D/Options3CollisionShape2D/SupplyOptionButtons3/SupplyOption3.disabled = false
+### SUPPLY CRAFT
+## BOX GENERATOR 1
+
+#gen start
+func _on_box_generator1_supply_option1_pressed():
+	if box_count >= 2:
+		sub_box(2)
+
+
+func _on_box_supply_1_pressed():
+	$Scene3/TruckScene/Generators/CollisionShape2D/BoxGenerator/BoxSupply1.hide()
+
+func _on_box_generator1_supply_option3_pressed():
+	if box_count >= 20:
+		sub_box(50)
+
+func _on_supply_option_1_pressed():
+	if box_count >= 6:
+		sub_box(6)
+		kaching.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = true
+		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1".start()
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
+	else:
+		error_onBuy.play()
+
+func _on_supply_option_2_pressed():
+	if box_count >= 10:
+		sub_box(10)
+		kaching.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = true
+		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".start()
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
+	else:
+		error_onBuy.play()
+
+func _on_supply_option_3_pressed():
+	if box_count >= 50:
+		sub_box(50)
+		kaching.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = true
+		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".start()
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
+	else:
+		error_onBuy.play()
+
+#collect box from gen
+func _on_box_1_gen_1_pressed():
+	add_supplies(6)
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box1, Gen1".hide()
+	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1".stop()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = false
+
+
+func _on_box_2_gen_1_pressed():
+	add_supplies(10)
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box2, Gen1".hide()
+	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".stop()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = false
+
+func _on_box_3_gen_1_pressed():
+	add_supplies(50)
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1".hide()
+	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".stop()
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = false
+
+### GEN 1 TIMER OPTIONS TIMEOUTS
+## Option 1
+func _on_option_1_timeout():
+	print("Option1 Finished")
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box1, Gen1".show()
+## Option 2
+func _on_option_2_timeout():
+	print("Option2 Finished")
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box2, Gen1".show()
+
+## Option 3
+func _on_option_3_timeout():
+	print("Option3 Finished")
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1".show()
+
+
+### GENERATORS TIMER TIMEOUTS
+## OPTION 1
+# GEN 1
 
 
 
 
+# GEN 2
 
+# GEN 3
+
+## OPTION 3
+# GEN 1
+
+# GEN 2
+
+# GEN 3
+
+## OPTION 2
+# GEN 1
+
+# GEN 2
+
+# GEN 3
 
 
 
