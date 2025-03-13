@@ -923,6 +923,7 @@ script = ExtResource("20_gnuvk")
 metadata/_edit_use_anchors_ = true
 
 [node name="Gen1SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 364.0
 offset_right = 175.0
@@ -1059,6 +1060,7 @@ offset_right = 7.95398
 offset_bottom = 8.04599
 
 [node name="Gen2SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2"]
+layout_mode = 0
 offset_left = 13.0
 offset_top = 364.0
 offset_right = 177.0
@@ -1199,6 +1201,7 @@ offset_bottom = 8.04599
 metadata/_edit_use_anchors_ = true
 
 [node name="Gen3SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 364.0
 offset_right = 175.0
@@ -1694,11 +1697,13 @@ offset_bottom = 104.0
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1" to="." method="_on_box_3_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2" to="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2" method="_on_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2" to="." method="_on_buy_generator_2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade" to="." method="_on_gen2_speed_upgrade_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box1, Gen2" to="." method="_on_box_1_gen_3_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box2, Gen2" to="." method="_on_box_2_gen_3_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box3, Gen2" to="." method="_on_box_3_gen_3_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3" to="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3" method="_on_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/BuyGenerator3" to="." method="_on_buy_generator_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade" to="." method="_on_gen3_speed_upgrade_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box1, Gen3" to="." method="_on_box_1_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box2, Gen3" to="." method="_on_box_1_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box3, Gen3" to="." method="_on_box_1_gen_1_pressed"]
@@ -1771,5 +1776,5 @@ offset_bottom = 104.0
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee Cup/AddCup" to="." method="_on_add_cup_pressed"]
 [connection signal="pressed" from="ADD 100 DOLLORS" to="." method="_on_add_100_dollors_pressed"]
 [connection signal="pressed" from="ADD 100 SUPPLIES" to="." method="_on_add_100_supplies_pressed"]
-[connection signal="pressed" from="ADD 100 ENERGY" to="." method="_on_add_100_energy_pressed"]
 [connection signal="pressed" from="ADD 100 ENERGY" to="." method="_on_add_100_supplies_pressed"]
+[connection signal="pressed" from="ADD 100 ENERGY" to="." method="_on_add_100_energy_pressed"]
