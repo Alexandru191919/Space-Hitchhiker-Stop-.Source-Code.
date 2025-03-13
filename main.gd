@@ -371,6 +371,82 @@ func _process(delta):
 			label3.visible = false
 			pb3.visible = false  # Hide the progress bar when the timer finishes
 
+# Declare and update labels for Gen1 timers
+	var gen1_label = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1/GeneratorTimeLabel"
+	var gen1_label2 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2/GeneratorTimeLabel"
+	var gen1_label3 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3/GeneratorTimeLabel"
+	
+	var gen2_label = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1/Generator2TimeLabel"
+	var gen2_label2 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2/Generator2TimeLabel"
+	var gen2_label3 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3/Generator2TimeLabel"
+	
+	var gen3_label = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1/Generator3TimeLabel"
+	var gen3_label2 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2/Generator3TimeLabel"
+	var gen3_label3 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3/Generator3TimeLabel"
+	
+	if gen1_label:
+		gen1_label.text = str(int(gen1option1_timer.time_left)) + "s"
+		if gen1option1_timer.time_left <= 0:
+			gen1_label.visible = false
+		else:
+			gen1_label.visible = true
+			
+	if gen1_label2:
+		gen1_label2.text = str(int(gen1option2_timer.time_left)) + "s"
+		if gen1option2_timer.time_left <= 0:
+			gen1_label2.visible = false
+		else:
+			gen1_label2.visible = true
+			
+	if gen1_label3:
+		gen1_label3.text = str(int(gen1option3_timer.time_left)) + "s"
+		if gen1option3_timer.time_left <= 0:
+			gen1_label3.visible = false
+		else:
+			gen1_label3.visible = true
+
+	if gen2_label:
+		gen2_label.text = str(int(gen2option1_timer.time_left)) + "s"
+		if gen2option1_timer.time_left <= 0:
+			gen2_label.visible = false
+		else:
+			gen2_label.visible = true
+			
+	if gen2_label2:
+		gen2_label2.text = str(int(gen2option2_timer.time_left)) + "s"
+		if gen2option2_timer.time_left <= 0:
+			gen2_label2.visible = false
+		else:
+			gen2_label2.visible = true
+			
+	if gen2_label3:
+		gen2_label3.text = str(int(gen2option3_timer.time_left)) + "s"
+		if gen2option3_timer.time_left <= 0:
+			gen2_label3.visible = false
+		else:
+			gen2_label3.visible = true
+
+	if gen3_label:
+		gen3_label.text = str(int(gen3option1_timer.time_left)) + "s"
+		if gen3option1_timer.time_left <= 0:
+			gen3_label.visible = false
+		else:
+			gen3_label.visible = true
+			
+	if gen3_label2:
+		gen3_label2.text = str(int(gen3option2_timer.time_left)) + "s"
+		if gen3option2_timer.time_left <= 0:
+			gen3_label2.visible = false
+		else:
+			gen3_label2.visible = true
+			
+	if gen3_label3:
+		gen3_label3.text = str(int(gen3option3_timer.time_left)) + "s"
+		if gen3option3_timer.time_left <= 0:
+			gen3_label3.visible = false
+		else:
+			gen3_label3.visible = true
+
 ## ENERGY BAR
 
 func _on_energy_timer_timeout():
@@ -661,6 +737,7 @@ func _on_buy_generator_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/BuyGenerator3.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = false
 		kaching.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
 	else:
 		error_onBuy.play()
 		print("couldn't buy")
@@ -672,6 +749,7 @@ func _on_buy_generator_2_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
 		kaching.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
 	else:
 		error_onBuy.play()
 		print("couldn't buy")
@@ -709,6 +787,7 @@ func _on_supply_option_1_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -721,6 +800,7 @@ func _on_supply_option_2_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -733,6 +813,7 @@ func _on_supply_option_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -778,6 +859,7 @@ func _on_supply_option_1_gen2_pressed() -> void:
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -791,6 +873,7 @@ func _on_supply_option_2_gen2_pressed() -> void:
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -803,6 +886,7 @@ func _on_supply_option_3_gen2_pressed() -> void:
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -846,6 +930,7 @@ func _on_supply_option_1_gen_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -855,10 +940,11 @@ func _on_supply_option_2_gen_3_pressed():
 		sub_box(10)
 		kaching.play()
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = true
-		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1".start()
+		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2".start()
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -868,10 +954,11 @@ func _on_supply_option_3_gen_3_pressed():
 		sub_box(50)
 		kaching.play()
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = true
-		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1".start()
+		$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3".start()
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
 	else:
 		error_onBuy.play()
 
@@ -911,38 +998,46 @@ func _on_box_3_gen_3_pressed():
 func _on_option1_gen1_timeout():
 	print("Gen1, Option1 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box1, Gen1".show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 func _on_option2_gen1_timeout():
 	print("Gen1, Option2 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box2, Gen1".show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 func _on_option3_gen1_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1".show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 
 # Gen 2
 func _on_option1_gen2_timeout():
+	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box1, Gen2".show()
-	print("Gen1, Option3 Finished")
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
 func _on_option2_gen2_timeout():
+	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box2, Gen2".show()
-	print("Gen1, Option3 Finished")
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
 func _on_option3_gen2_timeout():
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box3, Gen2".show()
 	print("Gen1, Option3 Finished")
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box3, Gen2".show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
 
 # Gen 3
 func _on_option1_gen3_timeout():
+	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box1, Gen3".show()
-	print("Gen1, Option3 Finished")
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
 func _on_option2_gen3_timeout():
+	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box2, Gen3".show()
-	print("Gen1, Option3 Finished")
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
 func _on_option3_gen3_timeout():
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box3, Gen3".show()
 	print("Gen1, Option3 Finished")
+	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box3, Gen3".show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
 
 
 ### GEN UPGRADES
-
 ## ADD COUNT FUNCTION
 func add_count_gen1(amount: int):
 	gen_press_count1 += amount
@@ -1015,6 +1110,7 @@ func _on_gen1_speed_upgrade_pressed():
 		# PLAY PARTY HORN SOUND
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 
+
 #GEN 2
 func _on_gen2_speed_upgrade_pressed():
 	add_count_gen2(1)
@@ -1083,15 +1179,13 @@ func _on_gen2_speed_upgrade_pressed():
 		sub_coin(70)
 		kaching.play()
 		#play golden confetti
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldL".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldM".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen2SpeedUpgrade/Golden Rain!!!/Gen2Gold3".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldL".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldM".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldR".emitting = true
 		# PLAY PARTY HORN SOUND
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
 		if coin_count <= 70 and gen_press_count2 == 7: #upgrade2
 			error_onBuy.play()
-
-
 
 
 #GEN 3
@@ -1149,12 +1243,11 @@ func _on_gen3_speed_upgrade_pressed():
 		sub_coin(70)
 		kaching.play()
 		#play golden confetti
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldL".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldM".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen3SpeedUpgrade/Golden Rain!!!/Gen3Gold3".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldL".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldM".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldR".emitting = true
 		# PLAY PARTY HORN SOUND
 		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
-
 
 
 
@@ -1181,3 +1274,6 @@ func _on_add_100_energy_pressed() -> void:
 	timer3.stop()
 	timer3.wait_time += 100
 	timer3.start()
+
+func _on_main_menu_button_pressed():
+	get_tree().change_scene_to_file("res://MainMenu.tscn")
