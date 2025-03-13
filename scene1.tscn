@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=43 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
@@ -99,6 +99,10 @@ size = Vector2(192, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2ved"]
 size = Vector2(609, 365.5)
+
+[sub_resource type="Curve" id="Curve_m63tb"]
+_data = [Vector2(0, 0.606742), 0.0, 0.0, 0, 0, Vector2(0.502857, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
 atlas = ExtResource("10_gq4dn")
@@ -918,6 +922,75 @@ grow_vertical = 2
 script = ExtResource("20_gnuvk")
 metadata/_edit_use_anchors_ = true
 
+[node name="Gen1SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator"]
+offset_left = 11.0
+offset_top = 364.0
+offset_right = 175.0
+offset_bottom = 421.0
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade"]
+position = Vector2(84, -304)
+
+[node name="Gen1GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-55, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-1, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1Gold3" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(49, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
 [node name="Box1, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator"]
 visible = false
 layout_mode = 0
@@ -957,6 +1030,8 @@ position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
 texture = ExtResource("20_m63tb")
 
+[node name="GenUpgradesBar1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator"]
+
 [node name="BoxGenerator2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -982,6 +1057,75 @@ offset_left = -0.0460014
 offset_top = 0.04599
 offset_right = 7.95398
 offset_bottom = 8.04599
+
+[node name="Gen2SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2"]
+offset_left = 13.0
+offset_top = 364.0
+offset_right = 177.0
+offset_bottom = 421.0
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade"]
+position = Vector2(84, -304)
+
+[node name="Gen2GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-55, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen2GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-4, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen2GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(49, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2"]
 visible = false
@@ -1028,6 +1172,8 @@ position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
 texture = ExtResource("20_m63tb")
 
+[node name="GenUpgradesBar2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2"]
+
 [node name="BoxGenerator3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D"]
 anchors_preset = 10
 anchor_right = 1.0
@@ -1051,6 +1197,75 @@ offset_top = 0.04599
 offset_right = 7.95399
 offset_bottom = 8.04599
 metadata/_edit_use_anchors_ = true
+
+[node name="Gen3SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3"]
+offset_left = 11.0
+offset_top = 364.0
+offset_right = 175.0
+offset_bottom = 421.0
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade"]
+position = Vector2(84, -304)
+
+[node name="Gen3GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-55, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen3GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-5, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen3GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(49, 329)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="Box1, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3"]
 visible = false
@@ -1091,19 +1306,7 @@ position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
 texture = ExtResource("20_m63tb")
 
-[node name="GeneratorSpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_left = -293.0
-offset_top = 222.0
-offset_right = 288.0
-offset_bottom = 262.0
-metadata/_edit_use_anchors_ = true
-
-[node name="GeneratorSpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/GeneratorSpeedUpgrade"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -28.0
-offset_right = 580.0
-offset_bottom = -7.0
+[node name="GenUpgradesBar3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3"]
 
 [node name="Timers & Upgrades" type="Node" parent="Scene3/TruckScene/GeneratorOptions"]
 
@@ -1138,6 +1341,204 @@ wait_time = 60.0
 wait_time = 300.0
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3"]
+wait_time = 600.0
+
+[node name="Upgrade1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1"]
+wait_time = 3.0
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2"]
+wait_time = 3.0
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3"]
+wait_time = 60.0
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3"]
+wait_time = 300.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3"]
+wait_time = 600.0
+
+[node name="Upgrade2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
+wait_time = 3.0
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2"]
+wait_time = 3.0
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
+wait_time = 60.0
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
+wait_time = 300.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
+wait_time = 600.0
+
+[node name="Upgrade3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
+wait_time = 3.0
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2"]
+wait_time = 3.0
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
+wait_time = 60.0
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
+wait_time = 300.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
+wait_time = 600.0
+
+[node name="Upgrade4" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
+wait_time = 3.0
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2"]
+wait_time = 3.0
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
+wait_time = 60.0
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
+wait_time = 300.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
+wait_time = 600.0
+
+[node name="Upgrade5" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
+wait_time = 3.0
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2"]
+wait_time = 3.0
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
+wait_time = 60.0
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
+wait_time = 300.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
+wait_time = 600.0
+
+[node name="Upgrade6" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
+wait_time = 3.0
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2"]
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2"]
+wait_time = 2.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2"]
+wait_time = 3.0
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
+wait_time = 60.0
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
+wait_time = 300.0
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
 wait_time = 600.0
 
 [node name="BuyAutoRobot" type="Button" parent="Scene3/TruckScene"]
@@ -1225,12 +1626,17 @@ offset_bottom = 66.0
 offset_right = 192.0
 offset_bottom = 117.0
 
-[node name="ADD 100 SUPPLIES" type="Button" parent="ADD 100 DOLLORS"]
-layout_mode = 0
+[node name="ADD 100 SUPPLIES" type="Button" parent="."]
 offset_left = 1.0
 offset_top = 117.0
 offset_right = 193.0
 offset_bottom = 218.0
+
+[node name="ADD 100 ENERGY" type="Button" parent="."]
+offset_left = 954.0
+offset_top = 43.0
+offset_right = 1143.0
+offset_bottom = 104.0
 
 [connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button2" to="." method="_on_button_2_pressed"]
@@ -1282,6 +1688,7 @@ offset_bottom = 218.0
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3" to="." method="_on_supply_option_3_gen_3_pressed"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/MovingTimer3" to="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3" method="_on_moving_timer3_timeout"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator" to="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator" method="_on_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade" to="." method="_on_gen1_speed_upgrade_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box1, Gen1" to="." method="_on_box_1_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box2, Gen1" to="." method="_on_box_2_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1" to="." method="_on_box_3_gen_1_pressed"]
@@ -1304,9 +1711,65 @@ offset_bottom = 218.0
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
 [connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]
 [connection signal="pressed" from="Scene4/CanvasLayer/Coffee Cup/AddCup" to="." method="_on_add_cup_pressed"]
 [connection signal="pressed" from="ADD 100 DOLLORS" to="." method="_on_add_100_dollors_pressed"]
-[connection signal="pressed" from="ADD 100 DOLLORS/ADD 100 SUPPLIES" to="." method="_on_add_100_supplies_pressed"]
+[connection signal="pressed" from="ADD 100 SUPPLIES" to="." method="_on_add_100_supplies_pressed"]
+[connection signal="pressed" from="ADD 100 ENERGY" to="." method="_on_add_100_energy_pressed"]
+[connection signal="pressed" from="ADD 100 ENERGY" to="." method="_on_add_100_supplies_pressed"]

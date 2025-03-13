@@ -241,6 +241,30 @@ func _on_button_4_pressed():
 @onready var BoxGenerator3: Button = $Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3
 
 
+## GENERATOR TIMERS W/ OPTIONS
+#gen1
+@onready var gen1option1_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1"
+@onready var gen1option2_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2"
+@onready var gen1option3_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3"
+
+#gen2
+@onready var gen2option1_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1"
+@onready var gen2option2_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2"
+@onready var gen2option3_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3"
+
+#gen3
+@onready var gen3option1_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1"
+@onready var gen3option2_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2"
+@onready var gen3option3_timer: Timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3"
+
+
+## GENERATOR UPGRADE TIERS
+
+var gen_press_count1: int = 0
+var gen_press_count2: int = 0
+var gen_press_count3: int = 0
+
+
 ## CURRENCIES
 
 var coin_gain: int = 1
@@ -917,12 +941,78 @@ func _on_option3_gen3_timeout():
 	print("Gen1, Option3 Finished")
 
 
+### GEN UPGRADES
+
+## ADD COUNT FUNCTION
+func add_count_gen1(amount: int):
+	gen_press_count1 += amount
+
+func add_count_gen2(amount: int):
+	gen_press_count2 += amount
+
+func add_count_gen3(amount: int):
+	gen_press_count3 += amount
 
 
+#gen1
+func _on_gen1_speed_upgrade_pressed():
+	add_count_gen1(1)
+	if coin_count >= current_cost and gen_press_count1 == 1: #upgrade1
+		sub_coin(1)
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+
+	if coin_count >= current_cost and gen_press_count1 == 2: #upgrade2
+		sub_coin(2)
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+
+	if coin_count >= current_cost and gen_press_count1 == 3: #upgrade3
+		sub_coin(3)
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+
+	if coin_count >= current_cost and gen_press_count1 == 4: #upgrade4
+		sub_coin(4)
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+
+	if coin_count >= current_cost and gen_press_count1 == 5: #upgrade5
+		sub_coin(5)
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+
+	if coin_count >= current_cost and gen_press_count1 == 6: #upgrade6
+		sub_coin(6)
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+
+	if coin_count >= current_cost and gen_press_count1 == 7: ## MAX UPGRADE
+		sub_coin(70)
+		#play golden confetti
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldL".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldM".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1Gold3".emitting = true
+		# PLAY PARTY HORN SOUND
+		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 
 
+#gen2
 
 
+#gen3
 
 
 
@@ -945,3 +1035,8 @@ func _on_add_100_dollors_pressed():
 
 func _on_add_100_supplies_pressed() -> void:
 	add_box(100)
+
+func _on_add_100_energy_pressed() -> void:
+	timer3.stop()
+	timer3.wait_time += 100
+	timer3.start()
