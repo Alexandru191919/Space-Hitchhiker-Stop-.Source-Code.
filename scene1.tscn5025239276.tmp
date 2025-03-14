@@ -1533,6 +1533,7 @@ text = "GENERATOR3"
 wait_time = 44.0
 
 [node name="Generator-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"]
+visible = false
 offset_left = 930.0
 offset_top = 130.0
 offset_right = 1119.0
@@ -1543,20 +1544,22 @@ text = "GENERATOR1"
 wait_time = 220.0
 
 [node name="Generator-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2"]
+visible = false
 offset_left = 930.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
 wait_time = 480.0
 
 [node name="Generator-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3"]
+visible = false
 offset_left = 930.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
@@ -1565,6 +1568,7 @@ text = "GENERATOR1"
 wait_time = 44.0
 
 [node name="Generator2-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1"]
+visible = false
 offset_left = 731.0
 offset_top = 130.0
 offset_right = 920.0
@@ -1576,10 +1580,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 220.0
 
 [node name="Generator2-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2"]
+visible = false
 offset_left = 731.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1587,10 +1592,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 480.0
 
 [node name="Generator2-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3"]
+visible = false
 offset_left = 731.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1600,6 +1606,7 @@ metadata/_edit_use_anchors_ = true
 wait_time = 44.0
 
 [node name="Generator3-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1"]
+visible = false
 offset_left = 532.0
 offset_top = 130.0
 offset_right = 721.0
@@ -1610,20 +1617,22 @@ text = "GENERATOR3"
 wait_time = 220.0
 
 [node name="Generator3-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2"]
+visible = false
 offset_left = 532.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
 wait_time = 480.0
 
 [node name="Generator3-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3"]
+visible = false
 offset_left = 532.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Upgrade3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
@@ -1634,6 +1643,7 @@ text = "GENERATOR3"
 wait_time = 36.0
 
 [node name="Generator-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1"]
+visible = false
 offset_left = 930.0
 offset_top = 130.0
 offset_right = 1119.0
@@ -1644,20 +1654,22 @@ text = "GENERATOR1"
 wait_time = 180.0
 
 [node name="Generator-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2"]
+visible = false
 offset_left = 930.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
 wait_time = 420.0
 
 [node name="Generator-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3"]
+visible = false
 offset_left = 930.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
@@ -1666,6 +1678,7 @@ text = "GENERATOR1"
 wait_time = 36.0
 
 [node name="Generator2-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1"]
+visible = false
 offset_left = 731.0
 offset_top = 130.0
 offset_right = 920.0
@@ -1677,10 +1690,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 180.0
 
 [node name="Generator2-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2"]
+visible = false
 offset_left = 731.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1688,10 +1702,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 420.0
 
 [node name="Generator2-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3"]
+visible = false
 offset_left = 731.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1701,6 +1716,7 @@ metadata/_edit_use_anchors_ = true
 wait_time = 36.0
 
 [node name="Generator3-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1"]
+visible = false
 offset_left = 532.0
 offset_top = 130.0
 offset_right = 721.0
@@ -1711,20 +1727,22 @@ text = "GENERATOR3"
 wait_time = 180.0
 
 [node name="Generator3-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2"]
+visible = false
 offset_left = 532.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
 wait_time = 420.0
 
 [node name="Generator3-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3"]
+visible = false
 offset_left = 532.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Upgrade4" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
@@ -1735,6 +1753,7 @@ text = "GENERATOR3"
 wait_time = 28.0
 
 [node name="Generator-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1"]
+visible = false
 offset_left = 930.0
 offset_top = 130.0
 offset_right = 1119.0
@@ -1745,20 +1764,22 @@ text = "GENERATOR1"
 wait_time = 140.0
 
 [node name="Generator-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2"]
+visible = false
 offset_left = 930.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
 wait_time = 360.0
 
 [node name="Generator-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3"]
+visible = false
 offset_left = 930.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
@@ -1767,6 +1788,7 @@ text = "GENERATOR1"
 wait_time = 28.0
 
 [node name="Generator2-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1"]
+visible = false
 offset_left = 731.0
 offset_top = 130.0
 offset_right = 920.0
@@ -1778,10 +1800,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 140.0
 
 [node name="Generator2-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2"]
+visible = false
 offset_left = 731.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1789,10 +1812,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 360.0
 
 [node name="Generator2-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3"]
+visible = false
 offset_left = 731.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1802,6 +1826,7 @@ metadata/_edit_use_anchors_ = true
 wait_time = 28.0
 
 [node name="Generator3-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1"]
+visible = false
 offset_left = 532.0
 offset_top = 130.0
 offset_right = 721.0
@@ -1812,20 +1837,22 @@ text = "GENERATOR3"
 wait_time = 140.0
 
 [node name="Generator3-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2"]
+visible = false
 offset_left = 532.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
 wait_time = 360.0
 
 [node name="Generator3-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3"]
+visible = false
 offset_left = 532.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Upgrade5" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
@@ -1836,6 +1863,7 @@ text = "GENERATOR3"
 wait_time = 20.0
 
 [node name="Generator-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1"]
+visible = false
 offset_left = 930.0
 offset_top = 130.0
 offset_right = 1119.0
@@ -1846,20 +1874,22 @@ text = "GENERATOR1"
 wait_time = 100.0
 
 [node name="Generator-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2"]
+visible = false
 offset_left = 930.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
 wait_time = 300.0
 
 [node name="Generator-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3"]
+visible = false
 offset_left = 930.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
@@ -1868,6 +1898,7 @@ text = "GENERATOR1"
 wait_time = 100.0
 
 [node name="Generator2-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2"]
+visible = false
 offset_left = 731.0
 offset_top = 130.0
 offset_right = 920.0
@@ -1879,6 +1910,7 @@ metadata/_edit_use_anchors_ = true
 wait_time = 20.0
 
 [node name="Generator2-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1"]
+visible = false
 offset_left = 731.0
 offset_top = 130.0
 offset_right = 920.0
@@ -1890,10 +1922,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 300.0
 
 [node name="Generator2-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3"]
+visible = false
 offset_left = 731.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1903,6 +1936,7 @@ metadata/_edit_use_anchors_ = true
 wait_time = 20.0
 
 [node name="Generator3-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1"]
+visible = false
 offset_left = 532.0
 offset_top = 130.0
 offset_right = 721.0
@@ -1913,20 +1947,22 @@ text = "GENERATOR3"
 wait_time = 100.0
 
 [node name="Generator3-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2"]
+visible = false
 offset_left = 532.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
 wait_time = 300.0
 
 [node name="Generator3-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3"]
+visible = false
 offset_left = 532.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Upgrade6" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
@@ -1937,6 +1973,7 @@ text = "GENERATOR3"
 wait_time = 5.0
 
 [node name="Generator-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1"]
+visible = false
 offset_left = 930.0
 offset_top = 130.0
 offset_right = 1119.0
@@ -1947,20 +1984,22 @@ text = "GENERATOR1"
 wait_time = 30.0
 
 [node name="Generator-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2"]
+visible = false
 offset_left = 930.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
 wait_time = 75.0
 
 [node name="Generator-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3"]
+visible = false
 offset_left = 930.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 1119.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR1"
 
 [node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
@@ -1969,6 +2008,7 @@ text = "GENERATOR1"
 wait_time = 5.0
 
 [node name="Generator2-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1"]
+visible = false
 offset_left = 731.0
 offset_top = 130.0
 offset_right = 920.0
@@ -1980,10 +2020,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 30.0
 
 [node name="Generator2-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2"]
+visible = false
 offset_left = 731.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -1991,10 +2032,11 @@ metadata/_edit_use_anchors_ = true
 wait_time = 75.0
 
 [node name="Generator2-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3"]
+visible = false
 offset_left = 731.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 920.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR2"
 metadata/_edit_use_anchors_ = true
 
@@ -2004,6 +2046,7 @@ metadata/_edit_use_anchors_ = true
 wait_time = 5.0
 
 [node name="Generator3-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1"]
+visible = false
 offset_left = 532.0
 offset_top = 130.0
 offset_right = 721.0
@@ -2014,20 +2057,22 @@ text = "GENERATOR3"
 wait_time = 30.0
 
 [node name="Generator3-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2"]
+visible = false
 offset_left = 532.0
-offset_top = 146.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 169.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
 wait_time = 75.0
 
 [node name="Generator3-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3"]
+visible = false
 offset_left = 532.0
-offset_top = 162.0
+offset_top = 130.0
 offset_right = 721.0
-offset_bottom = 185.0
+offset_bottom = 153.0
 text = "GENERATOR3"
 
 [node name="BuyAutoRobot" type="Button" parent="Scene3/TruckScene"]
@@ -2166,7 +2211,9 @@ offset_bottom = 45.0
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/ClearButton" to="." method="_on_ClearButton_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/ToComputer" to="." method="_on_toComputer_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1" to="." method="_on_supply_option_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2" to="." method="_on_box_generator3_supply_option2_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2" to="." method="_on_supply_option_2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3" to="." method="_on_box_generator3_supply_option3_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3" to="." method="_on_supply_option_3_pressed"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/MovingTimer1" to="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator" method="_on_moving_timer1_timeout"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/MovingTimer1/AutoHideTimer1" to="Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator" method="_on_AutoHideTimer1_timeout"]
