@@ -234,11 +234,11 @@ func _on_button_4_pressed():
 
 @onready var AmmountToBuy: Label = $Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater/ammounttobuy
 
-@onready var BuyGenerator2: Button = $Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2
+@onready var BuyGenerator2: Button = $Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2
 
-@onready var BoxGenerator: Button = $Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator
-@onready var BoxGenerator2: Button = $Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2
-@onready var BoxGenerator3: Button = $Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3
+@onready var BoxGenerator: Button = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator
+@onready var BoxGenerator2: Button = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2
+@onready var BoxGenerator3: Button = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3
 
 
 ### GENERATOR TIMERS W/ OPTIONS
@@ -426,7 +426,6 @@ func _on_button_4_pressed():
 @onready var gen3_label2_upgrade5 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2/Generator3-5TimeLabel"
 @onready var gen3_label3_upgrade5 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3/Generator3-5TimeLabel"
 
-
 #upgrade6
 
 @onready var gen1_label_upgrade6 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1/Generator-6TimeLabel"
@@ -440,6 +439,14 @@ func _on_button_4_pressed():
 @onready var gen3_label_upgrade6 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1/Generator3-6TimeLabel"
 @onready var gen3_label2_upgrade6 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2/Generator3-6TimeLabel"
 @onready var gen3_label3_upgrade6 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3/Generator3-6TimeLabel"
+
+@onready var upgrade_press_count = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/UpgradeGen3ShowLabel
+
+#@onready var active_gen2_texture: Sprite2D = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2Sprite
+#@onready var inactive_gen2_texture: Sprite2D = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen3BrokenSprite
+#
+#@onready var active_gen3_texture: Sprite2D = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3Sprite
+#@onready var inactive_gen3_texture: Sprite2D = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3Broken2Sprite
 
 
 ## GENERATOR UPGRADE TIERS
@@ -561,458 +568,457 @@ func _process(delta):
 
 	if gen1_label:
 		gen1_label.text = str(int(gen1option1_timer.time_left)) + "s"
-		if gen1option1_timer.time_left <= 0:
-			gen1_label.visible = false
-		else:
-			gen1_label.visible = true
+#		if gen1option1_timer.time_left <= 0:
+#			gen1_label.visible = false
+#		else:
+#			gen1_label.visible = true
 			
 	if gen1_label2:
 		gen1_label2.text = str(int(gen1option2_timer.time_left)) + "s"
-		if gen1option2_timer.time_left <= 0:
-			gen1_label2.visible = false
-		else:
-			gen1_label2.visible = true
+#		if gen1option2_timer.time_left <= 0:
+#			gen1_label2.visible = false
+#		else:
+#			gen1_label2.visible = true
 			
 	if gen1_label3:
 		gen1_label3.text = str(int(gen1option3_timer.time_left)) + "s"
-		if gen1option3_timer.time_left <= 0:
-			gen1_label3.visible = false
-		else:
-			gen1_label3.visible = true
+#		if gen1option3_timer.time_left <= 0:
+#			gen1_label3.visible = false
+#		else:
+#			gen1_label3.visible = true
 
 	if gen2_label:
 		gen2_label.text = str(int(gen2option1_timer.time_left)) + "s"
-		if gen2option1_timer.time_left <= 0:
-			gen2_label.visible = false
-		else:
-			gen2_label.visible = true
+#		if gen2option1_timer.time_left <= 0:
+#			gen2_label.visible = false
+#		else:
+#			gen2_label.visible = true
 			
 	if gen2_label2:
 		gen2_label2.text = str(int(gen2option2_timer.time_left)) + "s"
-		if gen2option2_timer.time_left <= 0:
-			gen2_label2.visible = false
-		else:
-			gen2_label2.visible = true
+#		if gen2option2_timer.time_left <= 0:
+#			gen2_label2.visible = false
+#		else:
+#			gen2_label2.visible = true
 			
 	if gen2_label3:
 		gen2_label3.text = str(int(gen2option3_timer.time_left)) + "s"
-		if gen2option3_timer.time_left <= 0:
-			gen2_label3.visible = false
-		else:
-			gen2_label3.visible = true
+#		if gen2option3_timer.time_left <= 0:
+#			gen2_label3.visible = false
+#		else:
+#			gen2_label3.visible = true
 
 	if gen3_label:
 		gen3_label.text = str(int(gen3option1_timer.time_left)) + "s"
-		if gen3option1_timer.time_left <= 0:
-			gen3_label.visible = false
-		else:
-			gen3_label.visible = true
+#		if gen3option1_timer.time_left <= 0:
+#			gen3_label.visible = false
+#		else:
+#			gen3_label.visible = true
 			
 	if gen3_label2:
 		gen3_label2.text = str(int(gen3option2_timer.time_left)) + "s"
-		if gen3option2_timer.time_left <= 0:
-			gen3_label2.visible = false
-		else:
-			gen3_label2.visible = true
+#		if gen3option2_timer.time_left <= 0:
+#			gen3_label2.visible = false
+#		else:
+#			gen3_label2.visible = true
 			
 	if gen3_label3:
 		gen3_label3.text = str(int(gen3option3_timer.time_left)) + "s"
-		if gen3option3_timer.time_left <= 0:
-			gen3_label3.visible = false
-		else:
-			gen3_label3.visible = true
+#		if gen3option3_timer.time_left <= 0:
+#			gen3_label3.visible = false
+#		else:
+#			gen3_label3.visible = true
 
 
 ## UPGRADE 1
 
 	if gen1_label_upgrade1:
 		gen1_label_upgrade1.text = str(int(gen1option1_upgrade1_timer.time_left)) + "s"
-		if gen1option1_upgrade1_timer.time_left <= 0:
-			gen1_label_upgrade1.visible = false
-		else:
-			gen1_label_upgrade1.visible = true
+#		if gen1option1_upgrade1_timer.time_left <= 0:
+#			gen1_label_upgrade1.visible = false
+#		else:
+#			gen1_label_upgrade1.visible = true
 			
 	if gen1_label2_upgrade1:
 		gen1_label2_upgrade1.text = str(int(gen1option2_upgrade1_timer.time_left)) + "s"
-		if gen1option2_upgrade1_timer.time_left <= 0:
-			gen1_label2_upgrade1.visible = false
-		else:
-			gen1_label2_upgrade1.visible = true
+#		if gen1option2_upgrade1_timer.time_left <= 0:
+#			gen1_label2_upgrade1.visible = false
+#		else:
+#			gen1_label2_upgrade1.visible = true
 			
 	if gen1_label3_upgrade1:
 		gen1_label3_upgrade1.text = str(int(gen1option3_upgrade1_timer.time_left)) + "s"
-		if gen1option3_upgrade1_timer.time_left <= 0:
-			gen1_label3_upgrade1.visible = false
-		else:
-			gen1_label3_upgrade1.visible = true
+#		if gen1option3_upgrade1_timer.time_left <= 0:
+#			gen1_label3_upgrade1.visible = false
+#		else:
+#			gen1_label3_upgrade1.visible = true
 			
 	if gen2_label_upgrade1:
 		gen2_label_upgrade1.text = str(int(gen2option1_upgrade1_timer.time_left)) + "s"
-		if gen2option1_upgrade1_timer.time_left <= 0:
-			gen2_label_upgrade1.visible = false
-		else:
-			gen1_label_upgrade1.visible = true
+#		if gen2option1_upgrade1_timer.time_left <= 0:
+#			gen2_label_upgrade1.visible = false
+#		else:
+#			gen1_label_upgrade1.visible = true
 			
 	if gen2_label2_upgrade1:
 		gen2_label2_upgrade1.text = str(int(gen2option2_upgrade1_timer.time_left)) + "s"
-		if gen2option2_upgrade1_timer.time_left <= 0:
-			gen2_label2_upgrade1.visible = false
-		else:
-			gen2_label2_upgrade1.visible = true
+#		if gen2option2_upgrade1_timer.time_left <= 0:
+#			gen2_label2_upgrade1.visible = false
+#		else:
+#			gen2_label2_upgrade1.visible = true
 			
 	if gen2_label3_upgrade1:
 		gen2_label3_upgrade1.text = str(int(gen2option3_upgrade1_timer.time_left)) + "s"
-		if gen2option3_upgrade1_timer.time_left <= 0:
-			gen2_label3_upgrade1.visible = false
-		else:
-			gen2_label3_upgrade1.visible = true
+#		if gen2option3_upgrade1_timer.time_left <= 0:
+#			gen2_label3_upgrade1.visible = false
+#		else:
+#			gen2_label3_upgrade1.visible = true
 			
 	if gen3_label_upgrade1:
 		gen3_label_upgrade1.text = str(int(gen3option1_upgrade1_timer.time_left)) + "s"
-		if gen3option1_upgrade1_timer.time_left <= 0:
-			gen3_label_upgrade1.visible = false
-		else:
-			gen3_label_upgrade1.visible = true
+#		if gen3option1_upgrade1_timer.time_left <= 0:
+#			gen3_label_upgrade1.visible = false
+#		else:
+#			gen3_label_upgrade1.visible = true
 			
 	if gen3_label2_upgrade1:
 		gen3_label2_upgrade1.text = str(int(gen3option2_upgrade1_timer.time_left)) + "s"
-		if gen3option2_upgrade1_timer.time_left <= 0:
-			gen3_label2_upgrade1.visible = false
-		else:
-			gen3_label2_upgrade1.visible = true
+#		if gen3option2_upgrade1_timer.time_left <= 0:
+#			gen3_label2_upgrade1.visible = false
+#		else:
+#			gen3_label2_upgrade1.visible = true
 			
 	if gen3_label3_upgrade1:
 		gen3_label3_upgrade1.text = str(int(gen3option3_upgrade1_timer.time_left)) + "s"
-		if gen3option3_upgrade1_timer.time_left <= 0:
-			gen3_label3_upgrade1.visible = false
-		else:
-			gen3_label3_upgrade1.visible = true
-
+#		if gen3option3_upgrade1_timer.time_left <= 0:
+#			gen3_label3_upgrade1.visible = false
+#		else:
+#			gen3_label3_upgrade1.visible = true
 ## UPGRADE 2
 
 	if gen1_label:
 		gen1_label_upgrade2.text = str(int(gen1option1_upgrade2_timer.time_left)) + "s"
-		if gen1option1_upgrade2_timer.time_left <= 0:
-			gen1_label_upgrade2.visible = false
-		else:
-			gen1_label_upgrade2.visible = true
+#		if gen1option1_upgrade2_timer.time_left <= 0:
+#			gen1_label_upgrade2.visible = false
+#		else:
+#			gen1_label_upgrade2.visible = true
 			
 	if gen1_label2_upgrade2:
 		gen1_label2_upgrade2.text = str(int(gen1option2_upgrade2_timer.time_left)) + "s"
-		if gen1option2_upgrade2_timer.time_left <= 0:
-			gen1_label2_upgrade2.visible = false
-		else:
-			gen1_label2_upgrade2.visible = true
+#		if gen1option2_upgrade2_timer.time_left <= 0:
+#			gen1_label2_upgrade2.visible = false
+#		else:
+#			gen1_label2_upgrade2.visible = true
 			
 	if gen1_label3_upgrade2:
 		gen1_label3_upgrade2.text = str(int(gen1option3_upgrade2_timer.time_left)) + "s"
-		if gen2option3_upgrade2_timer.time_left <= 0:
-			gen1_label3_upgrade2.visible = false
-		else:
-			gen1_label3_upgrade2.visible = true
+#		if gen2option3_upgrade2_timer.time_left <= 0:
+#			gen1_label3_upgrade2.visible = false
+#		else:
+#			gen1_label3_upgrade2.visible = true
 			
 	if gen2_label_upgrade2:
 		gen2_label_upgrade2.text = str(int(gen2option1_upgrade2_timer.time_left)) + "s"
-		if gen2option1_upgrade2_timer.time_left <= 0:
-			gen2_label_upgrade2.visible = false
-		else:
-			gen2_label_upgrade2.visible = true
+#		if gen2option1_upgrade2_timer.time_left <= 0:
+#			gen2_label_upgrade2.visible = false
+#		else:
+#			gen2_label_upgrade2.visible = true
 			
 	if gen2_label2_upgrade2:
 		gen2_label2_upgrade2.text = str(int(gen2option2_upgrade2_timer.time_left)) + "s"
-		if gen2option2_upgrade2_timer.time_left <= 0:
-			gen2_label2_upgrade2.visible = false
-		else:
-			gen2_label2_upgrade2.visible = true
+#		if gen2option2_upgrade2_timer.time_left <= 0:
+#			gen2_label2_upgrade2.visible = false
+#		else:
+#			gen2_label2_upgrade2.visible = true
 			
 	if gen2_label3_upgrade2:
 		gen2_label3_upgrade2.text = str(int(gen2option3_upgrade2_timer.time_left)) + "s"
-		if gen2option3_upgrade2_timer.time_left <= 0:
-			gen2_label3_upgrade2.visible = false
-		else:
-			gen2_label3_upgrade2.visible = true
+#		if gen2option3_upgrade2_timer.time_left <= 0:
+#			gen2_label3_upgrade2.visible = false
+#		else:
+#			gen2_label3_upgrade2.visible = true
 			
 	if gen3_label_upgrade2:
 		gen3_label_upgrade2.text = str(int(gen3option1_upgrade2_timer.time_left)) + "s"
-		if gen3option1_upgrade2_timer.time_left <= 0:
-			gen3_label_upgrade2.visible = false
-		else:
-			gen3_label_upgrade2.visible = true
+#		if gen3option1_upgrade2_timer.time_left <= 0:
+#			gen3_label_upgrade2.visible = false
+#		else:
+#			gen3_label_upgrade2.visible = true
 			
 	if gen3_label2_upgrade2:
 		gen3_label2_upgrade2.text = str(int(gen3option2_upgrade2_timer.time_left)) + "s"
-		if gen3option2_upgrade2_timer.time_left <= 0:
-			gen3_label2_upgrade2.visible = false
-		else:
-			gen3_label2_upgrade2.visible = true
+#		if gen3option2_upgrade2_timer.time_left <= 0:
+#			gen3_label2_upgrade2.visible = false
+#		else:
+#			gen3_label2_upgrade2.visible = true
 			
 	if gen3_label3_upgrade2:
 		gen3_label3_upgrade2.text = str(int(gen3option3_upgrade2_timer.time_left)) + "s"
-		if gen3option3_upgrade2_timer.time_left <= 0:
-			gen3_label3_upgrade2.visible = false
-		else:
-			gen3_label3_upgrade2.visible = true
+#		if gen3option3_upgrade2_timer.time_left <= 0:
+#			gen3_label3_upgrade2.visible = false
+#		else:
+#			gen3_label3_upgrade2.visible = true
 
 
 ## UPGRADE 3
 
 	if gen1_label_upgrade3:
 		gen1_label_upgrade3.text = str(int(gen1option1_upgrade3_timer.time_left)) + "s"
-		if gen1option1_upgrade3_timer.time_left <= 0:
-			gen1_label_upgrade3.visible = false
-		else:
-			gen1_label_upgrade3.visible = true
+#		if gen1option1_upgrade3_timer.time_left <= 0:
+#			gen1_label_upgrade3.visible = false
+#		else:
+#			gen1_label_upgrade3.visible = true
 			
 	if gen1_label2_upgrade3:
 		gen1_label2_upgrade3.text = str(int(gen1option2_upgrade3_timer.time_left)) + "s"
-		if gen1option2_upgrade3_timer.time_left <= 0:
-			gen1_label2_upgrade3.visible = false
-		else:
-			gen1_label2_upgrade3.visible = true
+#		if gen1option2_upgrade3_timer.time_left <= 0:
+#			gen1_label2_upgrade3.visible = false
+#		else:
+#			gen1_label2_upgrade3.visible = true
 			
 	if gen1_label3_upgrade3:
 		gen1_label3_upgrade3.text = str(int(gen1option3_upgrade3_timer.time_left)) + "s"
-		if gen1option3_upgrade3_timer.time_left <= 0:
-			gen1_label3_upgrade3.visible = false
-		else:
-			gen1_label3_upgrade3.visible = true
+#		if gen1option3_upgrade3_timer.time_left <= 0:
+#			gen1_label3_upgrade3.visible = false
+#		else:
+#			gen1_label3_upgrade3.visible = true
 			
 	if gen2_label_upgrade3:
 		gen2_label_upgrade3.text = str(int(gen2option1_upgrade3_timer.time_left)) + "s"
-		if gen2option1_upgrade3_timer.time_left <= 0:
-			gen2_label_upgrade3.visible = false
-		else:
-			gen1_label_upgrade3.visible = true
+#		if gen2option1_upgrade3_timer.time_left <= 0:
+#			gen2_label_upgrade3.visible = false
+#		else:
+#			gen1_label_upgrade3.visible = true
 			
 	if gen2_label2_upgrade3:
 		gen2_label2_upgrade3.text = str(int(gen2option2_upgrade3_timer.time_left)) + "s"
-		if gen2option2_upgrade3_timer.time_left <= 0:
-			gen2_label2_upgrade3.visible = false
-		else:
-			gen2_label2_upgrade3.visible = true
+#		if gen2option2_upgrade3_timer.time_left <= 0:
+#			gen2_label2_upgrade3.visible = false
+#		else:
+#			gen2_label2_upgrade3.visible = true
 			
 	if gen2_label3_upgrade3:
 		gen2_label3_upgrade3.text = str(int(gen2option3_upgrade3_timer.time_left)) + "s"
-		if gen2option3_upgrade3_timer.time_left <= 0:
-			gen2_label3_upgrade3.visible = false
-		else:
-			gen2_label3_upgrade3.visible = true
+#		if gen2option3_upgrade3_timer.time_left <= 0:
+#			gen2_label3_upgrade3.visible = false
+#		else:
+#			gen2_label3_upgrade3.visible = true
 			
 	if gen3_label_upgrade3:
 		gen3_label_upgrade3.text = str(int(gen3option1_upgrade3_timer.time_left)) + "s"
-		if gen3option1_upgrade3_timer.time_left <= 0:
-			gen3_label_upgrade3.visible = false
-		else:
-			gen3_label_upgrade3.visible = true
+#		if gen3option1_upgrade3_timer.time_left <= 0:
+#			gen3_label_upgrade3.visible = false
+#		else:
+#			gen3_label_upgrade3.visible = true
 			
 	if gen3_label2_upgrade3:
 		gen3_label2_upgrade3.text = str(int(gen3option2_upgrade3_timer.time_left)) + "s"
-		if gen3option2_upgrade3_timer.time_left <= 0:
-			gen3_label2_upgrade3.visible = false
-		else:
-			gen3_label2_upgrade3.visible = true
+#		if gen3option2_upgrade3_timer.time_left <= 0:
+#			gen3_label2_upgrade3.visible = false
+#		else:
+#			gen3_label2_upgrade3.visible = true
 			
 	if gen3_label3_upgrade3:
 		gen3_label3_upgrade3.text = str(int(gen3option3_upgrade3_timer.time_left)) + "s"
-		if gen3option3_upgrade3_timer.time_left <= 0:
-			gen3_label3_upgrade3.visible = false
-		else:
-			gen3_label3_upgrade3.visible = true
+#		if gen3option3_upgrade3_timer.time_left <= 0:
+#			gen3_label3_upgrade3.visible = false
+#		else:
+#			gen3_label3_upgrade3.visible = true
 
 ## UPGRADE 4
 
 	if gen1_label_upgrade4:
 		gen1_label_upgrade4.text = str(int(gen1option1_upgrade4_timer.time_left)) + "s"
-		if gen1option1_upgrade4_timer.time_left <= 0:
-			gen1_label_upgrade4.visible = false
-		else:
-			gen1_label_upgrade4.visible = true
+#		if gen1option1_upgrade4_timer.time_left <= 0:
+#			gen1_label_upgrade4.visible = false
+#		else:
+#			gen1_label_upgrade4.visible = true
 			
 	if gen1_label2_upgrade4:
 		gen1_label2_upgrade4.text = str(int(gen1option2_upgrade4_timer.time_left)) + "s"
-		if gen1option2_upgrade4_timer.time_left <= 0:
-			gen1_label2_upgrade4.visible = false
-		else:
-			gen1_label2_upgrade4.visible = true
+#		if gen1option2_upgrade4_timer.time_left <= 0:
+#			gen1_label2_upgrade4.visible = false
+#		else:
+#			gen1_label2_upgrade4.visible = true
 			
 	if gen1_label3_upgrade4:
 		gen1_label3_upgrade4.text = str(int(gen1option3_upgrade4_timer.time_left)) + "s"
-		if gen1option3_upgrade4_timer.time_left <= 0:
-			gen1_label3_upgrade4.visible = false
-		else:
-			gen1_label3_upgrade4.visible = true
+#		if gen1option3_upgrade4_timer.time_left <= 0:
+#			gen1_label3_upgrade4.visible = false
+#		else:
+#			gen1_label3_upgrade4.visible = true
 			
 	if gen2_label_upgrade4:
 		gen2_label_upgrade4.text = str(int(gen2option1_upgrade4_timer.time_left)) + "s"
-		if gen2option1_upgrade4_timer.time_left <= 0:
-			gen2_label_upgrade4.visible = false
-		else:
-			gen2_label_upgrade4.visible = true
+#		if gen2option1_upgrade4_timer.time_left <= 0:
+#			gen2_label_upgrade4.visible = false
+#		else:
+#			gen2_label_upgrade4.visible = true
 			
 	if gen2_label2_upgrade4:
 		gen2_label2_upgrade4.text = str(int(gen2option2_upgrade4_timer.time_left)) + "s"
-		if gen2option2_upgrade4_timer.time_left <= 0:
-			gen2_label2_upgrade4.visible = false
-		else:
-			gen2_label2_upgrade4.visible = true
+#		if gen2option2_upgrade4_timer.time_left <= 0:
+#			gen2_label2_upgrade4.visible = false
+#		else:
+#			gen2_label2_upgrade4.visible = true
 			
 	if gen2_label3_upgrade4:
 		gen2_label3_upgrade4.text = str(int(gen2option3_upgrade4_timer.time_left)) + "s"
-		if gen2option3_upgrade4_timer.time_left <= 0:
-			gen2_label3_upgrade4.visible = false
-		else:
-			gen2_label3_upgrade4.visible = true
+#		if gen2option3_upgrade4_timer.time_left <= 0:
+#			gen2_label3_upgrade4.visible = false
+#		else:
+#			gen2_label3_upgrade4.visible = true
 			
 	if gen3_label_upgrade4:
 		gen3_label_upgrade4.text = str(int(gen3option1_upgrade4_timer.time_left)) + "s"
-		if gen3option1_upgrade4_timer.time_left <= 0:
-			gen3_label_upgrade4.visible = false
-		else:
-			gen3_label_upgrade4.visible = true
+#		if gen3option1_upgrade4_timer.time_left <= 0:
+#			gen3_label_upgrade4.visible = false
+#		else:
+#			gen3_label_upgrade4.visible = true
 			
 	if gen3_label2_upgrade4:
 		gen3_label2_upgrade4.text = str(int(gen3option2_upgrade4_timer.time_left)) + "s"
-		if gen3option2_upgrade4_timer.time_left <= 0:
-			gen3_label2_upgrade4.visible = false
-		else:
-			gen3_label2_upgrade4.visible = true
+#		if gen3option2_upgrade4_timer.time_left <= 0:
+#			gen3_label2_upgrade4.visible = false
+#		else:
+#			gen3_label2_upgrade4.visible = true
 			
 	if gen3_label3_upgrade4:
 		gen3_label3_upgrade4.text = str(int(gen3option3_upgrade4_timer.time_left)) + "s"
-		if gen3option3_upgrade4_timer.time_left <= 0:
-			gen3_label3_upgrade4.visible = false
-		else:
-			gen3_label3_upgrade4.visible = true
+#		if gen3option3_upgrade4_timer.time_left <= 0:
+#			gen3_label3_upgrade4.visible = false
+#		else:
+#			gen3_label3_upgrade4.visible = true
 
 ## UPGRADE 5
 
 	if gen1_label_upgrade5:
 		gen1_label_upgrade5.text = str(int(gen1option1_upgrade5_timer.time_left)) + "s"
-		if gen1option1_upgrade5_timer.time_left <= 0:
-			gen1_label_upgrade5.visible = false
-		else:
-			gen1_label_upgrade5.visible = true
+#		if gen1option1_upgrade5_timer.time_left <= 0:
+#			gen1_label_upgrade5.visible = false
+#		else:
+#			gen1_label_upgrade5.visible = true
 			
 	if gen1_label2_upgrade5:
 		gen1_label2_upgrade5.text = str(int(gen1option2_upgrade5_timer.time_left)) + "s"
-		if gen1option2_upgrade5_timer.time_left <= 0:
-			gen1_label2_upgrade5.visible = false
-		else:
-			gen1_label2_upgrade5.visible = true
+#		if gen1option2_upgrade5_timer.time_left <= 0:
+#			gen1_label2_upgrade5.visible = false
+#		else:
+#			gen1_label2_upgrade5.visible = true
 			
 	if gen1_label3_upgrade5:
 		gen1_label3_upgrade5.text = str(int(gen1option3_upgrade5_timer.time_left)) + "s"
-		if gen1option3_upgrade5_timer.time_left <= 0:
-			gen1_label3_upgrade5.visible = false
-		else:
-			gen1_label3_upgrade5.visible = true
+#		if gen1option3_upgrade5_timer.time_left <= 0:
+#			gen1_label3_upgrade5.visible = false
+#		else:
+#			gen1_label3_upgrade5.visible = true
 			
 	if gen2_label_upgrade5:
 		gen2_label_upgrade5.text = str(int(gen2option1_upgrade5_timer.time_left)) + "s"
-		if gen2option1_upgrade5_timer.time_left <= 0:
-			gen2_label_upgrade5.visible = false
-		else:
-			gen2_label_upgrade5.visible = true
+#		if gen2option1_upgrade5_timer.time_left <= 0:
+#			gen2_label_upgrade5.visible = false
+#		else:
+#			gen2_label_upgrade5.visible = true
 			
 	if gen2_label2_upgrade5:
 		gen2_label2_upgrade5.text = str(int(gen2option2_upgrade5_timer.time_left)) + "s"
-		if gen2option2_upgrade5_timer.time_left <= 0:
-			gen2_label2_upgrade5.visible = false
-		else:
-			gen2_label2_upgrade5.visible = true
+#		if gen2option2_upgrade5_timer.time_left <= 0:
+#			gen2_label2_upgrade5.visible = false
+#		else:
+#			gen2_label2_upgrade5.visible = true
 			
 	if gen2_label3_upgrade5:
 		gen2_label3_upgrade5.text = str(int(gen2option3_upgrade5_timer.time_left)) + "s"
-		if gen2option3_upgrade5_timer.time_left <= 0:
-			gen2_label3_upgrade5.visible = false
-		else:
-			gen1_label3_upgrade5.visible = true
+#		if gen2option3_upgrade5_timer.time_left <= 0:
+#			gen2_label3_upgrade5.visible = false
+#		else:
+#			gen1_label3_upgrade5.visible = true
 			
 	if gen3_label_upgrade5:
 		gen3_label_upgrade5.text = str(int(gen3option1_upgrade5_timer.time_left)) + "s"
-		if gen3option1_upgrade5_timer.time_left <= 0:
-			gen3_label_upgrade5.visible = false
-		else:
-			gen3_label_upgrade5.visible = true
+#		if gen3option1_upgrade5_timer.time_left <= 0:
+#			gen3_label_upgrade5.visible = false
+#		else:
+#			gen3_label_upgrade5.visible = true
 			
 	if gen3_label2_upgrade5:
 		gen3_label2_upgrade5.text = str(int(gen3option2_upgrade5_timer.time_left)) + "s"
-		if gen3option2_upgrade5_timer.time_left <= 0:
-			gen3_label2_upgrade5.visible = false
-		else:
-			gen3_label2_upgrade5.visible = true
+#		if gen3option2_upgrade5_timer.time_left <= 0:
+#			gen3_label2_upgrade5.visible = false
+#		else:
+#			gen3_label2_upgrade5.visible = true
 			
 	if gen3_label3_upgrade5:
 		gen3_label3_upgrade5.text = str(int(gen3option3_upgrade5_timer.time_left)) + "s"
-		if gen3option3_upgrade5_timer.time_left <= 0:
-			gen3_label3_upgrade5.visible = false
-		else:
-			gen3_label3_upgrade5.visible = true
+#		if gen3option3_upgrade5_timer.time_left <= 0:
+#			gen3_label3_upgrade5.visible = false
+#		else:
+#			gen3_label3_upgrade5.visible = true
 
 ## UPGRADE 6
 
 	if gen1_label_upgrade6:
 		gen1_label_upgrade6.text = str(int(gen1option1_upgrade6_timer.time_left)) + "s"
-		if gen1option1_upgrade6_timer.time_left <= 0:
-			gen1_label_upgrade6.visible = false
-		else:
-			gen1_label_upgrade6.visible = true
+#		if gen1option1_upgrade6_timer.time_left <= 0:
+#			gen1_label_upgrade6.visible = false
+#		else:
+#			gen1_label_upgrade6.visible = true
 			
 	if gen1_label2_upgrade6:
 		gen1_label2_upgrade6.text = str(int(gen1option2_upgrade6_timer.time_left)) + "s"
-		if gen1option2_upgrade6_timer.time_left <= 0:
-			gen1_label2_upgrade6.visible = false
-		else:
-			gen1_label2_upgrade6.visible = true
+#		if gen1option2_upgrade6_timer.time_left <= 0:
+#			gen1_label2_upgrade6.visible = false
+#		else:
+#			gen1_label2_upgrade6.visible = true
 			
 	if gen1_label3_upgrade6:
 		gen1_label3_upgrade6.text = str(int(gen1option3_upgrade6_timer.time_left)) + "s"
-		if gen1option3_upgrade6_timer.time_left <= 0:
-			gen1_label3_upgrade6.visible = false
-		else:
-			gen1_label3_upgrade6.visible = true
+#		if gen1option3_upgrade6_timer.time_left <= 0:
+#			gen1_label3_upgrade6.visible = false
+#		else:
+#			gen1_label3_upgrade6.visible = true
 			
 	if gen2_label_upgrade6:
 		gen2_label_upgrade6.text = str(int(gen2option1_upgrade6_timer.time_left)) + "s"
-		if gen2option1_upgrade6_timer.time_left <= 0:
-			gen2_label_upgrade6.visible = false
-		else:
-			gen2_label_upgrade6.visible = true
+#		if gen2option1_upgrade6_timer.time_left <= 0:
+#			gen2_label_upgrade6.visible = false
+#		else:
+#			gen2_label_upgrade6.visible = true
 			
 	if gen2_label2_upgrade6:
 		gen2_label2_upgrade6.text = str(int(gen2option2_upgrade6_timer.time_left)) + "s"
-		if gen2option2_upgrade6_timer.time_left <= 0:
-			gen2_label2_upgrade6.visible = false
-		else:
-			gen2_label2_upgrade6.visible = true
+#		if gen2option2_upgrade6_timer.time_left <= 0:
+#			gen2_label2_upgrade6.visible = false
+#		else:
+#			gen2_label2_upgrade6.visible = true
 			
 	if gen2_label3_upgrade6:
 		gen2_label3_upgrade6.text = str(int(gen2option3_upgrade6_timer.time_left)) + "s"
-		if gen2option3_upgrade6_timer.time_left <= 0:
-			gen2_label3_upgrade6.visible = false
-		else:
-			gen2_label3_upgrade6.visible = true
+#		if gen2option3_upgrade6_timer.time_left <= 0:
+#			gen2_label3_upgrade6.visible = false
+#		else:
+#			gen2_label3_upgrade6.visible = true
 			
 	if gen3_label_upgrade6:
 		gen3_label_upgrade6.text = str(int(gen3option1_upgrade6_timer.time_left)) + "s"
-		if gen3option1_upgrade6_timer.time_left <= 0:
-			gen3_label_upgrade6.visible = false
-		else:
-			gen3_label_upgrade6.visible = true
+#		if gen3option1_upgrade6_timer.time_left <= 0:
+#			gen3_label_upgrade6.visible = false
+#		else:
+#			gen3_label_upgrade6.visible = true
 			
 	if gen3_label2_upgrade6:
 		gen3_label2_upgrade6.text = str(int(gen3option2_upgrade6_timer.time_left)) + "s"
-		if gen3option2_upgrade6_timer.time_left <= 0:
-			gen3_label2_upgrade6.visible = false
-		else:
-			gen3_label2_upgrade6.visible = true
+#		if gen3option2_upgrade6_timer.time_left <= 0:
+#			gen3_label2_upgrade6.visible = false
+#		else:
+#			gen3_label2_upgrade6.visible = true
 			
 	if gen3_label3_upgrade6:
 		gen3_label3_upgrade6.text = str(int(gen3option3_upgrade6_timer.time_left)) + "s"
-		if gen3option3_upgrade6_timer.time_left <= 0:
-			gen3_label3_upgrade6.visible = false
-		else:
-			gen3_label3_upgrade6.visible = true
+#		if gen3option3_upgrade6_timer.time_left <= 0:
+#			gen3_label3_upgrade6.visible = false
+#		else:
+#			gen3_label3_upgrade6.visible = true
 
 
 ## ENERGY BAR
@@ -1303,22 +1309,35 @@ func _on_buy_generator_3_pressed():
 	current_cost = 10
 	if coin_count >= current_cost:
 		sub_coin(current_cost)
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/BuyGenerator3.hide()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3Broken2Sprite.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3Sprite.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.disabled = false
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
 	else:
 		error_onBuy.play()
 		print("couldn't buy")
+
+
+func _on_buy_gen3_area_2d_mouse_entered() -> void:
+	$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Sprite.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyMouseonTopGen3Sprite3.show()
+
+func _on_buy_gen3_area_2d_mouse_exited() -> void:
+	$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Sprite.show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyMouseonTopGen3Sprite3.hide()
 
 func _on_buy_generator_2_pressed():
 	current_cost = 10
 	if coin_count >= current_cost:
 		sub_coin(current_cost)
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/BuyGenerator2.hide()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2BrokenSprite.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2Sprite.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
 	else:
 		error_onBuy.play()
 		print("couldn't buy")
@@ -1350,27 +1369,67 @@ func _on_supply_option_1_pressed():
 	if box_count >= 6:
 		sub_box(6)
 		#SCI-FI BOX CREATIOND SFX.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		if gen_press_count1 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1/GeneratorTimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2/GeneratorTimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3/GeneratorTimeLabel".hide()
+			
 		if gen_press_count1 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1/Generator-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2/Generator-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3/Generator-1TimeLabel".hide()
+			
 		if gen_press_count1 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1/Generator-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2/Generator-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3/Generator-2TimeLabel".hide()
+			
 		if gen_press_count1 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1".start()
+			###
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1/Generator-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2/Generator-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3/Generator-3TimeLabel".hide()
+			
 		if gen_press_count1 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1/Generator-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2/Generator-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3/Generator-4TimeLabel".hide()
+			
 		if gen_press_count1 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1/Generator-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2/Generator-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3/Generator-5TimeLabel".hide()
+			
 		if gen_press_count1 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen1/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1/Generator-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2/Generator-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3/Generator-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
@@ -1378,27 +1437,67 @@ func _on_supply_option_2_pressed():
 	if box_count >= 10:
 		sub_box(10)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		if gen_press_count1 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2/GeneratorTimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1/GeneratorTimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3/GeneratorTimeLabel".hide()
+			
 		if gen_press_count1 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2/Generator-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1/Generator-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3/Generator-1TimeLabel".hide()
+			
 		if gen_press_count1 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2/Generator-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1/Generator-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3/Generator-2TimeLabel".hide()
+			
 		if gen_press_count1 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2/Generator-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1/Generator-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3/Generator-3TimeLabel".hide()
+			
 		if gen_press_count1 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2/Generator-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1/Generator-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3/Generator-4TimeLabel".hide()
+			
 		if gen_press_count1 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2/Generator-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1/Generator-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3/Generator-5TimeLabel".hide()
+			
 		if gen_press_count1 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen1/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2/Generator-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1/Generator-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3/Generator-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
@@ -1406,46 +1505,85 @@ func _on_supply_option_3_pressed():
 	if box_count >= 50:
 		sub_box(50)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		if gen_press_count1 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3/GeneratorTimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1/GeneratorTimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2/GeneratorTimeLabel".hide()
+			
 		if gen_press_count1 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3/Generator-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1/Generator-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2/Generator-1TimeLabel".hide()
+			
 		if gen_press_count1 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3/Generator-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1/Generator-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2/Generator-2TimeLabel".hide()
+			
 		if gen_press_count1 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3/Generator-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1/Generator-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2/Generator-3TimeLabel".hide()
+			
 		if gen_press_count1 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3/Generator-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1/Generator-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2/Generator-4TimeLabel".hide()
+			
 		if gen_press_count1 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3/Generator-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1/Generator-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2/Generator-5TimeLabel".hide()
+			
 		if gen_press_count1 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen1/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3/Generator-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1/Generator-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2/Generator-6TimeLabel".hide()
 	else:
 		error_onBuy.play()
 
 #collect box from gen
 func _on_box_1_gen_1_pressed():
 	add_supplies(1)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/GenSpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box1, Gen1".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/GenSpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = false
-
+	
 func _on_box_2_gen_1_pressed():
 	add_supplies(5)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/GenSpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box2, Gen1".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/GenSpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = false
@@ -1453,9 +1591,9 @@ func _on_box_2_gen_1_pressed():
 
 func _on_box_3_gen_1_pressed():
 	add_supplies(10)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/GenSpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/GenSpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = false
@@ -1464,32 +1602,71 @@ func _on_box_3_gen_1_pressed():
 
 ### BOX GENERATOR 2
 
-
 func _on_supply_option_1_gen2_pressed() -> void:
 	if box_count >= 6:
 		sub_box(6)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
-		if gen_press_count1 == 0:
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		if gen_press_count2 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1".start()
-		if gen_press_count1 == 1:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1/Generator2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3/Generator2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2/Generator2TimeLabel".hide()
+			
+		if gen_press_count2 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1".start()
-		if gen_press_count1 == 2:
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1/Generator2-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3/Generator2-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2/Generator2-1TimeLabel".hide()
+		
+		if gen_press_count2 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1".start()
-		if gen_press_count1 == 3:
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1/Generator2-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3/Generator2-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2/Generator2-2TimeLabel".hide()
+		
+		if gen_press_count2 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1".start()
-		if gen_press_count1 == 4:
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1/Generator2-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3/Generator2-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2/Generator2-3TimeLabel".hide()
+		
+		if gen_press_count2 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1".start()
-		if gen_press_count1 == 5:
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1/Generator2-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3/Generator2-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2/Generator2-4TimeLabel".hide()
+		
+		if gen_press_count2 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1".start()
-		if gen_press_count1 == 6:
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1/Generator2-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3/Generator2-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2/Generator2-5TimeLabel".hide()
+		
+		if gen_press_count2 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen2/Option1".start()
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1/Generator2-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3/Generator2-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2/Generator2-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
@@ -1498,27 +1675,73 @@ func _on_supply_option_2_gen2_pressed() -> void:
 	if box_count >= 10:
 		sub_box(10)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
-		if gen_press_count1 == 0:
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		if gen_press_count2 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2".start()
-		if gen_press_count1 == 1:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2/Generator2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1/Generator2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3/Generator2TimeLabel".hide()
+			
+		if gen_press_count2 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2".start()
-		if gen_press_count1 == 2:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2/Generator2-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1/Generator2-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3/Generator2-1TimeLabel".hide()
+			
+		if gen_press_count2 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2".start()
-		if gen_press_count1 == 3:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2/Generator2-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1/Generator2-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3/Generator2-2TimeLabel".hide()
+			
+		if gen_press_count2 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2".start()
-		if gen_press_count1 == 4:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2/Generator2-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1/Generator2-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3/Generator2-3TimeLabel".hide()
+			
+		if gen_press_count2 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2".start()
-		if gen_press_count1 == 5:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2/Generator2-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1/Generator2-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3/Generator2-4TimeLabel".hide()
+			
+		if gen_press_count2 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2".start()
-		if gen_press_count1 == 6:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2/Generator2-5TimeLabel".show()
+			#######
+			
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2/Generator2-5TimeLabel".text = str($"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2".time_left) + "s"
+			
+			
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1/Generator2-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3/Generator2-5TimeLabel".hide()
+			
+		if gen_press_count2 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen2/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2/Generator2-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1/Generator2-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3/Generator2-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
@@ -1526,36 +1749,76 @@ func _on_supply_option_3_gen2_pressed() -> void:
 	if box_count >= 50:
 		sub_box(50)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
-		if gen_press_count1 == 0:
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		if gen_press_count2 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3".start()
-		if gen_press_count1 == 1:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3/Generator2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1/Generator2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2/Generator2TimeLabel".hide()
+			
+		if gen_press_count2 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3".start()
-		if gen_press_count1 == 2:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3/Generator2-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1/Generator2-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2/Generator2-1TimeLabel".hide()
+			
+		if gen_press_count2 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3".start()
-		if gen_press_count1 == 3:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3/Generator2-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1/Generator2-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2/Generator2-2TimeLabel".hide()
+			
+		if gen_press_count2 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3".start()
-		if gen_press_count1 == 4:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3/Generator2-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1/Generator2-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2/Generator2-3TimeLabel".hide()
+			
+		if gen_press_count2 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3".start()
-		if gen_press_count1 == 5:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3/Generator2-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1/Generator2-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2/Generator2-4TimeLabel".hide()
+			
+		if gen_press_count2 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3".start()
-		if gen_press_count1 == 6:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3/Generator2-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1/Generator2-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2/Generator2-5TimeLabel".hide()
+			
+		if gen_press_count2 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen2/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3/Generator2-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1/Generator2-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2/Generator2-6TimeLabel".hide()
+
 	else:
 		error_onBuy.play()
 
 #collect box from gen
 func _on_box_1_gen_2_pressed():
 	add_supplies(1)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box1, Gen2".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = false
@@ -1563,9 +1826,9 @@ func _on_box_1_gen_2_pressed():
 
 func _on_box_2_gen_2_pressed():
 	add_supplies(5)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box2, Gen2".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = false
@@ -1574,41 +1837,79 @@ func _on_box_2_gen_2_pressed():
 
 func _on_box_3_gen_2_pressed():
 	add_supplies(10)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box3, Gen2".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = false
-
 
 ### BOX GENERATOR 3
 func _on_supply_option_1_gen_3_pressed():
 	if box_count >= 6:
 		sub_box(6)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
-		if gen_press_count1 == 0:
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		if gen_press_count3 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1".start()
-		if gen_press_count1 == 1:
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1/Generator3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2/Generator3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3/Generator3TimeLabel".hide()
+			
+		if gen_press_count3 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1".start()
-		if gen_press_count1 == 2:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1/Generator3-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2/Generator3-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3/Generator3-1TimeLabel".hide()
+			
+		if gen_press_count3 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1".start()
-		if gen_press_count1 == 3:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1/Generator3-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2/Generator3-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3/Generator3-2TimeLabel".hide()
+			
+		if gen_press_count3 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1".start()
-		if gen_press_count1 == 4:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1/Generator3-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2/Generator3-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3/Generator3-3TimeLabel".hide()
+			
+		if gen_press_count3 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1".start()
-		if gen_press_count1 == 5:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1/Generator3-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2/Generator3-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3/Generator3-4TimeLabel".hide()
+			
+		if gen_press_count3 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1".start()
-		if gen_press_count1 == 6:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen2/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1/Generator3-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2/Generator3-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3/Generator3-5TimeLabel".hide()
+			
+		if gen_press_count3 == 6:
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1/Generator3-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2/Generator3-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3/Generator3-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
@@ -1617,27 +1918,67 @@ func _on_supply_option_2_gen_3_pressed():
 	if box_count >= 10:
 		sub_box(10)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
-		if gen_press_count1 == 0:
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		if gen_press_count3 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2".start()
-		if gen_press_count1 == 1:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2/Generator3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1/Generator3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3/Generator3TimeLabel".hide()
+			
+		if gen_press_count3 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2".start()
-		if gen_press_count1 == 2:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2/Generator3-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1/Generator3-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3/Generator3-1TimeLabel".hide()
+			
+		if gen_press_count3 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2".start()
-		if gen_press_count1 == 3:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2/Generator3-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1/Generator3-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3/Generator3-2TimeLabel".hide()
+			
+		if gen_press_count3 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2".start()
-		if gen_press_count1 == 4:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2/Generator3-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1/Generator3-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3/Generator3-3TimeLabel".hide()
+			
+		if gen_press_count3 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2".start()
-		if gen_press_count1 == 5:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2/Generator3-4TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1/Generator3-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3/Generator3-4TimeLabel".hide()
+			
+		if gen_press_count3 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2".start()
-		if gen_press_count1 == 6:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2/Generator3-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1/Generator3-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3/Generator3-5TimeLabel".hide()
+			
+		if gen_press_count3 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen3/Option2".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2/Generator3-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1/Generator3-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3/Generator3-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
@@ -1646,36 +1987,77 @@ func _on_supply_option_3_gen_3_pressed():
 	if box_count >= 50:
 		sub_box(50)
 		kaching.play()
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
-		if gen_press_count1 == 0:
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		if gen_press_count3 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3".start()
-		if gen_press_count1 == 1:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3/Generator3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1/Generator3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2/Generator3TimeLabel".hide()
+			
+		if gen_press_count3 == 1:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3".start()
-		if gen_press_count1 == 2:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3/Generator3-1TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1/Generator3-1TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2/Generator3-1TimeLabel".hide()
+			
+			
+		if gen_press_count3 == 2:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3".start()
-		if gen_press_count1 == 3:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3/Generator3-2TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1/Generator3-2TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2/Generator3-2TimeLabel".hide()
+			
+		if gen_press_count3 == 3:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3".start()
-		if gen_press_count1 == 4:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3/Generator3-3TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1/Generator3-3TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2/Generator3-3TimeLabel".hide()
+			
+		if gen_press_count3 == 4:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3".start()
-		if gen_press_count1 == 5:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3/Generator3-4TimeLabel".show()
+		
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1/Generator3-4TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2/Generator3-4TimeLabel".hide()
+			
+		if gen_press_count3 == 5:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3".start()
-		if gen_press_count1 == 6:
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3/Generator3-5TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1/Generator3-5TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2/Generator3-5TimeLabel".hide()
+			
+		if gen_press_count3 == 6:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3".start()
-		if gen_press_count1 == 7:
-			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade7/Gen3/Option3".start()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3/Generator3-6TimeLabel".show()
+			
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1/Generator3-6TimeLabel".hide()
+			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2/Generator3-6TimeLabel".hide()
+			
 	else:
 		error_onBuy.play()
 
 #collect box from gen
 func _on_box_1_gen_3_pressed():
 	add_supplies(1)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box1, Gen2".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = false
@@ -1684,9 +2066,9 @@ func _on_box_1_gen_3_pressed():
 
 func _on_box_2_gen_3_pressed():
 	add_supplies(5)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box2, Gen2".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = false
@@ -1695,9 +2077,9 @@ func _on_box_2_gen_3_pressed():
 
 func _on_box_3_gen_3_pressed():
 	add_supplies(10)
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
-	$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2.disabled = false
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box3, Gen2".hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.disabled = false
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3".stop()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = false
@@ -1708,245 +2090,279 @@ func _on_box_3_gen_3_pressed():
 # Gen 1
 func _on_option1_gen1_timeout():
 	print("Gen1, Option1 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box1, Gen1".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".stop()
+
 func _on_option2_gen1_timeout():
 	print("Gen1, Option2 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box2, Gen1".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".stop()
+
 func _on_option3_gen1_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Box3, Gen1".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".stop()
 
 # Gen 2
 func _on_option1_gen2_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box1, Gen2".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2".stop()
+
 func _on_option2_gen2_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box2, Gen2".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2".stop()
+
 func _on_option3_gen2_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Box3, Gen2".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2".stop()
 
 # Gen 3
 func _on_option1_gen3_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box1, Gen3".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3".stop()
+
 func _on_option2_gen3_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box2, Gen3".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3".stop()
+
 func _on_option3_gen3_timeout():
 	print("Gen1, Option3 Finished")
-	$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Box3, Gen3".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3".show()
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3".stop()
 
 
 ### GEN UPGRADES
 ## ADD COUNT FUNCTION
 func add_count_gen1(amount: int):
 	gen_press_count1 += amount
-
 func add_count_gen2(amount: int):
 	gen_press_count2 += amount
-
 func add_count_gen3(amount: int):
 	gen_press_count3 += amount
 
 
 #GEN 1
 func _on_gen1_speed_upgrade_pressed():
-	add_count_gen1(1)
-	if coin_count >= 1 and gen_press_count1 == 1: #upgrade1
+	upgrade_press_count.text = "" + str(gen_press_count1)
+	if coin_count >= 1 and gen_press_count1 == 0: #upgrade1
 		sub_coin(1)
 		kaching.play()
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen_press_count1 += 1  # Only increase on success
 
-	if coin_count >= 2 and gen_press_count1 == 2: #upgrade2
+	elif coin_count >= 2 and gen_press_count1 == 1: #upgrade2
 		sub_coin(2)
 		kaching.play()
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2"
-		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen_press_count1 += 1
 
-	if coin_count >= 3 and gen_press_count1 == 3: #upgrade3
+	elif coin_count >= 3 and gen_press_count1 == 2: #upgrade3
 		sub_coin(3)
 		kaching.play()
-		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1"
-		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2"
-		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1"
+		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2"
+		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen_press_count1 += 1
 
-	if coin_count >= 4 and gen_press_count1 == 4: #upgrade4
+	elif coin_count >= 4 and gen_press_count1 == 3: #upgrade4
 		sub_coin(4)
 		kaching.play()
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen_press_count1 += 1
 
-	if coin_count >= 5 and gen_press_count1 == 5: #upgrade5
+	elif coin_count >= 5 and gen_press_count1 == 4: #upgrade5
 		sub_coin(5)
 		kaching.play()
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen_press_count1 += 1
 
-	if coin_count >= 6 and gen_press_count1 == 6: #upgrade6
+	elif coin_count >= 6 and gen_press_count1 == 5: #upgrade6
 		sub_coin(6)
 		kaching.play()
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
+		gen_press_count1 += 1
 
-	if coin_count >= 70 and gen_press_count1 == 7: ## MAX UPGRADE
+	elif coin_count >= 70 and gen_press_count1 == 6: ## MAX UPGRADE
 		sub_coin(70)
 		kaching.play()
-		#play golden confetti
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldL".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldM".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1Gold3".emitting = true
+		# play golden confetti
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldL".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldM".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldR".emitting = true
 		# PLAY PARTY HORN SOUND
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		gen_press_count1 += 1  # Increment for max upgrade
+
+	else:	
+		print("ERROR ON UPGRADE GEN1 BUY")
+		error_onBuy.play()
 
 
 #GEN 2
 func _on_gen2_speed_upgrade_pressed():
-	add_count_gen2(1)
-	gen2_label.text = str(gen2option1_timer.time_left) + "s"
-	if coin_count >= 1 and gen_press_count2 == 1: #upgrade1
+	upgrade_press_count.text = "" + str(gen_press_count2)
+	if coin_count >= 1 and gen_press_count2 == 0: #upgrade1
 		sub_coin(1)
 		kaching.play()
 		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1"
 		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2"
 		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3"
-		if coin_count <= 1 and gen_press_count2 == 1: #upgrade1
-			error_onBuy.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		gen_press_count2 += 1  # Only increase on success
 
-	if coin_count >= 2 and gen_press_count2 == 2: #upgrade2
+	elif coin_count >= 2 and gen_press_count2 == 1: #upgrade2
 		sub_coin(2)
 		kaching.play()
 		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1"
 		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2"
 		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-		if coin_count <= 2 and gen_press_count2 == 2: #upgrade2
-			error_onBuy.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		gen_press_count2 += 1
 
-	if coin_count >= 3 and gen_press_count2 == 3: #upgrade3
+	elif coin_count >= 3 and gen_press_count2 == 2: #upgrade3
 		sub_coin(3)
 		kaching.play()
-		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1"
-		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2"
-		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-		if coin_count <= 2 and gen_press_count2 == 2: #upgrade2
-			error_onBuy.play()
+		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1"
+		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2"
+		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		gen_press_count2 += 1
 
-	if coin_count >= 4 and gen_press_count2 == 4: #upgrade4
+	elif coin_count >= 4 and gen_press_count2 == 3: #upgrade4
 		sub_coin(4)
 		kaching.play()
 		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1"
 		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2"
 		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-		if coin_count <= 4 and gen_press_count2 == 4: #upgrade2
-			error_onBuy.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		gen_press_count2 += 1
 
-	if coin_count >= 5 and gen_press_count2 == 5: #upgrade5
+	elif coin_count >= 5 and gen_press_count2 == 4: #upgrade5
 		sub_coin(5)
 		kaching.play()
 		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1"
 		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2"
 		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-		if coin_count <= 5 and gen_press_count2 == 5: #upgrade2
-			error_onBuy.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		gen_press_count2 += 1
 
-	if coin_count >= 6 and gen_press_count2 == 6: #upgrade6
+	elif coin_count >= 6 and gen_press_count2 == 5: #upgrade6
 		sub_coin(6)
 		kaching.play()
-		
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
-		if coin_count <= 6 and gen_press_count2 == 6: #upgrade2
-			error_onBuy.play()
+		gen2option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1"
+		gen2option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2"
+		gen2option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3"
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = false
+		gen_press_count2 += 1
 
-	if coin_count >= 70 and gen_press_count2 == 7: ## MAX UPGRADE
+	elif coin_count >= 70 and gen_press_count2 == 6: ## MAX UPGRADE
 		sub_coin(70)
 		kaching.play()
-		#play golden confetti
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldL".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldM".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldR".emitting = true
+		# play golden confetti
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldL".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldM".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!/Gen2GoldR".emitting = true
 		# PLAY PARTY HORN SOUND
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
-		if coin_count <= 70 and gen_press_count2 == 7: #upgrade2
-			error_onBuy.play()
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		gen_press_count2 += 1  # Increment for max upgrade
+
+	else:
+		print("ERROR ON UPGRADE GEN2 BUY")
+		error_onBuy.play()
 
 
 #GEN 3
 func _on_gen3_speed_upgrade_pressed():
-	add_count_gen3(1)
-	if coin_count >= 1 and gen_press_count3 == 1: #upgrade1
+	upgrade_press_count.text = "" + str(gen_press_count3)
+	if coin_count >= 1 and gen_press_count3 == 0: #upgrade1
 		sub_coin(1)
 		kaching.play()
 		gen3option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1"
 		gen3option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2"
 		gen3option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		gen_press_count3 += 1  # Only increase on success
 
-	if coin_count >= 2 and gen_press_count3 == 2: #upgrade2
+	elif coin_count >= 2 and gen_press_count3 == 1: #upgrade2
 		sub_coin(2)
 		kaching.play()
 		gen3option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1"
 		gen3option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2"
 		gen3option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		gen_press_count3 += 1
 
-	if coin_count >= 3 and gen_press_count3 == 3: #upgrade3
+	elif coin_count >= 3 and gen_press_count3 == 2: #upgrade3
 		sub_coin(3)
 		kaching.play()
 		gen3option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1"
 		gen3option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2"
 		gen3option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		gen_press_count3 += 1
 
-	if coin_count >= 4 and gen_press_count3 == 4: #upgrade4
+	elif coin_count >= 4 and gen_press_count3 == 3: #upgrade4
 		sub_coin(4)
 		kaching.play()
 		gen3option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1"
 		gen3option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2"
 		gen3option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		gen_press_count3 += 1
 
-	if coin_count >= 5 and gen_press_count3 == 5: #upgrade5
+	elif coin_count >= 5 and gen_press_count3 == 4: #upgrade5
 		sub_coin(5)
 		kaching.play()
 		gen3option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1"
 		gen3option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2"
 		gen3option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		gen_press_count3 += 1
 
-	if coin_count >= 6 and gen_press_count3 == 6: #upgrade6
+	elif coin_count >= 6 and gen_press_count3 == 5: #upgrade6
 		sub_coin(6)
 		kaching.play()
 		gen3option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1"
 		gen3option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2"
 		gen3option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = false
+		gen_press_count3 += 1
 
-	if coin_count >= 70 and gen_press_count3 == 7: ## MAX UPGRADE
+	elif coin_count >= 70 and gen_press_count3 == 6: ## MAX UPGRADE
 		sub_coin(70)
 		kaching.play()
-		#play golden confetti
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldL".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldM".emitting = true
-		$"Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldR".emitting = true
+		# play golden confetti
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldL".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldM".emitting = true
+		$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!/Gen3GoldR".emitting = true
 		# PLAY PARTY HORN SOUND
-		$Scene3/TruckScene/GeneratorOptions/Generators/CollisionShape2D/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		gen_press_count3 += 1  # Increment for max upgrade
+
+	else:
+		print("ERROR ON UPGRADE GEN3 BUY")
+		error_onBuy.play()
 
 
 
