@@ -21,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://bufmsujqhgskh" path="res://char/Windows Blue.png" id="15_1b2e6"]
 [ext_resource type="Texture2D" uid="uid://dg8gquviw1v5n" path="res://Imported_Background/Green.png" id="16_1b2e6"]
 [ext_resource type="Script" uid="uid://c1i4iy4twoxgr" path="res://box_generator3.gd" id="18_g2ved"]
-[ext_resource type="Texture2D" uid="uid://o7bei0gm7ylv" path="res://char/buy buttons/gens/upgrades/upg0.png" id="19_cs8hm"]
 [ext_resource type="Texture2D" uid="uid://2qt60axhd0cn" path="res://char/gen.png" id="19_gnuvk"]
 [ext_resource type="Script" uid="uid://c1d3tb3g5tf2v" path="res://box_generator2.gd" id="19_m63tb"]
 [ext_resource type="Script" uid="uid://jg05ogp23quw" path="res://box_generator.gd" id="20_gnuvk"]
@@ -106,6 +105,9 @@ size = Vector2(192, 57)
 [sub_resource type="Curve" id="Curve_m63tb"]
 _data = [Vector2(0, 0.606742), 0.0, 0.0, 0, 0, Vector2(0.502857, 1), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gnuvk"]
+load_path = "res://.godot/imported/buy.png-25d9117971abc22b6e149ecbb4dbc5f4.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5wjhk"]
 load_path = "res://.godot/imported/buyDisabled.png-904e7e19c755a97d193e721a3af2219c.ctex"
@@ -1049,7 +1051,7 @@ offset_bottom = 23.0
 [node name="BuyButtonSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade"]
 position = Vector2(82, 27.5)
 scale = Vector2(1.09333, 0.863636)
-texture = ExtResource("19_cs8hm")
+texture = SubResource("CompressedTexture2D_gnuvk")
 
 [node name="Gen1Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
 position = Vector2(97, 172)
@@ -1143,7 +1145,7 @@ color = Color(1, 0.807843, 0.215686, 1)
 [node name="BuyButtonSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade"]
 position = Vector2(82, 28.5)
 scale = Vector2(1.09333, 0.863636)
-texture = ExtResource("19_cs8hm")
+texture = SubResource("CompressedTexture2D_gnuvk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
@@ -1295,7 +1297,7 @@ text = "0"
 [node name="BuyButtonSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade"]
 position = Vector2(82, 28.5)
 scale = Vector2(1.09333, 0.863636)
-texture = ExtResource("19_cs8hm")
+texture = SubResource("CompressedTexture2D_gnuvk")
 
 [node name="Box1, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
@@ -1430,18 +1432,6 @@ position = Vector2(0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2/BuyGen2Area2D"]
 position = Vector2(79.5, 26)
 shape = SubResource("RectangleShape2D_cs8hm")
-
-[node name="TextureButton" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Timers & Upgrades" type="Node" parent="Scene3/TruckScene/GeneratorOptions"]
 

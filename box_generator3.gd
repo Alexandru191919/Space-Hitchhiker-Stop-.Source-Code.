@@ -8,7 +8,7 @@ var moving: bool = false
 var direction: int = 1  # 1 = up, -1 = down
 
 func _process(delta):
-	if moving:
+	if moving:	
 		OptionsArea2D.position.y += 100 * delta * direction
 
 func _on_pressed():
