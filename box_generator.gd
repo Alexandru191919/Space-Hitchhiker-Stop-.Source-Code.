@@ -1,7 +1,7 @@
-extends Button
+extends TextureButton
 
 @onready var SupplyOptionButtons1 = $"../../Options1Area2D/Options1CollisionShape2D"
-@onready var OptionsArea2D = $"../../Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"
+@onready var OptionsArea2D = $"../../Options1Area2D"
 @onready var MovingTimer1: Timer = $"../../Options1Area2D/Options1CollisionShape2D/MovingTimer1"
 
 var moving: bool = false

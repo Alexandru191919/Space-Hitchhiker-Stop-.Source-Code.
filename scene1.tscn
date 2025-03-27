@@ -1,9 +1,13 @@
-[gd_scene load_steps=51 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=84 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://bsppdk1cpe6a8" path="res://Imported_Background/Purple.png" id="1_jqcyg"]
+[ext_resource type="Texture2D" uid="uid://gcdgl0fhrss1" path="res://char/Scene1.png" id="2_t75e4"]
+[ext_resource type="Texture2D" uid="uid://dd20fdq7rkyts" path="res://char/Scene2.png" id="3_axxxg"]
 [ext_resource type="PackedScene" uid="uid://dpmthxhg01t2m" path="res://char/Customer.tscn" id="3_oqa6r"]
+[ext_resource type="Texture2D" uid="uid://lvcq30j4ynhn" path="res://char/Scene3.png" id="4_gvup2"]
 [ext_resource type="Texture2D" uid="uid://2lscdjr2akyy" path="res://white.png" id="4_takeo"]
+[ext_resource type="Texture2D" uid="uid://ckw5etjlr87vi" path="res://char/Scene4.png" id="5_pxnjm"]
 [ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="7_y86bs"]
 [ext_resource type="Texture2D" uid="uid://cnkxa8jk7smjk" path="res://icon.svg" id="8_lljbe"]
 [ext_resource type="Script" uid="uid://cl66krass8k4l" path="res://ProducttoScan.gd" id="9_evrua"]
@@ -19,17 +23,42 @@
 [ext_resource type="AudioStream" uid="uid://q28bb06inne3" path="res://SLURP.mp3" id="13_21bv0"]
 [ext_resource type="Texture2D" uid="uid://603ph41ntibl" path="res://Terrain (16x16).png" id="13_di5qy"]
 [ext_resource type="Texture2D" uid="uid://bufmsujqhgskh" path="res://char/Windows Blue.png" id="15_1b2e6"]
+[ext_resource type="Texture2D" uid="uid://b2rvm5q00jbj5" path="res://char/go-to buttons/gen room.png" id="15_nuep6"]
 [ext_resource type="Texture2D" uid="uid://dg8gquviw1v5n" path="res://Imported_Background/Green.png" id="16_1b2e6"]
+[ext_resource type="Texture2D" uid="uid://dkhebjvryty3j" path="res://char/go-to buttons/Computer Room.png" id="17_eakjk"]
+[ext_resource type="Texture2D" uid="uid://c0q1uxml2cxix" path="res://char/buy buttons/gens/get top only.png" id="18_75jky"]
 [ext_resource type="Script" uid="uid://c1i4iy4twoxgr" path="res://box_generator3.gd" id="18_g2ved"]
-[ext_resource type="Texture2D" uid="uid://o7bei0gm7ylv" path="res://char/buy buttons/gens/upgrades/upg0.png" id="19_cs8hm"]
+[ext_resource type="Texture2D" uid="uid://b7peuhg1qpehc" path="res://char/buy buttons/gens/option_buttons/option1.png" id="18_tqtwb"]
+[ext_resource type="Texture2D" uid="uid://c5o7yde70akt6" path="res://char/buy buttons/gens/option_buttons/pressed/option1_pressed.png" id="19_75jky"]
 [ext_resource type="Texture2D" uid="uid://2qt60axhd0cn" path="res://char/gen.png" id="19_gnuvk"]
 [ext_resource type="Script" uid="uid://c1d3tb3g5tf2v" path="res://box_generator2.gd" id="19_m63tb"]
+[ext_resource type="Texture2D" uid="uid://ojhq1dwygi5d" path="res://char/buy buttons/gens/option_buttons/option2.png" id="20_1hjk2"]
 [ext_resource type="Script" uid="uid://jg05ogp23quw" path="res://box_generator.gd" id="20_gnuvk"]
 [ext_resource type="Texture2D" uid="uid://cxj65r8kam87r" path="res://Export/box shutterstock.png" id="20_m63tb"]
+[ext_resource type="Texture2D" uid="uid://dj0dray0ufkbg" path="res://char/buy buttons/gens/upgrades/upg0.png" id="21_cs8hm"]
+[ext_resource type="Texture2D" uid="uid://bj3dhynjui8ng" path="res://char/buy buttons/gens/option_buttons/pressed/option2_pressed.png" id="21_e5hle"]
 [ext_resource type="Texture2D" uid="uid://dkxpi5poa3747" path="res://char/GentoBuy.png" id="21_pxlpg"]
+[ext_resource type="Texture2D" uid="uid://dxkgl62euffet" path="res://char/buy buttons/gens/option_buttons/option3.png" id="22_pgr8x"]
+[ext_resource type="Texture2D" uid="uid://cffn52j43gajq" path="res://char/buy buttons/gens/option_buttons/pressed/option3_pressed.png" id="23_u1pgp"]
 [ext_resource type="Texture2D" uid="uid://cf8gvj4gitkvh" path="res://char/buy buttons/gens/buy.png" id="23_vkopw"]
 [ext_resource type="Texture2D" uid="uid://cdc325s8q6hly" path="res://char/buy buttons/gens/buyMouseonTop.png" id="25_ftjon"]
 [ext_resource type="Texture2D" uid="uid://ba5oywyoyn3gx" path="res://char/buy buttons/gens/buyPressed.png" id="26_1mldf"]
+[ext_resource type="Texture2D" uid="uid://bahngfjor0dgb" path="res://char/buy buttons/gens/working/Sin título.png" id="27_ynu80"]
+[ext_resource type="Texture2D" uid="uid://122igdtx36h4" path="res://char/buy buttons/gens/working/1.png" id="28_eakjk"]
+[ext_resource type="Texture2D" uid="uid://qjvdyixeq3k4" path="res://char/buy buttons/gens/working/2.png" id="29_nuep6"]
+[ext_resource type="Texture2D" uid="uid://cvk7vj1xc6dau" path="res://char/buy buttons/gens/working/3.png" id="30_yjnah"]
+[ext_resource type="Texture2D" uid="uid://d0vykuckdl5c8" path="res://char/buy buttons/gens/working/4.png" id="31_w4mbv"]
+[ext_resource type="Texture2D" uid="uid://cb7m4ydgyops8" path="res://char/buy buttons/gens/working/5.png" id="32_gnl2d"]
+[ext_resource type="Texture2D" uid="uid://3y5pky6virlf" path="res://char/buy buttons/gens/working/6.png" id="33_t75e4"]
+[ext_resource type="Texture2D" uid="uid://c30l5md3kmo6s" path="res://char/buy buttons/gens/working/7.png" id="34_axxxg"]
+[ext_resource type="Texture2D" uid="uid://07q7xfwkeotf" path="res://char/UpgradeProgressBars/Scene3-Gens/gen0.png" id="41_axxxg"]
+[ext_resource type="Texture2D" uid="uid://bn02bfaom6fie" path="res://char/UpgradeProgressBars/Scene3-Gens/gen1.png" id="45_tlahr"]
+[ext_resource type="Texture2D" uid="uid://debtyvhpp2alm" path="res://char/UpgradeProgressBars/Scene3-Gens/gen2.png" id="46_sa4ha"]
+[ext_resource type="Texture2D" uid="uid://0iuxhiw1w4ot" path="res://char/UpgradeProgressBars/Scene3-Gens/gen6.png" id="47_cubks"]
+[ext_resource type="Texture2D" uid="uid://07ybqnqm2ckt" path="res://char/UpgradeProgressBars/Scene3-Gens/gen3.png" id="47_ihltv"]
+[ext_resource type="Texture2D" uid="uid://cwffbtqcltwxy" path="res://char/UpgradeProgressBars/Scene3-Gens/gen4.png" id="48_12ij3"]
+[ext_resource type="Texture2D" uid="uid://tsx1isp51qvs" path="res://char/UpgradeProgressBars/Scene3-Gens/gen5.png" id="49_fb74h"]
+[ext_resource type="Texture2D" uid="uid://bih2l3g113hua" path="res://char/UpgradeProgressBars/Scene3-Gens/gen7.png" id="51_y07ak"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hq0e"]
 resource_local_to_scene = true
@@ -103,18 +132,92 @@ func _on_time_tick(day:int, hour:int, minute:int):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m63tb"]
 size = Vector2(192, 57)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cs8hm"]
+load_path = "res://.godot/imported/upg0.png-9bbb62b2203c2ea61d98e05611967eb0.ctex"
+
 [sub_resource type="Curve" id="Curve_m63tb"]
 _data = [Vector2(0, 0.606742), 0.0, 0.0, 0, 0, Vector2(0.502857, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvup2"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_eakjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nuep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yjnah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w4mbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gnl2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_t75e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_axxxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_axxxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_t75e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gnl2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w4mbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yjnah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nuep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_eakjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 1.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxnjm"]
+load_path = "res://.godot/imported/gen3.png-7d7ac56d196e9a3937cddfc5e2716acc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cubks"]
+load_path = "res://.godot/imported/gen4.png-d6c2a29ed54faeaae68ca7e6bb1777b5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ema37"]
+load_path = "res://.godot/imported/gen5.png-64b90a516584d426519cea062bc78d4e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwm4h"]
+load_path = "res://.godot/imported/gen7.png-9fa4125b9e5ceb81f4178268766a8245.ctex"
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5wjhk"]
-load_path = "res://.godot/imported/buyDisabled.png-904e7e19c755a97d193e721a3af2219c.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxlpg"]
-size = Vector2(208, 372.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs8hm"]
-size = Vector2(197, 372)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wcai"]
 atlas = ExtResource("10_gq4dn")
@@ -215,56 +318,40 @@ script = ExtResource("1_1lou1")
 
 [node name="CanvasLayerButtons" type="CanvasLayer" parent="PlayerGUI"]
 
-[node name="Button1" type="Button" parent="PlayerGUI/CanvasLayerButtons"]
-anchors_preset = -1
-anchor_top = 0.921
-anchor_right = 0.259
-anchor_bottom = 1.0
-offset_top = -0.807983
-offset_right = -0.368011
-offset_bottom = -1.99994
-theme_override_font_sizes/font_size = 30
-text = "scene 1"
+[node name="Button1" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_top = 597.0
+offset_right = 298.0
+offset_bottom = 648.0
+texture_normal = ExtResource("2_t75e4")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Button2" type="Button" parent="PlayerGUI/CanvasLayerButtons"]
-anchors_preset = -1
-anchor_left = 0.259
-anchor_top = 0.92
-anchor_right = 0.513
-anchor_bottom = 0.997
-offset_left = -0.368011
-offset_top = -0.160034
-offset_right = 0.0239868
-offset_bottom = -0.0559692
-theme_override_font_sizes/font_size = 30
-text = "scene 2"
+[node name="Button2" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_left = 298.0
+offset_top = 597.0
+offset_right = 590.0
+offset_bottom = 648.0
+texture_normal = ExtResource("3_axxxg")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Button3" type="Button" parent="PlayerGUI/CanvasLayerButtons"]
-anchors_preset = -1
-anchor_left = 0.513
-anchor_top = 0.92
-anchor_right = 0.764
-anchor_bottom = 0.997
-offset_left = 0.0239868
-offset_top = -0.160034
-offset_right = -0.128052
-offset_bottom = -0.0559692
-theme_override_font_sizes/font_size = 30
-text = "scene 3"
+[node name="Button3" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_left = 590.0
+offset_top = 597.0
+offset_right = 879.0
+offset_bottom = 648.0
+texture_normal = ExtResource("4_gvup2")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Button4" type="Button" parent="PlayerGUI/CanvasLayerButtons"]
-anchors_preset = -1
-anchor_left = 0.764
-anchor_top = 0.923
-anchor_right = 1.0
-anchor_bottom = 0.997
-offset_left = -0.128113
-offset_top = -2.10406
-offset_right = 1.0
-offset_bottom = -0.0560303
-rotation = 0.00136651
-theme_override_font_sizes/font_size = 30
-text = "scene 4"
+[node name="Button4" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_left = 879.0
+offset_top = 597.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture_normal = ExtResource("5_pxnjm")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CanvasLayerEnergy" type="CanvasLayer" parent="PlayerGUI"]
 
@@ -638,9 +725,13 @@ anchor_left = 0.941
 anchor_top = 0.352
 anchor_right = 1.0
 anchor_bottom = 0.523
-offset_left = -0.0321045
-offset_top = -0.0960236
-offset_bottom = 0.0960083
+offset_left = -40.032
+offset_top = -0.095993
+offset_bottom = -28.904
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/ComputerScene/ToTruck"]
+position = Vector2(54.0001, 41)
+texture = ExtResource("15_nuep6")
 
 [node name="Restocking Shelves" type="Button" parent="Scene3/ComputerScene"]
 visible = false
@@ -769,24 +860,25 @@ texture_repeat = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12_06jb2")
 expand_mode = 2
 stretch_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="ToComputer" type="Button" parent="Scene3/TruckScene"]
 anchors_preset = -1
-anchor_top = 0.352
-anchor_right = 0.059
-anchor_bottom = 0.523
+anchor_top = 0.373605
+anchor_right = 0.0937222
+anchor_bottom = 0.499852
 offset_top = -0.0960236
 offset_right = 0.0319977
 offset_bottom = 0.0960083
 metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/ToComputer"]
+position = Vector2(54, 41)
+texture = ExtResource("17_eakjk")
 
 [node name="AddBox" type="Button" parent="Scene3/TruckScene"]
 offset_left = 4.0
@@ -804,37 +896,38 @@ position = Vector2(1027, 189)
 shape = SubResource("RectangleShape2D_m63tb")
 
 [node name="ButtonsArea1Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D"]
+position = Vector2(-1.75, 10)
+scale = Vector2(0.633013, 0.675493)
+texture = ExtResource("18_75jky")
 
-[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
-offset_left = -90.0
-offset_top = -26.0
-offset_right = -36.0
-offset_bottom = 26.0
-text = "6
-"
-metadata/_edit_use_anchors_ = true
+[node name="SupplyOption1" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = -134.673
+offset_top = -73.7673
+offset_right = -62.6734
+offset_bottom = -10.7673
+texture_normal = ExtResource("18_tqtwb")
+texture_pressed = ExtResource("19_75jky")
+stretch_mode = 0
 
-[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
-offset_left = -26.0
-offset_top = -26.0
-offset_right = 28.0
-offset_bottom = 26.0
-text = "10"
-metadata/_edit_use_anchors_ = true
+[node name="SupplyOption2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = -38.633
+offset_top = -76.9808
+offset_right = 37.367
+offset_bottom = -8.98081
+texture_normal = ExtResource("20_1hjk2")
+texture_pressed = ExtResource("21_e5hle")
+stretch_mode = 0
 
-[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
-offset_left = 38.0
-offset_top = -26.0
-offset_right = 92.0
-offset_bottom = 26.0
-text = "50"
-metadata/_edit_use_anchors_ = true
+[node name="SupplyOption3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = 56.367
+offset_top = -73.9808
+offset_right = 130.367
+offset_bottom = -11.9808
+texture_normal = ExtResource("22_pgr8x")
+texture_pressed = ExtResource("23_u1pgp")
+stretch_mode = 0
 
 [node name="MovingTimer1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D"]
-
-[node name="AutoHideTimer1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/MovingTimer1"]
-wait_time = 3.0
-one_shot = true
 
 [node name="Options2Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
 
@@ -843,91 +936,179 @@ position = Vector2(826, 189)
 shape = SubResource("RectangleShape2D_m63tb")
 
 [node name="ButtonsArea2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D"]
+position = Vector2(-1.99999, 10)
+scale = Vector2(0.628205, 0.675493)
+texture = ExtResource("18_75jky")
 
-[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
-offset_left = -91.0
-offset_top = -26.0
-offset_right = -37.0
-offset_bottom = 26.0
-disabled = true
-text = "6
-"
-metadata/_edit_use_anchors_ = true
+[node name="SupplyOption1" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -131.514
+offset_top = -74.02
+offset_right = -60.5139
+offset_bottom = -10.02
+texture_normal = ExtResource("18_tqtwb")
+texture_pressed = ExtResource("19_75jky")
+stretch_mode = 0
 
-[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
-offset_left = -27.0
-offset_top = -26.0
-offset_right = 27.0
-offset_bottom = 26.0
-disabled = true
-text = "10"
-metadata/_edit_use_anchors_ = true
+[node name="SupplyOption2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -39.8886
+offset_top = -74.02
+offset_right = 34.1114
+offset_bottom = -10.02
+texture_normal = ExtResource("20_1hjk2")
+texture_pressed = ExtResource("21_e5hle")
+stretch_mode = 0
 
-[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
-offset_left = 37.0
-offset_top = -26.0
-offset_right = 91.0
-offset_bottom = 26.0
-disabled = true
-text = "50"
-metadata/_edit_use_anchors_ = true
+[node name="SupplyOption3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = 51.7367
+offset_top = -75.5004
+offset_right = 125.737
+offset_bottom = -11.5004
+texture_normal = ExtResource("22_pgr8x")
+texture_pressed = ExtResource("23_u1pgp")
+stretch_mode = 0
 
 [node name="MovingTimer2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D"]
-
-[node name="AutoHideTimer2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/MovingTimer2"]
 
 [node name="Options3Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
 
 [node name="Options3CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D"]
-position = Vector2(626, 189)
+position = Vector2(465, 148)
 shape = SubResource("RectangleShape2D_m63tb")
-
-[node name="ButtonsArea3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
-
-[node name="SupplyOption1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
-offset_left = -92.0
-offset_top = -26.0
-offset_right = -38.0
-offset_bottom = 26.0
-disabled = true
-text = "6
-"
-
-[node name="SupplyOption2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
-offset_left = -28.0
-offset_top = -26.0
-offset_right = 26.0
-offset_bottom = 26.0
-disabled = true
-text = "10"
-metadata/_edit_use_anchors_ = true
-
-[node name="SupplyOption3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
-offset_left = 36.0
-offset_top = -26.0
-offset_right = 90.0
-offset_bottom = 26.0
-disabled = true
-text = "50"
-metadata/_edit_use_anchors_ = true
 
 [node name="MovingTimer3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
 
-[node name="AutoHideTimer3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/MovingTimer3"]
+[node name="ButtonsArea3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
+position = Vector2(159, 50)
+scale = Vector2(0.633013, 0.675493)
+texture = ExtResource("18_75jky")
+
+[node name="SupplyOption1" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
+offset_left = -127.959
+offset_top = -75.5004
+offset_right = -54.9595
+offset_bottom = -10.5004
+texture_normal = ExtResource("18_tqtwb")
+texture_pressed = ExtResource("19_75jky")
+stretch_mode = 0
+
+[node name="SupplyOption2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
+offset_left = -39.4936
+offset_top = -75.5004
+offset_right = 36.5064
+offset_bottom = -10.5004
+texture_normal = ExtResource("20_1hjk2")
+texture_pressed = ExtResource("21_e5hle")
+stretch_mode = 0
+
+[node name="SupplyOption3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
+offset_left = 52.1317
+offset_top = -74.02
+offset_right = 126.132
+offset_bottom = -12.02
+texture_normal = ExtResource("22_pgr8x")
+texture_pressed = ExtResource("23_u1pgp")
+stretch_mode = 0
 
 [node name="Generators" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
 position = Vector2(824, 302)
 
-[node name="BoxGenerator" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 106.0
-offset_top = -172.0
-offset_right = 295.0
-offset_bottom = 174.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Gen1SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = 128.0
+offset_top = 196.0
+offset_right = 278.0
+offset_bottom = 262.0
+texture_normal = SubResource("CompressedTexture2D_cs8hm")
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade"]
+position = Vector2(73, 35)
+
+[node name="Gen1GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-45, 1)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!"]
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(45, -3)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1Working" type="AnimatedSprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+position = Vector2(201.5, 0)
+scale = Vector2(0.637821, 0.833333)
+sprite_frames = SubResource("SpriteFrames_gvup2")
+animation = &"new_animation"
+
+[node name="Gen2Working" type="AnimatedSprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+visible = false
+position = Vector2(2, -2.28882e-05)
+scale = Vector2(0.637821, 0.833333)
+sprite_frames = SubResource("SpriteFrames_gvup2")
+animation = &"new_animation"
+
+[node name="Gen3Working" type="AnimatedSprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+visible = false
+position = Vector2(-201.5, 0)
+scale = Vector2(0.637821, 0.833333)
+sprite_frames = SubResource("SpriteFrames_gvup2")
+animation = &"new_animation"
+
+[node name="BoxGenerator" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = 102.0
+offset_top = -182.0
+offset_right = 300.0
+offset_bottom = 182.0
+texture_normal = ExtResource("19_gnuvk")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("20_gnuvk")
 
 [node name="Box1, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
@@ -969,119 +1150,81 @@ position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
 texture = ExtResource("20_m63tb")
 
-[node name="GenUpgradesBar1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+[node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+position = Vector2(26, 378)
 
-[node name="Gen1SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 367.0
-offset_right = 182.0
-offset_bottom = 424.0
+[node name="Gen1ProgressBarUpgrade" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("41_axxxg")
 
-[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade"]
-position = Vector2(77, -308)
+[node name="Gen1ProgressBarUpgrade1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("45_tlahr")
 
-[node name="Gen1GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(-46, 334)
-emitting = false
-lifetime = 3.0
-one_shot = true
-explosiveness = 0.4
-randomness = 0.2
-local_coords = true
-direction = Vector2(0, -5)
-spread = 20.0
-gravity = Vector2(0, 100)
-initial_velocity_min = 60.0
-initial_velocity_max = 130.0
-angular_velocity_min = 200.0
-angular_velocity_max = 200.0
-scale_amount_min = 3.2
-scale_amount_max = 3.2
-scale_amount_curve = SubResource("Curve_m63tb")
-color = Color(1, 0.807843, 0.215686, 1)
+[node name="Gen1ProgressBarUpgrade2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("46_sa4ha")
 
-[node name="Gen1GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(1, 332)
-emitting = false
-lifetime = 3.0
-one_shot = true
-explosiveness = 0.4
-randomness = 0.2
-local_coords = true
-direction = Vector2(0, -5)
-spread = 20.0
-gravity = Vector2(0, 100)
-initial_velocity_min = 60.0
-initial_velocity_max = 130.0
-angular_velocity_min = 200.0
-angular_velocity_max = 200.0
-scale_amount_min = 3.2
-scale_amount_max = 3.2
-scale_amount_curve = SubResource("Curve_m63tb")
-color = Color(1, 0.807843, 0.215686, 1)
+[node name="Gen1ProgressBarUpgrade3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_ihltv")
 
-[node name="Gen1GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(51, 332)
-emitting = false
-lifetime = 3.0
-one_shot = true
-explosiveness = 0.4
-randomness = 0.2
-local_coords = true
-direction = Vector2(0, -5)
-spread = 20.0
-gravity = Vector2(0, 100)
-initial_velocity_min = 60.0
-initial_velocity_max = 130.0
-angular_velocity_min = 200.0
-angular_velocity_max = 200.0
-scale_amount_min = 3.2
-scale_amount_max = 3.2
-scale_amount_curve = SubResource("Curve_m63tb")
-color = Color(1, 0.807843, 0.215686, 1)
+[node name="Gen1ProgressBarUpgrade4" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("48_12ij3")
 
-[node name="UpgradeTierShow7" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Gen1ProgressBarUpgrade5" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("49_fb74h")
 
-[node name="BuyButtonSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade"]
-position = Vector2(82, 27.5)
-scale = Vector2(1.09333, 0.863636)
-texture = ExtResource("19_cs8hm")
+[node name="Gen1ProgressBarUpgrade6" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_cubks")
 
-[node name="Gen1Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
-position = Vector2(97, 172)
-scale = Vector2(0.653846, 0.835616)
-texture = ExtResource("19_gnuvk")
+[node name="Gen1ProgressBarUpgrade7" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("51_y07ak")
 
-[node name="BoxGenerator2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -93.0
-offset_top = -172.0
+[node name="BoxGenerator2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = -97.0
+offset_top = -180.0
 offset_right = 96.0
-offset_bottom = 174.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 182.0
 disabled = true
+texture_normal = ExtResource("19_gnuvk")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("19_m63tb")
 
-[node name="Gen2SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+[node name="Gen2SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 364.0
-offset_right = 177.0
-offset_bottom = 421.0
+offset_left = 25.0
+offset_top = 378.0
+offset_right = 175.0
+offset_bottom = 444.0
 disabled = true
+texture_normal = ExtResource("21_cs8hm")
 
 [node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade"]
-position = Vector2(84, -304)
+position = Vector2(75, 35)
 
 [node name="Gen2GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(-55, 329)
+position = Vector2(-50, -1)
 emitting = false
 lifetime = 3.0
 one_shot = true
@@ -1101,7 +1244,6 @@ scale_amount_curve = SubResource("Curve_m63tb")
 color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="Gen2GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(-4, 329)
 emitting = false
 lifetime = 3.0
 one_shot = true
@@ -1121,7 +1263,7 @@ scale_amount_curve = SubResource("Curve_m63tb")
 color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="Gen2GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(49, 329)
+position = Vector2(50, 0)
 emitting = false
 lifetime = 3.0
 one_shot = true
@@ -1140,24 +1282,13 @@ scale_amount_max = 3.2
 scale_amount_curve = SubResource("Curve_m63tb")
 color = Color(1, 0.807843, 0.215686, 1)
 
-[node name="BuyButtonSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade"]
-position = Vector2(82, 28.5)
-scale = Vector2(1.09333, 0.863636)
-texture = ExtResource("19_cs8hm")
-
-[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
-visible = false
-position = Vector2(97, 167)
-scale = Vector2(0.726563, 1.60156)
-texture = ExtResource("8_lljbe")
-
 [node name="Box1, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
 layout_mode = 0
-offset_left = 9.0
-offset_top = 94.0
-offset_right = 178.0
-offset_bottom = 254.0
+offset_left = -80.0
+offset_top = -74.0
+offset_right = 89.0
+offset_bottom = 86.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2"]
 position = Vector2(84.75, 81)
@@ -1167,10 +1298,10 @@ texture = ExtResource("20_m63tb")
 [node name="Box2, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
 layout_mode = 0
-offset_left = 9.0
-offset_top = 94.0
-offset_right = 178.0
-offset_bottom = 254.0
+offset_left = -80.0
+offset_top = -74.0
+offset_right = 89.0
+offset_bottom = 86.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2"]
 position = Vector2(84.75, 81)
@@ -1180,52 +1311,95 @@ texture = ExtResource("20_m63tb")
 [node name="Box3, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
 layout_mode = 0
-offset_left = 9.0
-offset_top = 94.0
-offset_right = 178.0
-offset_bottom = 254.0
+offset_left = -80.0
+offset_top = -74.0
+offset_right = 89.0
+offset_bottom = 86.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
 texture = ExtResource("20_m63tb")
 
-[node name="GenUpgradesBar2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
-
-[node name="Gen2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
-position = Vector2(97, 172)
-scale = Vector2(0.653846, 0.835616)
-texture = ExtResource("19_gnuvk")
-
 [node name="Gen2BrokenSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
-position = Vector2(97, 172)
-scale = Vector2(0.653846, 0.835616)
+position = Vector2(97.5, 183.5)
+scale = Vector2(0.61859, 0.8379)
 texture = ExtResource("21_pxlpg")
 
-[node name="BoxGenerator3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -292.0
-offset_top = -172.0
-offset_right = -103.0
-offset_bottom = 174.0
-grow_horizontal = 2
+[node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+
+[node name="Gen2ProgressBarUpgrade" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("41_axxxg")
+
+[node name="Gen2ProgressBarUpgrade1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("45_tlahr")
+
+[node name="Gen2ProgressBarUpgrade2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("46_sa4ha")
+
+[node name="Gen2ProgressBarUpgrade3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_pxnjm")
+
+[node name="Gen2ProgressBarUpgrade4" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_cubks")
+
+[node name="Gen2ProgressBarUpgrade5" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_ema37")
+
+[node name="Gen2ProgressBarUpgrade6" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_cubks")
+
+[node name="Gen2ProgressBarUpgrade7" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_nwm4h")
+
+[node name="BoxGenerator3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = -297.0
+offset_top = -169.0
+offset_right = -102.0
+offset_bottom = 183.0
 disabled = true
+texture_normal = ExtResource("19_gnuvk")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("18_g2ved")
 
-[node name="Gen3SpeedUpgrade" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+[node name="Gen3SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 364.0
-offset_right = 175.0
-offset_bottom = 421.0
+offset_left = 22.0
+offset_top = 363.0
+offset_right = 172.0
+offset_bottom = 429.0
 disabled = true
+texture_normal = ExtResource("21_cs8hm")
 
 [node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade"]
-position = Vector2(84, -304)
+position = Vector2(74, 33)
 
 [node name="Gen3GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(-55, 329)
+position = Vector2(-59, 1)
 emitting = false
 lifetime = 3.0
 one_shot = true
@@ -1245,7 +1419,6 @@ scale_amount_curve = SubResource("Curve_m63tb")
 color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="Gen3GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(-5, 329)
 emitting = false
 lifetime = 3.0
 one_shot = true
@@ -1265,7 +1438,7 @@ scale_amount_curve = SubResource("Curve_m63tb")
 color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="Gen3GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
-position = Vector2(49, 329)
+position = Vector2(54, 1)
 emitting = false
 lifetime = 3.0
 one_shot = true
@@ -1286,16 +1459,10 @@ color = Color(1, 0.807843, 0.215686, 1)
 
 [node name="UpgradeGen3ShowLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade"]
 layout_mode = 0
-offset_left = -111.0
-offset_top = -127.0
-offset_right = -6.0
-offset_bottom = -51.0
-text = "0"
-
-[node name="BuyButtonSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade"]
-position = Vector2(82, 28.5)
-scale = Vector2(1.09333, 0.863636)
-texture = ExtResource("19_cs8hm")
+offset_left = 172.0
+offset_top = 221.0
+offset_right = 212.0
+offset_bottom = 244.0
 
 [node name="Box1, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
@@ -1336,18 +1503,59 @@ position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
 texture = ExtResource("20_m63tb")
 
-[node name="GenUpgradesBar3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
-
-[node name="Gen3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
-visible = false
-position = Vector2(97, 172)
-scale = Vector2(0.653846, 0.835616)
-texture = ExtResource("19_gnuvk")
-
 [node name="Gen3Broken2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
-position = Vector2(97, 172)
+position = Vector2(98, 170)
 scale = Vector2(0.653846, 0.835616)
 texture = ExtResource("21_pxlpg")
+
+[node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+
+[node name="Gen3ProgressBarUpgrade" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("41_axxxg")
+
+[node name="Gen3ProgressBarUpgrade1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("45_tlahr")
+
+[node name="Gen3ProgressBarUpgrade2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("46_sa4ha")
+
+[node name="Gen3ProgressBarUpgrade3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_ihltv")
+
+[node name="Gen3ProgressBarUpgrade4" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("48_12ij3")
+
+[node name="Gen3ProgressBarUpgrade5" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("49_fb74h")
+
+[node name="Gen3ProgressBarUpgrade6" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_cubks")
+
+[node name="Gen3ProgressBarUpgrade7" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("51_y07ak")
 
 [node name="BuyGenerator3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
 anchors_preset = -1
@@ -1355,9 +1563,9 @@ anchor_left = 0.114
 anchor_top = 0.424
 anchor_right = 0.865
 anchor_bottom = 0.592
-offset_left = -275.0
+offset_left = -282.0
 offset_top = -31.0
-offset_right = -115.0
+offset_right = -122.0
 offset_bottom = 38.0
 
 [node name="BuyGen3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3"]
@@ -1382,13 +1590,6 @@ visible = false
 position = Vector2(80.0003, 34.4998)
 scale = Vector2(1.06667, 1.04545)
 texture = ExtResource("26_1mldf")
-
-[node name="BuyGen3Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3"]
-position = Vector2(245, -240)
-
-[node name="BuyGen3CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Area2D"]
-position = Vector2(-169, 266)
-shape = SubResource("RectangleShape2D_pxlpg")
 
 [node name="BuyGenerator2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
 anchors_preset = -1
@@ -1426,22 +1627,6 @@ texture = ExtResource("26_1mldf")
 
 [node name="BuyGen2Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2"]
 position = Vector2(0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2/BuyGen2Area2D"]
-position = Vector2(79.5, 26)
-shape = SubResource("RectangleShape2D_cs8hm")
-
-[node name="TextureButton" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Timers & Upgrades" type="Node" parent="Scene3/TruckScene/GeneratorOptions"]
 
@@ -2343,15 +2528,15 @@ offset_bottom = 45.0
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2" to="." method="_on_supply_option_2_gen2_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3" to="." method="_on_supply_option_3_gen2_pressed"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/MovingTimer2" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2" method="_on_moving_timer2_timeout"]
-[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1" to="." method="_on_supply_option_1_gen_3_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2" to="." method="_on_supply_option_2_gen_3_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3" to="." method="_on_supply_option_3_gen_3_pressed"]
 [connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/MovingTimer3" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3" method="_on_moving_timer3_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1" to="." method="_on_supply_option_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2" to="." method="_on_supply_option_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3" to="." method="_on_supply_option_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade" to="." method="_on_gen1_speed_upgrade_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator" method="_on_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1" to="." method="_on_box_1_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1" to="." method="_on_box_2_gen_1_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1" to="." method="_on_box_3_gen_1_pressed"]
-[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade" to="." method="_on_gen1_speed_upgrade_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2" method="_on_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade" to="." method="_on_gen2_speed_upgrade_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2" to="." method="_on_box_1_gen_3_pressed"]
@@ -2365,10 +2550,6 @@ offset_bottom = 45.0
 [connection signal="button_down" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3" to="." method="_on_buy_generator3_button_down"]
 [connection signal="button_up" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3" to="." method="_on_buy_generator3_button_up"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3" to="." method="_on_buy_generator_3_pressed"]
-[connection signal="area_entered" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Area2D" to="." method="_on_buy_gen3_area_2d_area_entered"]
-[connection signal="area_exited" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Area2D" to="." method="_on_buy_gen3_area_2d_area_exited"]
-[connection signal="mouse_entered" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Area2D" to="." method="_on_buy_gen3_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3/BuyGen3Area2D" to="." method="_on_buy_gen3_area_2d_mouse_exited"]
 [connection signal="button_down" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator2_button_down"]
 [connection signal="button_up" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator2_button_up"]
 [connection signal="mouse_entered" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator_2_mouse_entered"]

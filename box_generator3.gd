@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 @onready var SupplyOptionButtons3 = $"../../Options3Area2D/Options3CollisionShape2D"
 @onready var OptionsArea2D = $"../../Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"
