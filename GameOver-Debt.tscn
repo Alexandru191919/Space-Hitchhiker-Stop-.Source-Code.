@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://htxcs3tolehr"]
+[gd_scene load_steps=6 format=3 uid="uid://htxcs3tolehr"]
 
 [ext_resource type="Script" uid="uid://bup55fgnfw3ls" path="res://debt death.gd" id="1_8bmif"]
 [ext_resource type="Texture2D" uid="uid://ccpcov8copbsr" path="res://GameOvers/play.png" id="2_4qn4e"]
 [ext_resource type="Texture2D" uid="uid://d4d1p6sjl0m28" path="res://GameOvers/turn off.png" id="3_tmp2v"]
 [ext_resource type="Texture2D" uid="uid://d4iikuulee88l" path="res://GameOvers/debt death.png" id="4_8bmif"]
+[ext_resource type="AudioStream" uid="uid://bcvubh3i3hv3j" path="res://151710__scorpion67890__rotten-zombie-death.mp3" id="5_4qn4e"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_8bmif")
@@ -54,6 +55,9 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(545, 251)
 scale = Vector2(3.04219, 3.10626)
 texture = ExtResource("4_8bmif")
+
+[node name="they killed you" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4qn4e")
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_mainmenu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dw8k7c8mtgnh7"
+path="res://.godot/imported/336573__anthousai__coins-in-cloth-03.wav-3709db7f4f1ecb9e04375f6ba9e7ec23.sample"
+
+[deps]
+
+source_file="res://char/go-to buttons/336573__anthousai__coins-in-cloth-03.wav"
+dest_files=["res://.godot/imported/336573__anthousai__coins-in-cloth-03.wav-3709db7f4f1ecb9e04375f6ba9e7ec23.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

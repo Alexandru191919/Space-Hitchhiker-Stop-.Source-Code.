@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://clpnxse35m8q1"]
+[gd_scene load_steps=121 format=3 uid="uid://clpnxse35m8q1"]
 
 [ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
 [ext_resource type="Texture2D" uid="uid://gcdgl0fhrss1" path="res://char/Scene1.png" id="2_t75e4"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://ckw5etjlr87vi" path="res://char/Scene4.png" id="5_pxnjm"]
 [ext_resource type="Texture2D" uid="uid://ojrcsjsiag7y" path="res://char/Player GUI/Coin.png" id="6_73xg6"]
 [ext_resource type="Texture2D" uid="uid://dsxj7bjhcb8p4" path="res://char/Player GUI/supplies.png" id="7_dpjev"]
-[ext_resource type="AudioStream" uid="uid://tpam34ghlef3" path="res://beep.wav" id="7_y86bs"]
 [ext_resource type="Texture2D" uid="uid://be1j6v1d1aov" path="res://char/Player GUI/box.png" id="8_k4v75"]
 [ext_resource type="Texture2D" uid="uid://cqwgeo1h2ydgy" path="res://char/Scene1/counter.png" id="8_tlahr"]
 [ext_resource type="Script" uid="uid://cl66krass8k4l" path="res://ProducttoScan.gd" id="9_evrua"]
@@ -22,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://bw3qtnwe673wj" path="res://char/Scene1/Products/arrow turn product.png" id="12_54ym8"]
 [ext_resource type="AudioStream" uid="uid://ql4s8cif4b6u" path="res://cash baby dinero.mp3" id="12_bqxh6"]
 [ext_resource type="AudioStream" uid="uid://guv1owvlngrj" path="res://roblox tycoon error.mp3" id="13_1b2e6"]
-[ext_resource type="AudioStream" uid="uid://q28bb06inne3" path="res://SLURP.mp3" id="13_21bv0"]
 [ext_resource type="Texture2D" uid="uid://bfsknmrlmvm8j" path="res://char/Scene1/Products/product bag bagged.png" id="13_54ym8"]
 [ext_resource type="Texture2D" uid="uid://cdjp7akl2qkqg" path="res://char/Scene1/Products/arrow bag product.png" id="13_jw06f"]
 [ext_resource type="Texture2D" uid="uid://lbjowa4brikg" path="res://char/Scene1/scanner & handle/handle with gun.png" id="14_12ij3"]
@@ -42,9 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://ueitnd4tjdnd" path="res://char/Scene1/bags-sup counter2.png" id="19_gq5j1"]
 [ext_resource type="Script" uid="uid://c1d3tb3g5tf2v" path="res://box_generator2.gd" id="19_m63tb"]
 [ext_resource type="Texture2D" uid="uid://ojhq1dwygi5d" path="res://char/buy buttons/gens/option_buttons/option2.png" id="20_1hjk2"]
+[ext_resource type="AudioStream" uid="uid://cho5gqp22rb7n" path="res://beep.wav" id="20_e071v"]
 [ext_resource type="Script" uid="uid://jg05ogp23quw" path="res://box_generator.gd" id="20_gnuvk"]
 [ext_resource type="Texture2D" uid="uid://bdiy0c6xdosow" path="res://char/Scene1/Products/product barcode.png" id="20_jw06f"]
-[ext_resource type="Texture2D" uid="uid://cxj65r8kam87r" path="res://Export/box shutterstock.png" id="20_m63tb"]
 [ext_resource type="Texture2D" uid="uid://b8r75qiiqc0yg" path="res://char/Scene1/bags-sup counter3.png" id="20_wbaho"]
 [ext_resource type="Texture2D" uid="uid://pysjkchpfvy0" path="res://char/Scene1/bags-sup counter4.png" id="21_54ym8"]
 [ext_resource type="Texture2D" uid="uid://dj0dray0ufkbg" path="res://char/buy buttons/gens/upgrades/upg0.png" id="21_cs8hm"]
@@ -73,12 +71,12 @@
 [ext_resource type="Texture2D" uid="uid://cyegemnyn6mvc" path="res://char/Scene2/progress bar/upg4.png" id="38_fugtg"]
 [ext_resource type="Texture2D" uid="uid://dwn1svpfhvduo" path="res://char/Scene2/upgrade icons/energy.png" id="39_gim1h"]
 [ext_resource type="Texture2D" uid="uid://cntrgr2ilmoyj" path="res://char/Scene2/upgrades done.png" id="40_23b6t"]
-[ext_resource type="Texture2D" uid="uid://bpobpjwhs6ggn" path="res://char/Scene2/upgrade icons/money cap.png" id="40_pmmsa"]
 [ext_resource type="Texture2D" uid="uid://clgoik8jg1tty" path="res://char/Scene2/upgrade icons/money gain.png" id="41_axkpg"]
 [ext_resource type="Texture2D" uid="uid://07q7xfwkeotf" path="res://char/UpgradeProgressBars/Scene3-Gens/gen0.png" id="41_axxxg"]
 [ext_resource type="Texture2D" uid="uid://dvoyhdhd4t00m" path="res://char/Scene2/upgrade icons/temper.png" id="42_lgg6e"]
 [ext_resource type="Texture2D" uid="uid://coa7socv11lp1" path="res://char/Scene3/scene3 background.png" id="44_573aq"]
 [ext_resource type="Texture2D" uid="uid://bn02bfaom6fie" path="res://char/UpgradeProgressBars/Scene3-Gens/gen1.png" id="45_tlahr"]
+[ext_resource type="Texture2D" uid="uid://c26a8fxo3jtks" path="res://retirement.png" id="45_xk1oi"]
 [ext_resource type="Texture2D" uid="uid://br8xnisurb7fw" path="res://char/Scene3/computer.png" id="46_522d3"]
 [ext_resource type="Texture2D" uid="uid://debtyvhpp2alm" path="res://char/UpgradeProgressBars/Scene3-Gens/gen2.png" id="46_sa4ha"]
 [ext_resource type="Texture2D" uid="uid://0iuxhiw1w4ot" path="res://char/UpgradeProgressBars/Scene3-Gens/gen6.png" id="47_cubks"]
@@ -102,6 +100,9 @@
 [ext_resource type="Texture2D" uid="uid://c1kgppilhvdg6" path="res://char/Scene3/computer window/shopping cart.png" id="61_u6r0k"]
 [ext_resource type="Texture2D" uid="uid://div8x6lrpqtld" path="res://char/Scene3/computer window/clear purchase.png" id="62_05sep"]
 [ext_resource type="Texture2D" uid="uid://by5ck8oa7ou2p" path="res://char/Scene4/background.png" id="98_xk1oi"]
+[ext_resource type="AudioStream" uid="uid://0f27ktblfrtf" path="res://char/go-to buttons/568039__benkenart__coffee-slurp-1.wav" id="101_v1b03"]
+[ext_resource type="AudioStream" uid="uid://dw8k7c8mtgnh7" path="res://char/go-to buttons/336573__anthousai__coins-in-cloth-03.wav" id="103_u6r0k"]
+[ext_resource type="AudioStream" uid="uid://87ddmrfboenq" path="res://GameOvers/137229__xenognosis__boiling-water.wav" id="103_v1b03"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hq0e"]
 resource_local_to_scene = true
@@ -186,6 +187,8 @@ animations = [{
 "name": &"new_animation",
 "speed": 1.0
 }]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_issu3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxnjm"]
 load_path = "res://.godot/imported/gen3.png-7d7ac56d196e9a3937cddfc5e2716acc.ctex"
@@ -349,7 +352,7 @@ position = Vector2(1, 6)
 script = SubResource("GDScript_nollb")
 
 [node name="Timer" type="Timer" parent="PlayerGUI/CanvasLayerSupplies/Day&Night"]
-wait_time = 5.0
+wait_time = 20.0
 
 [node name="Bills" type="Sprite2D" parent="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"]
 position = Vector2(629.25, 30)
@@ -530,7 +533,7 @@ toggle_mode = true
 
 [node name="Beep" type="AudioStreamPlayer2D" parent="Scene1/sigma/BarCode Scanner"]
 position = Vector2(20, 30)
-stream = ExtResource("7_y86bs")
+stream = ExtResource("20_e071v")
 volume_db = -10.0
 
 [node name="Scanner with handle" type="Sprite2D" parent="Scene1/sigma/BarCode Scanner"]
@@ -602,6 +605,9 @@ texture = ExtResource("21_54ym8")
 [node name="Bags CounterTimer" type="Timer" parent="Scene1"]
 wait_time = 0.1
 
+[node name="onScene1 Check Timer" type="Timer" parent="Scene1"]
+wait_time = 0.1
+
 [node name="Scene2" type="Node" parent="."]
 
 [node name="TextureScene2" type="TextureRect" parent="Scene2"]
@@ -611,7 +617,8 @@ texture_repeat = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -52.0
+offset_top = 0.5
+offset_bottom = -0.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_issu3")
@@ -630,13 +637,12 @@ position = Vector2(-7.62939e-06, 0)
 stream = ExtResource("13_1b2e6")
 
 [node name="Upgrade1-Energy" type="CanvasLayer" parent="Scene2/Upgrades"]
-visible = false
 
 [node name="upgrade1-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
-offset_left = 218.0
-offset_top = 184.75
-offset_right = 474.0
-offset_bottom = 292.75
+offset_left = 464.0
+offset_top = 185.75
+offset_right = 720.0
+offset_bottom = 293.75
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -662,10 +668,10 @@ text = "+2"
 
 [node name="upgrade1-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
 visible = false
-offset_left = 218.0
-offset_top = 184.75
-offset_right = 474.0
-offset_bottom = 292.75
+offset_left = 464.0
+offset_top = 187.0
+offset_right = 720.0
+offset_bottom = 295.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -691,10 +697,10 @@ text = "+5"
 
 [node name="upgrade1-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
 visible = false
-offset_left = 218.0
-offset_top = 184.75
-offset_right = 474.0
-offset_bottom = 292.75
+offset_left = 464.0
+offset_top = 187.0
+offset_right = 720.0
+offset_bottom = 295.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -720,10 +726,10 @@ text = "+10"
 
 [node name="upgrade1-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
 visible = false
-offset_left = 218.0
-offset_top = 184.75
-offset_right = 474.0
-offset_bottom = 292.75
+offset_left = 464.0
+offset_top = 187.0
+offset_right = 720.0
+offset_bottom = 295.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -748,14 +754,14 @@ offset_bottom = 99.5
 text = "+15"
 
 [node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
-position = Vector2(419, 170)
+position = Vector2(665, 171)
 texture = ExtResource("6_73xg6")
 
 [node name="ProgressBars-Upgrade1" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade1-Energy"]
 visible = false
 
 [node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
-position = Vector2(343.5, 312.75)
+position = Vector2(589.5, 313.75)
 texture = ExtResource("34_23b6t")
 
 [node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
@@ -779,7 +785,7 @@ position = Vector2(343.5, 313)
 texture = ExtResource("38_fugtg")
 
 [node name="Energy" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
-position = Vector2(350, 141.75)
+position = Vector2(596, 142.75)
 scale = Vector2(4.32353, 4.76667)
 texture = ExtResource("39_gim1h")
 
@@ -789,216 +795,13 @@ position = Vector2(346, 239)
 scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("40_23b6t")
 
-[node name="Upgrade2-MoneyCap" type="CanvasLayer" parent="Scene2/Upgrades"]
-visible = false
-
-[node name="upgrade2-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-offset_left = 603.0
-offset_top = 172.75
-offset_right = 859.0
-offset_bottom = 280.75
-texture_normal = ExtResource("33_uciac")
-ignore_texture_size = true
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="8" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.38672
-anchor_top = -1.56019
-anchor_right = -2.38672
-anchor_bottom = -1.56019
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "8"
-metadata/_edit_use_anchors_ = true
-
-[node name="10" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -3.34375
-anchor_top = -1.26389
-anchor_right = -3.34375
-anchor_bottom = -1.26389
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "10"
-metadata/_edit_use_anchors_ = true
-
-[node name="upgrade2-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-visible = false
-offset_left = 603.0
-offset_top = 172.75
-offset_right = 859.0
-offset_bottom = 280.75
-texture_normal = ExtResource("33_uciac")
-ignore_texture_size = true
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="15" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.38672
-anchor_top = -1.56019
-anchor_right = -2.38672
-anchor_bottom = -1.56019
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "15
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="20" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -3.34375
-anchor_top = -1.06944
-anchor_right = -3.34375
-anchor_bottom = -1.06944
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "20"
-metadata/_edit_use_anchors_ = true
-
-[node name="upgrade2-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-visible = false
-offset_left = 603.0
-offset_top = 172.75
-offset_right = 859.0
-offset_bottom = 280.75
-texture_normal = ExtResource("33_uciac")
-ignore_texture_size = true
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="27" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.38672
-anchor_top = -1.56019
-anchor_right = -2.38672
-anchor_bottom = -1.56019
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "27
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="30" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -3.34375
-anchor_top = -0.856481
-anchor_right = -3.34375
-anchor_bottom = -0.856481
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "30"
-metadata/_edit_use_anchors_ = true
-
-[node name="upgrade2-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-visible = false
-offset_left = 603.0
-offset_top = 172.75
-offset_right = 859.0
-offset_bottom = 280.75
-texture_normal = ExtResource("33_uciac")
-ignore_texture_size = true
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="42" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.38672
-anchor_top = -1.56019
-anchor_right = -2.38672
-anchor_bottom = -1.56019
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "42"
-metadata/_edit_use_anchors_ = true
-
-[node name="50" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -3.34375
-anchor_top = -0.634259
-anchor_right = -3.34375
-anchor_bottom = -0.634259
-offset_left = 831.0
-offset_top = 139.75
-offset_right = 893.0
-offset_bottom = 162.75
-text = "50"
-metadata/_edit_use_anchors_ = true
-
-[node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-position = Vector2(809, 156)
-texture = ExtResource("6_73xg6")
-
-[node name="ProgressBars-Upgrade2" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-visible = false
-
-[node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
-position = Vector2(741.5, 311.75)
-texture = ExtResource("34_23b6t")
-
-[node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
-visible = false
-position = Vector2(741.5, 312)
-texture = ExtResource("35_vd5ax")
-
-[node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
-visible = false
-position = Vector2(741.5, 312)
-texture = ExtResource("36_573aq")
-
-[node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
-visible = false
-position = Vector2(741.5, 312)
-texture = ExtResource("37_522d3")
-
-[node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
-visible = false
-position = Vector2(741.5, 312)
-texture = ExtResource("38_fugtg")
-
-[node name="MoneyCap" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-position = Vector2(732, 127)
-scale = Vector2(6.27941, 4.69531)
-texture = ExtResource("40_pmmsa")
-
-[node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-visible = false
-position = Vector2(731, 227)
-scale = Vector2(1.70667, 1.63636)
-texture = ExtResource("40_23b6t")
-
 [node name="Upgrade3-MoneyGain" type="CanvasLayer" parent="Scene2/Upgrades"]
-visible = false
 
 [node name="upgrade3-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
-offset_left = 217.0
-offset_top = 399.75
-offset_right = 473.0
-offset_bottom = 507.75
+offset_left = 274.0
+offset_top = 417.5
+offset_right = 530.0
+offset_bottom = 525.5
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1026,10 +829,10 @@ text = "2"
 
 [node name="upgrade3-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
 visible = false
-offset_left = 217.0
-offset_top = 399.75
-offset_right = 473.0
-offset_bottom = 507.75
+offset_left = 274.0
+offset_top = 418.0
+offset_right = 530.0
+offset_bottom = 526.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1058,10 +861,10 @@ text = "3"
 
 [node name="upgrade3-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
 visible = false
-offset_left = 217.0
-offset_top = 399.75
-offset_right = 473.0
-offset_bottom = 507.75
+offset_left = 274.0
+offset_top = 418.0
+offset_right = 530.0
+offset_bottom = 526.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1089,10 +892,10 @@ text = "4"
 
 [node name="upgrade3-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
 visible = false
-offset_left = 217.0
-offset_top = 399.75
-offset_right = 473.0
-offset_bottom = 507.75
+offset_left = 274.0
+offset_top = 418.0
+offset_right = 530.0
+offset_bottom = 526.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1119,14 +922,14 @@ offset_bottom = 104.25
 text = "5"
 
 [node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
-position = Vector2(419, 384)
+position = Vector2(476, 401.75)
 texture = ExtResource("6_73xg6")
 
 [node name="ProgressBars-Upgrade3" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
 visible = false
 
 [node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
-position = Vector2(342.5, 542.75)
+position = Vector2(399.5, 560.5)
 texture = ExtResource("34_23b6t")
 
 [node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
@@ -1150,7 +953,7 @@ position = Vector2(342.5, 543)
 texture = ExtResource("38_fugtg")
 
 [node name="MoneyGain" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
-position = Vector2(340, 359.75)
+position = Vector2(397, 377.5)
 scale = Vector2(4.3, 3.95)
 texture = ExtResource("41_axkpg")
 
@@ -1161,13 +964,12 @@ scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("40_23b6t")
 
 [node name="Upgrade4-CustomerTemper" type="CanvasLayer" parent="Scene2/Upgrades"]
-visible = false
 
 [node name="upgrade4-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-offset_left = 605.0
-offset_top = 412.75
-offset_right = 861.0
-offset_bottom = 520.75
+offset_left = 661.0
+offset_top = 419.75
+offset_right = 917.0
+offset_bottom = 527.75
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1196,7 +998,6 @@ text = "+1"
 horizontal_alignment = 2
 
 [node name="upgrade4-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-visible = false
 offset_left = 605.0
 offset_top = 412.75
 offset_right = 861.0
@@ -1229,7 +1030,6 @@ text = "+5"
 horizontal_alignment = 2
 
 [node name="upgrade4-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-visible = false
 offset_left = 605.0
 offset_top = 412.75
 offset_right = 861.0
@@ -1262,7 +1062,6 @@ text = "+10"
 horizontal_alignment = 2
 
 [node name="upgrade4-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-visible = false
 offset_left = 605.0
 offset_top = 412.75
 offset_right = 861.0
@@ -1295,14 +1094,14 @@ text = "+15"
 horizontal_alignment = 2
 
 [node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-position = Vector2(789, 397.25)
+position = Vector2(845, 404.25)
 texture = ExtResource("6_73xg6")
 
 [node name="ProgressBars-Upgrade4" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
 visible = false
 
 [node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
-position = Vector2(728.5, 548.75)
+position = Vector2(784.5, 555.75)
 texture = ExtResource("34_23b6t")
 
 [node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
@@ -1326,7 +1125,7 @@ position = Vector2(728.5, 549)
 texture = ExtResource("38_fugtg")
 
 [node name="Temper" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-position = Vector2(730, 370.75)
+position = Vector2(786, 377.75)
 scale = Vector2(3.525, 3.525)
 texture = ExtResource("42_lgg6e")
 
@@ -1335,6 +1134,34 @@ visible = false
 position = Vector2(733, 467)
 scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("40_23b6t")
+
+[node name="The End" type="CanvasLayer" parent="Scene2/Upgrades"]
+
+[node name="Retirement Requirements" type="Label" parent="Scene2/Upgrades/The End"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Retirement Check Timer" type="Timer" parent="Scene2/Upgrades/The End"]
+
+[node name="Finish" type="TextureButton" parent="Scene2/Upgrades/The End"]
+visible = false
+offset_left = 269.0
+offset_top = 218.0
+offset_right = 830.0
+offset_bottom = 470.0
+texture_normal = ExtResource("45_xk1oi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="too much" type="Label" parent="Scene2/Upgrades/The End/Finish"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 93.0
+offset_right = 385.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0, 0.811765, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "1000"
 
 [node name="Scene3" type="Node" parent="."]
 
@@ -1347,7 +1174,6 @@ texture_repeat = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("44_573aq")
@@ -1782,7 +1608,7 @@ offset_bottom = 254.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Box2, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
 visible = false
@@ -1795,7 +1621,7 @@ offset_bottom = 254.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Box3, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
 visible = false
@@ -1808,7 +1634,7 @@ offset_bottom = 254.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
 position = Vector2(26, 378)
@@ -1953,7 +1779,7 @@ offset_bottom = 86.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Box2, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
@@ -1966,7 +1792,7 @@ offset_bottom = 86.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Box3, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
@@ -1979,7 +1805,7 @@ offset_bottom = 86.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Gen2BrokenSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 position = Vector2(97.5, 183.5)
@@ -2135,7 +1961,7 @@ offset_bottom = 254.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Box2, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
@@ -2148,7 +1974,7 @@ offset_bottom = 254.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Box3, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
@@ -2161,7 +1987,7 @@ offset_bottom = 254.0
 [node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3"]
 position = Vector2(84.75, 81)
 scale = Vector2(0.575601, 0.557143)
-texture = ExtResource("20_m63tb")
+texture = SubResource("CompressedTexture2D_issu3")
 
 [node name="Gen3Broken2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 position = Vector2(98, 170)
@@ -3066,7 +2892,7 @@ texture_repeat = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -52.0
+offset_top = -25.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("98_xk1oi")
@@ -3112,7 +2938,7 @@ scale = Vector2(1.16854, 1.17197)
 texture = ExtResource("12_06jb2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Scene4/CanvasLayer/Coffee"]
-stream = ExtResource("13_21bv0")
+stream = ExtResource("101_v1b03")
 
 [node name="AddCup" type="Button" parent="Scene4/CanvasLayer"]
 anchors_preset = -1
@@ -3131,6 +2957,9 @@ position = Vector2(89, 61)
 scale = Vector2(1.21348, 1.19427)
 texture = ExtResource("10_4w70j")
 
+[node name="CoffeeMachineWorking" type="AudioStreamPlayer2D" parent="Scene4/CanvasLayer"]
+stream = ExtResource("103_v1b03")
+
 [node name="Check if debt" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
@@ -3146,11 +2975,12 @@ offset_bottom = 117.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "10s"
 
+[node name="coins!" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("103_u6r0k")
+
 [node name="Button" type="Button" parent="."]
-offset_left = 388.0
-offset_top = 374.0
-offset_right = 485.0
-offset_bottom = 522.0
+offset_right = 186.0
+offset_bottom = 233.0
 
 [connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button2" to="." method="_on_button_2_pressed"]
@@ -3168,14 +2998,11 @@ offset_bottom = 522.0
 [connection signal="visibility_changed" from="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite" to="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite" method="_on_visibility_changed"]
 [connection signal="pressed" from="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode" to="." method="_on_product_barcode_pressed"]
 [connection signal="timeout" from="Scene1/Bags CounterTimer" to="." method="_on_BagsCounter_timeout"]
+[connection signal="timeout" from="Scene1/onScene1 Check Timer" to="." method="_on_on_scene_1_check_timer_timeout"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-1" to="." method="_on_upgrade_1_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-2" to="." method="_on_upgrade_1_2_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-3" to="." method="_on_upgrade_1_3_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-4" to="." method="_on_upgrade_1_4_button_down"]
-[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1" to="." method="_on_upgrade_2_button_down"]
-[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2" to="." method="_on_upgrade_2_2_button_down"]
-[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3" to="." method="_on_upgrade_2_3_button_down"]
-[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4" to="." method="_on_upgrade_2_4_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-1" to="." method="_on_upgrade_3_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2" to="." method="_on_upgrade_3_2_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3" to="." method="_on_upgrade_3_3_button_down"]
@@ -3184,6 +3011,8 @@ offset_bottom = 522.0
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2" to="." method="_on_upgrade_4_2_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3" to="." method="_on_upgrade_4_3_button_down"]
 [connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4" to="." method="_on_upgrade_4_4_button_down"]
+[connection signal="timeout" from="Scene2/Upgrades/The End/Retirement Check Timer" to="." method="_on_retirement_check_timer_timeout"]
+[connection signal="pressed" from="Scene2/Upgrades/The End/Finish" to="." method="_on_finish_pressed"]
 [connection signal="pressed" from="Scene3/ComputerScene/ToTruck" to="." method="_on_toTruck_pressed"]
 [connection signal="timeout" from="Scene3/ComputerScene/Shelf/Shelf Check Timer" to="." method="_on_shelf_check_timer_timeout"]
 [connection signal="pressed" from="Scene3/ComputerScene/Computer" to="." method="_on_computer_pressed"]
@@ -3191,7 +3020,7 @@ offset_bottom = 522.0
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy1Crate" to="." method="_on_Buy1Crate_pressed"]
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy5Crates" to="." method="_on_Buy5Crate_pressed"]
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy20Crates" to="." method="_on_Buy20Crate_pressed"]
-[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater" to="." method="_on_purchasetest_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater" to="." method="_on_purchase_crater_pressed"]
 [connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/ClearButton" to="." method="_on_ClearButton_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/ToComputer" to="." method="_on_toComputer_pressed"]
 [connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1" to="." method="_on_supply_option_1_pressed"]

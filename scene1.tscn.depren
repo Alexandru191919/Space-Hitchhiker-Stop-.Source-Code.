@@ -1,0 +1,3343 @@
+[gd_scene load_steps=121 format=3 uid="uid://clpnxse35m8q1"]
+
+[ext_resource type="Script" uid="uid://c2hbd7nmn2cwh" path="res://main.gd" id="1_1lou1"]
+[ext_resource type="Texture2D" uid="uid://gcdgl0fhrss1" path="res://char/Scene1.png" id="2_t75e4"]
+[ext_resource type="Texture2D" uid="uid://dd20fdq7rkyts" path="res://char/Scene2.png" id="3_axxxg"]
+[ext_resource type="PackedScene" uid="uid://dpmthxhg01t2m" path="res://char/Customer.tscn" id="3_oqa6r"]
+[ext_resource type="Texture2D" uid="uid://lvcq30j4ynhn" path="res://char/Scene3.png" id="4_gvup2"]
+[ext_resource type="Texture2D" uid="uid://ckw5etjlr87vi" path="res://char/Scene4.png" id="5_pxnjm"]
+[ext_resource type="Texture2D" uid="uid://ojrcsjsiag7y" path="res://char/Player GUI/Coin.png" id="6_73xg6"]
+[ext_resource type="Texture2D" uid="uid://dsxj7bjhcb8p4" path="res://char/Player GUI/supplies.png" id="7_dpjev"]
+[ext_resource type="Texture2D" uid="uid://be1j6v1d1aov" path="res://char/Player GUI/box.png" id="8_k4v75"]
+[ext_resource type="Texture2D" uid="uid://cqwgeo1h2ydgy" path="res://char/Scene1/counter.png" id="8_tlahr"]
+[ext_resource type="Script" uid="uid://cl66krass8k4l" path="res://ProducttoScan.gd" id="9_evrua"]
+[ext_resource type="Texture2D" uid="uid://6fjak305h8op" path="res://char/background.png" id="9_issu3"]
+[ext_resource type="Texture2D" uid="uid://blo0l4i43m4ub" path="res://char/Scene1/Products/product box.png" id="9_wbaho"]
+[ext_resource type="Texture2D" uid="uid://bg4r51fl55fl2" path="res://char/bills.png" id="9_xk1oi"]
+[ext_resource type="Texture2D" uid="uid://dduvhg8fdbcvl" path="res://coffee cup.png" id="10_4w70j"]
+[ext_resource type="Script" uid="uid://dqxxtqjfm7nma" path="res://productto_scan.gd" id="10_36txy"]
+[ext_resource type="Texture2D" uid="uid://cqhwa77lplyux" path="res://coffee machine.png" id="10_oiyxf"]
+[ext_resource type="Texture2D" uid="uid://bfmej5mmye1kj" path="res://coffee.png" id="12_06jb2"]
+[ext_resource type="Texture2D" uid="uid://bw3qtnwe673wj" path="res://char/Scene1/Products/arrow turn product.png" id="12_54ym8"]
+[ext_resource type="AudioStream" uid="uid://ql4s8cif4b6u" path="res://cash baby dinero.mp3" id="12_bqxh6"]
+[ext_resource type="AudioStream" uid="uid://guv1owvlngrj" path="res://roblox tycoon error.mp3" id="13_1b2e6"]
+[ext_resource type="Texture2D" uid="uid://bfsknmrlmvm8j" path="res://char/Scene1/Products/product bag bagged.png" id="13_54ym8"]
+[ext_resource type="Texture2D" uid="uid://cdjp7akl2qkqg" path="res://char/Scene1/Products/arrow bag product.png" id="13_jw06f"]
+[ext_resource type="Texture2D" uid="uid://lbjowa4brikg" path="res://char/Scene1/scanner & handle/handle with gun.png" id="14_12ij3"]
+[ext_resource type="Texture2D" uid="uid://bufmsujqhgskh" path="res://char/Windows Blue.png" id="15_1b2e6"]
+[ext_resource type="Texture2D" uid="uid://cpuwg7mqdrp58" path="res://char/Scene1/scanner & handle/scanner.png" id="15_fb74h"]
+[ext_resource type="Texture2D" uid="uid://b2rvm5q00jbj5" path="res://char/go-to buttons/gen room.png" id="15_nuep6"]
+[ext_resource type="Texture2D" uid="uid://dhxarseas0gc1" path="res://char/Scene1/scanner & handle/handle.png" id="16_pe2h3"]
+[ext_resource type="Texture2D" uid="uid://dkhebjvryty3j" path="res://char/go-to buttons/Computer Room.png" id="17_eakjk"]
+[ext_resource type="Texture2D" uid="uid://dllx7s610qx0c" path="res://char/Scene1/bags-sup counter.png" id="17_qdb0v"]
+[ext_resource type="Texture2D" uid="uid://to08fjpjnh86" path="res://char/Scene1/bags-sup counter1.png" id="18_36txy"]
+[ext_resource type="Texture2D" uid="uid://c0q1uxml2cxix" path="res://char/buy buttons/gens/get top only.png" id="18_75jky"]
+[ext_resource type="Script" uid="uid://c1i4iy4twoxgr" path="res://box_generator3.gd" id="18_g2ved"]
+[ext_resource type="Texture2D" uid="uid://blp5c7p1f6xy7" path="res://char/fake background.png" id="18_issu3"]
+[ext_resource type="Texture2D" uid="uid://b7peuhg1qpehc" path="res://char/buy buttons/gens/option_buttons/option1.png" id="18_tqtwb"]
+[ext_resource type="Texture2D" uid="uid://c5o7yde70akt6" path="res://char/buy buttons/gens/option_buttons/pressed/option1_pressed.png" id="19_75jky"]
+[ext_resource type="Texture2D" uid="uid://2qt60axhd0cn" path="res://char/gen.png" id="19_gnuvk"]
+[ext_resource type="Texture2D" uid="uid://ueitnd4tjdnd" path="res://char/Scene1/bags-sup counter2.png" id="19_gq5j1"]
+[ext_resource type="Script" uid="uid://c1d3tb3g5tf2v" path="res://box_generator2.gd" id="19_m63tb"]
+[ext_resource type="Texture2D" uid="uid://ojhq1dwygi5d" path="res://char/buy buttons/gens/option_buttons/option2.png" id="20_1hjk2"]
+[ext_resource type="AudioStream" uid="uid://cho5gqp22rb7n" path="res://beep.wav" id="20_e071v"]
+[ext_resource type="Script" uid="uid://jg05ogp23quw" path="res://box_generator.gd" id="20_gnuvk"]
+[ext_resource type="Texture2D" uid="uid://bdiy0c6xdosow" path="res://char/Scene1/Products/product barcode.png" id="20_jw06f"]
+[ext_resource type="Texture2D" uid="uid://b8r75qiiqc0yg" path="res://char/Scene1/bags-sup counter3.png" id="20_wbaho"]
+[ext_resource type="Texture2D" uid="uid://pysjkchpfvy0" path="res://char/Scene1/bags-sup counter4.png" id="21_54ym8"]
+[ext_resource type="Texture2D" uid="uid://dj0dray0ufkbg" path="res://char/buy buttons/gens/upgrades/upg0.png" id="21_cs8hm"]
+[ext_resource type="Texture2D" uid="uid://bj3dhynjui8ng" path="res://char/buy buttons/gens/option_buttons/pressed/option2_pressed.png" id="21_e5hle"]
+[ext_resource type="Script" uid="uid://bonbp8iwe7roi" path="res://product_barcode_sprite.gd" id="21_jw06f"]
+[ext_resource type="Texture2D" uid="uid://dkxpi5poa3747" path="res://char/GentoBuy.png" id="21_pxlpg"]
+[ext_resource type="Texture2D" uid="uid://dxkgl62euffet" path="res://char/buy buttons/gens/option_buttons/option3.png" id="22_pgr8x"]
+[ext_resource type="Texture2D" uid="uid://cffn52j43gajq" path="res://char/buy buttons/gens/option_buttons/pressed/option3_pressed.png" id="23_u1pgp"]
+[ext_resource type="Texture2D" uid="uid://cf8gvj4gitkvh" path="res://char/buy buttons/gens/buy.png" id="23_vkopw"]
+[ext_resource type="Texture2D" uid="uid://cdc325s8q6hly" path="res://char/buy buttons/gens/buyMouseonTop.png" id="25_ftjon"]
+[ext_resource type="Texture2D" uid="uid://ba5oywyoyn3gx" path="res://char/buy buttons/gens/buyPressed.png" id="26_1mldf"]
+[ext_resource type="Texture2D" uid="uid://bahngfjor0dgb" path="res://char/buy buttons/gens/working/Sin título.png" id="27_ynu80"]
+[ext_resource type="Texture2D" uid="uid://122igdtx36h4" path="res://char/buy buttons/gens/working/1.png" id="28_eakjk"]
+[ext_resource type="Texture2D" uid="uid://qjvdyixeq3k4" path="res://char/buy buttons/gens/working/2.png" id="29_nuep6"]
+[ext_resource type="Texture2D" uid="uid://b2cwexntmxq3y" path="res://char/Scene2/background.png" id="30_issu3"]
+[ext_resource type="Texture2D" uid="uid://cvk7vj1xc6dau" path="res://char/buy buttons/gens/working/3.png" id="30_yjnah"]
+[ext_resource type="Texture2D" uid="uid://d0vykuckdl5c8" path="res://char/buy buttons/gens/working/4.png" id="31_w4mbv"]
+[ext_resource type="Texture2D" uid="uid://cb7m4ydgyops8" path="res://char/buy buttons/gens/working/5.png" id="32_gnl2d"]
+[ext_resource type="Texture2D" uid="uid://3y5pky6virlf" path="res://char/buy buttons/gens/working/6.png" id="33_t75e4"]
+[ext_resource type="Texture2D" uid="uid://dxjwymwkgmhbs" path="res://char/Scene2/upgrades.png" id="33_uciac"]
+[ext_resource type="Texture2D" uid="uid://5rmf3wnhb5xq" path="res://char/Scene2/progress bar/upg0.png" id="34_23b6t"]
+[ext_resource type="Texture2D" uid="uid://c30l5md3kmo6s" path="res://char/buy buttons/gens/working/7.png" id="34_axxxg"]
+[ext_resource type="Texture2D" uid="uid://bnlmhaqr5xuum" path="res://char/Scene2/progress bar/upg1.png" id="35_vd5ax"]
+[ext_resource type="Texture2D" uid="uid://pqn2m76e6ack" path="res://char/Scene2/progress bar/upg2.png" id="36_573aq"]
+[ext_resource type="Texture2D" uid="uid://csa8c5mos4eyu" path="res://char/Scene2/progress bar/upg3.png" id="37_522d3"]
+[ext_resource type="Texture2D" uid="uid://cyegemnyn6mvc" path="res://char/Scene2/progress bar/upg4.png" id="38_fugtg"]
+[ext_resource type="Texture2D" uid="uid://dwn1svpfhvduo" path="res://char/Scene2/upgrade icons/energy.png" id="39_gim1h"]
+[ext_resource type="Texture2D" uid="uid://cntrgr2ilmoyj" path="res://char/Scene2/upgrades done.png" id="40_23b6t"]
+[ext_resource type="Texture2D" uid="uid://bpobpjwhs6ggn" path="res://char/Scene2/upgrade icons/money cap.png" id="40_pmmsa"]
+[ext_resource type="Texture2D" uid="uid://clgoik8jg1tty" path="res://char/Scene2/upgrade icons/money gain.png" id="41_axkpg"]
+[ext_resource type="Texture2D" uid="uid://07q7xfwkeotf" path="res://char/UpgradeProgressBars/Scene3-Gens/gen0.png" id="41_axxxg"]
+[ext_resource type="Texture2D" uid="uid://dvoyhdhd4t00m" path="res://char/Scene2/upgrade icons/temper.png" id="42_lgg6e"]
+[ext_resource type="Texture2D" uid="uid://coa7socv11lp1" path="res://char/Scene3/scene3 background.png" id="44_573aq"]
+[ext_resource type="Texture2D" uid="uid://bn02bfaom6fie" path="res://char/UpgradeProgressBars/Scene3-Gens/gen1.png" id="45_tlahr"]
+[ext_resource type="Texture2D" uid="uid://c26a8fxo3jtks" path="res://retirement.png" id="45_xk1oi"]
+[ext_resource type="Texture2D" uid="uid://br8xnisurb7fw" path="res://char/Scene3/computer.png" id="46_522d3"]
+[ext_resource type="Texture2D" uid="uid://debtyvhpp2alm" path="res://char/UpgradeProgressBars/Scene3-Gens/gen2.png" id="46_sa4ha"]
+[ext_resource type="Texture2D" uid="uid://0iuxhiw1w4ot" path="res://char/UpgradeProgressBars/Scene3-Gens/gen6.png" id="47_cubks"]
+[ext_resource type="Texture2D" uid="uid://07ybqnqm2ckt" path="res://char/UpgradeProgressBars/Scene3-Gens/gen3.png" id="47_ihltv"]
+[ext_resource type="Texture2D" uid="uid://cwffbtqcltwxy" path="res://char/UpgradeProgressBars/Scene3-Gens/gen4.png" id="48_12ij3"]
+[ext_resource type="Script" uid="uid://lve3u1ucrql4" path="res://shelf.gd" id="48_fugtg"]
+[ext_resource type="Texture2D" uid="uid://bld1i2a8w826g" path="res://char/Scene3/shelf/shelf.png" id="49_3ggy6"]
+[ext_resource type="Texture2D" uid="uid://tsx1isp51qvs" path="res://char/UpgradeProgressBars/Scene3-Gens/gen5.png" id="49_fb74h"]
+[ext_resource type="Texture2D" uid="uid://d1eg8i56j0abp" path="res://char/Scene3/shelf/shelf1.png" id="50_i8irr"]
+[ext_resource type="Texture2D" uid="uid://c8qsdipyqrb1m" path="res://char/Scene3/shelf/shelf2.png" id="51_5gri6"]
+[ext_resource type="Texture2D" uid="uid://bih2l3g113hua" path="res://char/UpgradeProgressBars/Scene3-Gens/gen7.png" id="51_y07ak"]
+[ext_resource type="Texture2D" uid="uid://bjgpy7wi3wh3p" path="res://char/Scene3/shelf/shelf3.png" id="52_c8edl"]
+[ext_resource type="Texture2D" uid="uid://o6pgpl21xukp" path="res://char/Scene3/shelf/shelf4.png" id="53_31kl0"]
+[ext_resource type="Texture2D" uid="uid://b2mfc0xmdgrsf" path="res://char/Scene3/shelf/shelf5.png" id="54_0c7ib"]
+[ext_resource type="Texture2D" uid="uid://bb42uahfrpc77" path="res://char/Scene3/shelf/shelf6.png" id="55_issu3"]
+[ext_resource type="Texture2D" uid="uid://bak01jaqe0jxq" path="res://char/Scene3/shelf/shelf7.png" id="56_xk1oi"]
+[ext_resource type="Texture2D" uid="uid://c7sen0mwakyhk" path="res://char/Scene3/computer window/close tab.png" id="57_issu3"]
+[ext_resource type="Texture2D" uid="uid://bsojjdkyaptih" path="res://char/Scene3/computer window/1 box.png" id="58_xk1oi"]
+[ext_resource type="Texture2D" uid="uid://bihyc3ypg3k7q" path="res://char/Scene3/computer window/5 boxes.png" id="59_e071v"]
+[ext_resource type="Texture2D" uid="uid://dwcqspxaitn7w" path="res://char/Scene3/computer window/20 boxes.png" id="60_v1b03"]
+[ext_resource type="Texture2D" uid="uid://c1kgppilhvdg6" path="res://char/Scene3/computer window/shopping cart.png" id="61_u6r0k"]
+[ext_resource type="Texture2D" uid="uid://div8x6lrpqtld" path="res://char/Scene3/computer window/clear purchase.png" id="62_05sep"]
+[ext_resource type="Texture2D" uid="uid://by5ck8oa7ou2p" path="res://char/Scene4/background.png" id="98_xk1oi"]
+[ext_resource type="AudioStream" uid="uid://0f27ktblfrtf" path="res://char/go-to buttons/568039__benkenart__coffee-slurp-1.wav" id="101_v1b03"]
+[ext_resource type="AudioStream" uid="uid://dw8k7c8mtgnh7" path="res://char/go-to buttons/336573__anthousai__coins-in-cloth-03.wav" id="103_u6r0k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hq0e"]
+resource_local_to_scene = true
+bg_color = Color(0.42115, 0.00229025, 0.813601, 1)
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+
+[sub_resource type="GDScript" id="GDScript_nollb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m63tb"]
+size = Vector2(192, 57)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cs8hm"]
+load_path = "res://.godot/imported/upg0.png-9bbb62b2203c2ea61d98e05611967eb0.ctex"
+
+[sub_resource type="Curve" id="Curve_m63tb"]
+_data = [Vector2(0, 0.606742), 0.0, 0.0, 0, 0, Vector2(0.502857, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvup2"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_eakjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nuep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yjnah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w4mbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gnl2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_t75e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_axxxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_axxxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_t75e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gnl2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w4mbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yjnah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nuep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_eakjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ynu80")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 1.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_issu3"]
+load_path = "res://.godot/imported/box shutterstock.png-557dbe5a7c1044c0589c54f408504b96.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxnjm"]
+load_path = "res://.godot/imported/gen3.png-7d7ac56d196e9a3937cddfc5e2716acc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cubks"]
+load_path = "res://.godot/imported/gen4.png-d6c2a29ed54faeaae68ca7e6bb1777b5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ema37"]
+load_path = "res://.godot/imported/gen5.png-64b90a516584d426519cea062bc78d4e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwm4h"]
+load_path = "res://.godot/imported/gen7.png-9fa4125b9e5ceb81f4178268766a8245.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5wjhk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_23b6t"]
+load_path = "res://.godot/imported/CoffeeMachineWorking.png-c357d2c628ee699c26a069d36296becb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vd5ax"]
+load_path = "res://.godot/imported/CoffeeMachineWorking2.png-5e8aff262c1a56a63ebcc1194af7050d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_573aq"]
+load_path = "res://.godot/imported/CoffeeMachineWorking3.png-63f13b616d074c92057e13c00ed1ddd8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_522d3"]
+load_path = "res://.godot/imported/CoffeeMachineWorking4.png-1d0c1db4b206bb1092641cc55596b382.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rgts"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_23b6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_vd5ax")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_573aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_522d3")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_1lou1")
+countdown_time1 = null
+countdown_time2 = null
+countdown_time3 = null
+
+[node name="PlayerGUI" type="Node" parent="."]
+
+[node name="CanvasLayerButtons" type="CanvasLayer" parent="PlayerGUI"]
+
+[node name="Button1" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_top = 597.0
+offset_right = 298.0
+offset_bottom = 648.0
+texture_normal = ExtResource("2_t75e4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_left = 298.0
+offset_top = 597.0
+offset_right = 590.0
+offset_bottom = 648.0
+texture_normal = ExtResource("3_axxxg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_left = 590.0
+offset_top = 597.0
+offset_right = 879.0
+offset_bottom = 648.0
+texture_normal = ExtResource("4_gvup2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="PlayerGUI/CanvasLayerButtons"]
+offset_left = 879.0
+offset_top = 597.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture_normal = ExtResource("5_pxnjm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CanvasLayerEnergy" type="CanvasLayer" parent="PlayerGUI"]
+
+[node name="EnergyBar" type="ProgressBar" parent="PlayerGUI/CanvasLayerEnergy"]
+anchors_preset = -1
+anchor_left = 0.826
+anchor_top = 0.012
+anchor_right = 0.993
+anchor_bottom = 0.049
+offset_left = 0.447937
+offset_top = 0.224
+offset_right = 0.0639648
+offset_bottom = 0.247999
+theme_override_styles/fill = SubResource("StyleBoxFlat_2hq0e")
+value = 1.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="EnergyTimer" type="Timer" parent="PlayerGUI/CanvasLayerEnergy/EnergyBar"]
+process_callback = 0
+wait_time = 25.0
+
+[node name="Label" type="Label" parent="PlayerGUI/CanvasLayerEnergy/EnergyBar"]
+layout_mode = 0
+offset_left = 71.0001
+offset_top = 44.0
+offset_right = 111.0
+offset_bottom = 67.0
+
+[node name="CanvasLayerSupplies" type="CanvasLayer" parent="PlayerGUI"]
+
+[node name="Coins" type="Label" parent="PlayerGUI/CanvasLayerSupplies"]
+offset_left = 35.0
+offset_top = 13.0
+offset_right = 111.0
+offset_bottom = 36.0
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinSprite2D" type="Sprite2D" parent="PlayerGUI/CanvasLayerSupplies/Coins"]
+position = Vector2(-11, 12)
+texture = ExtResource("6_73xg6")
+
+[node name="Supplies" type="Label" parent="PlayerGUI/CanvasLayerSupplies"]
+offset_left = 36.0
+offset_top = 39.0
+offset_right = 126.0
+offset_bottom = 62.0
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="SuppliesSprite2D" type="Sprite2D" parent="PlayerGUI/CanvasLayerSupplies/Supplies"]
+position = Vector2(-11, 12)
+scale = Vector2(0.0989305, 0.140212)
+texture = ExtResource("7_dpjev")
+
+[node name="SuppliestoProcess" type="Label" parent="PlayerGUI/CanvasLayerSupplies"]
+offset_left = 36.0
+offset_top = 65.0
+offset_right = 126.0
+offset_bottom = 114.0
+text = "0
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxSprite2D" type="Sprite2D" parent="PlayerGUI/CanvasLayerSupplies/SuppliestoProcess"]
+position = Vector2(-11, 13)
+scale = Vector2(0.34, 0.36)
+texture = ExtResource("8_k4v75")
+
+[node name="Day&Night" type="Node2D" parent="PlayerGUI/CanvasLayerSupplies"]
+position = Vector2(1, 6)
+script = SubResource("GDScript_nollb")
+
+[node name="Timer" type="Timer" parent="PlayerGUI/CanvasLayerSupplies/Day&Night"]
+wait_time = 5.0
+
+[node name="Bills" type="Sprite2D" parent="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"]
+position = Vector2(629.25, 30)
+scale = Vector2(2.86538, 2.5)
+texture = ExtResource("9_xk1oi")
+
+[node name="Label" type="Label" parent="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"]
+offset_left = 598.25
+offset_top = 23.0
+offset_right = 773.25
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "5:00"
+
+[node name="Label2" type="Label" parent="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"]
+offset_left = 646.0
+offset_top = 24.0
+offset_right = 665.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"]
+offset_left = 686.0
+offset_top = 25.0
+offset_right = 861.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "5"
+
+[node name="CoinSprite2D" type="Sprite2D" parent="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"]
+position = Vector2(676, 38)
+scale = Vector2(0.611111, 0.6)
+texture = ExtResource("6_73xg6")
+
+[node name="Scene1" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Scene1"]
+visible = false
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_issu3")
+stretch_mode = 1
+
+[node name="Customer" parent="Scene1" instance=ExtResource("3_oqa6r")]
+visible = false
+position = Vector2(283, 203)
+
+[node name="ShopCounter" type="Sprite2D" parent="Scene1"]
+visible = false
+position = Vector2(576, 488.836)
+scale = Vector2(1, 0.941097)
+texture = ExtResource("8_tlahr")
+
+[node name="ProgressBar2" type="ProgressBar" parent="Scene1"]
+visible = false
+anchors_preset = -1
+anchor_right = 0.173
+anchor_bottom = 0.042
+offset_left = 187.0
+offset_top = 21.0
+offset_right = 186.704
+offset_bottom = 20.784
+min_value = 1.0
+value = 1.0
+show_percentage = false
+
+[node name="Label2" type="Label" parent="Scene1/ProgressBar2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CustomerReappear" type="Timer" parent="Scene1/ProgressBar2"]
+process_callback = 0
+wait_time = 5.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Scene1"]
+visible = false
+anchors_preset = -1
+anchor_right = 0.173
+anchor_bottom = 0.042
+offset_left = 187.0
+offset_top = 21.0
+offset_right = 186.704
+offset_bottom = 20.784
+min_value = 1.0
+value = 1.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Scene1/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.00005
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CustomerTemper" type="Timer" parent="Scene1/ProgressBar"]
+process_callback = 0
+wait_time = 2.0
+
+[node name="ScanningMinigameCanvasLayer" type="CanvasLayer" parent="Scene1"]
+visible = false
+
+[node name="ProducttoScan" type="Sprite2D" parent="Scene1/ScanningMinigameCanvasLayer"]
+position = Vector2(174, 468)
+scale = Vector2(0.845556, 1.05979)
+texture = ExtResource("9_wbaho")
+script = ExtResource("10_36txy")
+
+[node name="Bagging Area" type="Sprite2D" parent="Scene1/ScanningMinigameCanvasLayer"]
+visible = false
+position = Vector2(993.25, 309.5)
+scale = Vector2(1.26471, 1.28571)
+texture = ExtResource("13_54ym8")
+
+[node name="PlaceinBagButton" type="Button" parent="Scene1/ScanningMinigameCanvasLayer"]
+visible = false
+offset_left = 848.0
+offset_top = 106.0
+offset_right = 994.0
+offset_bottom = 179.0
+toggle_mode = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton"]
+position = Vector2(73, 37)
+texture = ExtResource("12_54ym8")
+
+[node name="Button" type="Button" parent="Scene1/ScanningMinigameCanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.127
+anchor_top = -0.125
+anchor_right = 1.186
+anchor_bottom = 0.141
+offset_left = 236.304
+offset_top = 403.0
+offset_right = -1110.27
+offset_bottom = 304.632
+script = ExtResource("9_evrua")
+
+[node name="arrow turn" type="Sprite2D" parent="Scene1/ScanningMinigameCanvasLayer/Button"]
+position = Vector2(83.0867, 36.6262)
+scale = Vector2(1.13356, 1)
+texture = ExtResource("13_jw06f")
+
+[node name="sigma" type="CanvasLayer" parent="Scene1"]
+visible = false
+
+[node name="Fake Background" type="TextureRect" parent="Scene1/sigma"]
+visible = false
+offset_left = -14.0
+offset_top = -11.0
+offset_right = 1176.0
+offset_bottom = 668.0
+texture = ExtResource("18_issu3")
+stretch_mode = 1
+
+[node name="BarCode Scanner" type="Button" parent="Scene1/sigma"]
+offset_left = 559.0
+offset_top = 523.0
+offset_right = 600.0
+offset_bottom = 587.0
+toggle_mode = true
+
+[node name="Beep" type="AudioStreamPlayer2D" parent="Scene1/sigma/BarCode Scanner"]
+position = Vector2(20, 30)
+stream = ExtResource("20_e071v")
+volume_db = -10.0
+
+[node name="Scanner with handle" type="Sprite2D" parent="Scene1/sigma/BarCode Scanner"]
+position = Vector2(20.5, 32)
+scale = Vector2(1.46429, 1.39131)
+texture = ExtResource("14_12ij3")
+
+[node name="Scanner" type="Sprite2D" parent="Scene1/sigma/BarCode Scanner"]
+visible = false
+position = Vector2(20.5, 32)
+scale = Vector2(1.46429, 1.3913)
+texture = ExtResource("15_fb74h")
+
+[node name="Handle" type="Sprite2D" parent="Scene1/sigma/BarCode Scanner"]
+visible = false
+position = Vector2(20.5, 32)
+scale = Vector2(1.46428, 1.3913)
+texture = ExtResource("16_pe2h3")
+
+[node name="ProductBarcodeSprite" type="Sprite2D" parent="Scene1/sigma/BarCode Scanner"]
+visible = false
+position = Vector2(60, -243)
+scale = Vector2(1.63874, 2.11183)
+texture = ExtResource("20_jw06f")
+script = ExtResource("21_jw06f")
+
+[node name="ProductBarcode" type="Button" parent="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite"]
+anchors_preset = -1
+anchor_left = -6.654
+anchor_top = -9.615
+anchor_right = -6.654
+anchor_bottom = -9.615
+offset_left = 1749.62
+offset_top = 1889.31
+offset_right = 1901.62
+offset_bottom = 1948.31
+toggle_mode = true
+
+[node name="Bags Counter" type="Sprite2D" parent="Scene1"]
+visible = false
+position = Vector2(1041, 553.5)
+scale = Vector2(1, 0.959184)
+texture = ExtResource("17_qdb0v")
+
+[node name="Bags Counter1" type="Sprite2D" parent="Scene1"]
+visible = false
+position = Vector2(1041, 553.5)
+scale = Vector2(1, 0.959184)
+texture = ExtResource("18_36txy")
+
+[node name="Bags Counter2" type="Sprite2D" parent="Scene1"]
+visible = false
+position = Vector2(1041, 553.5)
+scale = Vector2(1, 0.959184)
+texture = ExtResource("19_gq5j1")
+
+[node name="Bags Counter3" type="Sprite2D" parent="Scene1"]
+visible = false
+position = Vector2(1041, 553.5)
+scale = Vector2(1, 0.959184)
+texture = ExtResource("20_wbaho")
+
+[node name="Bags Counter4" type="Sprite2D" parent="Scene1"]
+visible = false
+position = Vector2(1041, 553.5)
+scale = Vector2(1, 0.959185)
+texture = ExtResource("21_54ym8")
+
+[node name="Bags CounterTimer" type="Timer" parent="Scene1"]
+wait_time = 0.1
+
+[node name="Scene2" type="Node" parent="."]
+
+[node name="TextureScene2" type="TextureRect" parent="Scene2"]
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.5
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_issu3")
+stretch_mode = 1
+
+[node name="Upgrades" type="Node" parent="Scene2"]
+
+[node name="Successful" type="AudioStreamPlayer2D" parent="Scene2/Upgrades"]
+visible = false
+position = Vector2(-7.62939e-06, 0)
+stream = ExtResource("12_bqxh6")
+
+[node name="Error" type="AudioStreamPlayer2D" parent="Scene2/Upgrades"]
+visible = false
+position = Vector2(-7.62939e-06, 0)
+stream = ExtResource("13_1b2e6")
+
+[node name="Upgrade1-Energy" type="CanvasLayer" parent="Scene2/Upgrades"]
+
+[node name="upgrade1-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
+offset_left = 218.0
+offset_top = 184.75
+offset_right = 474.0
+offset_bottom = 292.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="10" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0173611
+anchor_right = -0.0173611
+offset_left = 218.444
+offset_top = -26.75
+offset_right = 280.444
+offset_bottom = -3.75
+text = "10"
+
+[node name="+2" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-1"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 7.25
+offset_right = 15.0
+offset_bottom = 30.25
+text = "+2"
+
+[node name="upgrade1-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
+visible = false
+offset_left = 218.0
+offset_top = 184.75
+offset_right = 474.0
+offset_bottom = 292.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="30" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0173611
+anchor_right = -0.0173611
+offset_left = 218.444
+offset_top = -26.75
+offset_right = 280.444
+offset_bottom = -3.75
+text = "30"
+
+[node name="+5" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-2"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 30.5
+offset_right = 14.0
+offset_bottom = 53.5
+text = "+5"
+
+[node name="upgrade1-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
+visible = false
+offset_left = 218.0
+offset_top = 184.75
+offset_right = 474.0
+offset_bottom = 292.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="60" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0173611
+anchor_right = -0.0173611
+offset_left = 218.444
+offset_top = -26.75
+offset_right = 280.444
+offset_bottom = -3.75
+text = "60"
+
+[node name="+10" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-3"]
+layout_mode = 0
+offset_left = -34.0
+offset_top = 53.5
+offset_right = 6.0
+offset_bottom = 76.5
+text = "+10"
+
+[node name="upgrade1-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
+visible = false
+offset_left = 218.0
+offset_top = 184.75
+offset_right = 474.0
+offset_bottom = 292.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="94" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0173611
+anchor_right = -0.0173611
+offset_left = 218.444
+offset_top = -26.75
+offset_right = 280.444
+offset_bottom = -3.75
+text = "100"
+
+[node name="+15" type="Label" parent="Scene2/Upgrades/Upgrade1-Energy/upgrade1-4"]
+layout_mode = 0
+offset_left = -34.0
+offset_top = 76.5
+offset_right = 6.0
+offset_bottom = 99.5
+text = "+15"
+
+[node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
+position = Vector2(419, 170)
+texture = ExtResource("6_73xg6")
+
+[node name="ProgressBars-Upgrade1" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade1-Energy"]
+visible = false
+
+[node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
+position = Vector2(343.5, 312.75)
+texture = ExtResource("34_23b6t")
+
+[node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
+visible = false
+position = Vector2(343.5, 313)
+texture = ExtResource("35_vd5ax")
+
+[node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
+visible = false
+position = Vector2(343.5, 313)
+texture = ExtResource("36_573aq")
+
+[node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
+visible = false
+position = Vector2(343.5, 313)
+texture = ExtResource("37_522d3")
+
+[node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
+visible = false
+position = Vector2(343.5, 313)
+texture = ExtResource("38_fugtg")
+
+[node name="Energy" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
+position = Vector2(350, 141.75)
+scale = Vector2(4.32353, 4.76667)
+texture = ExtResource("39_gim1h")
+
+[node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
+visible = false
+position = Vector2(346, 239)
+scale = Vector2(1.70667, 1.63636)
+texture = ExtResource("40_23b6t")
+
+[node name="Upgrade2-MoneyCap" type="CanvasLayer" parent="Scene2/Upgrades"]
+
+[node name="upgrade2-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+offset_left = 603.0
+offset_top = 172.75
+offset_right = 859.0
+offset_bottom = 280.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "8"
+metadata/_edit_use_anchors_ = true
+
+[node name="10" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.34375
+anchor_top = -1.26389
+anchor_right = -3.34375
+anchor_bottom = -1.26389
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "10"
+metadata/_edit_use_anchors_ = true
+
+[node name="upgrade2-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+visible = false
+offset_left = 603.0
+offset_top = 172.75
+offset_right = 859.0
+offset_bottom = 280.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="15" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "15
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="20" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.34375
+anchor_top = -1.06944
+anchor_right = -3.34375
+anchor_bottom = -1.06944
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "20"
+metadata/_edit_use_anchors_ = true
+
+[node name="upgrade2-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+visible = false
+offset_left = 603.0
+offset_top = 172.75
+offset_right = 859.0
+offset_bottom = 280.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="27" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "27
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="30" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.34375
+anchor_top = -0.856481
+anchor_right = -3.34375
+anchor_bottom = -0.856481
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "30"
+metadata/_edit_use_anchors_ = true
+
+[node name="upgrade2-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+visible = false
+offset_left = 603.0
+offset_top = 172.75
+offset_right = 859.0
+offset_bottom = 280.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="42" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "42"
+metadata/_edit_use_anchors_ = true
+
+[node name="50" type="Label" parent="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.34375
+anchor_top = -0.634259
+anchor_right = -3.34375
+anchor_bottom = -0.634259
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "50"
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+position = Vector2(809, 156)
+texture = ExtResource("6_73xg6")
+
+[node name="ProgressBars-Upgrade2" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+visible = false
+
+[node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
+position = Vector2(741.5, 311.75)
+texture = ExtResource("34_23b6t")
+
+[node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
+visible = false
+position = Vector2(741.5, 312)
+texture = ExtResource("35_vd5ax")
+
+[node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
+visible = false
+position = Vector2(741.5, 312)
+texture = ExtResource("36_573aq")
+
+[node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
+visible = false
+position = Vector2(741.5, 312)
+texture = ExtResource("37_522d3")
+
+[node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
+visible = false
+position = Vector2(741.5, 312)
+texture = ExtResource("38_fugtg")
+
+[node name="MoneyCap" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+position = Vector2(732, 127)
+scale = Vector2(6.27941, 4.69531)
+texture = ExtResource("40_pmmsa")
+
+[node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
+visible = false
+position = Vector2(731, 227)
+scale = Vector2(1.70667, 1.63636)
+texture = ExtResource("40_23b6t")
+
+[node name="Upgrade3-MoneyGain" type="CanvasLayer" parent="Scene2/Upgrades"]
+
+[node name="upgrade3-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+offset_left = 217.0
+offset_top = 399.75
+offset_right = 473.0
+offset_bottom = 507.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="15" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "15"
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-1"]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 7.25
+offset_bottom = 30.25
+text = "2"
+
+[node name="upgrade3-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+visible = false
+offset_left = 217.0
+offset_top = 399.75
+offset_right = 473.0
+offset_bottom = 507.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="30" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "30"
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2"]
+layout_mode = 0
+offset_left = -41.0
+offset_top = 31.25
+offset_right = -1.0
+offset_bottom = 54.25
+text = "3"
+
+[node name="upgrade3-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+visible = false
+offset_left = 217.0
+offset_top = 399.75
+offset_right = 473.0
+offset_bottom = 507.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="40" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "45"
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3"]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 56.25
+offset_bottom = 79.25
+text = "4"
+
+[node name="upgrade3-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+visible = false
+offset_left = 217.0
+offset_top = 399.75
+offset_right = 473.0
+offset_bottom = 507.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="50" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.38672
+anchor_top = -1.56019
+anchor_right = -2.38672
+anchor_bottom = -1.56019
+offset_left = 831.0
+offset_top = 139.75
+offset_right = 893.0
+offset_bottom = 162.75
+text = "70"
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Label" parent="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4"]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 81.25
+offset_bottom = 104.25
+text = "5"
+
+[node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+position = Vector2(419, 384)
+texture = ExtResource("6_73xg6")
+
+[node name="ProgressBars-Upgrade3" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+visible = false
+
+[node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
+position = Vector2(342.5, 542.75)
+texture = ExtResource("34_23b6t")
+
+[node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
+visible = false
+position = Vector2(342.5, 543)
+texture = ExtResource("35_vd5ax")
+
+[node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
+visible = false
+position = Vector2(342.5, 543)
+texture = ExtResource("36_573aq")
+
+[node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
+visible = false
+position = Vector2(342.5, 543)
+texture = ExtResource("37_522d3")
+
+[node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
+visible = false
+position = Vector2(342.5, 543)
+texture = ExtResource("38_fugtg")
+
+[node name="MoneyGain" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+position = Vector2(340, 359.75)
+scale = Vector2(4.3, 3.95)
+texture = ExtResource("41_axkpg")
+
+[node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
+visible = false
+position = Vector2(345, 454)
+scale = Vector2(1.70667, 1.63636)
+texture = ExtResource("40_23b6t")
+
+[node name="Upgrade4-CustomerTemper" type="CanvasLayer" parent="Scene2/Upgrades"]
+
+[node name="upgrade4-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+offset_left = 605.0
+offset_top = 412.75
+offset_right = 861.0
+offset_bottom = 520.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="15 coins" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0273438
+anchor_top = 0.0949074
+anchor_right = 0.0273438
+anchor_bottom = 0.0949074
+offset_left = 187.0
+offset_top = -38.0
+offset_right = 249.0
+offset_bottom = -15.0
+text = "15"
+metadata/_edit_use_anchors_ = true
+
+[node name="+1" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-1"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 8.25
+offset_right = -4.0
+offset_bottom = 31.25
+text = "+1"
+horizontal_alignment = 2
+
+[node name="upgrade4-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+visible = false
+offset_left = 605.0
+offset_top = 412.75
+offset_right = 861.0
+offset_bottom = 520.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="50 Coins" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0273438
+anchor_top = 0.0949074
+anchor_right = 0.0273438
+anchor_bottom = 0.0949074
+offset_left = 187.0
+offset_top = -38.0
+offset_right = 249.0
+offset_bottom = -15.0
+text = "50"
+metadata/_edit_use_anchors_ = true
+
+[node name="+5" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 31.25
+offset_right = -4.0
+offset_bottom = 54.25
+text = "+5"
+horizontal_alignment = 2
+
+[node name="upgrade4-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+visible = false
+offset_left = 605.0
+offset_top = 412.75
+offset_right = 861.0
+offset_bottom = 520.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="80 Coins" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0273438
+anchor_top = 0.0949074
+anchor_right = 0.0273438
+anchor_bottom = 0.0949074
+offset_left = 187.0
+offset_top = -38.0
+offset_right = 249.0
+offset_bottom = -15.0
+text = "80"
+metadata/_edit_use_anchors_ = true
+
+[node name="+10" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 54.25
+offset_right = -4.0
+offset_bottom = 77.25
+text = "+10"
+horizontal_alignment = 2
+
+[node name="upgrade4-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+visible = false
+offset_left = 605.0
+offset_top = 412.75
+offset_right = 861.0
+offset_bottom = 520.75
+texture_normal = ExtResource("33_uciac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="145 Coins" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0273438
+anchor_top = 0.0949074
+anchor_right = 0.0273438
+anchor_bottom = 0.0949074
+offset_left = 187.0
+offset_top = -38.0
+offset_right = 249.0
+offset_bottom = -15.0
+text = "145"
+metadata/_edit_use_anchors_ = true
+
+[node name="+15" type="Label" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 77.25
+offset_right = -4.0
+offset_bottom = 100.25
+text = "+15"
+horizontal_alignment = 2
+
+[node name="CoinSprite2D" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+position = Vector2(789, 397.25)
+texture = ExtResource("6_73xg6")
+
+[node name="ProgressBars-Upgrade4" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+visible = false
+
+[node name="upg0" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
+position = Vector2(728.5, 548.75)
+texture = ExtResource("34_23b6t")
+
+[node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
+visible = false
+position = Vector2(728.5, 549)
+texture = ExtResource("35_vd5ax")
+
+[node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
+visible = false
+position = Vector2(728.5, 549)
+texture = ExtResource("36_573aq")
+
+[node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
+visible = false
+position = Vector2(728.5, 549)
+texture = ExtResource("37_522d3")
+
+[node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
+visible = false
+position = Vector2(728.5, 549)
+texture = ExtResource("38_fugtg")
+
+[node name="Temper" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+position = Vector2(730, 370.75)
+scale = Vector2(3.525, 3.525)
+texture = ExtResource("42_lgg6e")
+
+[node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
+visible = false
+position = Vector2(733, 467)
+scale = Vector2(1.70667, 1.63636)
+texture = ExtResource("40_23b6t")
+
+[node name="The End" type="CanvasLayer" parent="Scene2/Upgrades"]
+
+[node name="Retirement Requirements" type="Label" parent="Scene2/Upgrades/The End"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Retirement Check Timer" type="Timer" parent="Scene2/Upgrades/The End"]
+
+[node name="Finish" type="TextureButton" parent="Scene2/Upgrades/The End"]
+visible = false
+offset_left = 269.0
+offset_top = 218.0
+offset_right = 830.0
+offset_bottom = 470.0
+texture_normal = ExtResource("45_xk1oi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="too much" type="Label" parent="Scene2/Upgrades/The End/Finish"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 93.0
+offset_right = 385.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0, 0.811765, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "1000"
+
+[node name="Button" type="Button" parent="Scene2/Upgrades/The End"]
+offset_left = 90.0
+offset_top = 29.0
+offset_right = 117.0
+offset_bottom = 118.0
+
+[node name="Scene3" type="Node" parent="."]
+
+[node name="ComputerScene" type="Node" parent="Scene3"]
+
+[node name="TextureSceneComputer" type="TextureRect" parent="Scene3/ComputerScene"]
+visible = false
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("44_573aq")
+stretch_mode = 1
+
+[node name="ToTruck" type="Button" parent="Scene3/ComputerScene"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.941
+anchor_top = 0.352
+anchor_right = 1.0
+anchor_bottom = 0.523
+offset_left = -40.032
+offset_top = 72.904
+offset_bottom = 44.096
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/ComputerScene/ToTruck"]
+position = Vector2(54.0001, 41)
+texture = ExtResource("15_nuep6")
+
+[node name="Shelf" type="CanvasLayer" parent="Scene3/ComputerScene"]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="Scene3/ComputerScene/Shelf"]
+script = ExtResource("48_fugtg")
+
+[node name="Shelf" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+position = Vector2(795, 232)
+texture = ExtResource("49_3ggy6")
+
+[node name="Shelf1" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("50_i8irr")
+
+[node name="Shelf2" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("51_5gri6")
+
+[node name="Shelf3" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("52_c8edl")
+
+[node name="Shelf4" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("53_31kl0")
+
+[node name="Shelf5" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("54_0c7ib")
+
+[node name="Shelf6" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("55_issu3")
+
+[node name="Shelf7" type="Sprite2D" parent="Scene3/ComputerScene/Shelf"]
+visible = false
+position = Vector2(796, 263)
+texture = ExtResource("56_xk1oi")
+
+[node name="Shelf Check Timer" type="Timer" parent="Scene3/ComputerScene/Shelf"]
+wait_time = 0.1
+
+[node name="Computer" type="TextureButton" parent="Scene3/ComputerScene"]
+visible = false
+offset_left = 95.0
+offset_top = 230.0
+offset_right = 358.0
+offset_bottom = 527.0
+texture_normal = ExtResource("46_522d3")
+
+[node name="ComputerCanvasLayer" type="CanvasLayer" parent="Scene3/ComputerScene/Computer"]
+visible = false
+
+[node name="Fake Background" type="TextureRect" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = -14.0
+offset_top = -11.0
+offset_right = 1176.0
+offset_bottom = 668.0
+texture = ExtResource("18_issu3")
+stretch_mode = 1
+
+[node name="Computer Blue" type="TextureRect" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 90.0
+offset_top = 49.0
+offset_right = 1039.0
+offset_bottom = 562.0
+texture = ExtResource("15_1b2e6")
+
+[node name="CloseButton" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue"]
+layout_mode = 0
+offset_left = 916.0
+offset_right = 949.0
+offset_bottom = 33.0
+icon = ExtResource("57_issu3")
+
+[node name="Buy1Crate" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 197.0
+offset_top = 137.0
+offset_right = 411.0
+offset_bottom = 314.0
+icon = ExtResource("58_xk1oi")
+icon_alignment = 1
+
+[node name="1" type="Label" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy1Crate"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Buy5Crates" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 440.0
+offset_top = 140.0
+offset_right = 654.0
+offset_bottom = 317.0
+icon = ExtResource("59_e071v")
+icon_alignment = 1
+
+[node name="5" type="Label" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy5Crates"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Buy20Crates" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 683.0
+offset_top = 138.0
+offset_right = 897.0
+offset_bottom = 315.0
+icon = ExtResource("60_v1b03")
+icon_alignment = 1
+
+[node name="20" type="Label" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy20Crates"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PurchaseCrater" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 495.0
+offset_top = 419.0
+offset_right = 1012.0
+offset_bottom = 502.0
+icon = ExtResource("61_u6r0k")
+icon_alignment = 1
+
+[node name="ammounttobuy" type="Label" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater"]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 30.0
+offset_right = 453.0
+offset_bottom = 53.0
+
+[node name="ClearButton" type="Button" parent="Scene3/ComputerScene/Computer/ComputerCanvasLayer"]
+offset_left = 212.0
+offset_top = 359.0
+offset_right = 435.0
+offset_bottom = 526.0
+icon = ExtResource("62_05sep")
+icon_alignment = 1
+
+[node name="TruckScene" type="Node" parent="Scene3"]
+
+[node name="TextureSceneTruck" type="TextureRect" parent="Scene3/TruckScene"]
+visible = false
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_06jb2")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="ToComputer" type="Button" parent="Scene3/TruckScene"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.373605
+anchor_right = 0.0937222
+anchor_bottom = 0.499852
+offset_top = -0.0960236
+offset_right = 0.0319977
+offset_bottom = 0.0960083
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/ToComputer"]
+position = Vector2(54, 41)
+texture = ExtResource("17_eakjk")
+
+[node name="GeneratorOptions" type="Node" parent="Scene3/TruckScene"]
+
+[node name="Options1Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+visible = false
+position = Vector2(-175, -24)
+
+[node name="Options1CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D"]
+position = Vector2(1027, 189)
+shape = SubResource("RectangleShape2D_m63tb")
+
+[node name="ButtonsArea1Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D"]
+position = Vector2(-1.75, 10)
+scale = Vector2(0.633013, 0.675493)
+texture = ExtResource("18_75jky")
+
+[node name="SupplyOption1" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = -134.673
+offset_top = -73.7673
+offset_right = -62.6734
+offset_bottom = -10.7673
+texture_normal = ExtResource("18_tqtwb")
+texture_pressed = ExtResource("19_75jky")
+stretch_mode = 0
+
+[node name="SupplyOption2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = -38.633
+offset_top = -76.9808
+offset_right = 37.367
+offset_bottom = -8.98081
+texture_normal = ExtResource("20_1hjk2")
+texture_pressed = ExtResource("21_e5hle")
+stretch_mode = 0
+
+[node name="SupplyOption3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite"]
+offset_left = 56.367
+offset_top = -73.9808
+offset_right = 130.367
+offset_bottom = -11.9808
+texture_normal = ExtResource("22_pgr8x")
+texture_pressed = ExtResource("23_u1pgp")
+stretch_mode = 0
+
+[node name="MovingTimer1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D"]
+
+[node name="Options2Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+visible = false
+position = Vector2(-175, -24)
+
+[node name="Options2CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D"]
+position = Vector2(826, 189)
+shape = SubResource("RectangleShape2D_m63tb")
+
+[node name="ButtonsArea2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D"]
+position = Vector2(-1.99999, 10)
+scale = Vector2(0.628205, 0.675493)
+texture = ExtResource("18_75jky")
+
+[node name="SupplyOption1" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -131.514
+offset_top = -74.02
+offset_right = -60.5139
+offset_bottom = -10.02
+texture_normal = ExtResource("18_tqtwb")
+texture_pressed = ExtResource("19_75jky")
+stretch_mode = 0
+
+[node name="SupplyOption2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = -39.8886
+offset_top = -74.02
+offset_right = 34.1114
+offset_bottom = -10.02
+texture_normal = ExtResource("20_1hjk2")
+texture_pressed = ExtResource("21_e5hle")
+stretch_mode = 0
+
+[node name="SupplyOption3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite"]
+offset_left = 51.7367
+offset_top = -75.5004
+offset_right = 125.737
+offset_bottom = -11.5004
+texture_normal = ExtResource("22_pgr8x")
+texture_pressed = ExtResource("23_u1pgp")
+stretch_mode = 0
+
+[node name="MovingTimer2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D"]
+
+[node name="Options3Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+visible = false
+position = Vector2(-175, -24)
+
+[node name="Options3CollisionShape2D" type="CollisionShape2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D"]
+position = Vector2(465, 148)
+shape = SubResource("RectangleShape2D_m63tb")
+
+[node name="MovingTimer3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
+
+[node name="ButtonsArea3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D"]
+position = Vector2(159, 50)
+scale = Vector2(0.633013, 0.675493)
+texture = ExtResource("18_75jky")
+
+[node name="SupplyOption1" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
+offset_left = -127.959
+offset_top = -75.5004
+offset_right = -54.9595
+offset_bottom = -10.5004
+texture_normal = ExtResource("18_tqtwb")
+texture_pressed = ExtResource("19_75jky")
+stretch_mode = 0
+
+[node name="SupplyOption2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
+offset_left = -39.4936
+offset_top = -75.5004
+offset_right = 36.5064
+offset_bottom = -10.5004
+texture_normal = ExtResource("20_1hjk2")
+texture_pressed = ExtResource("21_e5hle")
+stretch_mode = 0
+
+[node name="SupplyOption3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite"]
+offset_left = 52.1317
+offset_top = -74.02
+offset_right = 126.132
+offset_bottom = -12.02
+texture_normal = ExtResource("22_pgr8x")
+texture_pressed = ExtResource("23_u1pgp")
+stretch_mode = 0
+
+[node name="Generators" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions"]
+visible = false
+position = Vector2(649, 278)
+
+[node name="Gen1SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = 128.0
+offset_top = 196.0
+offset_right = 278.0
+offset_bottom = 262.0
+texture_normal = SubResource("CompressedTexture2D_cs8hm")
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade"]
+position = Vector2(73, 35)
+
+[node name="Gen1GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-45, 1)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!"]
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(45, -3)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen1Working" type="AnimatedSprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+position = Vector2(201.5, 0)
+scale = Vector2(0.637821, 0.833333)
+sprite_frames = SubResource("SpriteFrames_gvup2")
+animation = &"new_animation"
+
+[node name="Gen2Working" type="AnimatedSprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+visible = false
+position = Vector2(2, -2.28882e-05)
+scale = Vector2(0.637821, 0.833333)
+sprite_frames = SubResource("SpriteFrames_gvup2")
+animation = &"new_animation"
+
+[node name="Gen3Working" type="AnimatedSprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+visible = false
+position = Vector2(-201.5, 0)
+scale = Vector2(0.637821, 0.833333)
+sprite_frames = SubResource("SpriteFrames_gvup2")
+animation = &"new_animation"
+
+[node name="BoxGenerator" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = 102.0
+offset_top = -182.0
+offset_right = 300.0
+offset_bottom = 182.0
+texture_normal = ExtResource("19_gnuvk")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("20_gnuvk")
+
+[node name="Box1, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 178.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Box2, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 178.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Box3, Gen1" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 178.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+position = Vector2(26, 378)
+
+[node name="Gen1ProgressBarUpgrade" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("41_axxxg")
+
+[node name="Gen1ProgressBarUpgrade1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("45_tlahr")
+
+[node name="Gen1ProgressBarUpgrade2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("46_sa4ha")
+
+[node name="Gen1ProgressBarUpgrade3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_ihltv")
+
+[node name="Gen1ProgressBarUpgrade4" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("48_12ij3")
+
+[node name="Gen1ProgressBarUpgrade5" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("49_fb74h")
+
+[node name="Gen1ProgressBarUpgrade6" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_cubks")
+
+[node name="Gen1ProgressBarUpgrade7" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D"]
+visible = false
+position = Vector2(73, 83.4999)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("51_y07ak")
+
+[node name="BoxGenerator2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = -97.0
+offset_top = -180.0
+offset_right = 96.0
+offset_bottom = 182.0
+disabled = true
+texture_normal = ExtResource("19_gnuvk")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("19_m63tb")
+
+[node name="Gen2SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 378.0
+offset_right = 175.0
+offset_bottom = 444.0
+disabled = true
+texture_normal = ExtResource("21_cs8hm")
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade"]
+position = Vector2(75, 35)
+
+[node name="Gen2GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-50, -1)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen2GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen2GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(50, 0)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Box1, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+visible = false
+layout_mode = 0
+offset_left = -80.0
+offset_top = -74.0
+offset_right = 89.0
+offset_bottom = 86.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Box2, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+visible = false
+layout_mode = 0
+offset_left = -80.0
+offset_top = -74.0
+offset_right = 89.0
+offset_bottom = 86.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Box3, Gen2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+visible = false
+layout_mode = 0
+offset_left = -80.0
+offset_top = -74.0
+offset_right = 89.0
+offset_bottom = 86.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Gen2BrokenSprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+position = Vector2(97.5, 183.5)
+scale = Vector2(0.61859, 0.8379)
+texture = ExtResource("21_pxlpg")
+
+[node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
+
+[node name="Gen2ProgressBarUpgrade" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("41_axxxg")
+
+[node name="Gen2ProgressBarUpgrade1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("45_tlahr")
+
+[node name="Gen2ProgressBarUpgrade2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("46_sa4ha")
+
+[node name="Gen2ProgressBarUpgrade3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_pxnjm")
+
+[node name="Gen2ProgressBarUpgrade4" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_cubks")
+
+[node name="Gen2ProgressBarUpgrade5" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_ema37")
+
+[node name="Gen2ProgressBarUpgrade6" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_cubks")
+
+[node name="Gen2ProgressBarUpgrade7" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Area2D"]
+visible = false
+position = Vector2(98, 459.5)
+scale = Vector2(0.37037, 0.59091)
+texture = SubResource("CompressedTexture2D_nwm4h")
+
+[node name="BoxGenerator3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+offset_left = -297.0
+offset_top = -169.0
+offset_right = -102.0
+offset_bottom = 183.0
+disabled = true
+texture_normal = ExtResource("19_gnuvk")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("18_g2ved")
+
+[node name="Gen3SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 363.0
+offset_right = 172.0
+offset_bottom = 429.0
+disabled = true
+texture_normal = ExtResource("21_cs8hm")
+
+[node name="Golden Rain!!!" type="Node2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade"]
+position = Vector2(74, 33)
+
+[node name="Gen3GoldL" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(-59, 1)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen3GoldM" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="Gen3GoldR" type="CPUParticles2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/Golden Rain!!!"]
+position = Vector2(54, 1)
+emitting = false
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.4
+randomness = 0.2
+local_coords = true
+direction = Vector2(0, -5)
+spread = 20.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.0
+angular_velocity_min = 200.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.2
+scale_amount_max = 3.2
+scale_amount_curve = SubResource("Curve_m63tb")
+color = Color(1, 0.807843, 0.215686, 1)
+
+[node name="UpgradeGen3ShowLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 221.0
+offset_right = 212.0
+offset_bottom = 244.0
+
+[node name="Box1, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 178.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Box2, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 178.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Box3, Gen3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 178.0
+offset_bottom = 254.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3"]
+position = Vector2(84.75, 81)
+scale = Vector2(0.575601, 0.557143)
+texture = SubResource("CompressedTexture2D_issu3")
+
+[node name="Gen3Broken2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+position = Vector2(98, 170)
+scale = Vector2(0.653846, 0.835616)
+texture = ExtResource("21_pxlpg")
+
+[node name="Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
+
+[node name="Gen3ProgressBarUpgrade" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("41_axxxg")
+
+[node name="Gen3ProgressBarUpgrade1" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("45_tlahr")
+
+[node name="Gen3ProgressBarUpgrade2" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("46_sa4ha")
+
+[node name="Gen3ProgressBarUpgrade3" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_ihltv")
+
+[node name="Gen3ProgressBarUpgrade4" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("48_12ij3")
+
+[node name="Gen3ProgressBarUpgrade5" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("49_fb74h")
+
+[node name="Gen3ProgressBarUpgrade6" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("47_cubks")
+
+[node name="Gen3ProgressBarUpgrade7" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Area2D"]
+visible = false
+position = Vector2(98, 448.5)
+scale = Vector2(0.37037, 0.59091)
+texture = ExtResource("51_y07ak")
+
+[node name="BuyGenerator3" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+anchors_preset = -1
+anchor_left = 0.114
+anchor_top = 0.424
+anchor_right = 0.865
+anchor_bottom = 0.592
+offset_left = -282.0
+offset_top = -31.0
+offset_right = -122.0
+offset_bottom = 38.0
+
+[node name="BuyGen3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3"]
+position = Vector2(80.0003, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = ExtResource("23_vkopw")
+
+[node name="BuydisabledGen3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3"]
+visible = false
+position = Vector2(80.0003, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = SubResource("CompressedTexture2D_5wjhk")
+
+[node name="BuyMouseonTopGen3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3"]
+visible = false
+position = Vector2(80.0003, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = ExtResource("25_ftjon")
+
+[node name="BuyPressedGen3Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3"]
+visible = false
+position = Vector2(80.0003, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = ExtResource("26_1mldf")
+
+[node name="BuyGenerator2" type="Button" parent="Scene3/TruckScene/GeneratorOptions/Generators"]
+anchors_preset = -1
+anchor_left = 0.114
+anchor_top = 0.424
+anchor_right = 0.865
+anchor_bottom = 0.592
+offset_left = -76.0
+offset_top = -32.0
+offset_right = 84.0
+offset_bottom = 37.0
+
+[node name="BuyGen2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2"]
+position = Vector2(80, 34.5)
+scale = Vector2(1.06667, 1.04545)
+texture = ExtResource("23_vkopw")
+
+[node name="BuydisabledGen2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2"]
+visible = false
+position = Vector2(80.0002, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = SubResource("CompressedTexture2D_5wjhk")
+
+[node name="BuyMouseonTopGen2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2"]
+visible = false
+position = Vector2(80.0002, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = ExtResource("25_ftjon")
+
+[node name="BuyPressedGen2Sprite" type="Sprite2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2"]
+visible = false
+position = Vector2(80.0002, 34.4998)
+scale = Vector2(1.06667, 1.04545)
+texture = ExtResource("26_1mldf")
+
+[node name="BuyGen2Area2D" type="Area2D" parent="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2"]
+position = Vector2(0, 1)
+
+[node name="Timers & Upgrades" type="Node" parent="Scene3/TruckScene/GeneratorOptions"]
+
+[node name="NoUpgrade" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1"]
+wait_time = 60.0
+
+[node name="GeneratorTimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1"]
+wait_time = 300.0
+
+[node name="GeneratorTimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1119.0
+offset_bottom = 169.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1"]
+wait_time = 600.0
+
+[node name="GeneratorTimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 162.0
+offset_right = 1119.0
+offset_bottom = 185.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2"]
+wait_time = 60.0
+
+[node name="Generator2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2"]
+wait_time = 300.0
+
+[node name="Generator2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2"]
+visible = false
+offset_left = 731.0
+offset_top = 146.0
+offset_right = 920.0
+offset_bottom = 169.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2"]
+wait_time = 600.0
+
+[node name="Generator2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 162.0
+offset_right = 920.0
+offset_bottom = 185.0
+text = "GENERATOR2"
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3"]
+wait_time = 60.0
+
+[node name="Generator3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3"]
+wait_time = 300.0
+
+[node name="Generator3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 146.0
+offset_right = 721.0
+offset_bottom = 169.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3"]
+wait_time = 600.0
+
+[node name="Generator3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 185.0
+text = "GENERATOR3"
+
+[node name="Upgrade1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1"]
+wait_time = 52.0
+
+[node name="Generator-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1"]
+wait_time = 260.0
+
+[node name="Generator-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1"]
+wait_time = 540.0
+
+[node name="Generator-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2"]
+wait_time = 52.0
+
+[node name="Generator2-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2"]
+wait_time = 260.0
+
+[node name="Generator2-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2"]
+wait_time = 540.0
+
+[node name="Generator2-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3"]
+wait_time = 52.0
+
+[node name="Generator3-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3"]
+wait_time = 260.0
+
+[node name="Generator3-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3"]
+wait_time = 540.0
+
+[node name="Generator3-1TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Upgrade2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
+wait_time = 44.0
+
+[node name="Generator-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
+wait_time = 220.0
+
+[node name="Generator-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1119.0
+offset_bottom = 169.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1"]
+wait_time = 480.0
+
+[node name="Generator-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 162.0
+offset_right = 1119.0
+offset_bottom = 185.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2"]
+wait_time = 44.0
+
+[node name="Generator2-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2"]
+wait_time = 220.0
+
+[node name="Generator2-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2"]
+visible = false
+offset_left = 731.0
+offset_top = 146.0
+offset_right = 920.0
+offset_bottom = 169.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2"]
+wait_time = 480.0
+
+[node name="Generator2-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 162.0
+offset_right = 920.0
+offset_bottom = 185.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
+wait_time = 44.0
+
+[node name="Generator3-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
+wait_time = 220.0
+
+[node name="Generator3-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 146.0
+offset_right = 721.0
+offset_bottom = 169.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3"]
+wait_time = 480.0
+
+[node name="Generator3-2TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 185.0
+text = "GENERATOR3"
+
+[node name="Upgrade3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
+wait_time = 36.0
+
+[node name="Generator-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
+wait_time = 180.0
+
+[node name="Generator-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1119.0
+offset_bottom = 169.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1"]
+wait_time = 420.0
+
+[node name="Generator-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 162.0
+offset_right = 1119.0
+offset_bottom = 185.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2"]
+wait_time = 36.0
+
+[node name="Generator2-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2"]
+wait_time = 180.0
+
+[node name="Generator2-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2"]
+visible = false
+offset_left = 731.0
+offset_top = 146.0
+offset_right = 920.0
+offset_bottom = 169.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2"]
+wait_time = 420.0
+
+[node name="Generator2-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 162.0
+offset_right = 920.0
+offset_bottom = 185.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
+wait_time = 36.0
+
+[node name="Generator3-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
+wait_time = 180.0
+
+[node name="Generator3-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 146.0
+offset_right = 721.0
+offset_bottom = 169.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3"]
+wait_time = 420.0
+
+[node name="Generator3-3TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 185.0
+text = "GENERATOR3"
+
+[node name="Upgrade4" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
+wait_time = 28.0
+
+[node name="Generator-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
+wait_time = 140.0
+
+[node name="Generator-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1119.0
+offset_bottom = 169.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1"]
+wait_time = 360.0
+
+[node name="Generator-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 162.0
+offset_right = 1119.0
+offset_bottom = 185.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2"]
+wait_time = 28.0
+
+[node name="Generator2-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2"]
+wait_time = 140.0
+
+[node name="Generator2-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2"]
+visible = false
+offset_left = 617.0
+offset_top = 150.0
+offset_right = 806.0
+offset_bottom = 173.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2"]
+wait_time = 360.0
+
+[node name="Generator2-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 162.0
+offset_right = 920.0
+offset_bottom = 185.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
+wait_time = 28.0
+
+[node name="Generator3-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
+wait_time = 140.0
+
+[node name="Generator3-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 146.0
+offset_right = 721.0
+offset_bottom = 169.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3"]
+wait_time = 360.0
+
+[node name="Generator3-4TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 185.0
+text = "GENERATOR3"
+
+[node name="Upgrade5" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
+wait_time = 20.0
+
+[node name="Generator-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
+wait_time = 100.0
+
+[node name="Generator-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1119.0
+offset_bottom = 169.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1"]
+wait_time = 300.0
+
+[node name="Generator-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 162.0
+offset_right = 1119.0
+offset_bottom = 185.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2"]
+wait_time = 20.0
+
+[node name="Generator2-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2"]
+
+[node name="Generator2-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option2"]
+visible = false
+offset_left = 731.0
+offset_top = 146.0
+offset_right = 920.0
+offset_bottom = 169.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2"]
+wait_time = 300.0
+
+[node name="Generator2-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 162.0
+offset_right = 920.0
+offset_bottom = 185.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
+wait_time = 20.0
+
+[node name="Generator3-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
+wait_time = 100.0
+
+[node name="Generator3-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 146.0
+offset_right = 721.0
+offset_bottom = 169.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3"]
+wait_time = 300.0
+
+[node name="Generator3-5TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 185.0
+text = "GENERATOR3"
+
+[node name="Upgrade6" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades"]
+
+[node name="Gen1" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
+wait_time = 5.0
+
+[node name="Generator-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1"]
+visible = false
+offset_left = 930.0
+offset_top = 130.0
+offset_right = 1119.0
+offset_bottom = 153.0
+text = "GENERATOR1"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
+wait_time = 30.0
+
+[node name="Generator-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2"]
+visible = false
+offset_left = 930.0
+offset_top = 146.0
+offset_right = 1119.0
+offset_bottom = 169.0
+text = "GENERATOR1"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1"]
+wait_time = 75.0
+
+[node name="Generator-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3"]
+visible = false
+offset_left = 930.0
+offset_top = 162.0
+offset_right = 1119.0
+offset_bottom = 185.0
+text = "GENERATOR1"
+
+[node name="Gen2" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2"]
+wait_time = 5.0
+
+[node name="Generator2-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1"]
+visible = false
+offset_left = 731.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 153.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2"]
+wait_time = 30.0
+
+[node name="Generator2-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2"]
+visible = false
+offset_left = 731.0
+offset_top = 146.0
+offset_right = 920.0
+offset_bottom = 169.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2"]
+wait_time = 75.0
+
+[node name="Generator2-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3"]
+visible = false
+offset_left = 731.0
+offset_top = 162.0
+offset_right = 920.0
+offset_bottom = 185.0
+text = "GENERATOR2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gen3" type="Node" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6"]
+
+[node name="Option1" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
+wait_time = 5.0
+
+[node name="Generator3-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1"]
+visible = false
+offset_left = 532.0
+offset_top = 130.0
+offset_right = 721.0
+offset_bottom = 153.0
+text = "GENERATOR3"
+
+[node name="Option2" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
+wait_time = 30.0
+
+[node name="Generator3-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2"]
+visible = false
+offset_left = 532.0
+offset_top = 146.0
+offset_right = 721.0
+offset_bottom = 169.0
+text = "GENERATOR3"
+
+[node name="Option3" type="Timer" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3"]
+wait_time = 75.0
+
+[node name="Generator3-6TimeLabel" type="Label" parent="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3"]
+visible = false
+offset_left = 532.0
+offset_top = 162.0
+offset_right = 721.0
+offset_bottom = 185.0
+text = "GENERATOR3"
+
+[node name="Scene4" type="Node" parent="."]
+
+[node name="TextureScene4" type="TextureRect" parent="Scene4"]
+visible = false
+texture_filter = 2
+texture_repeat = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("98_xk1oi")
+stretch_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Scene4"]
+visible = false
+
+[node name="CoffeeMachine" type="Sprite2D" parent="Scene4/CanvasLayer"]
+position = Vector2(555, 313)
+scale = Vector2(2.1575, 1.64839)
+texture = ExtResource("10_oiyxf")
+
+[node name="CoffeeMachineButton" type="Button" parent="Scene4/CanvasLayer/CoffeeMachine"]
+show_behind_parent = true
+light_mask = 0
+visibility_layer = 0
+offset_left = -229.919
+offset_top = -229.534
+offset_right = 195.081
+offset_bottom = 128.466
+metadata/_edit_use_anchors_ = true
+
+[node name="CoffeeMachineCooldown" type="Timer" parent="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton"]
+wait_time = 5.0
+
+[node name="CoffeeMachineRunning" type="AnimatedSprite2D" parent="Scene4/CanvasLayer"]
+position = Vector2(555.746, 314.25)
+scale = Vector2(2.15373, 1.63064)
+sprite_frames = SubResource("SpriteFrames_4rgts")
+animation = &"new_animation"
+
+[node name="Coffee" type="Button" parent="Scene4/CanvasLayer"]
+visible = false
+offset_left = 452.0
+offset_top = 297.0
+offset_right = 638.0
+offset_bottom = 433.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene4/CanvasLayer/Coffee"]
+position = Vector2(90, 61)
+scale = Vector2(1.16854, 1.17197)
+texture = ExtResource("12_06jb2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Scene4/CanvasLayer/Coffee"]
+stream = ExtResource("101_v1b03")
+
+[node name="AddCup" type="Button" parent="Scene4/CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.00520833
+anchor_right = 0.0425347
+anchor_bottom = 0.0277778
+offset_left = 458.0
+offset_top = 297.0
+offset_right = 587.0
+offset_bottom = 416.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Coffee Cup" type="Sprite2D" parent="Scene4/CanvasLayer/AddCup"]
+visible = false
+position = Vector2(89, 61)
+scale = Vector2(1.21348, 1.19427)
+texture = ExtResource("10_4w70j")
+
+[node name="Check if debt" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Debt Death Timer" type="Timer" parent="."]
+wait_time = 10.9
+
+[node name="Debt Label" type="Label" parent="Debt Death Timer"]
+offset_left = 16.0
+offset_top = 94.0
+offset_right = 56.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "10s"
+
+[node name="coins!" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("103_u6r0k")
+
+[connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="PlayerGUI/CanvasLayerButtons/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="timeout" from="PlayerGUI/CanvasLayerEnergy/EnergyBar/EnergyTimer" to="." method="_on_energy_timer_timeout"]
+[connection signal="timeout" from="PlayerGUI/CanvasLayerSupplies/Day&Night/Timer" to="." method="_on_Billtimer_timeout"]
+[connection signal="visibility_changed" from="Scene1/Customer" to="." method="_on_customer_visibility_changed"]
+[connection signal="timeout" from="Scene1/ProgressBar2/CustomerReappear" to="." method="_on_customer_reappear_timeout"]
+[connection signal="timeout" from="Scene1/ProgressBar/CustomerTemper" to="." method="_on_customer_temper_timeout"]
+[connection signal="visibility_changed" from="Scene1/ScanningMinigameCanvasLayer/ProducttoScan" to="Scene1/ScanningMinigameCanvasLayer/ProducttoScan" method="_on_visibility_changed"]
+[connection signal="button_up" from="Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton" to="." method="_on_placein_bag_button_button_up"]
+[connection signal="button_up" from="Scene1/ScanningMinigameCanvasLayer/Button" to="Scene1/ScanningMinigameCanvasLayer/Button" method="_on_button_down"]
+[connection signal="toggled" from="Scene1/sigma/BarCode Scanner" to="." method="_on_BarCode_scanner_toggled"]
+[connection signal="visibility_changed" from="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite" to="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite" method="_on_visibility_changed"]
+[connection signal="pressed" from="Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode" to="." method="_on_product_barcode_pressed"]
+[connection signal="timeout" from="Scene1/Bags CounterTimer" to="." method="_on_BagsCounter_timeout"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-1" to="." method="_on_upgrade_1_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-2" to="." method="_on_upgrade_1_2_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-3" to="." method="_on_upgrade_1_3_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade1-Energy/upgrade1-4" to="." method="_on_upgrade_1_4_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1" to="." method="_on_upgrade_2_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2" to="." method="_on_upgrade_2_2_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3" to="." method="_on_upgrade_2_3_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4" to="." method="_on_upgrade_2_4_button_down"]
+[connection signal="visibility_changed" from="Scene2/Upgrades/Upgrade2-MoneyCap/UpgradesDone" to="." method="_on_upgrades_done_visibility_changed"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-1" to="." method="_on_upgrade_3_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2" to="." method="_on_upgrade_3_2_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3" to="." method="_on_upgrade_3_3_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4" to="." method="_on_upgrade_3_4_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-1" to="." method="_on_upgrade_4_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2" to="." method="_on_upgrade_4_2_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3" to="." method="_on_upgrade_4_3_button_down"]
+[connection signal="button_down" from="Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4" to="." method="_on_upgrade_4_4_button_down"]
+[connection signal="timeout" from="Scene2/Upgrades/The End/Retirement Check Timer" to="." method="_on_retirement_check_timer_timeout"]
+[connection signal="pressed" from="Scene2/Upgrades/The End/Finish" to="." method="_on_finish_pressed"]
+[connection signal="pressed" from="Scene2/Upgrades/The End/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/ToTruck" to="." method="_on_toTruck_pressed"]
+[connection signal="timeout" from="Scene3/ComputerScene/Shelf/Shelf Check Timer" to="." method="_on_shelf_check_timer_timeout"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer" to="." method="_on_computer_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Computer Blue/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy1Crate" to="." method="_on_Buy1Crate_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy5Crates" to="." method="_on_Buy5Crate_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/Buy20Crates" to="." method="_on_Buy20Crate_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/PurchaseCrater" to="." method="_on_purchasetest_pressed"]
+[connection signal="pressed" from="Scene3/ComputerScene/Computer/ComputerCanvasLayer/ClearButton" to="." method="_on_ClearButton_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/ToComputer" to="." method="_on_toComputer_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1" to="." method="_on_supply_option_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2" to="." method="_on_supply_option_2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3" to="." method="_on_supply_option_3_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/MovingTimer1" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator" method="_on_moving_timer1_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption1" to="." method="_on_supply_option_1_gen2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2" to="." method="_on_supply_option_2_gen2_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3" to="." method="_on_supply_option_3_gen2_pressed"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/MovingTimer2" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2" method="_on_moving_timer2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/MovingTimer3" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3" method="_on_moving_timer3_timeout"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption1" to="." method="_on_supply_option_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2" to="." method="_on_supply_option_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3" to="." method="_on_supply_option_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade" to="." method="_on_gen1_speed_upgrade_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator" method="_on_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1" to="." method="_on_box_1_gen_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1" to="." method="_on_box_2_gen_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1" to="." method="_on_box_3_gen_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2" method="_on_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade" to="." method="_on_gen2_speed_upgrade_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2" to="." method="_on_box_1_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2" to="." method="_on_box_2_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2" to="." method="_on_box_3_gen_3_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3" to="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3" method="_on_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade" to="." method="_on_gen3_speed_upgrade_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3" to="." method="_on_box_1_gen_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3" to="." method="_on_box_1_gen_1_pressed"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3" to="." method="_on_box_1_gen_1_pressed"]
+[connection signal="button_down" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3" to="." method="_on_buy_generator3_button_down"]
+[connection signal="button_up" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3" to="." method="_on_buy_generator3_button_up"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator3" to="." method="_on_buy_generator_3_pressed"]
+[connection signal="button_down" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator2_button_down"]
+[connection signal="button_up" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator2_button_up"]
+[connection signal="mouse_entered" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator_2_mouse_entered"]
+[connection signal="mouse_exited" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator_2_mouse_exited"]
+[connection signal="pressed" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2" to="." method="_on_buy_generator_2_pressed"]
+[connection signal="mouse_entered" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2/BuyGen2Area2D" to="." method="_on_buy_gen_2_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2/BuyGen2Area2D" to="." method="_on_buy_gen_2_area_2d_mouse_exited"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade3/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1" to="." method="_on_option1_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2" to="." method="_on_option2_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3" to="." method="_on_option3_gen1_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option1" to="." method="_on_option1_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option2" to="." method="_on_option2_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen2/Option3" to="." method="_on_option3_gen2_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option1" to="." method="_on_option1_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option2" to="." method="_on_option2_gen3_timeout"]
+[connection signal="timeout" from="Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3" to="." method="_on_option3_gen3_timeout"]
+[connection signal="pressed" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton" to="." method="_on_coffeemachine_button_pressed"]
+[connection signal="timeout" from="Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown" to="." method="_on_coffeemachine_cooldown_timeout"]
+[connection signal="pressed" from="Scene4/CanvasLayer/Coffee" to="." method="_on_coffee_pressed"]
+[connection signal="pressed" from="Scene4/CanvasLayer/AddCup" to="." method="_on_add_cup_pressed"]
+[connection signal="timeout" from="Check if debt" to="." method="_on_check_if_debt_timeout"]
+[connection signal="timeout" from="Debt Death Timer" to="." method="_on_debt_death_timer_timeout"]

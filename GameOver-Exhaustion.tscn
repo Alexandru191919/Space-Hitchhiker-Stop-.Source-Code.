@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0x4hgctd5oq8"]
+[gd_scene load_steps=6 format=3 uid="uid://d0x4hgctd5oq8"]
 
 [ext_resource type="Script" uid="uid://c6q7qphp2cudw" path="res://game_over_exhaustion.gd" id="1_7qtx7"]
 [ext_resource type="Texture2D" uid="uid://ccpcov8copbsr" path="res://GameOvers/play.png" id="2_5q0rj"]
 [ext_resource type="Texture2D" uid="uid://d4d1p6sjl0m28" path="res://GameOvers/turn off.png" id="3_n2ikj"]
 [ext_resource type="Texture2D" uid="uid://cq0bhb4w8biwi" path="res://GameOvers/exhaustion death.png" id="4_kfmsh"]
+[ext_resource type="AudioStream" uid="uid://bk75dvmots8an" path="res://504626__leonelmail__body-fall-v-hvy-dirt.mp3" id="5_n2ikj"]
 
 [node name="EnergyDeath" type="Node"]
 script = ExtResource("1_7qtx7")
@@ -53,6 +54,9 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(545, 251)
 scale = Vector2(3.04219, 3.10626)
 texture = ExtResource("4_kfmsh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_n2ikj")
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_mainmenu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

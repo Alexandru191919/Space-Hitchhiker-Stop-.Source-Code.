@@ -2,7 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://tpam34ghlef3"
+uid="uid://cho5gqp22rb7n"
 path="res://.godot/imported/beep.wav-bc4655fdf7ad7a97d3e9727a4f4dc437.sample"
 
 [deps]
@@ -21,4 +21,4 @@ edit/normalize=false
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1
-compress/mode=0
+compress/mode=2
