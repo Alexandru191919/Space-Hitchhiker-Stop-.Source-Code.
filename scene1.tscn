@@ -637,6 +637,7 @@ position = Vector2(-7.62939e-06, 0)
 stream = ExtResource("13_1b2e6")
 
 [node name="Upgrade1-Energy" type="CanvasLayer" parent="Scene2/Upgrades"]
+visible = false
 
 [node name="upgrade1-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade1-Energy"]
 offset_left = 464.0
@@ -766,22 +767,22 @@ texture = ExtResource("34_23b6t")
 
 [node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
 visible = false
-position = Vector2(343.5, 313)
+position = Vector2(589.5, 314)
 texture = ExtResource("35_vd5ax")
 
 [node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
 visible = false
-position = Vector2(343.5, 313)
+position = Vector2(589.5, 314)
 texture = ExtResource("36_573aq")
 
 [node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
 visible = false
-position = Vector2(343.5, 313)
+position = Vector2(589.5, 314)
 texture = ExtResource("37_522d3")
 
 [node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
 visible = false
-position = Vector2(343.5, 313)
+position = Vector2(589.5, 314)
 texture = ExtResource("38_fugtg")
 
 [node name="Energy" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
@@ -791,11 +792,12 @@ texture = ExtResource("39_gim1h")
 
 [node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
 visible = false
-position = Vector2(346, 239)
+position = Vector2(592, 240)
 scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("40_23b6t")
 
 [node name="Upgrade3-MoneyGain" type="CanvasLayer" parent="Scene2/Upgrades"]
+visible = false
 
 [node name="upgrade3-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
 offset_left = 274.0
@@ -934,22 +936,22 @@ texture = ExtResource("34_23b6t")
 
 [node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
 visible = false
-position = Vector2(342.5, 543)
+position = Vector2(399.5, 561)
 texture = ExtResource("35_vd5ax")
 
 [node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
 visible = false
-position = Vector2(342.5, 543)
+position = Vector2(399.5, 561)
 texture = ExtResource("36_573aq")
 
 [node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
 visible = false
-position = Vector2(342.5, 543)
+position = Vector2(399.5, 561)
 texture = ExtResource("37_522d3")
 
 [node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3"]
 visible = false
-position = Vector2(342.5, 543)
+position = Vector2(399.5, 561)
 texture = ExtResource("38_fugtg")
 
 [node name="MoneyGain" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
@@ -959,11 +961,12 @@ texture = ExtResource("41_axkpg")
 
 [node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade3-MoneyGain"]
 visible = false
-position = Vector2(345, 454)
+position = Vector2(403, 472)
 scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("40_23b6t")
 
 [node name="Upgrade4-CustomerTemper" type="CanvasLayer" parent="Scene2/Upgrades"]
+visible = false
 
 [node name="upgrade4-1" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
 offset_left = 661.0
@@ -998,10 +1001,11 @@ text = "+1"
 horizontal_alignment = 2
 
 [node name="upgrade4-2" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-offset_left = 605.0
-offset_top = 412.75
-offset_right = 861.0
-offset_bottom = 520.75
+visible = false
+offset_left = 661.0
+offset_top = 421.0
+offset_right = 917.0
+offset_bottom = 529.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1030,10 +1034,11 @@ text = "+5"
 horizontal_alignment = 2
 
 [node name="upgrade4-3" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-offset_left = 605.0
-offset_top = 412.75
-offset_right = 861.0
-offset_bottom = 520.75
+visible = false
+offset_left = 661.0
+offset_top = 421.0
+offset_right = 917.0
+offset_bottom = 529.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1062,10 +1067,11 @@ text = "+10"
 horizontal_alignment = 2
 
 [node name="upgrade4-4" type="TextureButton" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
-offset_left = 605.0
-offset_top = 412.75
-offset_right = 861.0
-offset_bottom = 520.75
+visible = false
+offset_left = 661.0
+offset_top = 421.0
+offset_right = 917.0
+offset_bottom = 529.0
 texture_normal = ExtResource("33_uciac")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1106,22 +1112,22 @@ texture = ExtResource("34_23b6t")
 
 [node name="upg1" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
 visible = false
-position = Vector2(728.5, 549)
+position = Vector2(784.5, 555)
 texture = ExtResource("35_vd5ax")
 
 [node name="upg2" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
 visible = false
-position = Vector2(728.5, 549)
+position = Vector2(784.5, 555)
 texture = ExtResource("36_573aq")
 
 [node name="upg3" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
 visible = false
-position = Vector2(728.5, 549)
+position = Vector2(784.5, 555)
 texture = ExtResource("37_522d3")
 
 [node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4"]
 visible = false
-position = Vector2(728.5, 549)
+position = Vector2(784.5, 555)
 texture = ExtResource("38_fugtg")
 
 [node name="Temper" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
@@ -1131,7 +1137,7 @@ texture = ExtResource("42_lgg6e")
 
 [node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade4-CustomerTemper"]
 visible = false
-position = Vector2(733, 467)
+position = Vector2(789, 475)
 scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("40_23b6t")
 
@@ -1145,10 +1151,10 @@ offset_bottom = 23.0
 
 [node name="Finish" type="TextureButton" parent="Scene2/Upgrades/The End"]
 visible = false
-offset_left = 269.0
-offset_top = 218.0
-offset_right = 830.0
-offset_bottom = 470.0
+offset_left = 302.0
+offset_top = 243.0
+offset_right = 863.0
+offset_bottom = 495.0
 texture_normal = ExtResource("45_xk1oi")
 ignore_texture_size = true
 stretch_mode = 0

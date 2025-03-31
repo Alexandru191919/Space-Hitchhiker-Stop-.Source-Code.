@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bti1srdgt7s3g"]
+[gd_scene load_steps=24 format=3 uid="uid://bti1srdgt7s3g"]
 
 [ext_resource type="Texture2D" uid="uid://ccpcov8copbsr" path="res://GameOvers/play.png" id="1_bt3yw"]
 [ext_resource type="Texture2D" uid="uid://b6mnotfq2nvwr" path="res://THE END.png" id="1_se5xy"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cyegemnyn6mvc" path="res://char/Scene2/progress bar/upg4.png" id="6_gin24"]
 [ext_resource type="Texture2D" uid="uid://dwn1svpfhvduo" path="res://char/Scene2/upgrade icons/energy.png" id="7_aropp"]
 [ext_resource type="Texture2D" uid="uid://cntrgr2ilmoyj" path="res://char/Scene2/upgrades done.png" id="8_m34rv"]
-[ext_resource type="Texture2D" uid="uid://bpobpjwhs6ggn" path="res://char/Scene2/upgrade icons/money cap.png" id="9_f4cds"]
 [ext_resource type="Texture2D" uid="uid://clgoik8jg1tty" path="res://char/Scene2/upgrade icons/money gain.png" id="10_3u7vj"]
 [ext_resource type="Texture2D" uid="uid://dvoyhdhd4t00m" path="res://char/Scene2/upgrade icons/temper.png" id="11_2u6bi"]
 [ext_resource type="Texture2D" uid="uid://c26a8fxo3jtks" path="res://retirement.png" id="12_g88d4"]
@@ -142,34 +141,16 @@ stream = ExtResource("4_5t5x4")
 [node name="ProgressBars-Upgrade1" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade1-Energy"]
 
 [node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1"]
-position = Vector2(343.5, 313)
+position = Vector2(541.5, 325)
 texture = ExtResource("6_gin24")
 
 [node name="Energy" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
-position = Vector2(350, 141.75)
+position = Vector2(548, 153.75)
 scale = Vector2(4.32353, 4.76667)
 texture = ExtResource("7_aropp")
 
 [node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade1-Energy"]
-position = Vector2(346, 239)
-scale = Vector2(1.70667, 1.63636)
-texture = ExtResource("8_m34rv")
-
-[node name="Upgrade2-MoneyCap" type="CanvasLayer" parent="Scene2/Upgrades"]
-
-[node name="ProgressBars-Upgrade2" type="CanvasLayer" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-
-[node name="upg4" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2"]
-position = Vector2(741.5, 312)
-texture = ExtResource("6_gin24")
-
-[node name="MoneyCap" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-position = Vector2(732, 127)
-scale = Vector2(6.27941, 4.69531)
-texture = ExtResource("9_f4cds")
-
-[node name="UpgradesDone" type="Sprite2D" parent="Scene2/Upgrades/Upgrade2-MoneyCap"]
-position = Vector2(731, 227)
+position = Vector2(544, 251)
 scale = Vector2(1.70667, 1.63636)
 texture = ExtResource("8_m34rv")
 
