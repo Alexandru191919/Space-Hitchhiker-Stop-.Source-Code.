@@ -5,14 +5,11 @@ extends Button
 
 
 
-
-
 ## uncomment when integration with scene1 is ready.
 #@onready var customer = $Scene1/Scene1CanvasLayer/Customer
-#
 func _ready():
-	$"../../Sprite2D2/ProductBarcode".disabled = true
-	$"../../Sprite2D2/ProductBarcode".hide()
+	$"../../sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".disabled = true
+	$"../../sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".hide()
 #	self.disabled = true
 #	print("I AM disabled")
 #	if customer.hidden == false:
@@ -33,8 +30,8 @@ func _ready():
 #### #var border_down: Texture = preload("res://Jump (32x32).png")
 #	border_down
 
-func _on_button_up():
+func _on_button_down():
 	self.hide() #to change later, I want the bag to be shown empty when there's no more products
-	$"../../Sprite2D2".show()
-	$"..".hide()
-	$"../../Sprite2D2/ProductBarcode".disabled = false
+	$"../../sigma/BarCode Scanner/ProductBarcodeSprite".show()
+	$"../../sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".disabled = false
+	$"../ProducttoScan".hide()

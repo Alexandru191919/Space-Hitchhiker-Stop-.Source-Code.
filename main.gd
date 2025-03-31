@@ -5,10 +5,11 @@ func _on_button_1_pressed():
 	$Scene1/TextureRect.show()
 	$Scene1/Customer.show()
 	$Scene1/ShopCounter.show()
-	$Scene1/ProgressBar2.show()
-	$Scene1/ProgressBar2/Label2.show()
-	$Scene1/ProgressBar.show()
-	$Scene1/ProgressBar/Label.show()
+	$Scene1/ScanningMinigameCanvasLayer.show()
+	$Scene1/sigma.show()
+
+#start checker timer scene1
+	$"Scene1/Bags CounterTimer".start()
 
 	#scene2 hide
 	$Scene2/TextureScene2.hide()
@@ -21,20 +22,20 @@ func _on_button_1_pressed():
 	# ComputerScene hide
 	$Scene3/ComputerScene/TextureSceneComputer.hide()
 	$Scene3/ComputerScene/ToTruck.hide()
-	$"Scene3/ComputerScene/Restocking Shelves".hide()
-	$Scene3/ComputerScene/TakeBox.hide()
+	$Scene3/ComputerScene/Shelf.hide()
 	$Scene3/ComputerScene/Computer.hide()
-	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
-
+	
+#stop checker timer scene1
+	$"Scene3/ComputerScene/Shelf/Shelf Check Timer".stop()
+	
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
 	$Scene4/CanvasLayer.hide()
@@ -59,29 +60,30 @@ func _on_button_2_pressed():
 	$Scene1/TextureRect.hide()
 	$Scene1/Customer.hide()
 	$Scene1/ShopCounter.hide()
-	$Scene1/ProgressBar2.hide()
-	$Scene1/ProgressBar2/Label2.hide()
-	$Scene1/ProgressBar.hide()
-	$Scene1/ProgressBar/Label.hide()
+	$Scene1/ScanningMinigameCanvasLayer.hide()
+	$Scene1/sigma.hide()
+
+#stop checker timer scene1
+	$"Scene1/Bags CounterTimer".stop()
 
 	#scene3 hide
 	# ComputerScene hide
 	$Scene3/ComputerScene/TextureSceneComputer.hide()
 	$Scene3/ComputerScene/ToTruck.hide()
-	$"Scene3/ComputerScene/Restocking Shelves".hide()
-	$Scene3/ComputerScene/TakeBox.hide()
+	$Scene3/ComputerScene/Shelf.hide()
 	$Scene3/ComputerScene/Computer.hide()
-	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
-
+	
+#stop checker timer scene1
+	$"Scene3/ComputerScene/Shelf/Shelf Check Timer".stop()
+	
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
 	$Scene4/CanvasLayer.hide()
@@ -95,32 +97,33 @@ func _on_button_2_pressed():
 	$PlayerGUI/CanvasLayerButtons/Button3.disabled = false
 
 func _on_button_3_pressed():
-	#scene3 show
-	# show ComputerScene
+	#show scene3
+	#show ComputerScene
 	$Scene3/ComputerScene/TextureSceneComputer.show()
 	$Scene3/ComputerScene/ToTruck.show()
-	$"Scene3/ComputerScene/Restocking Shelves".show()
-	$Scene3/ComputerScene/TakeBox.show()
+	$Scene3/ComputerScene/Shelf.show()
 	$Scene3/ComputerScene/Computer.show()
-	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.show()
 
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
-
+	
+#start checker timer scene1
+	$"Scene3/ComputerScene/Shelf/Shelf Check Timer".start()
+	
 	#scene1 hide
 	$Scene1/TextureRect.hide()
 	$Scene1/Customer.hide()
 	$Scene1/ShopCounter.hide()
-	$Scene1/ProgressBar2.hide()
-	$Scene1/ProgressBar2/Label2.hide()
-	$Scene1/ProgressBar.hide()
-	$Scene1/ProgressBar/Label.hide()
+	$Scene1/ScanningMinigameCanvasLayer.hide()
+	$Scene1/sigma.hide()
+
+#stop checker timer scene1
+	$"Scene1/Bags CounterTimer".stop()
 
 	#scene2 hide
 	$Scene2/TextureScene2.hide()
@@ -128,7 +131,7 @@ func _on_button_3_pressed():
 	$"Scene2/Upgrades/Upgrade2-MoneyCap".hide()
 	$"Scene2/Upgrades/Upgrade3-MoneyGain".hide()
 	$"Scene2/Upgrades/Upgrade4-CustomerTemper".hide()
-
+	
 	#scene4 hide
 	$Scene4/TextureScene4.hide()
 	$Scene4/CanvasLayer.hide()
@@ -149,10 +152,12 @@ func _on_button_4_pressed():
 	#scene1 hide
 	$Scene1/TextureRect.hide()
 	$Scene1/Customer.hide()
-	$Scene1/ProgressBar2.hide()
-	$Scene1/ProgressBar2/Label2.hide()
-	$Scene1/ProgressBar.hide()
-	$Scene1/ProgressBar/Label.hide()
+	$Scene1/ShopCounter.hide()
+	$Scene1/ScanningMinigameCanvasLayer.hide()
+	$Scene1/sigma.hide()
+
+#stop checker timer scene1
+	$"Scene1/Bags CounterTimer".stop()
 
 	#scene2 hide
 	$Scene2/TextureScene2.hide()
@@ -165,20 +170,20 @@ func _on_button_4_pressed():
 	# ComputerScene hide
 	$Scene3/ComputerScene/TextureSceneComputer.hide()
 	$Scene3/ComputerScene/ToTruck.hide()
-	$"Scene3/ComputerScene/Restocking Shelves".hide()
-	$Scene3/ComputerScene/TakeBox.hide()
+	$Scene3/ComputerScene/Shelf.hide()
 	$Scene3/ComputerScene/Computer.hide()
-	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Generators.hide()
-
+	
+#stop checker timer scene1
+	$"Scene3/ComputerScene/Shelf/Shelf Check Timer".stop()
+	
 	##always show
 	$PlayerGUI/CanvasLayerButtons.show()
 	$PlayerGUI/CanvasLayerEnergy.show()
@@ -186,6 +191,7 @@ func _on_button_4_pressed():
 
 	#disable scene 3, because it has two scenes inside.
 	$PlayerGUI/CanvasLayerButtons/Button3.disabled = false
+
 
 ## PROGRESS BARS & CUSTOMER TEMPER
 
@@ -210,8 +216,8 @@ func _on_button_4_pressed():
 
 ## SCANNING MINIGAME
 
-@onready var BarCode_Scanner = $"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner"
-@onready var PlaceinBagButton = $"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton"
+@onready var BarCode_Scanner = $"Scene1/sigma/BarCode Scanner"
+@onready var PlaceinBagButton = $Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton
 @onready var coin_label: Label = $PlayerGUI/CanvasLayerSupplies/Coins
 
 @onready var Customer = $Scene1/Customer
@@ -222,7 +228,7 @@ func _on_button_4_pressed():
 @onready var box_label: Label = $PlayerGUI/CanvasLayerSupplies/SuppliestoProcess
 @onready var supplies_label: Label = $PlayerGUI/CanvasLayerSupplies/Supplies
 
-@onready var fake_background: TextureRect = $"Scene1/ScanningMinigameCanvasLayer/Fake Background"
+@onready var fake_background: TextureRect = $"Scene1/sigma/Fake Background"
 
 @onready var BoxAmmountBuy1: int = 6
 @onready var BoxAmmountBuy3: int = 10
@@ -422,6 +428,7 @@ func _on_button_4_pressed():
 @onready var gen3_label2_upgrade5 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option2/Generator3-5TimeLabel"
 @onready var gen3_label3_upgrade5 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen3/Option3/Generator3-5TimeLabel"
 
+
 #upgrade6
 
 @onready var gen1_label_upgrade6 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1/Generator-6TimeLabel"
@@ -437,6 +444,15 @@ func _on_button_4_pressed():
 @onready var gen3_label3_upgrade6 = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen3/Option3/Generator3-6TimeLabel"
 
 @onready var upgrade_press_count = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade/UpgradeGen3ShowLabel
+
+@onready var debt_timer = $"Debt Death Timer"
+@onready var debt_label = $"Debt Death Timer/Debt Label"
+
+## BILLS
+@onready var bill_timer = $"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer"
+@onready var bill_label = $"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label"
+@onready var bill_label2 = $"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label2"
+@onready var bill_label3 = $"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label3"
 
 
 #Upgrade Buttons
@@ -466,11 +482,24 @@ var current_box: int = 0
 ## CUSTOMER TEMPER
 func _ready():
 	add_box(6)
+	add_supplies(10)
+	var cursor_texture = load("res://hand custom cursor/hand-pickup.png")
+	if cursor_texture:
+		Input.set_custom_mouse_cursor(cursor_texture, Input.CURSOR_ARROW, Vector2.ZERO)
+	else:
+		print("Cursor texture not found!")
+
+	bill_timer.start()
+	update_label()
+	bill_label2.text = str(count)
+	bill_timer.timeout.connect(_on_Billtimer_timeout)
+
+	$"Scene1/Bags CounterTimer".start()
 	if Customer:
 		Customer.visibility_changed.connect(_on_customer_visibility_changed)
 		_on_customer_visibility_changed()  # Ensure correct visibility at start
 	
-		## ENERGY TIMER READY
+	## ENERGY TIMER READY
 	$PlayerGUI/CanvasLayerEnergy/EnergyBar/EnergyTimer.start()
 
 	## COFFEE MACHINE READY
@@ -481,9 +510,8 @@ func _ready():
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = true
 	
 	## SCANNER BUTTON
-	Input.set_custom_mouse_cursor(null)  # System cursor by default 
-	Beep = $"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner/Beep"
-	$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".toggle_mode = true 
+	Beep = $"Scene1/sigma/BarCode Scanner/Beep"
+	$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".toggle_mode = true 
 	Beep.stream = preload("res://beep.wav")
 	
 	# Set up initial values Customer time and pb
@@ -508,30 +536,34 @@ func _on_customer_visibility_changed():
 
 func _on_customer_temper_timeout():
 	print("Time out")
+	sub_supplies(1)
 	$Scene1/Customer.visible = false 
 	$Scene1/ProgressBar/CustomerTemper.stop()
 	$Scene1/ProgressBar.visible = false
 	$Scene1/ProgressBar/Label.visible = false
 	$Scene1/ProgressBar2/CustomerReappear.start()
 	$Scene1/ProgressBar2.visible = true
-
+	$Scene1/ProgressBar2/Label2.visible = true  # Ensure visibility
+	$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite".hide()
 
 func _on_customer_reappear_timeout():
-	print("Time in")
-	$Scene1/Customer.visible = true
-	$Scene1/ProgressBar2/CustomerReappear.stop()
-	$Scene1/ProgressBar2.visible = false 
-	$Scene1/ProgressBar2/Label2.visible = false
-	
-	# Manually reset customer-related properties instead of calling _ready()
-	timer.wait_time = countdown_time1
-	pb.max_value = countdown_time1
-	pb.value = countdown_time1  # Reset progress bar
-	
-	# Restart only the customer timer without affecting EnergyTimer
-	timer.start()
-	$Scene1/ProgressBar.visible = true
-	$Scene1/ProgressBar/Label.visible = true
+	if supplies_count <= 0:
+		print("Time in: Not enough supplies")
+		$Scene1/ProgressBar/CustomerTemper.stop()
+		sub_coin(5)
+		pass
+
+	elif supplies_count >= 1:
+		print("Time in")
+		$Scene1/ProgressBar/CustomerTemper.start()
+		$Scene1/ProgressBar2/CustomerReappear.stop()
+		$Scene1/ProgressBar2.visible = false 
+		$Scene1/ProgressBar2/Label2.visible = false
+		$Scene1/Customer.visible = true
+		$Scene1/ProgressBar.visible = true
+		$Scene1/ProgressBar/Label.visible = true
+		$Scene1/ScanningMinigameCanvasLayer/ProducttoScan.show()
+		$Scene1/ScanningMinigameCanvasLayer/Button.show()
 
 
 ## LABEL CODE
@@ -541,6 +573,11 @@ func _process(delta):
 	pb.value = timer.time_left
 	pb2.value = timer2.time_left
 	pb3.value = timer3.time_left
+
+	debt_label.text = str(int(debt_timer.time_left))
+
+	update_label()
+
 
 	# Ensure labels are updated with remaining time in seconds
 	if label:
@@ -1031,8 +1068,9 @@ func _on_energy_timer_timeout():
 
 func _on_add_cup_pressed():
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = false
-	$"Scene4/CanvasLayer/Coffee Cup/AddCup".disabled = true
-	$"Scene4/CanvasLayer/Coffee Cup/AddCup".hide()
+	$"Scene4/CanvasLayer/AddCup".disabled = true
+	$"Scene4/CanvasLayer/AddCup/Coffee Cup".show()
+
 func _on_coffeemachine_button_pressed():
 	$Scene4/CanvasLayer/CoffeeMachine.hide()
 	$Scene4/CanvasLayer/CoffeeMachineRunning.show()
@@ -1053,10 +1091,12 @@ func _on_coffeemachine_cooldown_timeout():
 	$Scene4/CanvasLayer/Coffee.show()
 	
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = true
-	$"Scene4/CanvasLayer/Coffee Cup".hide()
-	
+	$"Scene4/CanvasLayer/AddCup/Coffee Cup".hide()
+
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton/CoffeeMachineCooldown.stop()
-	
+
+	$Scene4/CanvasLayer/AddCup.hide()
+
 func _on_coffee_pressed():
 	$Scene4/CanvasLayer/CoffeeMachine/CoffeeMachineButton.disabled = true
 	timer3.stop()
@@ -1067,11 +1107,8 @@ func _on_coffee_pressed():
 	$Scene4/CanvasLayer/Coffee.hide()
 	$Scene4/CanvasLayer/Coffee/AudioStreamPlayer2D.play()
 	
-	$"Scene4/CanvasLayer/Coffee Cup".show()
-	$"Scene4/CanvasLayer/Coffee Cup/AddCup".disabled = false
-	$"Scene4/CanvasLayer/Coffee Cup/AddCup".show()
-	
-
+	$Scene4/CanvasLayer/AddCup.show()
+	$Scene4/CanvasLayer/AddCup.disabled = false
 
 ## if you drink coffee while hot, -75 permanent to energy bar each time you drink it while it's hot
 ## you drink it cool? delete the debuffs
@@ -1080,6 +1117,7 @@ func _on_coffee_pressed():
 ### COINS!!
 
 var coin_count: int = 0
+const MAX_COINS: int = 100
 
 func add_coin(amount: int):
 	coin_count += amount
@@ -1127,117 +1165,402 @@ func update_supplies_display():
 
 ### UPGRADE SHOP
 
-func _on_upgrade1_button_down():
-	if coin_count >= 1:
-		sub_coin(1)
+func _on_upgrade_1_button_down():
+	if coin_count >= 10:
+		sub_coin(10)
 		print("UPGRADE 1 BOUGHT")
-		countdown_time3 += 1
+		countdown_time3 += 2
 		timer3.wait_time = countdown_time3
-		### ENABLE WHEN DIFFERENT UPGRADE LEVELS ### $"Scene2/Upgrades/Upgrade1-Energy/upgrade1".hide()
-		### ENABLE WHEN DIFFERENT UPGRADE LEVELS ### $"Scene2/Upgrades/Upgrade1-Energy/upgrade1".disabled = true
+
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg0".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg1".show()
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-1".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-1".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-2".show()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-2".disabled = false
+		
 		kaching.play()
 	else:
 		print("couldn't buy")
 		error_onBuy.play()
 
+func _on_upgrade_1_2_button_down():
+	if coin_count >= 30:
+		sub_coin(30)
+		print("UPGRADE 1-2 BOUGHT")
+		countdown_time1 += 5
+		timer.wait_time = countdown_time1
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg1".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg2".show()
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-2".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-2".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-3".show()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-3".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+
+func _on_upgrade_1_3_button_down():
+	if coin_count >= 60:
+		sub_coin(60)
+		print("UPGRADE 1-3 BOUGHT")
+		countdown_time1 += 10
+		timer.wait_time = countdown_time1
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg2".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg3".show()
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-3".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-3".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-4".show()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-4".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_1_4_button_down():
+	if coin_count >= 94:
+		sub_coin(94)
+		print("UPGRADE 1-4 BOUGHT")
+		countdown_time1 += 15
+		timer.wait_time = countdown_time1
+		kaching.play()
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg3".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/ProgressBars-Upgrade1/upg4".show()
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-4".hide()
+		$"Scene2/Upgrades/Upgrade1-Energy/upgrade1-4".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade1-Energy/UpgradesDone".show()
+		$"Scene2/Upgrades/Upgrade1-Energy/CoinSprite2D".hide()
+		
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+
 func _on_upgrade_2_button_down(): #### CHANGE UPGRADE
-	if coin_count >= 2:
-		sub_coin(2)
+	if coin_count >= 8:
+		sub_coin(8)
 		print("UPGRADE 2 BOUGHT")
 		kaching.play()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg0".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg1".show()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-1".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2".show()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2".disabled = false
+		
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_2_2_button_down(): #### CHANGE UPGRADE
+	if coin_count >= 15:
+		sub_coin(15)
+		print("UPGRADE 2-2 BOUGHT")
+		kaching.play()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg1".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg2".show()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-2".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3".show()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3".disabled = false
+		
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_2_3_button_down(): #### CHANGE UPGRADE
+	if coin_count >= 27:
+		sub_coin(27)
+		print("UPGRADE 2-3 BOUGHT")
+		kaching.play()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg2".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg3".show()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-3".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4".show()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4".disabled = false
+		
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_2_4_button_down(): #### CHANGE UPGRADE
+	if coin_count >= 42:
+		sub_coin(42)
+		print("UPGRADE 2-4 BOUGHT")
+		kaching.play()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg3".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/ProgressBars-Upgrade2/upg4".show()
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4".hide()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/upgrade2-4".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/UpgradesDone".show()
+		$"Scene2/Upgrades/Upgrade2-MoneyCap/CoinSprite2D".hide()
+		
 	else:
 		print("couldn't buy")
 		error_onBuy.play()
 
 
 func _on_upgrade_3_button_down():
-	if coin_count >= 3:
-		sub_coin(3)
+	if coin_count >= 15:
+		sub_coin(15)
 		print("UPGRADE 3 BOUGHT")
 		kaching.play()
 		coin_gain = 2
-	else:
-		print("couldn't buy")
-		error_onBuy.play()
-
-
-func _on_upgrade_4_button_down():
-	if coin_count >= 4:
-		sub_coin(4)
-		print("UPGRADE 4 BOUGHT")
-		countdown_time1 += 1
-		timer.wait_time = countdown_time1
-		### ENABLE WHEN DIFFERENT UPGRADE LEVELS ### $"Scene2/Upgrades/Upgrade1-Energy/upgrade4".hide()
-		### ENABLE WHEN DIFFERENT UPGRADE LEVELS ### $"Scene2/Upgrades/Upgrade1-Energy/upgrade4".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg0".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg1".show()
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-1".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-1".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2".show()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2".disabled = false
 		kaching.play()
 	else:
 		print("couldn't buy")
 		error_onBuy.play()
-		
 
+func _on_upgrade_3_2_button_down():
+	if coin_count >= 30:
+		sub_coin(30)
+		print("UPGRADE 3-2 BOUGHT")
+		coin_gain = 3
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg1".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg2".show()
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-2".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3".show()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+
+func _on_upgrade_3_3_button_down():
+	if coin_count >= 40:
+		sub_coin(40)
+		print("UPGRADE 3-3 BOUGHT")
+		coin_gain = 4
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg2".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg3".show()
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-3".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4".show()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_3_4_button_down():
+	if coin_count >= 50:
+		sub_coin(50)
+		print("UPGRADE 3-4 BOUGHT")
+		coin_gain = 5
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg3".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg4".show()
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4".hide()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/upgrade3-4".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/UpgradesDone".show()
+		$"Scene2/Upgrades/Upgrade3-MoneyGain/CoinSprite2D".hide()
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_4_button_down():
+	if coin_count >= 15:
+		sub_coin(15)
+		print("UPGRADE 3-4 BOUGHT")
+		countdown_time1 += 1
+		timer.wait_time = countdown_time1
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg0".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg1".show()
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-1".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-1".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2".show()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_upgrade_4_2_button_down():
+	if coin_count >= 50:
+		sub_coin(50)
+		print("UPGRADE 4-2 BOUGHT")
+		countdown_time1 += 5
+		timer.wait_time = countdown_time1
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg1".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg2".show()
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-2".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3".show()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+
+func _on_upgrade_4_3_button_down():
+	if coin_count >= 80:
+		sub_coin(80)
+		print("UPGRADE 4-3 BOUGHT")
+		countdown_time1 += 10
+		timer.wait_time = countdown_time1
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg2".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg3".show()
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-3".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4".show()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4".disabled = false
+		kaching.play()
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+
+func _on_upgrade_4_4_button_down():
+	if coin_count >= 145:
+		sub_coin(145)
+		print("UPGRADE 4-4 BOUGHT")
+		countdown_time1 += 15
+		timer.wait_time = countdown_time1
+		kaching.play()
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg3".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg4".show()
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4".hide()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/upgrade4-4".disabled = true
+		
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/UpgradesDone".show()
+		$"Scene2/Upgrades/Upgrade4-CustomerTemper/CoinSprite2D".hide()
+		
+	else:
+		print("couldn't buy")
+		error_onBuy.play()
+
+func _on_BagsCounter_timeout():
+	print("bags check!")
+	$"Scene1/Bags Counter".hide()
+	$"Scene1/Bags Counter1".hide()
+	$"Scene1/Bags Counter2".hide()
+	$"Scene1/Bags Counter3".hide()
+	$"Scene1/Bags Counter4".hide()
+
+	if supplies_count >= 50:
+		$"Scene1/Bags Counter".show()
+	elif supplies_count >= 37:
+		$"Scene1/Bags Counter1".show()
+	elif supplies_count >= 25:
+		$"Scene1/Bags Counter2".show()
+	elif supplies_count >= 12:
+		$"Scene1/Bags Counter3".show()
+	elif supplies_count >= 3:
+		$"Scene1/Bags Counter4".show()
 
 #### SCANNING MINIGAME
 
-var custom_cursor: Texture = preload("res://barcode.png")
+var custom_cursor: Texture = preload("res://char/Scene1/scanner & handle/pickedup.png")
+var normal_cursor: Texture = preload("res://hand custom cursor/hand-pickup.png")
 var using_custom_cursor: bool = false # Is custom cursor active? (boolean)
 var using_normal_cursor: bool
-var texture_normal: Texture = preload("res://Jump (32x32).png")
-var texture_pickedup: Texture = preload("res://icon.svg")
 var Beep: AudioStreamPlayer2D
 
-func _on_product_barcode_button_up():
-	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".show()
-	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
+func _on_product_barcode_pressed():
+	$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.show()
 
-
-func _on_product_barcode_button_down():
-	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".show()
 	if PlaceinBagButton.visible:
-		$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
-		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
+		$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.disabled = false
+		$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".disabled = true
 
 	if using_custom_cursor:
-		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = true
-		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2".hide()
+		$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".disabled = true
+		$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite".hide()
 		Beep.play()
-		$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".show()
-		$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
-	else:
-		pass
-
+		$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.show()
+		$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.disabled = false
 
 func _on_placein_bag_button_button_up():
-	$"Scene1/ScanningMinigameCanvasLayer/Bagging Area".show() 	
-	$"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner".show()
-	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".disabled = false
+	add_coin(coin_gain)
+	$"Scene1/ScanningMinigameCanvasLayer/Bagging Area".show()
+	$"Scene1/sigma/BarCode Scanner".show()
+	$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.disabled = false
 	$"Scene1/ScanningMinigameCanvasLayer/ProducttoScan".show()
-	$"Scene1/ScanningMinigameCanvasLayer/ProducttoScan/Button".show()
-###	$"Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton".hide()
-
-	var main_node = get_tree().root.get_node("Node")
-	if main_node:
-		print("adding coin!")  # Debugging log
-		main_node.add_coin(coin_gain) 
+	$Scene1/ScanningMinigameCanvasLayer/Button.show()
+	$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.hide()
+	if coin_count > MAX_COINS:
+		coin_count = min(coin_count + coin_gain, MAX_COINS)
+		print("Coins: ", coin_count)
 	else:
-		print("ERROR: Main node not found!")  # Debugging log
-
+		print("Coin cap reached!")
 
 func _on_BarCode_scanner_toggled(toggled_on: bool):
-	$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".show()
-	$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
+	$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".show()
+	$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".disabled = false
 	if using_custom_cursor:
-		Input.set_custom_mouse_cursor(null)
+		Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW)
 		print("System Cursor")
-		$"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner".icon = texture_normal  # Change button texture when picked up
-		$"Scene1/ScanningMinigameCanvasLayer/Sprite2D2/ProductBarcode".disabled = false
-		$"Scene1/ScanningMinigameCanvasLayer/Fake Background".hide()
+		$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".disabled = false
+		$"Scene1/sigma/Fake Background".hide()
+		$"Scene1/sigma/BarCode Scanner/Scanner with handle".show()
+		$"Scene1/sigma/BarCode Scanner/Handle".hide()
+		$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".hide()
 		
 	else:
-		var hotspot = Vector2(223, 46) ## s223, 46
+		var hotspot = Vector2(15, 15) ## s223, 46
 		Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, hotspot)
-		$"Scene1/ScanningMinigameCanvasLayer/BarCode Scanner".icon = texture_pickedup  # Change button texture when picked up
 		print("BarCode Scanner Picked up!")
-		$"Scene1/ScanningMinigameCanvasLayer/Fake Background".show()
+		$"Scene1/sigma/Fake Background".show()
+		$"Scene1/sigma/BarCode Scanner/Scanner with handle".hide()
+		$"Scene1/sigma/BarCode Scanner/Handle".show()
 	
 	# Toggle the state of the custom cursor
 	using_custom_cursor = !using_custom_cursor
@@ -1249,15 +1572,12 @@ func _on_toTruck_pressed():
 	# ComputerScene hide
 	$Scene3/ComputerScene/TextureSceneComputer.hide()
 	$Scene3/ComputerScene/ToTruck.hide()
-	$"Scene3/ComputerScene/Restocking Shelves".hide()
-	$Scene3/ComputerScene/TakeBox.hide()
+	$Scene3/ComputerScene/Shelf.hide()
 	$Scene3/ComputerScene/Computer.hide()
-	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 
 	# show TruckScene
 	$Scene3/TruckScene/TextureSceneTruck.show()
 	$Scene3/TruckScene/ToComputer.show()
-	$Scene3/TruckScene/AddBox.show()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.show()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.show()
 	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.show()
@@ -1265,6 +1585,7 @@ func _on_toTruck_pressed():
 
 func _on_computer_pressed():
 	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.show()
+	$Scene3/ComputerScene/Shelf.hide()
 
 
 #### COMPUTER LAYOUT
@@ -1274,12 +1595,15 @@ func _on_close_button_pressed():
 	AmmountToBuy.text = " " # ammount to show when clicking button
 	current_cost = 0 # ammount to deduct in player's wallet
 	current_box = 0 # supply ammoun to add after purchase
+	$Scene3/ComputerScene/Shelf.show()
 
 func _on_close_button_2_pressed():
 	$Scene3/ComputerScene/Computer/ComputerCanvasLayer.hide()
 	AmmountToBuy.text = " " # ammount to show when clicking button
 	current_cost = 0 # ammount to deduct in player's wallet
 	current_box = 0 # supply ammoun to add after purchase
+	$Scene3/ComputerScene/Shelf.show()
+
 
 #### SCENE 3-1
 
@@ -1287,14 +1611,12 @@ func _on_toComputer_pressed():
 	# Show ComputerScene
 	$Scene3/ComputerScene/TextureSceneComputer.show()
 	$Scene3/ComputerScene/ToTruck.show()
-	$"Scene3/ComputerScene/Restocking Shelves".show()
-	$Scene3/ComputerScene/TakeBox.show()
+	$Scene3/ComputerScene/Shelf.show()
 	$Scene3/ComputerScene/Computer.show()
 
 	# TruckScene hide
 	$Scene3/TruckScene/TextureSceneTruck.hide()
 	$Scene3/TruckScene/ToComputer.hide()
-	$Scene3/TruckScene/AddBox.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options1Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options2Area2D.hide()
 	$Scene3/TruckScene/GeneratorOptions/Options3Area2D.hide()
@@ -1363,8 +1685,6 @@ func _on_buy_generator2_button_down():
 func _on_buy_generator2_button_up():
 	$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2/BuyPressedGen2Sprite.hide()
 	$Scene3/TruckScene/GeneratorOptions/Generators/BuyGenerator2/BuyGen2Sprite.show()
-
-
 
 
 func _on_Buy1Crate_pressed() -> void:
@@ -2465,30 +2785,134 @@ func _on_gen3_speed_upgrade_pressed():
 		error_onBuy.play()
 
 
+# SCENE 3 SHELF CHECK
+
+func _on_shelf_check_timer_timeout() -> void:
+	print("shelf check!")
+	$Scene3/ComputerScene/Shelf/Shelf1.hide()
+	$Scene3/ComputerScene/Shelf/Shelf2.hide()
+	$Scene3/ComputerScene/Shelf/Shelf3.hide()
+	$Scene3/ComputerScene/Shelf/Shelf4.hide()
+	$Scene3/ComputerScene/Shelf/Shelf5.hide()
+	$Scene3/ComputerScene/Shelf/Shelf6.hide()
+	$Scene3/ComputerScene/Shelf/Shelf7.hide()
+
+	if box_count >= 150:
+		$Scene3/ComputerScene/Shelf/Shelf7.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf1.hide()
+		$Scene3/ComputerScene/Shelf/Shelf2.hide()
+		$Scene3/ComputerScene/Shelf/Shelf3.hide()
+		$Scene3/ComputerScene/Shelf/Shelf4.hide()
+		$Scene3/ComputerScene/Shelf/Shelf5.hide()
+		$Scene3/ComputerScene/Shelf/Shelf6.hide()
+		
+	elif box_count >= 120:
+		$Scene3/ComputerScene/Shelf/Shelf6.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf1.hide()
+		$Scene3/ComputerScene/Shelf/Shelf2.hide()
+		$Scene3/ComputerScene/Shelf/Shelf3.hide()
+		$Scene3/ComputerScene/Shelf/Shelf4.hide()
+		$Scene3/ComputerScene/Shelf/Shelf5.hide()
+		$Scene3/ComputerScene/Shelf/Shelf7.hide()
+		
+	elif box_count >= 100:
+		$Scene3/ComputerScene/Shelf/Shelf5.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf1.hide()
+		$Scene3/ComputerScene/Shelf/Shelf2.hide()
+		$Scene3/ComputerScene/Shelf/Shelf3.hide()
+		$Scene3/ComputerScene/Shelf/Shelf4.hide()
+		$Scene3/ComputerScene/Shelf/Shelf6.hide()
+		$Scene3/ComputerScene/Shelf/Shelf7.hide()
+		
+	elif box_count >= 75:
+		$Scene3/ComputerScene/Shelf/Shelf4.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf1.hide()
+		$Scene3/ComputerScene/Shelf/Shelf2.hide()
+		$Scene3/ComputerScene/Shelf/Shelf3.hide()
+		$Scene3/ComputerScene/Shelf/Shelf5.hide()
+		$Scene3/ComputerScene/Shelf/Shelf6.hide()
+		$Scene3/ComputerScene/Shelf/Shelf7.hide()
+		
+	elif box_count >= 50:
+		$Scene3/ComputerScene/Shelf/Shelf3.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf1.hide()
+		$Scene3/ComputerScene/Shelf/Shelf2.hide()
+		$Scene3/ComputerScene/Shelf/Shelf4.hide()
+		$Scene3/ComputerScene/Shelf/Shelf5.hide()
+		$Scene3/ComputerScene/Shelf/Shelf6.hide()
+		$Scene3/ComputerScene/Shelf/Shelf7.hide()
+		
+	elif box_count >= 25:
+		$Scene3/ComputerScene/Shelf/Shelf2.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf1.hide()
+		$Scene3/ComputerScene/Shelf/Shelf3.hide()
+		$Scene3/ComputerScene/Shelf/Shelf4.hide()
+		$Scene3/ComputerScene/Shelf/Shelf5.hide()
+		$Scene3/ComputerScene/Shelf/Shelf6.hide()
+		$Scene3/ComputerScene/Shelf/Shelf7.hide()
+		
+	elif box_count >= 15:
+		$Scene3/ComputerScene/Shelf/Shelf1.show()
+		
+		$Scene3/ComputerScene/Shelf/Shelf2.hide()
+		$Scene3/ComputerScene/Shelf/Shelf3.hide()
+		$Scene3/ComputerScene/Shelf/Shelf4.hide()
+		$Scene3/ComputerScene/Shelf/Shelf5.hide()
+		$Scene3/ComputerScene/Shelf/Shelf6.hide()
+		$Scene3/ComputerScene/Shelf/Shelf7.hide()
+
+
+func _on_button_pressed() -> void:
+	add_coin(5)
+
+func _on_button_pressed1() -> void:
+	sub_box(5)
 
 
 
+## BILLS
+
+var count = 0
+var bills_topay = 5
+
+func update_label():
+	var time_left = int(bill_timer.time_left)
+	var minutes = time_left / 60
+	var seconds = time_left % 60
+	bill_label.text = "%02d:%02d" % [minutes, seconds]
+
+func _on_Billtimer_timeout():
+	count += 1
+	bill_label2.text = str(count)
+
+	sub_coin(bills_topay)
+	
+	bills_topay *= 1.25
+	
+	update_expected_payment()
+
+func update_expected_payment():
+	bill_label3.text = "%d" % int(bills_topay)
 
 
+## DEBT TIMER & DEATH !!!
 
+func _on_check_if_debt_timeout():
+	if coin_count <= -1 and debt_timer.is_stopped():
+		coin_label.add_theme_color_override("font_color", Color.RED)
+		debt_timer.start()
+		debt_label.show()
+	
+	elif coin_count >= 0:
+		coin_label.add_theme_color_override("font_color", Color.WHITE)
+		debt_timer.stop()
+		debt_label.hide()
 
-
-
-
-
-
-#### TESTING - ADMIN HACK MODE
-
-func _on_add_100_dollors_pressed():
-	add_coin(100)
-
-func _on_add_100_supplies_pressed() -> void:
-	add_box(100)
-
-func _on_add_100_energy_pressed() -> void:
-	timer3.stop()
-	timer3.wait_time += 100
-	timer3.start()
-
-func _on_main_menu_button_pressed():
-	get_tree().change_scene_to_file("res://MainMenu.tscn")
+func _on_debt_death_timer_timeout():
+	get_tree().change_scene_to_file("res://GameOver-Debt.tscn")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c77npmaur4gli"
-path="res://.godot/imported/barcode.png-61fcf69cb3ccd2f1441983cedf993790.ctex"
+uid="uid://be1j6v1d1aov"
+path="res://.godot/imported/box.png-24c47e08945cfc0be263d591cd3b76e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://barcode.png"
-dest_files=["res://.godot/imported/barcode.png-61fcf69cb3ccd2f1441983cedf993790.ctex"]
+source_file="res://char/Player GUI/box.png"
+dest_files=["res://.godot/imported/box.png-24c47e08945cfc0be263d591cd3b76e9.ctex"]
 
 [params]
 

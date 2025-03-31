@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpmthxhg01t2m"]
 
-[ext_resource type="Texture2D" uid="uid://bup7cpbsfvp7k" path="res://Jump (32x32).png" id="2_8e2d0"]
+[ext_resource type="Texture2D" uid="uid://cyix3u4acmkb3" path="res://char/Scene1/customer.png" id="1_4xh34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is6y0"]
 size = Vector2(383.875, 355.625)
@@ -15,6 +15,6 @@ shape = SubResource("RectangleShape2D_is6y0")
 [node name="robbersprite" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(0, -3.8147e-06)
-scale = Vector2(11.7188, 11.2422)
-texture = ExtResource("2_8e2d0")
+position = Vector2(-0.999971, -1)
+scale = Vector2(4.8, 3.91209)
+texture = ExtResource("1_4xh34")

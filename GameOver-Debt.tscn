@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0x4hgctd5oq8"]
+[gd_scene load_steps=5 format=3 uid="uid://htxcs3tolehr"]
 
-[ext_resource type="Script" uid="uid://c6q7qphp2cudw" path="res://game_over_exhaustion.gd" id="1_7qtx7"]
-[ext_resource type="Texture2D" uid="uid://ccpcov8copbsr" path="res://GameOvers/play.png" id="2_5q0rj"]
-[ext_resource type="Texture2D" uid="uid://d4d1p6sjl0m28" path="res://GameOvers/turn off.png" id="3_n2ikj"]
-[ext_resource type="Texture2D" uid="uid://cq0bhb4w8biwi" path="res://GameOvers/exhaustion death.png" id="4_kfmsh"]
+[ext_resource type="Script" uid="uid://bup55fgnfw3ls" path="res://debt death.gd" id="1_8bmif"]
+[ext_resource type="Texture2D" uid="uid://ccpcov8copbsr" path="res://GameOvers/play.png" id="2_4qn4e"]
+[ext_resource type="Texture2D" uid="uid://d4d1p6sjl0m28" path="res://GameOvers/turn off.png" id="3_tmp2v"]
+[ext_resource type="Texture2D" uid="uid://d4iikuulee88l" path="res://GameOvers/debt death.png" id="4_8bmif"]
 
-[node name="EnergyDeath" type="Node"]
-script = ExtResource("1_7qtx7")
+[node name="Node" type="Node"]
+script = ExtResource("1_8bmif")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -14,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 0.992238)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -28,7 +29,7 @@ offset_top = -1.24802
 offset_right = -0.392029
 offset_bottom = 0.127991
 theme_override_font_sizes/font_size = 30
-icon = ExtResource("2_5q0rj")
+icon = ExtResource("2_4qn4e")
 icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -44,15 +45,15 @@ offset_top = -0.248016
 offset_right = -0.256104
 offset_bottom = 1.12799
 theme_override_font_sizes/font_size = 30
-icon = ExtResource("3_n2ikj")
+icon = ExtResource("3_tmp2v")
 icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="ExhaustionDeath" type="Sprite2D" parent="."]
+[node name="BedtDeath" type="Sprite2D" parent="."]
 position = Vector2(545, 251)
 scale = Vector2(3.04219, 3.10626)
-texture = ExtResource("4_kfmsh")
+texture = ExtResource("4_8bmif")
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_mainmenu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
