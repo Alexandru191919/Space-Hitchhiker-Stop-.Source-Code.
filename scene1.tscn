@@ -1147,6 +1147,7 @@ texture = ExtResource("40_23b6t")
 [node name="Retirement Requirements" type="Label" parent="Scene2/Upgrades/The End"]
 offset_right = 40.0
 offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Retirement Check Timer" type="Timer" parent="Scene2/Upgrades/The End"]
 
