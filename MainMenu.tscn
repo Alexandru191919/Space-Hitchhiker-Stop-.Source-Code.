@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://btd56h1qe7ah0"]
+[gd_scene load_steps=6 format=3 uid="uid://btd56h1qe7ah0"]
 
-[ext_resource type="Texture2D" uid="uid://dgng3ggfxdkyp" path="res://Imported_Background/Gray.png" id="1_236f1"]
 [ext_resource type="Script" uid="uid://bs6cx2ca8qc3p" path="res://main_menu.gd" id="1_g38k0"]
+[ext_resource type="Texture2D" uid="uid://c8564wd4n4tj2" path="res://MainMenu Scene.png" id="2_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://ccpcov8copbsr" path="res://GameOvers/play.png" id="3_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://d4d1p6sjl0m28" path="res://GameOvers/turn off.png" id="4_iwfq2"]
+[ext_resource type="Texture2D" uid="uid://d0nkxjxjv4c16" path="res://MainTitle Text.png" id="5_iwfq2"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_g38k0")
@@ -16,20 +17,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_236f1")
+texture = ExtResource("2_qoqlk")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.097
+anchor_left = 0.0562014
 anchor_top = 0.576
-anchor_right = 0.371
+anchor_right = 0.256417
 anchor_bottom = 0.864
 offset_left = 0.255997
 offset_top = -1.24802
-offset_right = -0.392029
+offset_right = -0.392059
 offset_bottom = 0.127991
 theme_override_font_sizes/font_size = 35
 icon = ExtResource("3_qoqlk")
@@ -40,13 +41,13 @@ metadata/_edit_use_anchors_ = true
 [node name="Quit" type="Button" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.629
-anchor_top = 0.576
-anchor_right = 0.903
-anchor_bottom = 0.864
+anchor_left = 0.729694
+anchor_top = 0.574457
+anchor_right = 0.928174
+anchor_bottom = 0.860914
 offset_left = 0.391968
 offset_top = -0.248016
-offset_right = -0.256104
+offset_right = -0.255981
 offset_bottom = 1.12799
 theme_override_font_sizes/font_size = 35
 icon = ExtResource("4_iwfq2")
@@ -54,42 +55,12 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="TitleBackground" type="TextEdit" parent="."]
-anchors_preset = -1
-anchor_left = 0.092
-anchor_top = 0.073
-anchor_right = 0.908
-anchor_bottom = 0.431
-offset_left = 0.0159912
-offset_top = -0.304005
-offset_right = -0.0161133
-offset_bottom = -0.288025
-grow_horizontal = 2
-mouse_default_cursor_shape = 0
-theme_override_font_sizes/font_size = 40
-editable = false
-context_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-virtual_keyboard_enabled = false
-middle_mouse_paste_enabled = false
-use_default_word_separators = false
-metadata/_edit_use_anchors_ = true
-
-[node name="GameTitle" type="Label" parent="TitleBackground"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme_override_font_sizes/font_size = 40
-text = "Space
-Hitchhiker
-Stop"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 298.0
+offset_top = 52.0
+offset_right = 802.0
+offset_bottom = 259.0
+texture = ExtResource("5_iwfq2")
 
 [connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]

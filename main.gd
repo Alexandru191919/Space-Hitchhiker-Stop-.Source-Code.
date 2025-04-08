@@ -228,7 +228,7 @@ func _on_button_4_pressed():
 
 @export var countdown_time1 : float = 11.0 ## Customer Temper
 @export var countdown_time2 : float = 6.0 ## Customer Reappear
-@export var countdown_time3 : float = 26 ## Energy time
+@export var countdown_time3 : float = 61 ## Energy time
 
 ## BUYING SOUNDS
 
@@ -496,7 +496,7 @@ var gen_press_count3: int = 0
 
 ## CURRENCIES
 
-var coin_gain: int = 1
+var coin_gain: int = 5
 
 var current_cost: int = 0
 var current_box: int = 0
@@ -1281,7 +1281,7 @@ func _on_upgrade_3_button_down():
 		sub_coin(15)
 		print("UPGRADE 3 BOUGHT")
 		kaching.play()
-		coin_gain = 2
+		coin_gain += 2
 		
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg0".hide()
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg1".show()
@@ -1300,7 +1300,7 @@ func _on_upgrade_3_2_button_down():
 	if coin_count >= 30:
 		sub_coin(30)
 		print("UPGRADE 3-2 BOUGHT")
-		coin_gain = 3
+		coin_gain += 3
 		
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg1".hide()
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg2".show()
@@ -1320,7 +1320,7 @@ func _on_upgrade_3_3_button_down():
 	if coin_count >= 40:
 		sub_coin(40)
 		print("UPGRADE 3-3 BOUGHT")
-		coin_gain = 4
+		coin_gain += 4
 		
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg2".hide()
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg3".show()
@@ -1339,7 +1339,7 @@ func _on_upgrade_3_4_button_down():
 	if coin_count >= 50:
 		sub_coin(50)
 		print("UPGRADE 3-4 BOUGHT")
-		coin_gain = 5
+		coin_gain += 5
 		
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg3".hide()
 		$"Scene2/Upgrades/Upgrade3-MoneyGain/ProgressBars-Upgrade3/upg4".show()
@@ -1361,7 +1361,7 @@ func _on_upgrade_4_button_down():
 	if coin_count >= 15:
 		sub_coin(15)
 		print("UPGRADE 3-4 BOUGHT")
-		countdown_time1 += 1
+		countdown_time1 += 5
 		timer.wait_time = countdown_time1
 		
 		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg0".hide()
@@ -1381,7 +1381,7 @@ func _on_upgrade_4_2_button_down():
 	if coin_count >= 50:
 		sub_coin(50)
 		print("UPGRADE 4-2 BOUGHT")
-		countdown_time1 += 5
+		countdown_time1 += 20
 		timer.wait_time = countdown_time1
 		
 		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg1".hide()
@@ -1402,7 +1402,7 @@ func _on_upgrade_4_3_button_down():
 	if coin_count >= 80:
 		sub_coin(80)
 		print("UPGRADE 4-3 BOUGHT")
-		countdown_time1 += 10
+		countdown_time1 += 25
 		timer.wait_time = countdown_time1
 		
 		$"Scene2/Upgrades/Upgrade4-CustomerTemper/ProgressBars-Upgrade4/upg2".hide()
@@ -1423,7 +1423,7 @@ func _on_upgrade_4_4_button_down():
 	if coin_count >= 145:
 		sub_coin(145)
 		print("UPGRADE 4-4 BOUGHT")
-		countdown_time1 += 15
+		countdown_time1 += 40
 		timer.wait_time = countdown_time1
 		kaching.play()
 		
@@ -1443,8 +1443,8 @@ func _on_upgrade_4_4_button_down():
 		error_onBuy.play()
 
 func _on_finish_pressed():
-	if coin_count >= 1000:
-		sub_coin(1000)
+	if coin_count >= 500:
+		sub_coin(500)
 		print("Yayyy, I'm free!! :3")
 		kaching.play()
 		get_tree().change_scene_to_file("res://finish.tscn")
@@ -1597,7 +1597,7 @@ func _on_toComputer_pressed():
 
 
 func _on_buy_generator_3_pressed():
-	current_cost = 10
+	current_cost = 50
 	if coin_count >= current_cost:
 		sub_coin(current_cost)
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3Broken2Sprite.hide()
@@ -1628,7 +1628,7 @@ func _on_buy_generator3_button_up():
 
 
 func _on_buy_generator_2_pressed():
-	current_cost = 10
+	current_cost = 50
 	if coin_count >= current_cost:
 		sub_coin(current_cost)
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2BrokenSprite.hide()
@@ -1772,7 +1772,12 @@ func _on_supply_option_2_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.play()
+		
 		if gen_press_count1 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".start()
 			
@@ -1840,7 +1845,12 @@ func _on_supply_option_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.play()
+		
 		if gen_press_count1 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".start()
 			
@@ -1902,7 +1912,7 @@ func _on_supply_option_3_pressed():
 #collect box from gen
 func _on_box_1_gen_1_pressed():
 	add_supplies(1)
-	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/GenSpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1".stop()
@@ -1914,7 +1924,7 @@ func _on_box_1_gen_1_pressed():
 
 func _on_box_2_gen_1_pressed():
 	add_supplies(5)
-	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/GenSpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".stop()
@@ -1926,7 +1936,7 @@ func _on_box_2_gen_1_pressed():
 
 func _on_box_3_gen_1_pressed():
 	add_supplies(10)
-	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/GenSpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".stop()
@@ -1947,6 +1957,11 @@ func _on_supply_option_1_gen2_pressed() -> void:
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.play()
+		
 		if gen_press_count2 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option1".start()
 			
@@ -2016,6 +2031,11 @@ func _on_supply_option_2_gen2_pressed() -> void:
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.play()
+		
 		if gen_press_count2 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option2".start()
 			
@@ -2090,6 +2110,11 @@ func _on_supply_option_3_gen2_pressed() -> void:
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options2Area2D/Options2CollisionShape2D/ButtonsArea2Sprite/SupplyOption3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Gen2SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.play()
+		
 		if gen_press_count2 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen2/Option3".start()
 			
@@ -2191,6 +2216,11 @@ func _on_supply_option_1_gen_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.play()
+		
 		if gen_press_count3 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1".start()
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option1/Generator3TimeLabel".show()
@@ -2259,6 +2289,11 @@ func _on_supply_option_2_gen_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.play()
+		
 		if gen_press_count3 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option2".start()
 			
@@ -2328,6 +2363,11 @@ func _on_supply_option_3_gen_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options3Area2D/Options3CollisionShape2D/ButtonsArea3Sprite/SupplyOption3.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Gen3SpeedUpgrade.disabled = true
+		
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.hide()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.show()
+		$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.play()
+		
 		if gen_press_count3 == 0:
 			$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen3/Option3".start()
 			
