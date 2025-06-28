@@ -13,9 +13,9 @@ config_version=5
 config/name="Space Hitchhiker Stop"
 run/main_scene="res://MainMenu.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="uid://b2gm4mubc8h2n"
-config/macos_native_icon="res://icon.icns"
-config/windows_native_icon="res://icon.ico"
+config/icon="uid://1kj4pv0l3mq2"
+config/macos_native_icon="res://icons/MacOS/icon.icns"
+config/windows_native_icon="res://icons/Windows/icon.ico"
 
 [display]
 
