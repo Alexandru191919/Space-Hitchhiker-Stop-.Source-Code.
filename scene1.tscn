@@ -396,10 +396,7 @@ texture_repeat = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 145.0
-offset_right = 30.0
-offset_bottom = 144.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9_issu3")
@@ -1571,6 +1568,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Gen1SpeedUpgrade" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator"]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 381.0
 offset_right = 176.0
@@ -1702,6 +1700,7 @@ script = ExtResource("19_m63tb")
 
 [node name="Box1, Gen2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
+layout_mode = 0
 offset_left = 38.0
 offset_top = 117.0
 offset_right = 154.0
@@ -1712,6 +1711,7 @@ stretch_mode = 0
 
 [node name="Box2, Gen2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
+layout_mode = 0
 offset_left = 38.0
 offset_top = 117.0
 offset_right = 154.0
@@ -1722,6 +1722,7 @@ stretch_mode = 0
 
 [node name="Box3, Gen2" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2"]
 visible = false
+layout_mode = 0
 offset_left = 38.0
 offset_top = 117.0
 offset_right = 154.0
@@ -1868,6 +1869,7 @@ script = ExtResource("18_g2ved")
 
 [node name="Box1, Gen3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
+layout_mode = 0
 offset_left = 39.0
 offset_top = 117.0
 offset_right = 155.0
@@ -1878,6 +1880,7 @@ stretch_mode = 0
 
 [node name="Box2, Gen3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
+layout_mode = 0
 offset_left = 39.0
 offset_top = 117.0
 offset_right = 155.0
@@ -1888,6 +1891,7 @@ stretch_mode = 0
 
 [node name="Box3, Gen3" type="TextureButton" parent="Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3"]
 visible = false
+layout_mode = 0
 offset_left = 39.0
 offset_top = 117.0
 offset_right = 155.0

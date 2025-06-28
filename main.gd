@@ -504,7 +504,7 @@ var current_box: int = 0
 ## CUSTOMER TEMPER
 func _ready():
 	add_box(6)
-	#add_supplies(10)
+	add_supplies(10)
 	var cursor_texture = load("res://hand custom cursor/hand-pickup.png")
 	if cursor_texture:
 		Input.set_custom_mouse_cursor(cursor_texture, Input.CURSOR_ARROW, Vector2.ZERO)
