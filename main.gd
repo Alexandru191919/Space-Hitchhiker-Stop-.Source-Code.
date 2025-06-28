@@ -626,11 +626,12 @@ func _process(delta):
 
 	if gen1_label:
 		gen1_label.text = str(int(gen1option1_timer.time_left)) + "s"
-#		if gen1option1_timer.time_left <= 0:
-#			gen1_label.visible = false
+		if gen1option1_timer.time_left <= 0:
+			gen1_label.visible = false
 #		else:
-#			gen1_label.visible = true
-			
+#			gen1_label1.visible = true
+	
+	
 	if gen1_label2:
 		gen1_label2.text = str(int(gen1option2_timer.time_left)) + "s"
 #		if gen1option2_timer.time_left <= 0:
@@ -1141,7 +1142,6 @@ func _on_coffee_pressed():
 ### COINS!!
 
 var coin_count: int = 0
-const MAX_COINS: int = 100
 
 func add_coin(amount: int):
 	coin_count += amount
@@ -1509,11 +1509,6 @@ func _on_placein_bag_button_button_up():
 	$"Scene1/ScanningMinigameCanvasLayer/ProducttoScan".show()
 	$Scene1/ScanningMinigameCanvasLayer/Button.show()
 	$Scene1/ScanningMinigameCanvasLayer/PlaceinBagButton.hide()
-	if coin_count > MAX_COINS:
-		coin_count = min(coin_count + coin_gain, MAX_COINS)
-		print("Coins: ", coin_count)
-	else:
-		print("Coin cap reached!")
 
 func _on_BarCode_scanner_toggled(toggled_on: bool):
 	$"Scene1/sigma/BarCode Scanner/ProductBarcodeSprite/ProductBarcode".show()
@@ -2463,52 +2458,78 @@ func _on_box_3_gen_3_pressed():
 
 ## GEN 1 TIMER OPTIONS TIMEOUTS
 # Gen 1
+func _on_option1_gen1_noupgrade_timeout():
+	print("Gen1, Option1 Finished")
+	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".show()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.show()
+
+
 func _on_option1_gen1_timeout():
 	print("Gen1, Option1 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.show()
 
 func _on_option2_gen1_timeout():
 	print("Gen1, Option2 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.show()
 
 func _on_option3_gen1_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.show()
 
 # Gen 2
 func _on_option1_gen2_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box1, Gen2".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.show()
 
 func _on_option2_gen2_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box2, Gen2".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.show()
 
 func _on_option3_gen2_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2/Box3, Gen2".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen2Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2.show()
 
 # Gen 3
 func _on_option1_gen3_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box1, Gen3".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.show()
 
 func _on_option2_gen3_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box2, Gen3".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.show()
 
 func _on_option3_gen3_timeout():
 	print("Gen1, Option3 Finished")
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3".show()
-	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3/Box3, Gen3".stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.stop()
+	$Scene3/TruckScene/GeneratorOptions/Generators/Gen3Working.hide()
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3.show()
 
 
 ### GEN UPGRADES
