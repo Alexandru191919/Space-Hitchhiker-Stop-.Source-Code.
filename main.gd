@@ -261,7 +261,7 @@ func _on_button_4_pressed():
 
 @onready var BoxGenerator: TextureButton = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator
 @onready var BoxGenerator2: TextureButton = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator2
-#@onready var BoxGenerator3: TextureButton = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3
+@onready var BoxGenerator3: TextureButton = $Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator3
 
 
 ### GENERATOR TIMERS W/ OPTIONS
@@ -504,7 +504,7 @@ var current_box: int = 0
 ## CUSTOMER TEMPER
 func _ready():
 	add_box(6)
-	add_supplies(10)
+	#add_supplies(10)
 	var cursor_texture = load("res://hand custom cursor/hand-pickup.png")
 	if cursor_texture:
 		Input.set_custom_mouse_cursor(cursor_texture, Input.CURSOR_ARROW, Vector2.ZERO)
@@ -1694,7 +1694,7 @@ func _on_supply_option_1_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.show()
@@ -1767,7 +1767,7 @@ func _on_supply_option_2_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.show()
@@ -1840,7 +1840,7 @@ func _on_supply_option_3_pressed():
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption1.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption2.disabled = true
 		$Scene3/TruckScene/GeneratorOptions/Options1Area2D/Options1CollisionShape2D/ButtonsArea1Sprite/SupplyOption3.disabled = true
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1Working.show()
@@ -1907,7 +1907,7 @@ func _on_supply_option_3_pressed():
 #collect box from gen
 func _on_box_1_gen_1_pressed():
 	add_supplies(1)
-	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box1, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option1".stop()
@@ -1919,7 +1919,7 @@ func _on_box_1_gen_1_pressed():
 
 func _on_box_2_gen_1_pressed():
 	add_supplies(5)
-	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box2, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option2".stop()
@@ -1931,7 +1931,7 @@ func _on_box_2_gen_1_pressed():
 
 func _on_box_3_gen_1_pressed():
 	add_supplies(10)
-	$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 	$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator.disabled = false
 	$"Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Box3, Gen1".hide()
 	$"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/NoUpgrade/Gen1/Option3".stop()
@@ -2551,9 +2551,9 @@ func _on_gen1_speed_upgrade_pressed():
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 		gen_press_count1 += 1
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg1
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg1
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade1.show()
 
@@ -2563,9 +2563,9 @@ func _on_gen1_speed_upgrade_pressed():
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade2/Gen1/Option1"
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 		gen_press_count1 += 1
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg2
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg2
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade1.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade2.show()
 
@@ -2575,9 +2575,9 @@ func _on_gen1_speed_upgrade_pressed():
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade1/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 		gen_press_count1 += 1
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg3
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg3
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade2.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade3.show()
 
@@ -2587,9 +2587,9 @@ func _on_gen1_speed_upgrade_pressed():
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade4/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 		gen_press_count1 += 1
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg4
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg4
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade3.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade4.show()
 
@@ -2599,9 +2599,9 @@ func _on_gen1_speed_upgrade_pressed():
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade5/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 		gen_press_count1 += 1
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg5
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg5
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade4.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade5.show()
 
@@ -2611,9 +2611,9 @@ func _on_gen1_speed_upgrade_pressed():
 		gen1option1_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option1"
 		gen1option2_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option2"
 		gen1option3_timer = $"Scene3/TruckScene/GeneratorOptions/Timers & Upgrades/Upgrade6/Gen1/Option3"
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = false
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = false
 		gen_press_count1 += 1
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg6
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg6
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade5.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade6.show()
 
@@ -2625,9 +2625,9 @@ func _on_gen1_speed_upgrade_pressed():
 		$"Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldM".emitting = true
 		$"Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade/Golden Rain!!!/Gen1GoldR".emitting = true
 		# PLAY PARTY HORN SOUND
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.disabled = true
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.disabled = true
 		gen_press_count1 += 1  # Increment for max upgrade
-		$Scene3/TruckScene/GeneratorOptions/Generators/Gen1SpeedUpgrade.texture_normal = upg7
+		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Gen1SpeedUpgrade.texture_normal = upg7
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade6.hide()
 		$Scene3/TruckScene/GeneratorOptions/Generators/BoxGenerator/Area2D/Gen1ProgressBarUpgrade7.show()
 
@@ -2946,11 +2946,25 @@ func _on_check_if_debt_timeout():
 		coin_label.add_theme_color_override("font_color", Color.RED)
 		debt_timer.start()
 		debt_label.show()
+		
+		## HIDE BILLS WHEN DEBT IS HAPPENING
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Bills".hide()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label".hide()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label2".hide()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label3".hide()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/CoinSprite2D".hide()
 	
 	elif coin_count >= 0:
 		coin_label.add_theme_color_override("font_color", Color.WHITE)
 		debt_timer.stop()
 		debt_label.hide()
+		
+		## WE ARE SAVED, BILLS ARE BACK
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Bills".show()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label".show()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label2".show()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/Label3".show()
+		$"PlayerGUI/CanvasLayerSupplies/Day&Night/Timer/CoinSprite2D".show()
 
 func _on_debt_death_timer_timeout():
 	get_tree().change_scene_to_file("res://GameOver-Debt.tscn")
